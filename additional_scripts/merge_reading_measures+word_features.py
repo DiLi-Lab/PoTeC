@@ -1,20 +1,8 @@
 #!/usr/bin/env python3
 """
-RUNNING INSTRUCTIONS
-This script is used to merge the reading measures with the word and text features.
-If the repo is downloaded as-is, the script can be run in this folder and no paths need to be provided.
-
-python3 merge_reading_measures+word_features.py
-
-You can also specify the paths to some or all the files you need yourself. In that case ouy need to make sure that the
-files contain all the information they are expected to contain as specified in the docstring.
-
-python3merge_reading_measures_word_features.py
-    --reading_measure_folder /path/to/reading_measure/folder
-    --word_features_folder /path/to/word_features/folder
-    --text_tags_folder /path/to/text_tags/folder
-    --reader_ids_file /path/to/reader_ids/file
-    --output_folder /path/to/output/folder
+TODO: clean again, r is never closed?
+Call: python3 merge_reading_measures+word_features.py
+To specify custom file paths see argparse arguments at the bottom of the file.
 """
 import argparse
 import csv

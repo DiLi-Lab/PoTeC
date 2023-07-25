@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-RUNNING INSTRUCTIONS
+
 Before running this script you need to run the following script:
 python merge_fixations+word+char.py
+Call: TODO
 """
 
 import argparse

@@ -1,6 +1,8 @@
-# This code splits the Fixation Report created by data viewer into separate files, one file per reader and text. In
-# addition, it creates a file containing all reader IDs (RECORDING_SESSION_LABEL) FixRep darf wegen encoding keine
-# interest area labels beinhalten
+#!/usr/bin/env python3
+"""
+#TODO
+Call: #TODO
+"""
 import argparse
 import csv
 import os
@@ -8,9 +10,6 @@ from pathlib import Path
 
 import pandas as pd
 from tqdm import tqdm
-
-
-# Aufruf: python3 split_fixation_report.py ../data/<filename Fixation Report> <filename fixrep outputfiles>
 
 
 def split_fixation_report(
@@ -104,6 +103,8 @@ if __name__ == '__main__':
     parser = create_parser()
     args = vars(parser.parse_args())
 
+    # prevent overwrite as this script creates another version of the fixation files
+    # the correct version cannot be reproduced
     if os.listdir(args['output_folder']) and not args['overwrite']:
         raise ValueError("The output folder is not empty! If you want to overwrite any files please specify by "
                          "explicitly adding the overwrite flag.")

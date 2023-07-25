@@ -1,7 +1,8 @@
-# March 7, 2017 Lena Jaeger File for data preprocessing_scripts of "ExpertReading" This code creates a list consisting of two
-# lists containing the first and the last roi (i.e., character index in a text) of a word. These lists (
-# <itemid>_Limits) will be used to create the mapping between characters (rois) and words (wordIndexInText) for all
-# items.
+#!/usr/bin/env python3
+"""
+#TODO
+Call: #TODO
+"""
 import argparse
 import json
 import os
@@ -15,7 +16,7 @@ import pandas as pd
 def create_word_roi_limits(
         text_tags_folder: str,
         output_file_wl: str,
-        output_file_sl
+        output_file_sl: str,
 ) -> None:
     text_tags_paths = list(Path(text_tags_folder).glob('*.tags'))
 
@@ -37,9 +38,9 @@ def create_word_roi_limits(
             punctuation_before = word_row['STTS_Punctuationbefore']
             punctuation_after = word_row['STTS_Punctuationafter']
 
-            if punctuation_before == 'None':
+            if not punctuation_before or pd.isnull(punctuation_before):
                 punctuation_before = ''  # replace "None" with nothing (because length is used below)
-            if punctuation_after == 'None':
+            if not punctuation_after or pd.isnull(punctuation_after):
                 punctuation_after = ''
 
             # 'Position' stores the start and end roi of a word

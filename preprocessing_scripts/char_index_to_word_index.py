@@ -1,16 +1,14 @@
-# March 7, 2017
-# Lena Jaeger
-# File for data preprocessing_scripts of "ExpertReading"
-# This code creates a file containing the mapping of the character-based rois to the word-based WordIndexInText
+#!/usr/bin/env python3
+"""
+#TODO
+Call: #TODO
+"""
 import argparse
 import json
 import os
 from pathlib import Path
 
 import pandas as pd
-
-
-# Aufruf: python char_index_to_word_index.py
 
 
 def roi2word(roi: int, word_limits: list) -> int:
@@ -28,7 +26,7 @@ def roi2word(roi: int, word_limits: list) -> int:
             return - index - 1
 
 
-def create_roi_to_word_index_mapping(limits_file: str, output_file: str) -> None:
+def char_index_to_word_index(limits_file: str, output_file: str) -> None:
     with open(limits_file, 'r') as limits_json:
         limits = json.load(limits_json)
 
@@ -83,4 +81,4 @@ if __name__ == '__main__':
     parser = create_parser()
     args = vars(parser.parse_args())
 
-    create_roi_to_word_index_mapping(**args)
+    char_index_to_word_index(**args)

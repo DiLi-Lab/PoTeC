@@ -15,11 +15,14 @@ This repository contains the following data:
 * **Eye-tracking data**
   * raw eye-tracking data
   * preprocessed eye-tracking data
-* **Stimuli texts**
-* **Participant data**
+* ~~**Stimulus texts**~~ --> we're not allowed right?
+* **Anonymized participant data**
 * **Scripts (in Python)**
   * scripts to preprocess the data
   * additional scripts that can be used to process the data further
+
+The scripts were run using Python 3.9 with the dependencies specified in the `requirements.txt` file 
+in the top folder.
 
 ## Repository Structure
     PoTeC

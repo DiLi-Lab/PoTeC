@@ -1,25 +1,9 @@
 #!/usr/bin/env python3
 """
-RUNNING INSTRUCTIONS
-This script is used to merge the fixation data with the word and character information.
-If the repo is downloaded as-is, the script can be run in this folder and no paths need to be provided.
-
-python3 merge_fixations+word+char.py
-
-You can also specify the paths to some or all the files you need yourself. In that case ouy need to make sure that the
-files contain all the information they are expected to contain as specified in the docstring.
-
-python3 merge_fixations+word+char.py
-    --fixation_folder /path/to/fixation/folder
-    --roi2word_file /path/to/roi2word/file
-    --texts_folder /path/to/texts/folder
-    --ias_folder /path/to/ias/folder
-    --output_folder /path/to/output/folder
-
-If a roi (which is equivalent to CharIndexInText) cannot be mapped to a character, the values will be written as np.NA in the output file.
-All errors will be logged in a file in the errors folder.
+Creates scanpaths for given fixations files and text information.
+Call: python3 merge_fixations+word+char.py
+To specify custom file paths see argparse below.
 """
-
 import argparse
 import os
 import re
@@ -36,30 +20,6 @@ def create_scanpaths(
         ias_folder: str,
         output_folder: str,
 ) -> None:
-    """
-    This function adds the word and character information to the fixation data.
-    The output is a file containing the scanpath for each reader and each text.
-
-    Parameters
-    ----------
-    fixation_folder: str
-        Files are expected to contain the following columns:
-        'roi',
-    roi2word_file: str
-        Expected to contain the following columns:
-        'itemid', 'wordIndexInText', 'charIndexInText'
-    texts_folder: str
-        Files are expected to contain the following columns:
-        'WORD_INDEX', 'WORD'
-    ias_folder: str
-        Interest area files are expected to contain the following columns:
-        'type', 'roi', 'start_x', 'start_y', 'end_x', 'end_y', 'character'
-    output_folder: str
-        Path to the folder where the output files should be saved.
-
-    """
-
-    # create the output folder if it does not exist
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
@@ -71,7 +31,7 @@ def create_scanpaths(
             'For the fixation files in this file, there were errors '
             'when trying to map the roi to a word and character.'
             'Those need to be manually fixed. The missing values are written as np.NA in the output file.\n\n'
-            )
+        )
 
         f.write('fixation_file_name, text_id, roi, word_idx, word, character')
 
