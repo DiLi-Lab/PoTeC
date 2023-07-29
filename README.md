@@ -42,6 +42,8 @@ in the top folder.
 
 Es wäre auch gut, wenn du das ganze mal Marie-Luise zeigen könntest und sie um Feedback fragen könntest. 
 
+Und es fehlt auch noch Informationen zu den comprehension questions und wie sie kodiert sind. 
+
 
 ## Repository Structure
     PoTeC
