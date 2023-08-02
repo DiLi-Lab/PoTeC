@@ -11,7 +11,12 @@ Factor 1: Study major with the levels={physics, biology}
 Factor 2: Level of expertise with the levels={beginner; advanced}
 --> Du kannst die Faktoren auch anders nennen; es sollte nur konsistent sein in readme, code/data und paper
 
-We also need a participants section where we define the inclusion criteria (they are simple: beginner = 1st semester; advanced=graduate student pursuing a Master's or phd degree); students who were or had been studying both majors were excluded from participation; weitere kriterien: native speaker of German, normal or corrected-to-normal vision
+More information is found in the following README'S:
+* [preprocessing](./preprocessing_scripts/README.md).
+* [participants](./participants/README.md)
+* [stimuli](./stimuli/README.md)
+* [eye-tracking data](./eyetracking_data/README.md)
+* [additional processing](./additional_scripts/REAMDE.md)
 
 ## Data
 All the data that was used to create the corpus and that was obtained during the experiments is made available. 
