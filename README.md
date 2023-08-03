@@ -18,7 +18,7 @@ More information is found in the following README'S:
 * [eye-tracking data](./eyetracking_data/README.md)
 * [additional processing](./additional_scripts/REAMDE.md)
 
-## Data
+## Data Overview
 All the data that was used to create the corpus and that was obtained during the experiments is made available. 
 The data is stored in respective sub folders each of which contains a README that provides more information 
 about the data and how to use it.
@@ -27,7 +27,21 @@ This repository contains the following data:
 * **Eye-tracking data**
   * raw eye-tracking data
   * preprocessed eye-tracking data
-* ~~**Stimulus texts**~~ --> we're not allowed right? --> I think we are allowed since it is only excerpts of less than 10%. We need to double check this (maybe ask Marie-Luise how to find this out, she did this for MultiplEYE).
+* ~~**Stimulus texts**~~ --> we're not allowed right? 
+
+--> ich habe Marie-Luise gefragt, sie hat mir das gesagt (Wir können uns auf 60c (1) 2. beziehen. Dann müssen wir allerdings das OSF repo vlt so machen, dass sie Leute sich einloggen müssen, um die Daten zu erhalten. Dann würde das vermutlich als 'einzelne Dritte' gelten.):
+ https://www.gesetze-im-internet.de/urhg/BJNR012730965.html#BJNR012730965BJNG001302123
+New
+10:09
+"§ 60c Wissenschaftliche Forschung
+(1) Zum Zweck der nicht kommerziellen wissenschaftlichen Forschung dürfen bis zu 15 Prozent eines Werkes vervielfältigt, verbreitet und öffentlich zugänglich gemacht werden
+1.
+für einen bestimmt abgegrenzten Kreis von Personen für deren eigene wissenschaftliche Forschung sowie
+2.
+für einzelne Dritte, soweit dies der Überprüfung der Qualität wissenschaftlicher Forschung dient.
+(2) Für die eigene wissenschaftliche Forschung dürfen bis zu 75 Prozent eines Werkes vervielfältigt werden.
+(3) Abbildungen, einzelne Beiträge aus derselben Fachzeitschrift oder wissenschaftlichen Zeitschrift, sonstige Werke geringen Umfangs und vergriffene Werke dürfen abweichend von den Absätzen 1 und 2 vollständig genutzt werden.
+(4) Nicht nach den Absätzen 1 bis 3 erlaubt ist es, während öffentlicher Vorträge, Aufführungen oder Vorführungen eines Werkes diese auf Bild- oder Tonträger aufzunehmen und später öffentlich zugänglich zu machen."
 
   --> we also need to mention all the annotations that we provide (part-of-speech, and all the handcrafted tags, and the corpus-based features, and surprisal etc.). We should briefly describe them here.
   --> die Quelle der stimuli (Referenz mit seitenangabe) muss auch unbedingt rein.
