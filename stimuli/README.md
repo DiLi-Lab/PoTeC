@@ -1,5 +1,11 @@
 # README STIMULI
 
+## Text sources
+
+
+## Text tags
+
+
 
 ## ----------- text below: check what needs to go to README from 'notes.txt' ----------------
 
