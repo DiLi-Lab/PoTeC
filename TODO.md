@@ -7,3 +7,5 @@
     - [ ] gender
     - [ ] 
 - [ ] encoding of nan values (sometimes nan, sometimes . or something)
+- [ ] check data types in code book and rename, so far created automatically from csv
+- [ ] codebook: remove duplicate column names, e.g. word features or text tags and reference to the table where they are defined
