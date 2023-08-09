@@ -149,7 +149,7 @@ def create_parser():
 
     pars.add_argument(
         '--output_folder',
-        default=base_path / 'eyetracking_data/rm_word_features',
+        default=base_path / 'eyetracking_data/reader_rm_wf',
     )
 
     return pars

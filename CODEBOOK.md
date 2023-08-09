@@ -3,6 +3,9 @@
 ## Stimuli
 
 [Word features](./stimuli/word_features)
+todos:
+- check whether text and word columns are always exactly equal, if yes, delete text, but move word to the first column
+- 
 
 | Column                                                     | Data type   | Description   |
 |:-----------------------------------------------------------|:------------|:--------------|
@@ -235,7 +238,7 @@
 | word                       | object      | <NA>          |
 | character                  | object      | <NA>          |
 
-[Merged: reading measures + word features](./eyetracking_data/rm_word_features)
+[Merged: reading measures + word features](./eyetracking_data/reader_rm_wf)
 
 | Column                                                     | Data type   | Description   |
 |:-----------------------------------------------------------|:------------|:--------------|
@@ -373,7 +376,7 @@
 | age                                                        | float64     | <NA>          |
 | group                                                      | int64       | <NA>          |
 
-[Merged: scanpaths + reading measures](./eyetracking_data/scanpaths_reader_rm)
+[Merged: scanpaths + reading measures](./eyetracking_data/scanpaths_reader_rm_wf)
 
 | Column                                                     | Data type   | Description   |
 |:-----------------------------------------------------------|:------------|:--------------|

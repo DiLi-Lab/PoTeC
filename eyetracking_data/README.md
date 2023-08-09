@@ -26,7 +26,7 @@ rm". All the reading measure and their definitions are listed in the file in the
 
 Can be recreated using this script: ``preprocessing_scripts/compute_reading_measures.py``.
 
-## rm_word_features
+## reader_rm_wf
 
 This folder contains the eye-tracking data for each reader and each text **sequentially ordered by word order in the
 text**.
