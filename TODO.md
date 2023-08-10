@@ -14,7 +14,7 @@
     - [ ] remove duplicate column names, e.g. word features or text tags and reference to the table where they are defined
     - [ ] decide for capitalization? sometimes all caps, sometimes camel case, sometimes weird...
     - [ ] look at todos in codebook --> for some data files there are todos
-- [ ] 
+- [ ] delimiters! all should be the same, it is a mix between 4 spaces and tab (comma?) --> make all tabs
 - [ ] add table of contents to codebook
 - [ ] debug all scripts one more time! (they look nicer but might still produce garbage)
 - [ ] spell check

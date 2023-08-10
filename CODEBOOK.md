@@ -5,7 +5,7 @@
 [Word features](./stimuli/word_features)
 todos:
 - check whether text and word columns are always exactly equal, if yes, delete text, but move word to the first column
-- 
+  - there are some that are not the same, why??
 
 | Column                                                     | Data type   | Description   |
 |:-----------------------------------------------------------|:------------|:--------------|
