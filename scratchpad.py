@@ -21,13 +21,13 @@ PATHS = [
 
 PATHS_FOLDERS = [
     # 'stimuli/aoi_texts/aoi/',
-    'stimuli/word_features/',
-    'stimuli/text_tags/',
+    #'stimuli/word_features/',
+    #'stimuli/text_tags/',
     # 'eyetracking_data/fixations/',
-    'eyetracking_data/reader_rm_wf/',
-    'eyetracking_data/reading_measures/',
-    'eyetracking_data/scanpaths/',
-    'eyetracking_data/scanpaths_reader_rm_wf/',
+    # 'eyetracking_data/reader_rm_wf/',
+    #'eyetracking_data/reading_measures/',
+    #'eyetracking_data/scanpaths/',
+    #'eyetracking_data/scanpaths_reader_rm_wf/',
 ]
 
 
@@ -76,11 +76,11 @@ def check_col_vals():
         for path in Path(folder).iterdir():
 
             try:
-                csv = pd.read_csv(path, sep=r'\s+', keep_default_na=False, na_values=[''])#, '#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan', '1.#IND', '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan'])
+                csv = pd.read_csv(path, sep=r'\s+', keep_default_na=False, na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan', '1.#IND', '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan'])
                 # f.write('## delimiter = spaces\n\n')
             except:
                 try:
-                    csv = pd.read_csv(path, sep='\t', keep_default_na=False, na_values=[''])#, '#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan', '1.#IND', '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan'])
+                    csv = pd.read_csv(path, sep='\t', keep_default_na=False, na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan', '1.#IND', '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan'])
                     # f.write('## delimiter = tab\n\n')
                 except:
                     print(path)
@@ -96,8 +96,12 @@ def check_col_vals():
             nans = csv.isna().sum().sum()
             if nans != 0:
                 print(path)
-                print(f'Nans: {nans}\n\n')
-                print(csv.isna().sum())
+                print(f'total nans: {nans}')
+                counts = csv.isna().sum()
+                print(counts[counts != 0])
+                print(csv.shape)
+
+                print('\n\n')
 
 
 if __name__ == '__main__':

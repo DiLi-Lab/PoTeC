@@ -1,0 +1,20 @@
+stimuli/word_features/word_features_p3.txt
+Line: 10
+Text: dem	Word: Vielzahl
+
+stimuli/word_features/word_features_p3.txt
+Line: 159
+Text: beide	Word: können
+
+stimuli/word_features/word_features_p0.txt
+Line: 106
+Text: nach	Word: zu
+
+stimuli/word_features/word_features_p4.txt
+Line: 41
+Text: ohne	Word: am
+
+stimuli/word_features/word_features_b4.txt
+Line: 154
+Text: die	Word: extrazelluläre
+

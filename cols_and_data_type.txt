@@ -1,11 +1,20 @@
-# Codebook
+## stimuli/aoi_texts/aoi/b0.ias
+## delimiter = spaces
 
-## Stimuli
+| Column    | Data type   | Description   |
+|:----------|:------------|:--------------|
+| 0         | int64       | <NA>          |
+| RECTANGLE | object      | <NA>          |
+| 1         | int64       | <NA>          |
+| 80        | int64       | <NA>          |
+| 21        | int64       | <NA>          |
+| 93        | int64       | <NA>          |
+| 99        | int64       | <NA>          |
+| U         | object      | <NA>          |
 
-[Word features](./stimuli/word_features)
-todos:
-- check whether text and word columns are always exactly equal, if yes, delete text, but move word to the first column
-  - there are some that are not the same, why??
+
+## stimuli/word_features/word_features_b0.txt
+## delimiter = spaces
 
 | Column                                                     | Data type   | Description   |
 |:-----------------------------------------------------------|:------------|:--------------|
@@ -14,10 +23,10 @@ todos:
 | Line                                                       | int64       | <NA>          |
 | Word                                                       | object      | <NA>          |
 | Type                                                       | object      | <NA>          |
-| Type_length_(characters)                                   | int64       | <NA>          |
+| Type_length_(characters)                                   | float64     | <NA>          |
 | PoS_tag                                                    | object      | <NA>          |
 | Lemma                                                      | object      | <NA>          |
-| Lemma_length_(characters)                                  | int64       | <NA>          |
+| Lemma_length_(characters)                                  | float64     | <NA>          |
 | Syllables                                                  | object      | <NA>          |
 | Type_length_(syllables)                                    | float64     | <NA>          |
 | Annotated_type_frequency_normalized                        | float64     | <NA>          |
@@ -49,7 +58,9 @@ todos:
 | Neighbors_Levenshtein_all,_cum._freq.,_normalized          | float64     | <NA>          |
 | Neighbors_Levenshtein_all,_count,_normalized               | float64     | <NA>          |
 
-[Text tags](./stimuli/text_tags)
+
+## stimuli/text_tags/b0.tags
+## delimiter = spaces
 
 | Column                 | Data type   | Description   |
 |:-----------------------|:------------|:--------------|
@@ -61,7 +72,7 @@ todos:
 | WordIndexInSentence    | int64       | <NA>          |
 | SentenceIndex          | int64       | <NA>          |
 | WordLen                | int64       | <NA>          |
-| STTS_Punctuationbefore | float64     | <NA>          |
+| STTS_Punctuationbefore | object      | <NA>          |
 | STTS_Punctuationafter  | object      | <NA>          |
 | Position               | object      | <NA>          |
 | WordIndexInText        | int64       | <NA>          |
@@ -124,91 +135,17 @@ todos:
 | PWS                    | int64       | <NA>          |
 | PRF                    | int64       | <NA>          |
 
-[Aoi](./stimuli/aoi_texts/aoi)
 
-| Column    | Data type   | Description   |
-|:----------|:------------|:--------------|
-| ?         | int64       | <NA>          |
-| ?         | object      | <NA>          |
-| roi       | int64       | <NA>          |
-| ?         | int64       | <NA>          |
-| ?         | int64       | <NA>          |
-| ?         | int64       | <NA>          |
-| ?         | int64       | <NA>          |
-| Character | object      | <NA>          |
+## participants/participant_data.csv
+## delimiter = spaces
 
-## Eye-tracking data
-
-[Fixations](./eyetracking_data/fixations)
-
-| Column                     | Data types   | Decscription   |
-|:---------------------------|:-------------|:---------------|
-| CURRENT_FIX_INDEX          | int64        | <NA>           |
-| topic                      | object       | <NA>           |
-| trial                      | int64        | <NA>           |
-| ACC_B_Q1                   | int64        | <NA>           |
-| ACC_B_Q2                   | int64        | <NA>           |
-| ACC_B_Q3                   | int64        | <NA>           |
-| ACC_T_Q1                   | int64        | <NA>           |
-| ACC_T_Q2                   | int64        | <NA>           |
-| ACC_T_Q3                   | int64        | <NA>           |
-| CURRENT_FIX_DURATION       | int64        | <NA>           |
-| NEXT_SAC_DURATION          | int64        | <NA>           |
-| PREVIOUS_SAC_DURATION      | object       | <NA>           |
-| version                    | int64        | <NA>           |
-| line                       | int64        | <NA>           |
-| roi                        | int64        | <NA>           |
-| index_inline               | int64        | <NA>           |
-| ORIGINAL_CURRENT_FIX_INDEX | int64        | <NA>           |
-| Fix_adjusted               | bool         | <NA>           |
-| RECORDING_SESSION_LABEL    | int64        | <NA>           |
-| itemid                     | object       | <NA>           |
+| Column                                                                           | Data type   | Description   |
+|:---------------------------------------------------------------------------------|:------------|:--------------|
+| readerId,major,beginner/expert,glasses,age,handedness,hours_sleep,alcohol,gender | object      | <NA>          |
 
 
-[Reading measures](./eyetracking_data/reading_measures)
-
-| Column        | Data type   | Description   |
-|:--------------|:------------|:--------------|
-| WordIndexSent | int64       | <NA>          |
-| SentIndex     | int64       | <NA>          |
-| FFD           | int64       | <NA>          |
-| SFD           | int64       | <NA>          |
-| FD            | int64       | <NA>          |
-| FPRT          | int64       | <NA>          |
-| FRT           | int64       | <NA>          |
-| TFT           | int64       | <NA>          |
-| RRT           | int64       | <NA>          |
-| RPD_inc       | int64       | <NA>          |
-| RPD_exc       | int64       | <NA>          |
-| RBRT          | int64       | <NA>          |
-| Fix           | int64       | <NA>          |
-| FPF           | int64       | <NA>          |
-| RR            | int64       | <NA>          |
-| FPReg         | int64       | <NA>          |
-| TRC_out       | int64       | <NA>          |
-| TRC_in        | int64       | <NA>          |
-| LP            | int64       | <NA>          |
-| SL_in         | int64       | <NA>          |
-| SL_out        | int64       | <NA>          |
-| ACC_B_Q1      | float64     | <NA>          |
-| ACC_B_Q2      | float64     | <NA>          |
-| ACC_B_Q3      | float64     | <NA>          |
-| ACC_T_Q1      | float64     | <NA>          |
-| ACC_T_Q2      | float64     | <NA>          |
-| ACC_T_Q3      | float64     | <NA>          |
-| topic         | int64       | <NA>          |
-| trial         | int64       | <NA>          |
-| itemid        | object      | <NA>          |
-| reader        | int64       | <NA>          |
-| gender        | int64       | <NA>          |
-| major         | int64       | <NA>          |
-| expert_status | int64       | <NA>          |
-| age           | float64     | <NA>          |
-| meanAccBQ     | float64     | <NA>          |
-| meanAccTQ     | float64     | <NA>          |
-| group         | int64       | <NA>          |
-
-[Scanpaths](./eyetracking_data/scanpaths)
+## eyetracking_data/fixations/reader0_b0_fixations.txt
+## delimiter = spaces
 
 | Column                     | Data type   | Description   |
 |:---------------------------|:------------|:--------------|
@@ -232,13 +169,10 @@ todos:
 | Fix_adjusted               | bool        | <NA>          |
 | RECORDING_SESSION_LABEL    | int64       | <NA>          |
 | itemid                     | object      | <NA>          |
-| wordIndexInText            | int64       | <NA>          |
-| sentIndex                  | int64       | <NA>          |
-| charIndexInText            | int64       | <NA>          |
-| word                       | object      | <NA>          |
-| character                  | object      | <NA>          |
 
-[Merged: reading measures + word features](./eyetracking_data/reader_rm_wf)
+
+## eyetracking_data/reader_rm_wf/reader0_b0_merged.txt
+## delimiter = spaces
 
 | Column                                                     | Data type   | Description   |
 |:-----------------------------------------------------------|:------------|:--------------|
@@ -376,7 +310,86 @@ todos:
 | age                                                        | float64     | <NA>          |
 | group                                                      | int64       | <NA>          |
 
-[Merged: scanpaths + reading measures](./eyetracking_data/scanpaths_reader_rm_wf)
+
+## eyetracking_data/reading_measures/reader0_b0_rm.csv
+## delimiter = spaces
+
+| Column        | Data type   | Description   |
+|:--------------|:------------|:--------------|
+| WordIndexSent | int64       | <NA>          |
+| SentIndex     | int64       | <NA>          |
+| FFD           | int64       | <NA>          |
+| SFD           | int64       | <NA>          |
+| FD            | int64       | <NA>          |
+| FPRT          | int64       | <NA>          |
+| FRT           | int64       | <NA>          |
+| TFT           | int64       | <NA>          |
+| RRT           | int64       | <NA>          |
+| RPD_inc       | int64       | <NA>          |
+| RPD_exc       | int64       | <NA>          |
+| RBRT          | int64       | <NA>          |
+| Fix           | int64       | <NA>          |
+| FPF           | int64       | <NA>          |
+| RR            | int64       | <NA>          |
+| FPReg         | int64       | <NA>          |
+| TRC_out       | int64       | <NA>          |
+| TRC_in        | int64       | <NA>          |
+| LP            | int64       | <NA>          |
+| SL_in         | int64       | <NA>          |
+| SL_out        | int64       | <NA>          |
+| ACC_B_Q1      | float64     | <NA>          |
+| ACC_B_Q2      | float64     | <NA>          |
+| ACC_B_Q3      | float64     | <NA>          |
+| ACC_T_Q1      | float64     | <NA>          |
+| ACC_T_Q2      | float64     | <NA>          |
+| ACC_T_Q3      | float64     | <NA>          |
+| topic         | int64       | <NA>          |
+| trial         | int64       | <NA>          |
+| itemid        | object      | <NA>          |
+| reader        | int64       | <NA>          |
+| gender        | int64       | <NA>          |
+| major         | int64       | <NA>          |
+| expert_status | int64       | <NA>          |
+| age           | float64     | <NA>          |
+| meanAccBQ     | float64     | <NA>          |
+| meanAccTQ     | float64     | <NA>          |
+| group         | int64       | <NA>          |
+
+
+## eyetracking_data/scanpaths/reader0_b0_scanpath.txt
+## delimiter = spaces
+
+| Column                     | Data type   | Description   |
+|:---------------------------|:------------|:--------------|
+| CURRENT_FIX_INDEX          | int64       | <NA>          |
+| topic                      | object      | <NA>          |
+| trial                      | int64       | <NA>          |
+| ACC_B_Q1                   | int64       | <NA>          |
+| ACC_B_Q2                   | int64       | <NA>          |
+| ACC_B_Q3                   | int64       | <NA>          |
+| ACC_T_Q1                   | int64       | <NA>          |
+| ACC_T_Q2                   | int64       | <NA>          |
+| ACC_T_Q3                   | int64       | <NA>          |
+| CURRENT_FIX_DURATION       | int64       | <NA>          |
+| NEXT_SAC_DURATION          | int64       | <NA>          |
+| PREVIOUS_SAC_DURATION      | int64       | <NA>          |
+| version                    | int64       | <NA>          |
+| line                       | int64       | <NA>          |
+| roi                        | int64       | <NA>          |
+| index_inline               | int64       | <NA>          |
+| ORIGINAL_CURRENT_FIX_INDEX | int64       | <NA>          |
+| Fix_adjusted               | bool        | <NA>          |
+| RECORDING_SESSION_LABEL    | int64       | <NA>          |
+| itemid                     | object      | <NA>          |
+| wordIndexInText            | int64       | <NA>          |
+| sentIndex                  | int64       | <NA>          |
+| charIndexInText            | int64       | <NA>          |
+| word                       | object      | <NA>          |
+| character                  | object      | <NA>          |
+
+
+## eyetracking_data/scanpaths_reader_rm_wf/reader0_b0_merged_sp_rm.txt
+## delimiter = spaces
 
 | Column                                                     | Data type   | Description   |
 |:-----------------------------------------------------------|:------------|:--------------|
@@ -470,8 +483,8 @@ todos:
 | PRF                                                        | int64       | <NA>          |
 | Type                                                       | object      | <NA>          |
 | Lemma                                                      | object      | <NA>          |
-| Lemma_length_(characters)                                  | int64       | <NA>          |
-| Type_length_(syllables)                                    | int64       | <NA>          |
+| Lemma_length_(characters)                                  | float64     | <NA>          |
+| Type_length_(syllables)                                    | float64     | <NA>          |
 | Annotated_type_frequency_normalized                        | float64     | <NA>          |
 | Type_frequency_normalized                                  | float64     | <NA>          |
 | Lemma_frequency_normalized                                 | float64     | <NA>          |
@@ -531,18 +544,3 @@ todos:
 | group                                                      | int64       | <NA>          |
 
 
-## Participants
-
-[Participants](./participants/participant_data.csv)
-
-| Column          | Data type   | Description                   |
-|:----------------|:------------|:------------------------------|
-| readerId        | int64       | unique reader ID, starts at 0 |
-| major           | object      | <NA>                          |
-| beginner/expert | object      | <NA>                          |
-| glasses         | object      | <NA>                          |
-| age             | float64     | <NA>                          |
-| handedness      | object      | <NA>                          |
-| hours_sleep     | float64     | <NA>                          |
-| alcohol         | object      | <NA>                          |
-| gender          | object      | <NA>                          |

@@ -182,33 +182,67 @@ def compute_reading_measures(
         except ValueError:
             # if no accuracy information is available, code with -1
             acc_tq1 = acc_tq2 = acc_tq3 = acc_bq1 = acc_bq2 = acc_bq3 = mean_acc_tq = mean_acc_bq = -1
-            # print(f'No accuracy values for {fixation_file_path}')
-            logging.error("No accuracy values for", str(fixation_file_path),  exc_info=True)
+            logging.error(f"No accuracy values for {fixation_file_path}")
 
         except TypeError:
             # if no accuracy information is available, code with -1
             acc_tq1 = acc_tq2 = acc_tq3 = acc_bq1 = acc_bq2 = acc_bq3 = mean_acc_tq = mean_acc_bq = -1
-            # print(f'No accuracy values for {fixation_file_path}')
-            logging.error("No accuracy values for", str(fixation_file_path),  exc_info=True)
+            logging.error(f"No accuracy values for {fixation_file_path}")
 
-        topic = 1 if fixation_file_sorted.loc[1, 'topic'] == 'bio' else -1  # Coding of topic: bio=1, phy=-1
+        # Coding of topic: bio=1, phy=-1
+        if fixation_file_sorted.loc[1, 'topic'] == 'bio':
+            topic = 1
+        elif fixation_file_sorted.loc[1, 'topic'] == 'physik':
+            topic = -1
+        else:
+            topic = pd.NA
+            logging.error(f"Topic not defined for {fixation_file_path}")
+
+        # Coding of gender female=1, male=-1
+        if gender == 'w':
+            gender = 1
+        elif gender == 'm':
+            gender = -1
+        else:
+            gender = pd.NA
+            logging.error(f"Gender not defined for {fixation_file_path}")
+
+        # Coding of major: B=1, P=-1
+        if major == 'B':
+            major = 1
+        elif major == 'P':
+            major = -1
+        else:
+            major = pd.NA
+            logging.error(f"Major not defined for {fixation_file_path}")
+
+        # Coding of expert_status: E=1, A=-1
+        if expert_status == 'E':
+            expert_status = 1
+        elif expert_status == 'A':
+            expert_status = -1
+        else:
+            expert_status = pd.NA
+            logging.error(f"Expert status not defined for {fixation_file_path}")
+
         trial = fixation_file_sorted.loc[1, 'trial']
         itemid = fixation_file_sorted.loc[1, 'itemid']
-        gender = 1 if gender == "w" else -1  # Coding of gender: f=1, m=-1
-        major = 1 if major == "B" else -1  # Coding of major: B=1, P=-1
-        expert_status = 1 if expert_status == 'E' else -1  # Coding of expert_status: E=1, A=-1
 
         # Add group column: Bio/Beginner=1, Bio/Expert=2, Physics/Beginner=3, Physics/Expert=4
-        if major == "B":
-            if expert_status == "A":
+        group = pd.NA
+
+        if major == 1:
+            if expert_status == -1:
                 group = 1
-            else:
+            elif expert_status == 1:
                 group = 2
-        else:
-            if expert_status == "A":
+        elif major == -1:
+            if expert_status == -1:
                 group = 3
-            else:
+            elif expert_status == 1:
                 group = 4
+        else:
+            logging.error(f'Group cannot be determined for {fixation_file_path}')
 
         trial_information_header = [
             'ACC_B_Q1', 'ACC_B_Q2', 'ACC_B_Q3', 'ACC_T_Q1', 'ACC_T_Q2', 'ACC_T_Q3', 'topic',
