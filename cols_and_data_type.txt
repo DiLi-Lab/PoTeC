@@ -1,20 +1,19 @@
 ## stimuli/aoi_texts/aoi/b0.ias
-## delimiter = spaces
+## delimiter = ('\t', 0)
 
-| Column    | Data type   | Description   |
-|:----------|:------------|:--------------|
-| 0         | int64       | <NA>          |
-| RECTANGLE | object      | <NA>          |
-| 1         | int64       | <NA>          |
-| 80        | int64       | <NA>          |
-| 21        | int64       | <NA>          |
-| 93        | int64       | <NA>          |
-| 99        | int64       | <NA>          |
-| U         | object      | <NA>          |
+| Column      | Data type   | Description   |
+|:------------|:------------|:--------------|
+| 0 RECTANGLE | object      | <NA>          |
+| 1           | int64       | <NA>          |
+| 80          | int64       | <NA>          |
+| 21          | int64       | <NA>          |
+| 93          | int64       | <NA>          |
+| 99          | int64       | <NA>          |
+| U           | object      | <NA>          |
 
 
 ## stimuli/word_features/word_features_b0.txt
-## delimiter = spaces
+## delimiter = ('\t', 0)
 
 | Column                                                     | Data type   | Description   |
 |:-----------------------------------------------------------|:------------|:--------------|
@@ -60,7 +59,7 @@
 
 
 ## stimuli/text_tags/b0.tags
-## delimiter = spaces
+## delimiter = ('\t', 0)
 
 | Column                 | Data type   | Description   |
 |:-----------------------|:------------|:--------------|
@@ -137,15 +136,23 @@
 
 
 ## participants/participant_data.csv
-## delimiter = spaces
+## delimiter = (',', 2)
 
-| Column                                                                           | Data type   | Description   |
-|:---------------------------------------------------------------------------------|:------------|:--------------|
-| readerId,major,beginner/expert,glasses,age,handedness,hours_sleep,alcohol,gender | object      | <NA>          |
+| Column          | Data type   | Description   |
+|:----------------|:------------|:--------------|
+| readerId        | int64       | <NA>          |
+| major           | object      | <NA>          |
+| beginner/expert | object      | <NA>          |
+| glasses         | object      | <NA>          |
+| age             | float64     | <NA>          |
+| handedness      | object      | <NA>          |
+| hours_sleep     | float64     | <NA>          |
+| alcohol         | object      | <NA>          |
+| gender          | object      | <NA>          |
 
 
 ## eyetracking_data/fixations/reader0_b0_fixations.txt
-## delimiter = spaces
+## delimiter = ('\\s+', 1)
 
 | Column                     | Data type   | Description   |
 |:---------------------------|:------------|:--------------|
@@ -172,7 +179,7 @@
 
 
 ## eyetracking_data/reader_rm_wf/reader0_b0_merged.txt
-## delimiter = spaces
+## delimiter = ('\t', 0)
 
 | Column                                                     | Data type   | Description   |
 |:-----------------------------------------------------------|:------------|:--------------|
@@ -312,7 +319,7 @@
 
 
 ## eyetracking_data/reading_measures/reader0_b0_rm.csv
-## delimiter = spaces
+## delimiter = ('\t', 0)
 
 | Column        | Data type   | Description   |
 |:--------------|:------------|:--------------|
@@ -357,7 +364,7 @@
 
 
 ## eyetracking_data/scanpaths/reader0_b0_scanpath.txt
-## delimiter = spaces
+## delimiter = ('\t', 0)
 
 | Column                     | Data type   | Description   |
 |:---------------------------|:------------|:--------------|
@@ -389,7 +396,7 @@
 
 
 ## eyetracking_data/scanpaths_reader_rm_wf/reader0_b0_merged_sp_rm.txt
-## delimiter = spaces
+## delimiter = ('\t', 0)
 
 | Column                                                     | Data type   | Description   |
 |:-----------------------------------------------------------|:------------|:--------------|

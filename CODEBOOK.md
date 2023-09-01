@@ -6,123 +6,124 @@
 todos:
 - check whether text and word columns are always exactly equal, if yes, delete text, but move word to the first column
   - there are some that are not the same, why??
+- can we remove these commas and dots from the column names? I find them confusing 
 
-| Column                                                     | Data type   | Description   |
-|:-----------------------------------------------------------|:------------|:--------------|
-| Text                                                       | object      | <NA>          |
-| SSTS-Tag                                                   | object      | <NA>          |
-| Line                                                       | int64       | <NA>          |
-| Word                                                       | object      | <NA>          |
-| Type                                                       | object      | <NA>          |
-| Type_length_(characters)                                   | int64       | <NA>          |
-| PoS_tag                                                    | object      | <NA>          |
-| Lemma                                                      | object      | <NA>          |
-| Lemma_length_(characters)                                  | int64       | <NA>          |
-| Syllables                                                  | object      | <NA>          |
-| Type_length_(syllables)                                    | float64     | <NA>          |
-| Annotated_type_frequency_normalized                        | float64     | <NA>          |
-| Type_frequency_normalized                                  | float64     | <NA>          |
-| Lemma_frequency_normalized                                 | float64     | <NA>          |
-| Familiarity_normalized                                     | float64     | <NA>          |
-| Regularity_normalized                                      | float64     | <NA>          |
-| Document_frequency_normalized                              | float64     | <NA>          |
-| Sentence_frequency_normalized                              | float64     | <NA>          |
-| Cumulative_syllable_corpus_frequency_normalized            | float64     | <NA>          |
-| Cumulative_syllable_lexicon_frequency_normalized           | float64     | <NA>          |
-| Cumulative_character_corpus_frequency_normalized           | float64     | <NA>          |
-| Cumulative_character_lexicon_frequency_normalized          | float64     | <NA>          |
-| Cumulative_character_bigram_corpus_frequency_normalized    | float64     | <NA>          |
-| Cumulative_character_bigram_lexicon_frequency_normalized   | float64     | <NA>          |
-| Cumulative_character_trigram_corpus_frequency_normalized   | float64     | <NA>          |
-| Cumulative_character_trigram_lexicon_frequency_normalized  | float64     | <NA>          |
-| Initial_letter_frequency_normalized                        | float64     | <NA>          |
-| Initial_bigram_frequency_normalized                        | float64     | <NA>          |
-| Initial_trigram_frequency_normalized                       | float64     | <NA>          |
-| Avg._cond._prob.,_in_bigrams                               | float64     | <NA>          |
-| Avg._cond._prob.,_in_trigrams                              | float64     | <NA>          |
-| Neighbors_Coltheart_higher_freq.,_cum._freq.,_normalized   | float64     | <NA>          |
-| Neighbors_Coltheart_higher_freq.,_count,_normalized        | float64     | <NA>          |
-| Neighbors_Coltheart_all,_cum._freq.,_normalized            | float64     | <NA>          |
-| Neighbors_Coltheart_all,_count,_normalized                 | float64     | <NA>          |
-| Neighbors_Levenshtein_higher_freq.,_cum._freq.,_normalized | float64     | <NA>          |
-| Neighbors_Levenshtein_higher_freq.,_count,_normalized      | float64     | <NA>          |
-| Neighbors_Levenshtein_all,_cum._freq.,_normalized          | float64     | <NA>          |
-| Neighbors_Levenshtein_all,_count,_normalized               | float64     | <NA>          |
+| Column                                                      | Data type   | Description   |
+|:------------------------------------------------------------|:------------|:--------------|
+| Text                                                        | object      | <NA>          |
+| SSTS-Tag                                                    | object      | <NA>          |
+| Line                                                        | int64       | <NA>          |
+| Word                                                        | object      | <NA>          |
+| Type                                                        | object      | <NA>          |
+| Type_length_(characters):Type_length_characters             | int64       | <NA>          |
+| PoS_tag                                                     | object      | <NA>          |
+| Lemma                                                       | object      | <NA>          |
+| Lemma_length_(characters):Lemma_length_characters           | int64       | <NA>          |
+| Syllables                                                   | object      | <NA>          |
+| Type_length_(syllables):Type_length_syllables               | float64     | <NA>          |
+| Annotated_type_frequency_normalized                         | float64     | <NA>          |
+| Type_frequency_normalized                                   | float64     | <NA>          |
+| Lemma_frequency_normalized                                  | float64     | <NA>          |
+| Familiarity_normalized                                      | float64     | <NA>          |
+| Regularity_normalized                                       | float64     | <NA>          |
+| Document_frequency_normalized                               | float64     | <NA>          |
+| Sentence_frequency_normalized                               | float64     | <NA>          |
+| Cumulative_syllable_corpus_frequency_normalized             | float64     | <NA>          |
+| Cumulative_syllable_lexicon_frequency_normalized            | float64     | <NA>          |
+| Cumulative_character_corpus_frequency_normalized            | float64     | <NA>          |
+| Cumulative_character_lexicon_frequency_normalized           | float64     | <NA>          |
+| Cumulative_character_bigram_corpus_frequency_normalized     | float64     | <NA>          |
+| Cumulative_character_bigram_lexicon_frequency_normalized    | float64     | <NA>          |
+| Cumulative_character_trigram_corpus_frequency_normalized    | float64     | <NA>          |
+| Cumulative_character_trigram_lexicon_frequency_normalized   | float64     | <NA>          |
+| Initial_letter_frequency_normalized                         | float64     | <NA>          |
+| Initial_bigram_frequency_normalized                         | float64     | <NA>          |
+| Initial_trigram_frequency_normalized                        | float64     | <NA>          |
+| Avg._cond._prob.,_in_bigrams                                | float64     | <NA>          |
+| Avg._cond._prob.,_in_trigrams                               | float64     | <NA>          |
+| Neighbors_Coltheart_higher_freq.,_cum._freq.,_normalized    | float64     | <NA>          |
+| Neighbors_Coltheart_higher_freq.,_count,_normalized         | float64     | <NA>          |
+| Neighbors_Coltheart_all,_cum._freq.,_normalized             | float64     | <NA>          |
+| Neighbors_Coltheart_all,_count,_normalized                  | float64     | <NA>          |
+| Neighbors_Levenshtein_higher_freq.,_cum._freq.,_normalized  | float64     | <NA>          |
+| Neighbors_Levenshtein_higher_freq.,_count,_normalized       | float64     | <NA>          |
+| Neighbors_Levenshtein_all,_cum._freq.,_normalized           | float64     | <NA>          |
+| Neighbors_Levenshtein_all,_count,_normalized                | float64     | <NA>          |
 
 [Text tags](./stimuli/text_tags)
 
-| Column                 | Data type   | Description   |
-|:-----------------------|:------------|:--------------|
-| WORD_INDEX             | int64       | <NA>          |
-| WORD                   | object      | <NA>          |
-| STTS_PoSTag            | object      | <NA>          |
-| TechnialTerm           | int64       | <NA>          |
-| Abbreviation           | int64       | <NA>          |
-| WordIndexInSentence    | int64       | <NA>          |
-| SentenceIndex          | int64       | <NA>          |
-| WordLen                | int64       | <NA>          |
-| STTS_Punctuationbefore | float64     | <NA>          |
-| STTS_Punctuationafter  | object      | <NA>          |
-| Position               | object      | <NA>          |
-| WordIndexInText        | int64       | <NA>          |
-| textID                 | object      | <NA>          |
-| Quote                  | int64       | <NA>          |
-| Parentheses            | int64       | <NA>          |
-| Symbol                 | int64       | <NA>          |
-| Hyph                   | int64       | <NA>          |
-| ClauseBegin            | int64       | <NA>          |
-| SentenceBegin          | int64       | <NA>          |
-| isAbbr                 | int64       | <NA>          |
-| containsAbbr           | int64       | <NA>          |
-| PRELS                  | int64       | <NA>          |
-| PRELAT                 | int64       | <NA>          |
-| PPOSAT                 | int64       | <NA>          |
-| PPER                   | int64       | <NA>          |
-| PPOSS                  | int64       | <NA>          |
-| PIDAT                  | int64       | <NA>          |
-| PIAT                   | int64       | <NA>          |
-| PIS                    | int64       | <NA>          |
-| PDAT                   | int64       | <NA>          |
-| PDS                    | int64       | <NA>          |
-| NN                     | int64       | <NA>          |
-| NE                     | int64       | <NA>          |
-| KOKOM                  | int64       | <NA>          |
-| KON                    | int64       | <NA>          |
-| KOUS                   | int64       | <NA>          |
-| KOUI                   | int64       | <NA>          |
-| ITJ                    | int64       | <NA>          |
-| FM                     | int64       | <NA>          |
-| CARD                   | int64       | <NA>          |
-| ART                    | int64       | <NA>          |
-| APZR                   | int64       | <NA>          |
-| APPO                   | int64       | <NA>          |
-| APPRART                | int64       | <NA>          |
-| APPR                   | int64       | <NA>          |
-| ADV                    | int64       | <NA>          |
-| ADJD                   | int64       | <NA>          |
-| ADJA                   | int64       | <NA>          |
-| XY                     | int64       | <NA>          |
-| VMPP                   | int64       | <NA>          |
-| VMINF                  | int64       | <NA>          |
-| VMFIN                  | int64       | <NA>          |
-| VAPP                   | int64       | <NA>          |
-| VAFIN                  | int64       | <NA>          |
-| VVPP                   | int64       | <NA>          |
-| VVIZU                  | int64       | <NA>          |
-| VVINF                  | int64       | <NA>          |
-| VVIMP                  | int64       | <NA>          |
-| VVFIN                  | int64       | <NA>          |
-| TRUNC                  | int64       | <NA>          |
-| PTKA                   | int64       | <NA>          |
-| PTKANT                 | int64       | <NA>          |
-| PTKVZ                  | int64       | <NA>          |
-| PTKNEG                 | int64       | <NA>          |
-| PTKZU                  | int64       | <NA>          |
-| PAV                    | int64       | <NA>          |
-| PWAV                   | int64       | <NA>          |
-| PWAT                   | int64       | <NA>          |
-| PWS                    | int64       | <NA>          |
-| PRF                    | int64       | <NA>          |
+| Column                                         | Data type   | Description   |
+|:-----------------------------------------------|:------------|:--------------|
+| WORD_INDEX                                     | int64       | <NA>          |
+| WORD                                           | object      | <NA>          |
+| STTS_PoSTag                                    | object      | <NA>          |
+| TechnialTerm                                   | int64       | <NA>          |
+| Abbreviation                                   | int64       | <NA>          |
+| WordIndexInSentence                            | int64       | <NA>          |
+| SentenceIndex                                  | int64       | <NA>          |
+| WordLen                                        | int64       | <NA>          |
+| STTS_Punctuationbefore:STTS_punctuation_before | float64     | <NA>          |
+| STTS_Punctuationafter:STTS_punctuation_after   | object      | <NA>          |
+| Position                                       | object      | <NA>          |
+| WordIndexInText                                | int64       | <NA>          |
+| textID                                         | object      | <NA>          |
+| Quote                                          | int64       | <NA>          |
+| Parentheses                                    | int64       | <NA>          |
+| Symbol                                         | int64       | <NA>          |
+| Hyph                                           | int64       | <NA>          |
+| ClauseBegin                                    | int64       | <NA>          |
+| SentenceBegin                                  | int64       | <NA>          |
+| isAbbr                                         | int64       | <NA>          |
+| containsAbbr                                   | int64       | <NA>          |
+| PRELS                                          | int64       | <NA>          |
+| PRELAT                                         | int64       | <NA>          |
+| PPOSAT                                         | int64       | <NA>          |
+| PPER                                           | int64       | <NA>          |
+| PPOSS                                          | int64       | <NA>          |
+| PIDAT                                          | int64       | <NA>          |
+| PIAT                                           | int64       | <NA>          |
+| PIS                                            | int64       | <NA>          |
+| PDAT                                           | int64       | <NA>          |
+| PDS                                            | int64       | <NA>          |
+| NN                                             | int64       | <NA>          |
+| NE                                             | int64       | <NA>          |
+| KOKOM                                          | int64       | <NA>          |
+| KON                                            | int64       | <NA>          |
+| KOUS                                           | int64       | <NA>          |
+| KOUI                                           | int64       | <NA>          |
+| ITJ                                            | int64       | <NA>          |
+| FM                                             | int64       | <NA>          |
+| CARD                                           | int64       | <NA>          |
+| ART                                            | int64       | <NA>          |
+| APZR                                           | int64       | <NA>          |
+| APPO                                           | int64       | <NA>          |
+| APPRART                                        | int64       | <NA>          |
+| APPR                                           | int64       | <NA>          |
+| ADV                                            | int64       | <NA>          |
+| ADJD                                           | int64       | <NA>          |
+| ADJA                                           | int64       | <NA>          |
+| XY                                             | int64       | <NA>          |
+| VMPP                                           | int64       | <NA>          |
+| VMINF                                          | int64       | <NA>          |
+| VMFIN                                          | int64       | <NA>          |
+| VAPP                                           | int64       | <NA>          |
+| VAFIN                                          | int64       | <NA>          |
+| VVPP                                           | int64       | <NA>          |
+| VVIZU                                          | int64       | <NA>          |
+| VVINF                                          | int64       | <NA>          |
+| VVIMP                                          | int64       | <NA>          |
+| VVFIN                                          | int64       | <NA>          |
+| TRUNC                                          | int64       | <NA>          |
+| PTKA                                           | int64       | <NA>          |
+| PTKANT                                         | int64       | <NA>          |
+| PTKVZ                                          | int64       | <NA>          |
+| PTKNEG                                         | int64       | <NA>          |
+| PTKZU                                          | int64       | <NA>          |
+| PAV                                            | int64       | <NA>          |
+| PWAV                                           | int64       | <NA>          |
+| PWAT                                           | int64       | <NA>          |
+| PWS                                            | int64       | <NA>          |
+| PRF                                            | int64       | <NA>          |
 
 [Aoi](./stimuli/aoi_texts/aoi)
 
@@ -140,6 +141,9 @@ todos:
 ## Eye-tracking data
 
 [Fixations](./eyetracking_data/fixations)
+
+TODO:
+- (uncorrected) fixation data: is the value of the RECORDING_SESSION_LABEL column always identical to the reader-ID in the filename?
 
 | Column                     | Data types   | Decscription   |
 |:---------------------------|:-------------|:---------------|
@@ -535,14 +539,14 @@ todos:
 
 [Participants](./participants/participant_data.csv)
 
-| Column          | Data type   | Description                   |
-|:----------------|:------------|:------------------------------|
-| readerId        | int64       | unique reader ID, starts at 0 |
-| major           | object      | <NA>                          |
-| beginner/expert | object      | <NA>                          |
-| glasses         | object      | <NA>                          |
-| age             | float64     | <NA>                          |
-| handedness      | object      | <NA>                          |
-| hours_sleep     | float64     | <NA>                          |
-| alcohol         | object      | <NA>                          |
-| gender          | object      | <NA>                          |
+| Column                         | Data type   | Description                   |
+|:-------------------------------|:------------|:------------------------------|
+| readerId                       | int64       | unique reader ID, starts at 0 |
+| major                          | object      | <NA>                          |
+| beginner/expert: expert_status | object      | <NA>                          |
+| glasses                        | object      | <NA>                          |
+| age                            | float64     | <NA>                          |
+| handedness                     | object      | <NA>                          |
+| hours_sleep                    | float64     | <NA>                          |
+| alcohol                        | object      | <NA>                          |
+| gender                         | object      | <NA>                          |

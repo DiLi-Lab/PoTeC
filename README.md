@@ -1,15 +1,20 @@
 # PoTeC - Potsdam Textbook Corpus
 
-This repository contains eye-tracking data, the Potsdam Textbook Corpus (PoTeC). 
-4 groups of participants (advanced/beginner level students of physics and biology) read a series of short 
+This repository contains Potsdam Textbook Corpus (PoTeC) which is a natural reading eye-tracking corpus.
+Four groups of participants (advanced/beginner level students of physics and biology) read 12 short 
 texts taken from textbooks of physics and biology while their eye movements were monitored
-(each participant reads all texts). Their text comprehension as well as their background 
-knowledge in the topics presented in the texts were assessed by multiple-choice comprehension questions.
---> I would add a somewhat more formal description of the experimental design: 
-Fully-crossed 2x2 factorial design. Both factors are quasi-experimental and manipulated between subjects. 
-Factor 1: Study major with the levels={physics, biology}
-Factor 2: Level of expertise with the levels={beginner; advanced}
---> Du kannst die Faktoren auch anders nennen; es sollte nur konsistent sein in readme, code/data und paper
+(each participant reads all texts). The study follows a 2x2 fully-crossed factorial design:
+* Factor 1: Study major with the levels either physics or biology
+* Factor 2: Level of expertise with the levels either beginner or advanced
+
+|          | Physics | Biology |
+|----------|---------|---------|
+| Beginner |         |         |
+| Advanced |         |         |
+
+Both factors are quasi-experimental and manipulated between subjects.
+The readers' text comprehension as well as their background 
+knowledge in the topics presented in the texts were assessed by multiple-choice questions. 
 
 More information is found in the following README'S:
 * [preprocessing](./preprocessing_scripts/README.md).
@@ -18,16 +23,19 @@ More information is found in the following README'S:
 * [eye-tracking data](./eyetracking_data/README.md)
 * [additional processing](./additional_scripts/REAMDE.md)
 
+
+
 ## Data Overview
 All the data that was used to create the corpus and that was obtained during the experiments is made available. 
 The data is stored in respective sub folders each of which contains a README that provides more information 
-about the data and how to use it.
+about the data and how to use it. **For a detailed description of the data types, format and content, please refer to the 
+[CODEBOOK](./CODEBOOK.md).**
 
 This repository contains the following data:
 * **Eye-tracking data**
   * raw eye-tracking data
   * preprocessed eye-tracking data
-* ~~**Stimulus texts**~~ --> we're not allowed right? 
+* **Stimulus texts**
 
 --> ich habe Marie-Luise gefragt, sie hat mir das gesagt (Wir können uns auf 60c (1) 2. beziehen. Dann müssen wir allerdings das OSF repo vlt so machen, dass sie Leute sich einloggen müssen, um die Daten zu erhalten. Dann würde das vermutlich als 'einzelne Dritte' gelten.):
  https://www.gesetze-im-internet.de/urhg/BJNR012730965.html#BJNR012730965BJNG001302123
@@ -43,9 +51,6 @@ für einzelne Dritte, soweit dies der Überprüfung der Qualität wissenschaftli
 (3) Abbildungen, einzelne Beiträge aus derselben Fachzeitschrift oder wissenschaftlichen Zeitschrift, sonstige Werke geringen Umfangs und vergriffene Werke dürfen abweichend von den Absätzen 1 und 2 vollständig genutzt werden.
 (4) Nicht nach den Absätzen 1 bis 3 erlaubt ist es, während öffentlicher Vorträge, Aufführungen oder Vorführungen eines Werkes diese auf Bild- oder Tonträger aufzunehmen und später öffentlich zugänglich zu machen."
 
-  --> we also need to mention all the annotations that we provide (part-of-speech, and all the handcrafted tags, and the corpus-based features, and surprisal etc.). We should briefly describe them here.
-  --> die Quelle der stimuli (Referenz mit seitenangabe) muss auch unbedingt rein.
-  
 * **Anonymized participant data**
 * **Scripts (in Python)**
   * scripts to preprocess the data
@@ -54,15 +59,14 @@ für einzelne Dritte, soweit dies der Überprüfung der Qualität wissenschaftli
 The scripts were run using Python 3.9 with the dependencies specified in the `requirements.txt` file 
 in the top folder.
 
------> We also need to provide some kind of code book where we define the column names of all data files. 
----> aus der repository structure hier unten geht nicht klar hervor, was welches der skripte tut. Das sollte auch noch irgendwo rein.
-
 ----> Kannst du vielleicht auch noch eine Art Baum zeichnen, der darstellt, wie das preprocessing durchgeführt wird/wurde (also welches skript angewendet wird um dann welchen datensatz zu erzeugen)?
 
-Es wäre auch gut, wenn du das ganze mal Marie-Luise zeigen könntest und sie um Feedback fragen könntest. 
 
-Und es fehlt auch noch Informationen zu den comprehension questions und wie sie kodiert sind. 
 
+
+## Data Annotation
+The stimuli have been manually annoted with part-of-speech tags and other linguistic information. The annotations are described
+in a separate file: `stimuli/ANNOTATION.md`.
 
 ## Repository Structure
     PoTeC
@@ -92,6 +96,8 @@ Und es fehlt auch noch Informationen zu den comprehension questions und wie sie 
     │ ├── text_examples
     │ ├── texts
     │ └── word_features
+    ├── comprehension_questions
+    ├── CODEBOOK.md
     └── README.md
 
 

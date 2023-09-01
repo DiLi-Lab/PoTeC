@@ -1,9 +1,18 @@
-# README STIMULI
+# Stimuli
+The stimuli text and the comprehension questions are contained in this folder. 
+More detailed information on the content of the files (e.g. column names and data types) is found in the [codebook](./CODEBOOK.md).
 
-## Text sources
+## Texts and questions
+All text and questions are contained in a [csv-file](./texts_and_questions.csv). 
+
+### Sources
+
 
 
 ## Text tags
+
+## Word features
+
 
 
 
