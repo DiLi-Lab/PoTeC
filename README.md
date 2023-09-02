@@ -2,15 +2,16 @@
 
 This repository contains Potsdam Textbook Corpus (PoTeC) which is a natural reading eye-tracking corpus.
 Four groups of participants (advanced/beginner level students of physics and biology) read 12 short 
-texts taken from textbooks of physics and biology while their eye movements were monitored
-(each participant reads all texts). The study follows a 2x2 fully-crossed factorial design:
-* Factor 1: Study major with the levels either physics or biology
-* Factor 2: Level of expertise with the levels either beginner or advanced
+texts taken from textbooks of physics and biology while their eye movements were monitored. 
+The final dataset contains the reading data for 75 participants each reading all 12 texts.
+The study follows a 2x2 fully-crossed factorial design:
+* _Factor 1_: Study major with the levels either physics or biology
+* _Factor 2_: Level of expertise with the levels either beginner or advanced
 
-|          | Physics | Biology |
-|----------|---------|---------|
-| Beginner |         |         |
-| Advanced |         |         |
+|              | Physics | Biology |
+|--------------|---------|---------|
+| **Beginner** | 12      | 16      |
+| **Advanced** | 20      | 27      |
 
 Both factors are quasi-experimental and manipulated between subjects.
 The readers' text comprehension as well as their background 

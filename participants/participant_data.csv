@@ -1,4 +1,4 @@
-﻿readerId,major,beginner/expert,glasses,age,handedness,hours_sleep,alcohol,gender
+﻿reader_id,major,expert_status,glasses,age,handedness,hours_sleep,alcohol,gender
 0,P,E,B,26,r,8,n,w
 1,P,E,B,None,r,6.5,n,m
 2,P,E,B,26,r,7.5,n,w

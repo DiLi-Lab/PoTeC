@@ -51,9 +51,9 @@ def char_index_to_word_index(limits_file: str, output_file: str) -> None:
             rois.append(roi)
 
     data_dict = {
-        'itemid': item_ids,
-        'wordIndexInText': word_indices,
-        'charIndexInText': rois
+        'text_id': item_ids,
+        'word_index_in_text': word_indices,
+        'char_index_in_text': rois
     }
 
     data_df = pd.DataFrame(data_dict)

@@ -2,7 +2,7 @@
 """
 
 Before running this script you need to run the following script:
-python merge_fixations+word+char.py
+python generate_scanpaths.py
 Call: TODO
 """
 
@@ -27,18 +27,18 @@ def merge_scanpaths_reader_information(
 
     participant_data = pd.read_csv(reader_information_file, sep=',')
 
-    scanpath_files = Path(scanpaths_folder).glob('*.txt')
+    scanpath_files = Path(scanpaths_folder).glob('*.csv')
 
     for scanpath_file in tqdm(scanpath_files, total=900):
         scanpath_file_name = os.path.basename(scanpath_file)
         reader_id = re.search(r'(\d+)_', scanpath_file_name).group(1)
 
         name_components = scanpath_file_name.split('_')
-        rm_filename = f'{name_components[0]}_{name_components[1]}_merged.txt'
+        rm_filename = f'{name_components[0]}_{name_components[1]}_merged.csv'
 
-        final_file_name = f'{name_components[0]}_{name_components[1]}_merged_sp_rm.txt'
+        final_file_name = f'{name_components[0]}_{name_components[1]}_merged_sp_rm.csv'
 
-        reader_data = participant_data[participant_data['readerId'] == int(reader_id)]
+        reader_data = participant_data[participant_data['reader_id'] == int(reader_id)]
 
         scanpath_csv = pd.read_csv(scanpath_file, sep='\t')
         rm_csv = pd.read_csv(Path(rm_folder) / rm_filename, sep='\t')
@@ -48,11 +48,11 @@ def merge_scanpaths_reader_information(
 
         merged_df = pd.merge(scanpath_csv, rm_csv,
                              how='inner',
-                             left_on=['wordIndexInText', 'sentIndex'],
-                             right_on=['WordIndexInText', 'SentenceIndex'],
+                             left_on=['word_index_in_text', 'sent_index_in_text'],
+                             right_on=['word_index_in_text', 'sent_index_in_text'],
                              suffixes=(None, '_rm'),
                              )
-        merged_df = merged_df.sort_values(by=['CURRENT_FIX_INDEX'])
+        merged_df = merged_df.sort_values(by=['fixation_index'])
 
         merged_df = merged_df.drop(
             columns=[col for col in merged_df.columns if col.endswith('_rm')],

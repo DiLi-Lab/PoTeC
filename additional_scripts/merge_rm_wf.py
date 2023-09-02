@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 TODO: clean again, r is never closed?
-Call: python3 merge_reading_measures+word_features.py
+Call: python3 merge_rm_wf.py
 To specify custom file paths see argparse arguments at the bottom of the file.
 """
 import argparse
@@ -36,14 +36,14 @@ def merge_rm_word_features(
 
     # Read text features
     for textIndex, text in tqdm(enumerate(texts), desc='Merging files...', total=len(texts)):
-        filename_tags = os.path.join(text_tags_folder, text + '.tags')
-        filename_features = os.path.join(word_features_folder, 'word_features_' + text + '.txt')
+        filename_tags = os.path.join(text_tags_folder, text + '.csv')
+        filename_features = os.path.join(word_features_folder, 'word_features_' + text + '.csv')
 
         word_tags = pd.read_csv(
             filename_tags, sep='\t', na_values=['None', '.', 'NA'],
-            usecols=['WORD', 'TechnialTerm', 'WordIndexInSentence', 'SentenceIndex', 'WordLen',
-                     'WordIndexInText', 'Quote', 'Parentheses', 'ClauseBegin', 'SentenceBegin',
-                     'isAbbr', 'containsAbbr', 'Hyph', 'Symbol', 'PRELS', 'PRELAT', 'PPOSAT',
+            usecols=['word', 'is_technical_term', 'word_index_in_sent', 'sent_index_in_text', 'word_length',
+                     'word_index_in_text', 'is_in_quote', 'is_in_parentheses', 'is_clause_beginning', 'is_sent_beginning',
+                     'is_abbreviation', 'contains_abbreviation', 'contains_hyphen', 'contains_symbol', 'PRELS', 'PRELAT', 'PPOSAT',
                      'PPER',
                      'PPOSS', 'PIDAT', 'PIAT', 'PIS', 'PDAT', 'PDS', 'NN', 'NE', 'KOKOM', 'KON',
                      'KOUS', 'KOUI', 'ITJ', 'FM', 'CARD', 'ART', 'APZR', 'APPO', 'APPRART', 'APPR',
@@ -54,31 +54,31 @@ def merge_rm_word_features(
         )
         word_features = pd.read_csv(
             filename_features, sep='\s+', na_values=['None', '.', 'NA'],
-            usecols=['Type', 'Lemma', 'Lemma_length_(characters)', 'Type_length_(syllables)',
-                     'Annotated_type_frequency_normalized', 'Type_frequency_normalized',
-                     'Lemma_frequency_normalized', 'Familiarity_normalized',
-                     'Regularity_normalized', 'Document_frequency_normalized',
-                     'Sentence_frequency_normalized',
-                     'Cumulative_syllable_corpus_frequency_normalized',
-                     'Cumulative_syllable_lexicon_frequency_normalized',
-                     'Cumulative_character_corpus_frequency_normalized',
-                     'Cumulative_character_lexicon_frequency_normalized',
-                     'Cumulative_character_bigram_corpus_frequency_normalized',
-                     'Cumulative_character_bigram_lexicon_frequency_normalized',
-                     'Cumulative_character_trigram_corpus_frequency_normalized',
-                     'Cumulative_character_trigram_lexicon_frequency_normalized',
-                     'Initial_letter_frequency_normalized',
-                     'Initial_bigram_frequency_normalized',
-                     'Initial_trigram_frequency_normalized', 'Avg._cond._prob.,_in_bigrams',
-                     'Avg._cond._prob.,_in_trigrams',
-                     'Neighbors_Coltheart_higher_freq.,_cum._freq.,_normalized',
-                     'Neighbors_Coltheart_higher_freq.,_count,_normalized',
-                     'Neighbors_Coltheart_all,_cum._freq.,_normalized',
-                     'Neighbors_Coltheart_all,_count,_normalized',
-                     'Neighbors_Levenshtein_higher_freq.,_cum._freq.,_normalized',
-                     'Neighbors_Levenshtein_higher_freq.,_count,_normalized',
-                     'Neighbors_Levenshtein_all,_cum._freq.,_normalized',
-                     'Neighbors_Levenshtein_all,_count,_normalized'],
+            usecols=['type', 'lemma', 'lemma_length_chars', 'type_length_syllables',
+                     'annotated_type_frequency_normalized', 'type_frequency_normalized',
+                     'lemma_frequency_normalized', 'familiarity_normalized',
+                     'regularity_normalized', 'document_frequency_normalized',
+                     'sentence_frequency_normalized',
+                     'cumulative_syllable_corpus_frequency_normalized',
+                     'cumulative_syllable_lexicon_frequency_normalized',
+                     'cumulative_character_corpus_frequency_normalized',
+                     'cumulative_character_lexicon_frequency_normalized',
+                     'cumulative_character_bigram_corpus_frequency_normalized',
+                     'cumulative_character_bigram_lexicon_frequency_normalized',
+                     'cumulative_character_trigram_corpus_frequency_normalized',
+                     'cumulative_character_trigram_lexicon_frequency_normalized',
+                     'initial_letter_frequency_normalized',
+                     'initial_bigram_frequency_normalized',
+                     'initial_trigram_frequency_normalized', 'avg_cond_prob_in_bigrams',
+                     'avg_cond_prob_in_trigrams',
+                     'neighbors_coltheart_higher_freq_cum_freq_normalized',
+                     'neighbors_coltheart_higher_freq_count_normalized',
+                     'neighbors_coltheart_all_cum_freq_normalized',
+                     'neighbors_coltheart_all_count_normalized',
+                     'neighbors_levenshtein_higher_freq_cum_freq_normalized',
+                     'neighbors_levenshtein_higher_freq_count_normalized',
+                     'neighbors_levenshtein_all_cum_freq_normalized',
+                     'neighbors_levenshtein_all_count_normalized'],
             encoding='utf-8',
             engine='python',
         )
@@ -101,25 +101,27 @@ def merge_rm_word_features(
                 sep='\t',
                 na_values=['None', '.', 'NA'],
                 usecols=['FRT', 'SL_out', 'TRC_in', 'FFD', 'FPRT', 'RPD_exc', 'TFT', 'RRT', 'FPF', 'FD', 'RR', 'Fix',
-                         'LP', 'WordIndexSent', 'SL_in', 'RPD_inc', 'FPReg', 'TRC_out', 'SentIndex', 'SFD', 'RBRT',
-                         'topic', 'trial', 'gender', 'major', 'expert_status', 'age', 'ACC_B_Q1', 'ACC_B_Q2',
-                         'ACC_B_Q3',
-                         'ACC_T_Q1', 'ACC_T_Q2', 'ACC_T_Q3', 'meanAccBQ', 'meanAccTQ', 'group', 'itemid', 'reader']
+                         'LP', 'word_index_in_sent', 'SL_in', 'RPD_inc', 'FPReg', 'TRC_out', 'sent_index_in_text',
+                         'SFD', 'RBRT', 'topic', 'trial', 'gender', 'major', 'expert_status', 'age', 'acc_bq_1',
+                         'acc_bq_2', 'acc_bq_3', 'acc_tq_1', 'acc_tq_2', 'acc_tq_3', 'mean_acc_bq', 'mean_acc_tq',
+                         'domain_expert_status', 'text_id', 'reader']
             )
 
             # sort columns. Necessary because different col ordering in different input files
             reading_measure_csv = reading_measure_csv[
-                ["WordIndexSent", "SentIndex", "FFD", "SFD", "FD", "FPRT", "FRT", "TFT", "RRT", "RPD_inc", "RPD_exc",
-                 "RBRT", "Fix", "FPF", "RR", "FPReg", "TRC_out", "TRC_in", "LP", "SL_in", "SL_out", "ACC_B_Q1",
-                 "ACC_B_Q2", "ACC_B_Q3", "ACC_T_Q1", "ACC_T_Q2", "ACC_T_Q3", "meanAccTQ", "meanAccBQ", "topic", "trial",
-                 "itemid", "reader", "gender", "major", "expert_status", "age", "group"]
+                ["word_index_in_sent", "sent_index_in_text", "FFD", "SFD", "FD", "FPRT", "FRT", "TFT", "RRT", "RPD_inc",
+                 "RPD_exc",
+                 "RBRT", "Fix", "FPF", "RR", "FPReg", "TRC_out", "TRC_in", "LP", "SL_in", "SL_out", "acc_bq_1",
+                 "acc_bq_2", "acc_bq_3", "acc_tq_1", "acc_tq_2", "acc_tq_3", "mean_acc_tq", "mean_acc_bq", "topic",
+                 "trial",
+                 "text_id", "reader", "gender", "major", "expert_status", "age", "domain_expert_status"]
             ]
 
             # concatenate text features with eye movements
             data = pd.concat([text_features, reading_measure_csv], axis=1)
 
             # write merged data
-            filename_merged_data = os.path.join(output_folder, 'reader' + str(reader) + '_' + text + '_merged.txt')
+            filename_merged_data = os.path.join(output_folder, 'reader' + str(reader) + '_' + text + '_merged.csv')
             data.to_csv(path_or_buf=filename_merged_data, header=True, na_rep='NA', sep='\t', index=False)
 
 

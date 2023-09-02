@@ -18,7 +18,7 @@ def create_word_roi_limits(
         output_file_wl: str,
         output_file_sl: str,
 ) -> None:
-    text_tags_paths = list(Path(text_tags_folder).glob('*.tags'))
+    text_tags_paths = list(Path(text_tags_folder).glob('*.csv'))
 
     word_limits_dict = {}
     sent_limits_dict = {}
@@ -35,8 +35,8 @@ def create_word_roi_limits(
 
         for word_index, word_row in text_tags_csv.iterrows():
 
-            punctuation_before = word_row['STTS_Punctuationbefore']
-            punctuation_after = word_row['STTS_Punctuationafter']
+            punctuation_before = word_row['STTS_punctuation_before']
+            punctuation_after = word_row['STTS_punctuation_after']
 
             if not punctuation_before or pd.isnull(punctuation_before):
                 punctuation_before = ''  # replace "None" with nothing (because length is used below)
@@ -44,7 +44,7 @@ def create_word_roi_limits(
                 punctuation_after = ''
 
             # 'Position' stores the start and end roi of a word
-            word_start_roi, word_end_roi = word_row['Position'].split(',')
+            word_start_roi, word_end_roi = word_row['word_limit_char_indices'].split(',')
 
             # if a punctuation mark directly precedes a word, a fixation on it is counted as a fixation on this word
             word_limits[0].append(int(word_start_roi) - len(punctuation_before) // 2)
