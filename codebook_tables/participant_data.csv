@@ -1,0 +1,10 @@
+Column name,Possible values,Missing value,Description,Source
+reader_id,int64,,,
+major,object,,,
+expert_status,object,,,
+glasses,object,,,
+age,float64,,,
+handedness,object,,,
+hours_sleep,float64,,,
+alcohol,object,,,
+gender,object,,,
