@@ -16,7 +16,7 @@ from tqdm import tqdm
 def create_scanpaths(
         fixation_folder: str,
         roi2word_file: str,
-        texts_folder: str,
+        wf_folder: str,
         ias_folder: str,
         output_folder: str,
 ) -> None:
@@ -36,20 +36,20 @@ def create_scanpaths(
         f.write('fixation_file_name, text_id, roi, word_idx, word, character')
 
     # sort the file names to be sure we have the same order
-    fixation_files = sorted(list(Path(fixation_folder).glob('*.txt')))
+    fixation_files = sorted(list(Path(fixation_folder).glob('*.csv')))
 
     roi2word = pd.read_csv(roi2word_file, sep='\t')
 
     for fixation_file in tqdm(fixation_files):
         # get only the file name without the path
         fixation_file_name = os.path.basename(fixation_file)
-        fix_csv = pd.read_csv(fixation_file, sep='\s+')
+        fix_csv = pd.read_csv(fixation_file, sep='\t')
 
         # extract text id from file name which is r'(bp)\d'
         text_id = fixation_file_name.split('_')[1]
 
-        text_file = Path(texts_folder) / f'{text_id}.csv'
-        text_csv = pd.read_csv(text_file, sep='\t')
+        wf_file = Path(wf_folder) / f'word_features_{text_id}.csv'
+        wf_csv = pd.read_csv(wf_file, sep='\t')
 
         # get aoi file for the text
         aoi_file = Path(ias_folder) / f'{text_id}.ias'
@@ -77,8 +77,8 @@ def create_scanpaths(
 
                 # get the actual character and word
                 character = aoi_csv[aoi_csv['roi'] == roi]['character'].values[0]
-                word = text_csv[text_csv['word_index_in_text'] == word_idx]['word'].values[0]
-                sentence_index = text_csv[text_csv['word_index_in_text'] == word_idx]['sent_index_in_text'].values[0]
+                word = wf_csv[wf_csv['word_index_in_text'] == word_idx]['word'].values[0]
+                sentence_index = wf_csv[wf_csv['word_index_in_text'] == word_idx]['sent_index_in_text'].values[0]
 
             # in case the roi does not exist, there will be an index error
             except IndexError:
@@ -96,7 +96,6 @@ def create_scanpaths(
         fix_csv = pd.concat([fix_csv, new_df], axis=1)
 
         scanpath_file = re.sub('fixations', 'scanpath', fixation_file_name)
-        scanpath_file = re.sub('txt', 'csv', scanpath_file)
 
         fix_csv.to_csv(Path(output_folder) / scanpath_file, sep='\t', index=False)
 
@@ -117,8 +116,8 @@ def create_parser():
     )
 
     pars.add_argument(
-        '--texts-folder',
-        default=base_path / 'stimuli/text_tags/',
+        '--wf-folder',
+        default=base_path / 'stimuli/word_features/',
     )
 
     pars.add_argument(

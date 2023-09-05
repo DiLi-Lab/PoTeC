@@ -70,12 +70,12 @@ def compute_reading_measures(
         reader_id = int(reader[6:])
 
         # select participant's row
-        reader_row = df_participants.loc[df_participants['readerId'] == reader_id]
+        reader_row = df_participants.loc[df_participants['reader_id'] == reader_id]
 
         # get participant information
         major = reader_row['major'].item()
         gender = reader_row['gender'].item()
-        expert_status = reader_row['beginner/expert'].item()
+        expert_status = reader_row['expert_status'].item()
         age = reader_row['age'].item()
 
         fixation_file = pd.read_csv(fixation_file_path, delimiter=DELIMITER)

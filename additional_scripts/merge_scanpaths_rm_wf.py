@@ -66,22 +66,22 @@ def create_parser():
     pars = argparse.ArgumentParser()
 
     pars.add_argument(
-        '--scanpaths-folder',
+        '--scanpaths-folder', '-sp',
         default=base_path / 'eyetracking_data/scanpaths/',
     )
 
     pars.add_argument(
-        '--rm-folder',
+        '--rm-folder', '-rm',
         default=base_path / 'eyetracking_data/reader_rm_wf/',
     )
 
     pars.add_argument(
-        '--reader-information-file',
+        '--reader-information-file', '-ri',
         default=base_path / 'participants/participant_data.csv',
     )
 
     pars.add_argument(
-        '--output-folder',
+        '--output-folder', '-o',
         default=base_path / 'eyetracking_data/scanpaths_reader_rm_wf/',
     )
 

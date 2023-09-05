@@ -65,9 +65,9 @@ in the top folder.
 
 
 
-## Data Annotation
+## Stimuli Annotation
 The stimuli have been manually annoted with part-of-speech tags and other linguistic information. The annotations are described
-in a separate file: `stimuli/ANNOTATION.md`.
+in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
 
 ## Repository Structure
     PoTeC

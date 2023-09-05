@@ -18,13 +18,6 @@ All text and questions are contained in a [csv-file](./texts_and_questions.csv).
 
 ## ----------- text below: check what needs to go to README from 'notes.txt' ----------------
 
-Word	STTS_PoSTag	TechnicalTerm	Abbreviation	WordIndex	SentenceIndex	WordLen PunctuationAfterWord_STTS_PosTag WordPosition	wordIndexIntext
-
-
-WordLen=word length in number of characters without sentence punctuation at the end (i.e., z.B. = 4 characters; DNA-Kette =9 characters; [He] eats.=4 characters
-
-
-PunctuationAfterWord_STTS_PosTag = None, wenn kein Satzzeichen
 
 Bei mapping mit rois: Interpunktion ist NICHT teil einer ROI! Leerzeichen sind auch NICHT Teil einer roi!
 

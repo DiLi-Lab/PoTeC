@@ -74,17 +74,17 @@ def create_parser():
     pars = argparse.ArgumentParser()
 
     pars.add_argument(
-        '--text-tags-folder',
-        default=base_path / 'stimuli/text_tags',
+        '--word_features-folder', '-wf',
+        default=base_path / 'stimuli/word_features',
     )
 
     pars.add_argument(
-        '--output-file_wl',
+        '--output-file_wl', '-ow',
         default=base_path / 'preprocessing_scripts/word_limits.json',
     )
 
     pars.add_argument(
-        '--output-file_sl',
+        '--output-file_sl', '-os',
         default=base_path / 'preprocessing_scripts/sent_limits.json',
     )
 

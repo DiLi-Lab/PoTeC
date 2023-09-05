@@ -16,45 +16,31 @@ from tqdm import tqdm
 def merge_rm_word_features(
         reading_measure_folder: str,
         word_features_folder: str,
-        text_tags_folder: str,
         reader_ids_file: str,
         output_folder: str,
 ):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
-    r = open(reader_ids_file, 'r')  # open file containing all reader ids as a list in one line
-    reader = csv.reader(r, delimiter='\t')
-    reader_ids = [int(r) for r in sorted(next(reader))]
-    # remove readers with bad calibration:
-    # bad_cali = []
-    # # bad_cali = [2, 9, 16, 19, 22, 31, 39, 41, 64, 72, 83, 85, 90, 93]
-    # [reader_ids.remove(r) for r in bad_cali]
+    with open(reader_ids_file, 'r', encoding='utf8') as f:  # open file containing all reader ids as a list in one line
+        reader_ids = [int(r) for r in sorted(f.readline().split('\t'))]
+
     texts = ['b0', 'b1', 'b2', 'b3', 'b4', 'b5', 'p0', 'p1', 'p2', 'p3', 'p4', 'p5']
 
     # Read and merge data
 
     # Read text features
     for textIndex, text in tqdm(enumerate(texts), desc='Merging files...', total=len(texts)):
-        filename_tags = os.path.join(text_tags_folder, text + '.csv')
         filename_features = os.path.join(word_features_folder, 'word_features_' + text + '.csv')
 
-        word_tags = pd.read_csv(
-            filename_tags, sep='\t', na_values=['None', '.', 'NA'],
-            usecols=['word', 'is_technical_term', 'word_index_in_sent', 'sent_index_in_text', 'word_length',
-                     'word_index_in_text', 'is_in_quote', 'is_in_parentheses', 'is_clause_beginning', 'is_sent_beginning',
-                     'is_abbreviation', 'contains_abbreviation', 'contains_hyphen', 'contains_symbol', 'PRELS', 'PRELAT', 'PPOSAT',
-                     'PPER',
-                     'PPOSS', 'PIDAT', 'PIAT', 'PIS', 'PDAT', 'PDS', 'NN', 'NE', 'KOKOM', 'KON',
-                     'KOUS', 'KOUI', 'ITJ', 'FM', 'CARD', 'ART', 'APZR', 'APPO', 'APPRART', 'APPR',
-                     'ADV', 'ADJD', 'ADJA', 'XY', 'VMPP', 'VMINF', 'VMFIN', 'VAPP', 'VAFIN', 'VVPP',
-                     'VVIZU', 'VVINF', 'VVIMP', 'VVFIN', 'TRUNC', 'PTKA', 'PTKANT', 'PTKVZ',
-                     'PTKNEG', 'PTKZU', 'PAV', 'PWAV', 'PWAT', 'PWS', 'PRF'],
-            encoding='utf-8',
-        )
         word_features = pd.read_csv(
-            filename_features, sep='\s+', na_values=['None', '.', 'NA'],
-            usecols=['type', 'lemma', 'lemma_length_chars', 'type_length_syllables',
+            filename_features, sep='\t', na_values=['None', '.', 'NA'],
+            usecols=['word', 'is_technical_term', 'word_index_in_sent', 'sent_index_in_text', 'word_length',
+                     'word_index_in_text', 'is_in_quote', 'is_in_parentheses', 'is_clause_beginning',
+                     'is_sent_beginning',
+                     'is_abbreviation', 'contains_abbreviation', 'contains_hyphen', 'contains_symbol',
+                     'type', 'lemma',
+                     'lemma_length_chars', 'type_length_syllables',
                      'annotated_type_frequency_normalized', 'type_frequency_normalized',
                      'lemma_frequency_normalized', 'familiarity_normalized',
                      'regularity_normalized', 'document_frequency_normalized',
@@ -83,12 +69,8 @@ def merge_rm_word_features(
             engine='python',
         )
 
-        # concatenate word_features and word_tags (i.e., just add columns; their order is identical)
-        text_features = pd.concat([word_tags, word_features], axis=1)
-        text_features = text_features.reindex(word_tags.index)
-
         # replace missing values with 0s (affects frequency measures: if word does not occur in corpus, frequency = 0)
-        text_features = text_features.fillna(0)
+        word_features = word_features.fillna(0)
 
         # add Eye movements data for each reader
         for readerIndex, reader in enumerate(reader_ids):
@@ -114,15 +96,20 @@ def merge_rm_word_features(
                  "RBRT", "Fix", "FPF", "RR", "FPReg", "TRC_out", "TRC_in", "LP", "SL_in", "SL_out", "acc_bq_1",
                  "acc_bq_2", "acc_bq_3", "acc_tq_1", "acc_tq_2", "acc_tq_3", "mean_acc_tq", "mean_acc_bq", "topic",
                  "trial",
-                 "text_id", "reader", "gender", "major", "expert_status", "age", "domain_expert_status"]
+                 "text_id", "reader", "gender", "major", "age", "expert_status", "domain_expert_status"]
             ]
 
             # concatenate text features with eye movements
-            data = pd.concat([text_features, reading_measure_csv], axis=1)
+            merged_df = pd.merge(word_features, reading_measure_csv,
+                                 how='inner',
+                                 left_on=['word_index_in_sent', 'sent_index_in_text'],
+                                 right_on=['word_index_in_sent', 'sent_index_in_text'],
+                                 suffixes=(None, '_rm'),
+                                 )
 
             # write merged data
             filename_merged_data = os.path.join(output_folder, 'reader' + str(reader) + '_' + text + '_merged.csv')
-            data.to_csv(path_or_buf=filename_merged_data, header=True, na_rep='NA', sep='\t', index=False)
+            merged_df.to_csv(path_or_buf=filename_merged_data, header=True, na_rep='NA', sep='\t', index=False)
 
 
 def create_parser():
@@ -137,11 +124,6 @@ def create_parser():
     pars.add_argument(
         '--word_features_folder',
         default=base_path / 'stimuli/word_features',
-    )
-
-    pars.add_argument(
-        '--text_tags_folder',
-        default=base_path / 'stimuli/text_tags',
     )
 
     pars.add_argument(
