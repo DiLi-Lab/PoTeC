@@ -14,26 +14,26 @@ import pandas as pd
 # Aufruf: python create_word_roi_limits.py
 
 def create_word_roi_limits(
-        text_tags_folder: str,
+        word_features_folder: str,
         output_file_wl: str,
         output_file_sl: str,
 ) -> None:
-    text_tags_paths = list(Path(text_tags_folder).glob('*.csv'))
+    wf_paths = list(Path(word_features_folder).glob('*.csv'))
 
     word_limits_dict = {}
     sent_limits_dict = {}
 
-    for text_tags_file in text_tags_paths:
+    for wf_file in wf_paths:
 
-        text_id = text_tags_file.stem
+        text_id = wf_file.stem[-2:]
 
         # read file
-        text_tags_csv = pd.read_csv(text_tags_file, sep='\t')
+        wf_csv = pd.read_csv(wf_file, sep='\t')
 
         word_limits = [[], []]
         sent_limits = [[1], []]
 
-        for word_index, word_row in text_tags_csv.iterrows():
+        for word_index, word_row in wf_csv.iterrows():
 
             punctuation_before = word_row['STTS_punctuation_before']
             punctuation_after = word_row['STTS_punctuation_after']

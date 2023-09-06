@@ -22,7 +22,7 @@ More information is found in the following README'S:
 * [participants](./participants/README.md)
 * [stimuli](./stimuli/README.md)
 * [eye-tracking data](./eyetracking_data/README.md)
-* [additional processing](./additional_scripts/REAMDE.md)
+* [additional processing](./additional_scripts/README.md)
 
 
 
