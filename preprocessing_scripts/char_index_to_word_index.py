@@ -71,7 +71,7 @@ def create_parser():
 
     pars.add_argument(
         '--output-file',
-        default=base_path / 'preprocessing_scripts/mappingRoiToWordIndex.csv',
+        default=base_path / 'preprocessing_scripts/roi_to_word.tsv',
     )
 
     return pars

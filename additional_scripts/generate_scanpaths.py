@@ -36,7 +36,7 @@ def create_scanpaths(
         f.write('fixation_file_name, text_id, roi, word_idx, word, character')
 
     # sort the file names to be sure we have the same order
-    fixation_files = sorted(list(Path(fixation_folder).glob('*.csv')))
+    fixation_files = sorted(list(Path(fixation_folder).glob('*.tsv')))
 
     roi2word = pd.read_csv(roi2word_file, sep='\t')
 
@@ -48,7 +48,7 @@ def create_scanpaths(
         # extract text id from file name which is r'(bp)\d'
         text_id = fixation_file_name.split('_')[1]
 
-        wf_file = Path(wf_folder) / f'word_features_{text_id}.csv'
+        wf_file = Path(wf_folder) / f'word_features_{text_id}.tsv'
         wf_csv = pd.read_csv(wf_file, sep='\t')
 
         # get aoi file for the text
@@ -97,7 +97,7 @@ def create_scanpaths(
 
         scanpath_file = re.sub('fixations', 'scanpath', fixation_file_name)
 
-        fix_csv.to_csv(Path(output_folder) / scanpath_file, sep='\t', index=False)
+        fix_csv.to_csv(Path(output_folder) / scanpath_file, sep='\t', index=False, na_rep='NA')
 
 
 def create_parser():
@@ -112,7 +112,7 @@ def create_parser():
 
     pars.add_argument(
         '--roi2word-file',
-        default=base_path / 'preprocessing_scripts/mappingRoiToWordIndex.csv',
+        default=base_path / 'preprocessing_scripts/roi_to_word.tsv',
     )
 
     pars.add_argument(

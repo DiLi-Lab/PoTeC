@@ -1,0 +1,55 @@
+Column name	Possible values	Missing value	Description	Source
+word	object	Number of missing values: 0		
+word_index_in_text	Interval: 1-180	Number of missing values: 0		
+word_index_in_sent	Interval: 1-51	Number of missing values: 0		
+sent_index_in_text	Interval: 1-12	Number of missing values: 0		
+word_limit_char_indices	object	Number of missing values: 0		
+text_id	object	Number of missing values: 0		
+is_technical_term	{0, 1, 2}	Number of missing values: 0		
+word_length	Interval: 2-33	Number of missing values: 0		
+STTS_punctuation_before	more than one dtype: [dtype('float64'), dtype('O')]	Number of missing values: 152		
+STTS_punctuation_after	{nan, '$($,', '$,', '$.', '$('}	Number of missing values: 137		
+is_in_quote	{0, 1}	Number of missing values: 0		
+is_in_parentheses	{0, 1}	Number of missing values: 0		
+is_clause_beginning	{0, 1}	Number of missing values: 0		
+is_sent_beginning	{0, 1}	Number of missing values: 0		
+is_abbreviation	{0, 1, 2}	Number of missing values: 0		
+contains_symbol	{0, 1}	Number of missing values: 0		
+contains_hyphen	{0, 1}	Number of missing values: 0		
+contains_abbreviation	{0, 1}	Number of missing values: 0		
+STTS_PoS_tag	object	Number of missing values: 0		
+type	object	Number of missing values: 0		
+type_length_chars	min: 2.0, max: 33.0, mean: 6.394611727416799, std: 4.221172912935259	Number of missing values: 0		
+PoS_tag	object	Number of missing values: 0		
+lemma	object	Number of missing values: 0		
+lemma_length_chars	min: 1.0, max: 32.0, mean: 5.945031712473573, std: 4.22529734468827	Number of missing values: 0		
+syllables	object	Number of missing values: 1		
+type_length_syllables	min: 1.0, max: 14.0, mean: 2.1715660074826295, std: 1.5269289215074386	Number of missing values: 1		
+annotated_type_frequency_normalized	min: nan, max: nan, mean: 3889.8532426390702, std: 6967.088993039663	Number of missing values: 10		
+type_frequency_normalized	min: nan, max: nan, mean: 4409.228254840187, std: 7712.528700733406	Number of missing values: 10		
+lemma_frequency_normalized	min: nan, max: nan, mean: 13063.805716400366, std: 25247.18978415099	Number of missing values: 8		
+familiarity_normalized	min: nan, max: nan, mean: 4074.036235400772, std: 7634.060201424037	Number of missing values: 10		
+regularity_normalized	min: nan, max: nan, mean: 37.611878458019504, std: 123.3575169015009	Number of missing values: 10		
+document_frequency_normalized	min: nan, max: nan, mean: 3073.6225174463298, std: 3377.454858436317	Number of missing values: 10		
+sentence_frequency_normalized	min: nan, max: nan, mean: 6119.801893911904, std: 9642.456998173624	Number of missing values: 10		
+cumulative_syllable_corpus_frequency_normalized	min: nan, max: nan, mean: 16825.507968819293, std: 15793.390004035991	Number of missing values: 10		
+cumulative_syllable_lexicon_frequency_normalized	min: nan, max: nan, mean: 23221.261323739203, std: 31879.014252338464	Number of missing values: 10		
+cumulative_character_corpus_frequency_normalized	min: nan, max: nan, mean: 1917789.2640995327, std: 1253328.3202480578	Number of missing values: 10		
+cumulative_character_lexicon_frequency_normalized	min: nan, max: nan, mean: 4265792.357010431, std: 2812004.0938315024	Number of missing values: 10		
+cumulative_character_bigram_corpus_frequency_normalized	min: nan, max: nan, mean: 363265.3368013265, std: 217175.5613113575	Number of missing values: 10		
+cumulative_character_bigram_lexicon_frequency_normalized	min: nan, max: nan, mean: 590209.5888622531, std: 442407.5129174885	Number of missing values: 10		
+cumulative_character_trigram_corpus_frequency_normalized	min: nan, max: nan, mean: 227949.91579475388, std: 122856.94324583188	Number of missing values: 10		
+cumulative_character_trigram_lexicon_frequency_normalized	min: nan, max: nan, mean: 237804.6838521761, std: 171696.67122514444	Number of missing values: 10		
+initial_letter_frequency_normalized	min: nan, max: nan, mean: 38381.096250742004, std: 33346.99837502738	Number of missing values: 10		
+initial_bigram_frequency_normalized	min: nan, max: nan, mean: 12768.020258811055, std: 14670.963067577793	Number of missing values: 10		
+initial_trigram_frequency_normalized	min: nan, max: nan, mean: 5888.498077936312, std: 8949.432512238907	Number of missing values: 10		
+avg_cond_prob_in_bigrams	min: nan, max: nan, mean: 0.04507207475410552, std: 0.04480276371935339	Number of missing values: 10		
+avg_cond_prob_in_trigrams	min: nan, max: nan, mean: 0.2525640412672185, std: 0.6009175545916088	Number of missing values: 10		
+neighbors_coltheart_higher_freq_cum_freq_normalized	min: nan, max: nan, mean: 2248.7136212810688, std: 7540.558192568154	Number of missing values: 10		
+neighbors_coltheart_higher_freq_count_normalized	min: nan, max: nan, mean: 0.207666157675258, std: 0.5007010526293203	Number of missing values: 10		
+neighbors_coltheart_all_cum_freq_normalized	min: nan, max: nan, mean: 5076.603171956833, std: 10127.103344837997	Number of missing values: 10		
+neighbors_coltheart_all_count_normalized	min: nan, max: nan, mean: 15.797065954895421, std: 14.415261366959847	Number of missing values: 10		
+neighbors_levenshtein_higher_freq_cum_freq_normalized	min: nan, max: nan, mean: 2879.4345771672547, std: 7921.044755452329	Number of missing values: 10		
+neighbors_levenshtein_higher_freq_count_normalized	min: nan, max: nan, mean: 0.3277419545234649, std: 0.6575732905136784	Number of missing values: 10		
+neighbors_levenshtein_all_cum_freq_normalized	min: nan, max: nan, mean: 6722.365983309461, std: 11598.260087811945	Number of missing values: 10		
+neighbors_levenshtein_all_count_normalized	min: nan, max: nan, mean: 24.64176733554289, std: 22.529466740412182	Number of missing values: 10		

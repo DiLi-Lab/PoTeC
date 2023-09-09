@@ -16,14 +16,13 @@ from tqdm import tqdm
 def merge_rm_word_features(
         reading_measure_folder: str,
         word_features_folder: str,
-        reader_ids_file: str,
+        participants_file: str,
         output_folder: str,
 ):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
-    with open(reader_ids_file, 'r', encoding='utf8') as f:  # open file containing all reader ids as a list in one line
-        reader_ids = [int(r) for r in sorted(f.readline().split('\t'))]
+    reader_ids = pd.read_csv(participants_file, sep='\t', usecols=['reader_id'])['reader_id'].tolist()
 
     texts = ['b0', 'b1', 'b2', 'b3', 'b4', 'b5', 'p0', 'p1', 'p2', 'p3', 'p4', 'p5']
 
@@ -31,7 +30,7 @@ def merge_rm_word_features(
 
     # Read text features
     for textIndex, text in tqdm(enumerate(texts), desc='Merging files...', total=len(texts)):
-        filename_features = os.path.join(word_features_folder, 'word_features_' + text + '.csv')
+        filename_features = os.path.join(word_features_folder, 'word_features_' + text + '.tsv')
 
         word_features = pd.read_csv(
             filename_features, sep='\t', na_values=['None', '.', 'NA'],
@@ -76,7 +75,7 @@ def merge_rm_word_features(
         for readerIndex, reader in enumerate(reader_ids):
             filename_reading_measures = os.path.join(
                 reading_measure_folder,
-                'reader' + str(reader) + '_' + text + '_rm.csv'
+                'reader' + str(reader) + '_' + text + '_rm.tsv'
             )
             reading_measure_csv = pd.read_csv(
                 filename_reading_measures,
@@ -84,9 +83,10 @@ def merge_rm_word_features(
                 na_values=['None', '.', 'NA'],
                 usecols=['FRT', 'SL_out', 'TRC_in', 'FFD', 'FPRT', 'RPD_exc', 'TFT', 'RRT', 'FPF', 'FD', 'RR', 'Fix',
                          'LP', 'word_index_in_sent', 'SL_in', 'RPD_inc', 'FPReg', 'TRC_out', 'sent_index_in_text',
-                         'SFD', 'RBRT', 'topic', 'trial', 'gender', 'major', 'expert_status', 'age', 'acc_bq_1',
+                         'SFD', 'RBRT', 'text_domain_numeric', 'trial', 'gender_numeric', 'reader_domain_numeric',
+                         'expert_status_numeric', 'age', 'acc_bq_1',
                          'acc_bq_2', 'acc_bq_3', 'acc_tq_1', 'acc_tq_2', 'acc_tq_3', 'mean_acc_bq', 'mean_acc_tq',
-                         'domain_expert_status', 'text_id', 'reader']
+                         'domain_expert_status_numeric', 'text_id', 'reader_id']
             )
 
             # sort columns. Necessary because different col ordering in different input files
@@ -94,9 +94,11 @@ def merge_rm_word_features(
                 ["word_index_in_sent", "sent_index_in_text", "FFD", "SFD", "FD", "FPRT", "FRT", "TFT", "RRT", "RPD_inc",
                  "RPD_exc",
                  "RBRT", "Fix", "FPF", "RR", "FPReg", "TRC_out", "TRC_in", "LP", "SL_in", "SL_out", "acc_bq_1",
-                 "acc_bq_2", "acc_bq_3", "acc_tq_1", "acc_tq_2", "acc_tq_3", "mean_acc_tq", "mean_acc_bq", "topic",
+                 "acc_bq_2", "acc_bq_3", "acc_tq_1", "acc_tq_2", "acc_tq_3", "mean_acc_tq", "mean_acc_bq",
+                 "text_domain_numeric",
                  "trial",
-                 "text_id", "reader", "gender", "major", "age", "expert_status", "domain_expert_status"]
+                 "text_id", "reader_id", "gender_numeric", "reader_domain_numeric", "age", "expert_status_numeric",
+                 "domain_expert_status_numeric"]
             ]
 
             # concatenate text features with eye movements
@@ -108,7 +110,7 @@ def merge_rm_word_features(
                                  )
 
             # write merged data
-            filename_merged_data = os.path.join(output_folder, 'reader' + str(reader) + '_' + text + '_merged.csv')
+            filename_merged_data = os.path.join(output_folder, 'reader' + str(reader) + '_' + text + '_merged.tsv')
             merged_df.to_csv(path_or_buf=filename_merged_data, header=True, na_rep='NA', sep='\t', index=False)
 
 
@@ -117,22 +119,22 @@ def create_parser():
     pars = argparse.ArgumentParser()
 
     pars.add_argument(
-        '--reading_measure_folder',
+        '--reading_measure_folder', '-rm',
         default=base_path / 'eyetracking_data/reading_measures',
     )
 
     pars.add_argument(
-        '--word_features_folder',
+        '--word_features_folder', '-wf',
         default=base_path / 'stimuli/word_features',
     )
 
     pars.add_argument(
-        '--reader_ids_file',
-        default=base_path / 'participants/readerIDs.txt',
+        '--participants_file', '-p',
+        default=base_path / 'participants/participant_data.tsv',
     )
 
     pars.add_argument(
-        '--output_folder',
+        '--output_folder', '-o',
         default=base_path / 'eyetracking_data/reader_rm_wf',
     )
 

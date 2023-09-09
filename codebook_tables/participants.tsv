@@ -1,0 +1,15 @@
+Column name	Possible values	Missing value	Description	Source
+reader_id	Interval: 0-105	Number of missing values: 0		
+reader_domain	{'physics', 'biology'}	Number of missing values: 0		
+reader_domain_numeric	{0, 1}	Number of missing values: 0		
+expert_status	{'beginner', 'expert'}	Number of missing values: 0		
+expert_status_numeric	{0, 1}	Number of missing values: 0		
+domain_expert_status	{'biology-expert', 'physics-expert', 'biology-beginner', 'physics-beginner'}	Number of missing values: 0		
+domain_expert_status_numeric	{0, 1, 2, 3}	Number of missing values: 0		
+glasses	{'yes', nan, 'no'}	Number of missing values: 1		
+age	min: 18.0, max: 41.0, mean: 24.164383561643834, std: 4.209822174359153	Number of missing values: 2		
+handedness	{nan, 'left', 'right'}	Number of missing values: 1		
+hours_sleep	min: 0.0, max: 11.0, mean: 7.20945945945946, std: 1.3138012316998877	Number of missing values: 1		
+alcohol	{'yes', nan, 'no'}	Number of missing values: 1		
+gender	{nan, 'female', 'male'}	Number of missing values: 1		
+gender_numeric	min: 0.0, max: 1.0, mean: 0.527027027027027, std: 0.5026770245797547	Number of missing values: 1		

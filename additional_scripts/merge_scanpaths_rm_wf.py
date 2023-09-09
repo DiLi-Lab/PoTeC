@@ -18,27 +18,22 @@ from tqdm import tqdm
 def merge_scanpaths_reader_information(
         scanpaths_folder: str,
         rm_folder: str,
-        reader_information_file: str,
         output_folder: str,
 ) -> None:
     # create the output folder if it does not exist
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
-    participant_data = pd.read_csv(reader_information_file, sep=',')
 
-    scanpath_files = Path(scanpaths_folder).glob('*.csv')
+    scanpath_files = Path(scanpaths_folder).glob('*.tsv')
 
     for scanpath_file in tqdm(scanpath_files, total=900):
         scanpath_file_name = os.path.basename(scanpath_file)
-        reader_id = re.search(r'(\d+)_', scanpath_file_name).group(1)
 
         name_components = scanpath_file_name.split('_')
-        rm_filename = f'{name_components[0]}_{name_components[1]}_merged.csv'
+        rm_filename = f'{name_components[0]}_{name_components[1]}_merged.tsv'
 
-        final_file_name = f'{name_components[0]}_{name_components[1]}_merged_sp_rm.csv'
-
-        reader_data = participant_data[participant_data['reader_id'] == int(reader_id)]
+        final_file_name = f'{name_components[0]}_{name_components[1]}_merged_sp_rm.tsv'
 
         scanpath_csv = pd.read_csv(scanpath_file, sep='\t')
         rm_csv = pd.read_csv(Path(rm_folder) / rm_filename, sep='\t')
@@ -58,7 +53,7 @@ def merge_scanpaths_reader_information(
             columns=[col for col in merged_df.columns if col.endswith('_rm')],
         )
 
-        merged_df.to_csv(Path(output_folder) / final_file_name, sep='\t', index=False)
+        merged_df.to_csv(Path(output_folder) / final_file_name, sep='\t', index=False, na_rep='NA')
 
 
 def create_parser():
@@ -73,11 +68,6 @@ def create_parser():
     pars.add_argument(
         '--rm-folder', '-rm',
         default=base_path / 'eyetracking_data/reader_rm_wf/',
-    )
-
-    pars.add_argument(
-        '--reader-information-file', '-ri',
-        default=base_path / 'participants/participant_data.csv',
     )
 
     pars.add_argument(

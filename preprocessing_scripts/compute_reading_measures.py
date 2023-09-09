@@ -16,10 +16,10 @@ from tqdm import tqdm
 
 logging.basicConfig(filename='rm_error_log.txt', level=logging.ERROR)
 
-FIX_INDEX_COL_NAME = 'CURRENT_FIX_INDEX'
-FIX_DUR_COL_NAME = 'CURRENT_FIX_DURATION'
+FIX_INDEX_COL_NAME = 'fixation_index'
+FIX_DUR_COL_NAME = 'fixation_duration'
 ROI_COL_NAME = 'roi'
-DELIMITER = '\s+'
+DELIMITER = '\t'
 
 
 def roi2word(roi: int, word_limits: list) -> int:
@@ -49,8 +49,8 @@ def compute_reading_measures(
         os.makedirs(output_folder)
 
     # read all the files we need
-    fixation_filenames = list(Path(fixation_folder).glob('*.txt'))
-    df_participants = pd.read_csv(participants_file, delimiter=",")
+    fixation_filenames = list(Path(fixation_folder).glob('*.tsv'))
+    df_participants = pd.read_csv(participants_file, delimiter="\t")
 
     with open(word_limits_json, 'r') as limits_w_json:
         word_limits = json.load(limits_w_json)
@@ -63,7 +63,7 @@ def compute_reading_measures(
         word_limits_text = word_limits[text_id]
         sent_limits_text = sent_limits[text_id]
 
-        output_file_name = reader + '_' + text_id + '_rm.csv'
+        output_file_name = reader + '_' + text_id + '_rm.tsv'
         output_file_name = os.path.join(output_folder, output_file_name)
 
         # reader is always reader[number], we need to extract actual id
@@ -73,9 +73,10 @@ def compute_reading_measures(
         reader_row = df_participants.loc[df_participants['reader_id'] == reader_id]
 
         # get participant information
-        major = reader_row['major'].item()
-        gender = reader_row['gender'].item()
-        expert_status = reader_row['expert_status'].item()
+        reader_domain_numeric = reader_row['reader_domain_numeric'].item()
+        gender_numeric = reader_row['gender_numeric'].item()
+        expert_status_numeric = reader_row['expert_status_numeric'].item()
+        domain_expert_status_numeric = reader_row['domain_expert_status_numeric'].item()
         age = reader_row['age'].item()
 
         fixation_file = pd.read_csv(fixation_file_path, delimiter=DELIMITER)
@@ -98,8 +99,9 @@ def compute_reading_measures(
 
         for word_index in range(1, num_words_in_text + 1):
             word_row = {
-                'WordIndexSent': word_index - sent_limits_text[0][(roi2word(word_index, sent_limits_text)) - 1] + 1,
-                'SentIndex': roi2word(word_index, sent_limits_text), 'FFD': 0, 'SFD': 0, 'FD': 0, 'FPRT': 0,
+                'word_index_in_sent': word_index - sent_limits_text[0][
+                    (roi2word(word_index, sent_limits_text)) - 1] + 1,
+                'sent_index_in_text': roi2word(word_index, sent_limits_text), 'FFD': 0, 'SFD': 0, 'FD': 0, 'FPRT': 0,
                 'FRT': 0, 'TFT': 0, 'RRT': 0, 'RPD_inc': 0, 'RPD_exc': 0, 'RBRT': 0, 'Fix': 0,
                 'FPF': 0, 'RR': 0, 'FPReg': 0, 'TRC_out': 0, 'TRC_in': 0, 'LP': 0, 'SL_in': 0, 'SL_out': 0
             }
@@ -173,86 +175,40 @@ def compute_reading_measures(
                 word_dict[cur_fix_word_idx]['SL_out'] = next_fix_word_idx - cur_fix_word_idx
 
         try:
-            acc_tq1, acc_tq2, acc_tq3 = fixation_file_sorted[['ACC_T_Q1', 'ACC_T_Q2', 'ACC_T_Q3']].mean()
-            acc_bq1, acc_bq2, acc_bq3 = fixation_file_sorted[['ACC_B_Q1', 'ACC_B_Q2', 'ACC_B_Q3']].mean()
+            acc_tq1, acc_tq2, acc_tq3 = fixation_file_sorted[['acc_tq_1', 'acc_tq_2', 'acc_tq_3']].mean()
+            acc_bq1, acc_bq2, acc_bq3 = fixation_file_sorted[['acc_bq_1', 'acc_bq_2', 'acc_bq_3']].mean()
 
             mean_acc_tq = statistics.mean([acc_bq1, acc_bq2, acc_bq3])
             mean_acc_bq = statistics.mean([acc_tq1, acc_tq2, acc_tq3])
 
-        except ValueError:
+        except (ValueError, TypeError):
             # if no accuracy information is available, code with -1
-            acc_tq1 = acc_tq2 = acc_tq3 = acc_bq1 = acc_bq2 = acc_bq3 = mean_acc_tq = mean_acc_bq = -1
+            acc_tq1 = acc_tq2 = acc_tq3 = acc_bq1 = acc_bq2 = acc_bq3 = mean_acc_tq = mean_acc_bq = pd.NA
             logging.error(f"No accuracy values for {fixation_file_path}")
 
-        except TypeError:
-            # if no accuracy information is available, code with -1
-            acc_tq1 = acc_tq2 = acc_tq3 = acc_bq1 = acc_bq2 = acc_bq3 = mean_acc_tq = mean_acc_bq = -1
-            logging.error(f"No accuracy values for {fixation_file_path}")
-
-        # Coding of topic: bio=1, phy=-1
-        if fixation_file_sorted.loc[1, 'topic'] == 'bio':
-            topic = 1
-        elif fixation_file_sorted.loc[1, 'topic'] == 'physik':
-            topic = -1
+        # Coding of topic: bio=1, phy=0
+        if fixation_file_sorted.loc[1, 'text_domain'] == 'bio':
+            text_domain_numeric = 1
+        elif fixation_file_sorted.loc[1, 'text_domain'] == 'physics':
+            text_domain_numeric = 0
         else:
-            topic = pd.NA
+            text_domain_numeric = pd.NA
             logging.error(f"Topic not defined for {fixation_file_path}")
 
-        # Coding of gender female=1, male=-1
-        if gender == 'w':
-            gender = 1
-        elif gender == 'm':
-            gender = -1
-        else:
-            gender = pd.NA
-            logging.error(f"Gender not defined for {fixation_file_path}")
-
-        # Coding of major: B=1, P=-1
-        if major == 'B':
-            major = 1
-        elif major == 'P':
-            major = -1
-        else:
-            major = pd.NA
-            logging.error(f"Major not defined for {fixation_file_path}")
-
-        # Coding of expert_status: E=1, A=-1
-        if expert_status == 'E':
-            expert_status = 1
-        elif expert_status == 'A':
-            expert_status = -1
-        else:
-            expert_status = pd.NA
-            logging.error(f"Expert status not defined for {fixation_file_path}")
-
         trial = fixation_file_sorted.loc[1, 'trial']
-        itemid = fixation_file_sorted.loc[1, 'itemid']
-
-        # Add group column: Bio/Beginner=1, Bio/Expert=2, Physics/Beginner=3, Physics/Expert=4
-        group = pd.NA
-
-        if major == 1:
-            if expert_status == -1:
-                group = 1
-            elif expert_status == 1:
-                group = 2
-        elif major == -1:
-            if expert_status == -1:
-                group = 3
-            elif expert_status == 1:
-                group = 4
-        else:
-            logging.error(f'Group cannot be determined for {fixation_file_path}')
+        text_id = fixation_file_sorted.loc[1, 'text_id']
 
         trial_information_header = [
-            'ACC_B_Q1', 'ACC_B_Q2', 'ACC_B_Q3', 'ACC_T_Q1', 'ACC_T_Q2', 'ACC_T_Q3', 'topic',
-            'trial', 'itemid', 'reader', 'gender', 'major', 'expert_status', 'age',
-            'meanAccBQ', 'meanAccTQ', 'group'
+            'text_domain_numeric',
+            'trial', 'text_id', 'reader_id', 'gender_numeric', 'reader_domain_numeric', 'expert_status_numeric',
+            'domain_expert_status_numeric', 'age',
+            'mean_acc_bq', 'mean_acc_tq', 'acc_bq_1', 'acc_bq_2', 'acc_bq_3', 'acc_tq_1', 'acc_tq_2', 'acc_tq_3',
         ]
 
         trial_information = [
-            acc_bq1, acc_bq2, acc_bq3, acc_tq1, acc_tq2, acc_tq3, topic, trial, itemid, reader_id, gender, major,
-            expert_status, age, mean_acc_bq, mean_acc_tq, group
+            text_domain_numeric, trial, text_id, reader_id, gender_numeric, reader_domain_numeric,
+            expert_status_numeric, domain_expert_status_numeric, age, mean_acc_bq, mean_acc_tq,
+            acc_bq1, acc_bq2, acc_bq3, acc_tq1, acc_tq2, acc_tq3,
         ]
 
         for word_indices, word_rm in sorted(word_dict.items()):
@@ -276,6 +232,8 @@ def compute_reading_measures(
                            zip(trial_information_header, trial_information)}
 
         rm_reader_text_pair_df = rm_reader_text_pair_df.join(pd.DataFrame(trial_info_dict))
+
+        rm_reader_text_pair_df.fillna('NA', inplace=True)
         rm_reader_text_pair_df.to_csv(output_file_name, index=False, sep='\t')
 
 
@@ -290,7 +248,7 @@ def create_parser():
 
     pars.add_argument(
         '--participants-file',
-        default=base_path / 'participants/participant_data.csv',
+        default=base_path / 'participants/participant_data.tsv',
     )
 
     pars.add_argument(

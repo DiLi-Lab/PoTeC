@@ -43,7 +43,7 @@ def create_word_roi_limits(
             if not punctuation_after or pd.isnull(punctuation_after):
                 punctuation_after = ''
 
-            # 'Position' stores the start and end roi of a word
+            # 'word_limit_char_indices' stores the start and end roi of a word
             word_start_roi, word_end_roi = word_row['word_limit_char_indices'].split(',')
 
             # if a punctuation mark directly precedes a word, a fixation on it is counted as a fixation on this word

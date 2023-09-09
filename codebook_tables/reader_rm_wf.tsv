@@ -1,0 +1,83 @@
+Column name	Possible values	Missing value	Description	Source
+word	object	Number of missing values: 0		
+word_index_in_text	Interval: 1-180	Number of missing values: 0		
+word_index_in_sent	Interval: 1-51	Number of missing values: 0		
+sent_index_in_text	Interval: 1-12	Number of missing values: 0		
+is_technical_term	{0, 1, 2}	Number of missing values: 0		
+word_length	Interval: 2-33	Number of missing values: 0		
+is_in_quote	{0, 1}	Number of missing values: 0		
+is_in_parentheses	{0, 1}	Number of missing values: 0		
+is_clause_beginning	{0, 1}	Number of missing values: 0		
+is_sent_beginning	{0, 1}	Number of missing values: 0		
+is_abbreviation	{0, 1, 2}	Number of missing values: 0		
+contains_symbol	{0, 1}	Number of missing values: 0		
+contains_hyphen	{0, 1}	Number of missing values: 0		
+contains_abbreviation	{0, 1}	Number of missing values: 0		
+type	object	Number of missing values: 0		
+lemma	object	Number of missing values: 0		
+lemma_length_chars	min: 0.0, max: 32.0, mean: 5.935620052770449, std: 4.227462916260678	Number of missing values: 0		
+type_length_syllables	min: 0.0, max: 14.0, mean: 2.1440633245382585, std: 1.5361436442639942	Number of missing values: 0		
+annotated_type_frequency_normalized	min: 0.0, max: 24738.5901996, mean: 3629.16123112711, std: 6797.649151199755	Number of missing values: 0		
+type_frequency_normalized	min: 0.0, max: 26530.3631386, mean: 4141.649759163871, std: 7546.557777947236	Number of missing values: 0		
+lemma_frequency_normalized	min: 0.0, max: 80100.3069113, mean: 12271.015395880026, std: 24660.3797061742	Number of missing values: 0		
+familiarity_normalized	min: 0.0, max: 26530.3631386, mean: 3822.4994335317006, std: 7457.331353607712	Number of missing values: 0		
+regularity_normalized	min: 0.0, max: 2123.30585022, mean: 35.30951544950751, std: 119.82883340382473	Number of missing values: 0		
+document_frequency_normalized	min: 0.0, max: 9372.80956103, mean: 2885.474648304496, std: 3353.4876608462214	Number of missing values: 0		
+sentence_frequency_normalized	min: 0.0, max: 30912.3596552, mean: 5745.186052384844, std: 9454.592142790545	Number of missing values: 0		
+cumulative_syllable_corpus_frequency_normalized	min: 0.0, max: 125126.524676, mean: 15795.556029830883, std: 15820.915170241862	Number of missing values: 0		
+cumulative_syllable_lexicon_frequency_normalized	min: 0.0, max: 218985.607753, mean: 21763.039636390942, std: 31363.336565706573	Number of missing values: 0		
+cumulative_character_corpus_frequency_normalized	min: 0.0, max: 7810554.20193, mean: 1800394.2484607224, std: 1298158.5605290856	Number of missing values: 0		
+cumulative_character_lexicon_frequency_normalized	min: 0.0, max: 18380479.713, mean: 4004667.336739607, std: 2909455.8454302447	Number of missing values: 0		
+cumulative_character_bigram_corpus_frequency_normalized	min: 0.0, max: 1322150.62097, mean: 341028.5140736463, std: 227677.25317589103	Number of missing values: 0		
+cumulative_character_bigram_lexicon_frequency_normalized	min: 0.0, max: 2788357.77704, mean: 554080.6641614502, std: 451286.91013127734	Number of missing values: 0		
+cumulative_character_trigram_corpus_frequency_normalized	min: 0.0, max: 603427.130456, mean: 213996.25340309608, std: 130950.62487081642	Number of missing values: 0		
+cumulative_character_trigram_lexicon_frequency_normalized	min: 0.0, max: 899592.89035, mean: 223247.77444486617, std: 175811.3774555993	Number of missing values: 0		
+initial_letter_frequency_normalized	min: 0.0, max: 110461.430317, mean: 36031.64655940371, std: 33586.11226570026	Number of missing values: 0		
+initial_bigram_frequency_normalized	min: 0.0, max: 53801.2331077, mean: 11986.442237691223, std: 14536.778708377566	Number of missing values: 0		
+initial_trigram_frequency_normalized	min: -0.00817507899599, max: 29048.3692201, mean: 5528.041203508548, std: 8782.965910292138	Number of missing values: 0		
+avg_cond_prob_in_bigrams	min: 0.0, max: 0.5006180465, mean: 0.04231304537601778, std: 0.04472261001303685	Number of missing values: 0		
+avg_cond_prob_in_trigrams	min: 0.0, max: 25.0, mean: 0.23710365668305106, std: 0.5852137084412179	Number of missing values: 0		
+neighbors_coltheart_higher_freq_cum_freq_normalized	min: 0.0, max: 44055.247282, mean: 2111.0614945957896, std: 7323.958551218876	Number of missing values: 0		
+neighbors_coltheart_higher_freq_count_normalized	min: 0.0, max: 8.13363128109, mean: 0.1949541395800971, std: 0.4875477480332204	Number of missing values: 0		
+neighbors_coltheart_all_cum_freq_normalized	min: 0.0, max: 49782.1108458, mean: 4765.845405230188, std: 9884.727732659036	Number of missing values: 0		
+neighbors_coltheart_all_count_normalized	min: 0.0, max: 47.5175301158, mean: 14.83006877770921, std: 14.467619513314979	Number of missing values: 0		
+neighbors_levenshtein_higher_freq_cum_freq_normalized	min: 0.0, max: 44055.247282, mean: 2703.173674290525, std: 7703.635004457402	Number of missing values: 0		
+neighbors_levenshtein_higher_freq_count_normalized	min: 0.0, max: 11.9864039932, mean: 0.3076796501832421, std: 0.6417796651392181	Number of missing values: 0		
+neighbors_levenshtein_all_cum_freq_normalized	min: 0.0, max: 54875.2749862, mean: 6310.864952141177, std: 11349.53905552419	Number of missing values: 0		
+neighbors_levenshtein_all_count_normalized	min: 0.0, max: 75.7711966712, mean: 23.133353081757683, std: 22.608330948390655	Number of missing values: 0		
+FFD	Interval: 0-2144	Number of missing values: 0		
+SFD	Interval: 0-2144	Number of missing values: 0		
+FD	Interval: 0-2144	Number of missing values: 0		
+FPRT	Interval: 0-9649	Number of missing values: 0		
+FRT	Interval: 0-9649	Number of missing values: 0		
+TFT	Interval: 0-25314	Number of missing values: 0		
+RRT	Interval: 0-23902	Number of missing values: 0		
+RPD_inc	Interval: 0-318898	Number of missing values: 0		
+RPD_exc	Interval: 0-315640	Number of missing values: 0		
+RBRT	Interval: 0-10675	Number of missing values: 0		
+Fix	{0, 1}	Number of missing values: 0		
+FPF	{0, 1}	Number of missing values: 0		
+RR	{0, 1}	Number of missing values: 0		
+FPReg	{0, 1}	Number of missing values: 0		
+TRC_out	Interval: 0-15	Number of missing values: 0		
+TRC_in	Interval: 0-12	Number of missing values: 0		
+LP	Interval: 0-28	Number of missing values: 0		
+SL_in	Interval: -162-156	Number of missing values: 0		
+SL_out	Interval: -179-63	Number of missing values: 0		
+acc_bq_1	min: 0.0, max: 1.0, mean: 0.3922392574571761, std: 0.4882512909545087	Number of missing values: 0		
+acc_bq_2	min: 0.0, max: 1.0, mean: 0.3618540740687894, std: 0.48053860468550247	Number of missing values: 0		
+acc_bq_3	min: 0.0, max: 1.0, mean: 0.42768269278788873, std: 0.4947443313122571	Number of missing values: 0		
+acc_tq_1	min: 0.0, max: 1.0, mean: 0.6468997695605956, std: 0.477935233421278	Number of missing values: 0		
+acc_tq_2	min: 0.0, max: 1.0, mean: 0.6427832514072499, std: 0.4791811570456907	Number of missing values: 0		
+acc_tq_3	min: 0.0, max: 1.0, mean: 0.6562957044097398, std: 0.47494553593118793	Number of missing values: 0		
+mean_acc_tq	min: 0.0, max: 1.0, mean: 0.3939253414379514, std: 0.3157738758512426	Number of missing values: 0		
+mean_acc_bq	min: 0.0, max: 1.0, mean: 0.6486595751258618, std: 0.307588679147495	Number of missing values: 0		
+text_domain_numeric	{0, 1}	Number of missing values: 0		
+trial	Interval: 1-12	Number of missing values: 0		
+text_id	object	Number of missing values: 0		
+reader_id	Interval: 0-105	Number of missing values: 0		
+gender_numeric	min: 0.0, max: 1.0, mean: 0.527027027027027, std: 0.4992707856455908	Number of missing values: 0		
+reader_domain_numeric	{0, 1}	Number of missing values: 0		
+age	min: 18.0, max: 41.0, mean: 24.164383561643834, std: 4.180903457306639	Number of missing values: 0		
+expert_status_numeric	{0, 1}	Number of missing values: 0		
+domain_expert_status_numeric	{0, 1, 2, 3}	Number of missing values: 0		

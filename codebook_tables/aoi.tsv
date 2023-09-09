@@ -1,0 +1,8 @@
+Column name	Possible values	Missing value	Description	Source
+type	{'0 RECTANGLE'}	Number of missing values: 0		
+roi	Interval: 1-1121	Number of missing values: 0		
+start_x	Interval: 80-1622	Number of missing values: 0		
+start_y	Interval: 21-920	Number of missing values: 0		
+end_x	Interval: 92-1634	Number of missing values: 0		
+end_y	Interval: 99-998	Number of missing values: 0		
+character	object	Number of missing values: 0		

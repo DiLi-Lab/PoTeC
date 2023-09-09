@@ -1,0 +1,26 @@
+Column name	Possible values	Missing value	Description	Source
+fixation_index	Interval: 1-1469	Number of missing values: 0		
+text_domain	{'physics', 'bio'}	Number of missing values: 0		
+trial	Interval: 1-12	Number of missing values: 0		
+acc_bq_1	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+acc_bq_2	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+acc_bq_3	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+acc_tq_1	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+acc_tq_2	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+acc_tq_3	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+fixation_duration	Interval: 2-4474	Number of missing values: 0		
+next_saccade_duration	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+previous_saccade_duration	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+version	Interval: 0-105	Number of missing values: 0		
+line	Interval: 1-12	Number of missing values: 0		
+roi	Interval: 1-1121	Number of missing values: 0		
+char_index_in_line	Interval: 1-100	Number of missing values: 0		
+original_fixation_index	Interval: 1-1478	Number of missing values: 0		
+is_fixation_adjusted	[dtype('bool')]	Number of missing values: 0		
+reader_id	Interval: 0-105	Number of missing values: 0		
+text_id	object	Number of missing values: 0		
+word_index_in_text	min: nan, max: nan, mean: nan, std: nan	Number of missing values: 363		
+sent_index_in_text	min: nan, max: nan, mean: nan, std: nan	Number of missing values: 363		
+char_index_in_text	Interval: 1-1121	Number of missing values: 0		
+word	min: nan, max: nan, mean: nan, std: nan	Number of missing values: 363		
+character	min: nan, max: nan, mean: nan, std: nan	Number of missing values: 363		

@@ -1,0 +1,21 @@
+Word    STTS_PoSTag    TechnicalTerm    Abbreviation    WordIndex    SentenceIndex    WordLen PunctuationAfterWord_STTS_PosTag WordPosition    wordIndexIntext
+
+
+
+Bei mapping mit rois: Interpunktion ist NICHT teil einer ROI! Leerzeichen sind auch NICHT Teil einer roi!
+
+
+DlexDB:
+passenden posTag eintrag gewaehlt; manchmal dlex nicht korrekt getaggt, dann denjenigen tag ausgewählt, der wohl der passende ist (adja beid beide +nn oder adv bei daher obwohl es eigentlich pav ist.
+Schwesterchromatide: dlex: prels; => so gelassen.
+Ligation=> ptkvz
+==> um derartige Wörter zu finden: mein Postag mit dlexdb postag vergleichen. => wenn nicht gleich, dann ggf problematischer eintrag, bzw. in dlexdb nicht vorhanden.
+fuer alle eintraege geprüft, ob sie auf richtiges Lemma gemappt wurden; ggf missing values eingefuegt;
+eintraege mit richtigem postag ausgewaehlt; da in dlexdb aber tagging errors sind, alle einträge semi-manuell durchgegangen und fuer jeden eintrag, wo mein tag nicht dem von dlexdb vergegebenen tag entspricht, entschieden, was tun. 
+lemma, silben, silbenzahl, worlaenge, lemmalaenge fuer in dlexdb fehlende woerter manuell ergaenzt;
+in dlexeintraegen, mapping zu lemma geprüft. wenn falsches lemma, dann entsprechende eintraege gelosescht (lemma-laenge, lemma-frequenz etc)
+
+
+TODO: Woerten mit Symb: silben nur dann, wenn eindeutig. zb: z-richtung; +Ende: 3 silben; dna-Fragment: none silben, in dlexdb dna als eine silbe, aber nicht gut; bzw: none (in dlex: 1 silbe, aber nicht gut; 5 silben waere aber auch nicht gut)
+todo card: silben, silbenzahl none, falls zahl als ziffern gegeben z.B. 800
+

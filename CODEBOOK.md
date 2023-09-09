@@ -536,7 +536,7 @@ TODO:
 
 ## Participants
 
-[Participants](./participants/participant_data.csv)
+[Participants](./participants/participant_data.tsv)
 
 | Column        | Data type   | Description   |
 |:--------------|:------------|:--------------|
