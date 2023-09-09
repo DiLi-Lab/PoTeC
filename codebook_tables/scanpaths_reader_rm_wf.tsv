@@ -1,96 +1,96 @@
 Column name	Possible values	Missing value	Description	Source
-fixation_index	set()	Number of missing values: 0.0		
-text_domain	set()	Number of missing values: 0.0		
-trial	set()	Number of missing values: 0.0		
-acc_bq_1	set()	Number of missing values: 0.0		
-acc_bq_2	set()	Number of missing values: 0.0		
-acc_bq_3	set()	Number of missing values: 0.0		
-acc_tq_1	set()	Number of missing values: 0.0		
-acc_tq_2	set()	Number of missing values: 0.0		
-acc_tq_3	set()	Number of missing values: 0.0		
-fixation_duration	set()	Number of missing values: 0.0		
-next_saccade_duration	set()	Number of missing values: 0.0		
-previous_saccade_duration	set()	Number of missing values: 0.0		
-version	set()	Number of missing values: 0.0		
-line	set()	Number of missing values: 0.0		
-roi	set()	Number of missing values: 0.0		
-char_index_in_line	set()	Number of missing values: 0.0		
-original_fixation_index	set()	Number of missing values: 0.0		
-is_fixation_adjusted	set()	Number of missing values: 0.0		
-reader_id	set()	Number of missing values: 0.0		
-text_id	set()	Number of missing values: 0.0		
-word_index_in_text	set()	Number of missing values: 0.0		
-sent_index_in_text	set()	Number of missing values: 0.0		
-char_index_in_text	set()	Number of missing values: 0.0		
-word	set()	Number of missing values: 0.0		
-character	set()	Number of missing values: 0.0		
-word_index_in_sent	set()	Number of missing values: 0.0		
-is_technical_term	set()	Number of missing values: 0.0		
-word_length	set()	Number of missing values: 0.0		
-is_in_quote	set()	Number of missing values: 0.0		
-is_in_parentheses	set()	Number of missing values: 0.0		
-is_clause_beginning	set()	Number of missing values: 0.0		
-is_sent_beginning	set()	Number of missing values: 0.0		
-is_abbreviation	set()	Number of missing values: 0.0		
-contains_symbol	set()	Number of missing values: 0.0		
-contains_hyphen	set()	Number of missing values: 0.0		
-contains_abbreviation	set()	Number of missing values: 0.0		
-type	set()	Number of missing values: 0.0		
-lemma	set()	Number of missing values: 0.0		
-lemma_length_chars	set()	Number of missing values: 0.0		
-type_length_syllables	set()	Number of missing values: 0.0		
-annotated_type_frequency_normalized	set()	Number of missing values: 0.0		
-type_frequency_normalized	set()	Number of missing values: 0.0		
-lemma_frequency_normalized	set()	Number of missing values: 0.0		
-familiarity_normalized	set()	Number of missing values: 0.0		
-regularity_normalized	set()	Number of missing values: 0.0		
-document_frequency_normalized	set()	Number of missing values: 0.0		
-sentence_frequency_normalized	set()	Number of missing values: 0.0		
-cumulative_syllable_corpus_frequency_normalized	set()	Number of missing values: 0.0		
-cumulative_syllable_lexicon_frequency_normalized	set()	Number of missing values: 0.0		
-cumulative_character_corpus_frequency_normalized	set()	Number of missing values: 0.0		
-cumulative_character_lexicon_frequency_normalized	set()	Number of missing values: 0.0		
-cumulative_character_bigram_corpus_frequency_normalized	set()	Number of missing values: 0.0		
-cumulative_character_bigram_lexicon_frequency_normalized	set()	Number of missing values: 0.0		
-cumulative_character_trigram_corpus_frequency_normalized	set()	Number of missing values: 0.0		
-cumulative_character_trigram_lexicon_frequency_normalized	set()	Number of missing values: 0.0		
-initial_letter_frequency_normalized	set()	Number of missing values: 0.0		
-initial_bigram_frequency_normalized	set()	Number of missing values: 0.0		
-initial_trigram_frequency_normalized	set()	Number of missing values: 0.0		
-avg_cond_prob_in_bigrams	set()	Number of missing values: 0.0		
-avg_cond_prob_in_trigrams	set()	Number of missing values: 0.0		
-neighbors_coltheart_higher_freq_cum_freq_normalized	set()	Number of missing values: 0.0		
-neighbors_coltheart_higher_freq_count_normalized	set()	Number of missing values: 0.0		
-neighbors_coltheart_all_cum_freq_normalized	set()	Number of missing values: 0.0		
-neighbors_coltheart_all_count_normalized	set()	Number of missing values: 0.0		
-neighbors_levenshtein_higher_freq_cum_freq_normalized	set()	Number of missing values: 0.0		
-neighbors_levenshtein_higher_freq_count_normalized	set()	Number of missing values: 0.0		
-neighbors_levenshtein_all_cum_freq_normalized	set()	Number of missing values: 0.0		
-neighbors_levenshtein_all_count_normalized	set()	Number of missing values: 0.0		
-FFD	set()	Number of missing values: 0.0		
-SFD	set()	Number of missing values: 0.0		
-FD	set()	Number of missing values: 0.0		
-FPRT	set()	Number of missing values: 0.0		
-FRT	set()	Number of missing values: 0.0		
-TFT	set()	Number of missing values: 0.0		
-RRT	set()	Number of missing values: 0.0		
-RPD_inc	set()	Number of missing values: 0.0		
-RPD_exc	set()	Number of missing values: 0.0		
-RBRT	set()	Number of missing values: 0.0		
-Fix	set()	Number of missing values: 0.0		
-FPF	set()	Number of missing values: 0.0		
-RR	set()	Number of missing values: 0.0		
-FPReg	set()	Number of missing values: 0.0		
-TRC_out	set()	Number of missing values: 0.0		
-TRC_in	set()	Number of missing values: 0.0		
-LP	set()	Number of missing values: 0.0		
-SL_in	set()	Number of missing values: 0.0		
-SL_out	set()	Number of missing values: 0.0		
-mean_acc_tq	set()	Number of missing values: 0.0		
-mean_acc_bq	set()	Number of missing values: 0.0		
-text_domain_numeric	set()	Number of missing values: 0.0		
-gender_numeric	set()	Number of missing values: 0.0		
-reader_domain_numeric	set()	Number of missing values: 0.0		
-age	set()	Number of missing values: 0.0		
-expert_status_numeric	set()	Number of missing values: 0.0		
-domain_expert_status_numeric	set()	Number of missing values: 0.0		
+fixation_index	Interval: 1-1469	Number of missing values: 0		
+text_domain	{'physics', 'bio'}	Number of missing values: 0		
+trial	Interval: 1-12	Number of missing values: 0		
+acc_bq_1	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+acc_bq_2	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+acc_bq_3	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+acc_tq_1	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+acc_tq_2	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+acc_tq_3	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+fixation_duration	Interval: 2-4474	Number of missing values: 0		
+next_saccade_duration	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+previous_saccade_duration	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+version	Interval: 0-105	Number of missing values: 0		
+line	Interval: 1-12	Number of missing values: 0		
+roi	Interval: 1-1121	Number of missing values: 0		
+char_index_in_line	Interval: 1-100	Number of missing values: 0		
+original_fixation_index	Interval: 1-1478	Number of missing values: 0		
+is_fixation_adjusted	[dtype('bool')]	Number of missing values: 0		
+reader_id	Interval: 0-105	Number of missing values: 0		
+text_id	object	Number of missing values: 0		
+word_index_in_text	more than one dtype: [dtype('int64'), dtype('float64')]	Number of missing values: 0		
+sent_index_in_text	more than one dtype: [dtype('int64'), dtype('float64')]	Number of missing values: 0		
+char_index_in_text	Interval: 1-1121	Number of missing values: 0		
+word	object	Number of missing values: 0		
+character	object	Number of missing values: 0		
+word_index_in_sent	Interval: 1-51	Number of missing values: 0		
+is_technical_term	{0, 1, 2}	Number of missing values: 0		
+word_length	Interval: 2-33	Number of missing values: 0		
+is_in_quote	{0, 1}	Number of missing values: 0		
+is_in_parentheses	{0, 1}	Number of missing values: 0		
+is_clause_beginning	{0, 1}	Number of missing values: 0		
+is_sent_beginning	{0, 1}	Number of missing values: 0		
+is_abbreviation	{0, 1, 2}	Number of missing values: 0		
+contains_symbol	{0, 1}	Number of missing values: 0		
+contains_hyphen	{0, 1}	Number of missing values: 0		
+contains_abbreviation	{0, 1}	Number of missing values: 0		
+type	object	Number of missing values: 0		
+lemma	object	Number of missing values: 0		
+lemma_length_chars	min: 0.0, max: 32.0, mean: 8.254735853022266, std: 5.461843346987376	Number of missing values: 0		
+type_length_syllables	min: 0.0, max: 14.0, mean: 2.960350135380735, std: 2.095533458738319	Number of missing values: 0		
+annotated_type_frequency_normalized	min: 0.0, max: 24738.5901996, mean: 1950.9292704098993, std: 5185.328282943734	Number of missing values: 0		
+type_frequency_normalized	min: 0.0, max: 26530.3631386, mean: 2247.4796419198296, std: 5847.249653269257	Number of missing values: 0		
+lemma_frequency_normalized	min: 0.0, max: 80100.3069113, mean: 7203.32919278041, std: 19769.54909098252	Number of missing values: 0		
+familiarity_normalized	min: 0.0, max: 26530.3631386, mean: 2191.797773985417, std: 5759.291887039027	Number of missing values: 0		
+regularity_normalized	min: 0.0, max: 2123.30585022, mean: 46.8600139930817, std: 137.48762548958604	Number of missing values: 0		
+document_frequency_normalized	min: 0.0, max: 9372.80956103, mean: 1684.121983050577, std: 2829.075501200068	Number of missing values: 0		
+sentence_frequency_normalized	min: 0.0, max: 30912.3596552, mean: 3137.4919011882553, std: 7374.841406418542	Number of missing values: 0		
+cumulative_syllable_corpus_frequency_normalized	min: 0.0, max: 125126.524676, mean: 15768.69288013058, std: 17529.635983262695	Number of missing values: 0		
+cumulative_syllable_lexicon_frequency_normalized	min: 0.0, max: 218985.607753, mean: 27232.082046222444, std: 36884.11861959317	Number of missing values: 0		
+cumulative_character_corpus_frequency_normalized	min: 0.0, max: 7810554.20193, mean: 2053786.0730880755, std: 1596380.2448313436	Number of missing values: 0		
+cumulative_character_lexicon_frequency_normalized	min: 0.0, max: 18380479.713, mean: 4612542.4048467055, std: 3597157.6472157985	Number of missing values: 0		
+cumulative_character_bigram_corpus_frequency_normalized	min: 0.0, max: 1322150.62097, mean: 356826.51845200366, std: 269770.26642476645	Number of missing values: 0		
+cumulative_character_bigram_lexicon_frequency_normalized	min: 0.0, max: 2788357.77704, mean: 629617.8522113685, std: 539086.9161836719	Number of missing values: 0		
+cumulative_character_trigram_corpus_frequency_normalized	min: 0.0, max: 603427.130456, mean: 200339.50367574638, std: 144121.97753493485	Number of missing values: 0		
+cumulative_character_trigram_lexicon_frequency_normalized	min: 0.0, max: 899592.89035, mean: 236419.8797668273, std: 199571.86338190967	Number of missing values: 0		
+initial_letter_frequency_normalized	min: 0.0, max: 110461.430317, mean: 28044.978642259073, std: 30619.08875797936	Number of missing values: 0		
+initial_bigram_frequency_normalized	min: 0.0, max: 53801.2331077, mean: 8706.01082517915, std: 12743.334576563324	Number of missing values: 0		
+initial_trigram_frequency_normalized	min: -0.00817507899599, max: 29048.3692201, mean: 3754.6197586791213, std: 7393.161404875861	Number of missing values: 0		
+avg_cond_prob_in_bigrams	min: 0.0, max: 0.5006180465, mean: 0.03128742213385951, std: 0.046574075206319024	Number of missing values: 0		
+avg_cond_prob_in_trigrams	min: 0.0, max: 25.0, mean: 0.22507210082931692, std: 0.8814545703420508	Number of missing values: 0		
+neighbors_coltheart_higher_freq_cum_freq_normalized	min: 0.0, max: 44055.247282, mean: 1276.6587743798304, std: 5775.4373633215455	Number of missing values: 0		
+neighbors_coltheart_higher_freq_count_normalized	min: 0.0, max: 8.13363128109, mean: 0.15555220443662693, std: 0.43211257083695587	Number of missing values: 0		
+neighbors_coltheart_all_cum_freq_normalized	min: 0.0, max: 49782.1108458, mean: 2794.212462662379, std: 7982.67547958668	Number of missing values: 0		
+neighbors_coltheart_all_count_normalized	min: 0.0, max: 47.5175301158, mean: 9.044912241294153, std: 12.67902816455658	Number of missing values: 0		
+neighbors_levenshtein_higher_freq_cum_freq_normalized	min: 0.0, max: 44055.247282, mean: 1683.6481228208984, std: 6153.885624712181	Number of missing values: 0		
+neighbors_levenshtein_higher_freq_count_normalized	min: 0.0, max: 11.9864039932, mean: 0.2680666511990796, std: 0.58142761169928	Number of missing values: 0		
+neighbors_levenshtein_all_cum_freq_normalized	min: 0.0, max: 54875.2749862, mean: 3761.5197405992317, std: 9299.612831631406	Number of missing values: 0		
+neighbors_levenshtein_all_count_normalized	min: 0.0, max: 75.7711966712, mean: 14.141812551352713, std: 19.638372252717048	Number of missing values: 0		
+FFD	Interval: 0-2144	Number of missing values: 0		
+SFD	Interval: 0-2144	Number of missing values: 0		
+FD	Interval: 0-2144	Number of missing values: 0		
+FPRT	Interval: 0-9649	Number of missing values: 0		
+FRT	Interval: 0-9649	Number of missing values: 0		
+TFT	Interval: 0-25314	Number of missing values: 0		
+RRT	Interval: 0-23902	Number of missing values: 0		
+RPD_inc	Interval: 0-318898	Number of missing values: 0		
+RPD_exc	Interval: 0-315640	Number of missing values: 0		
+RBRT	Interval: 0-10675	Number of missing values: 0		
+Fix	{0, 1}	Number of missing values: 0		
+FPF	{0, 1}	Number of missing values: 0		
+RR	{0, 1}	Number of missing values: 0		
+FPReg	{0, 1}	Number of missing values: 0		
+TRC_out	Interval: 0-15	Number of missing values: 0		
+TRC_in	Interval: 0-12	Number of missing values: 0		
+LP	Interval: 1-28	Number of missing values: 0		
+SL_in	Interval: -162-156	Number of missing values: 0		
+SL_out	Interval: -179-63	Number of missing values: 0		
+mean_acc_tq	min: 0.0, max: 1.0, mean: 0.38830828922392524, std: 0.3144329608923865	Number of missing values: 0		
+mean_acc_bq	min: 0.0, max: 1.0, mean: 0.6504895935244882, std: 0.30522059941673724	Number of missing values: 0		
+text_domain_numeric	{0, 1}	Number of missing values: 0		
+gender_numeric	min: 0.0, max: 1.0, mean: 0.5316417127658246, std: 0.4989984207211105	Number of missing values: 0		
+reader_domain_numeric	{0, 1}	Number of missing values: 0		
+age	min: 18.0, max: 41.0, mean: 24.028258190303973, std: 4.143645938920287	Number of missing values: 0		
+expert_status_numeric	{0, 1}	Number of missing values: 0		
+domain_expert_status_numeric	{0, 1, 2, 3}	Number of missing values: 0		

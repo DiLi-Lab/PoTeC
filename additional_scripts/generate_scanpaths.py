@@ -56,7 +56,6 @@ def create_scanpaths(
         aoi_csv = pd.read_csv(
             aoi_file,
             sep='\t',
-            names=['type', 'roi', 'start_x', 'start_y', 'end_x', 'end_y', 'character'],
         )
 
         new_columns = {
@@ -97,7 +96,7 @@ def create_scanpaths(
 
         scanpath_file = re.sub('fixations', 'scanpath', fixation_file_name)
 
-        fix_csv.to_csv(Path(output_folder) / scanpath_file, sep='\t', index=False, na_rep='NA')
+        fix_csv.to_csv(Path(output_folder) / scanpath_file, sep='\t', index=False)
 
 
 def create_parser():
