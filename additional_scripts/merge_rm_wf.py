@@ -33,7 +33,9 @@ def merge_rm_word_features(
         filename_features = os.path.join(word_features_folder, 'word_features_' + text + '.tsv')
 
         word_features = pd.read_csv(
-            filename_features, sep='\t', na_values=['None', '.', 'NA'],
+            filename_features, sep='\t', keep_default_na=False,
+            na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan', '1.#IND',
+                       '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan', ''],
             usecols=['word', 'is_technical_term', 'word_index_in_sent', 'sent_index_in_text', 'word_length',
                      'word_index_in_text', 'is_in_quote', 'is_in_parentheses', 'is_clause_beginning',
                      'is_sent_beginning',
@@ -80,7 +82,9 @@ def merge_rm_word_features(
             reading_measure_csv = pd.read_csv(
                 filename_reading_measures,
                 sep='\t',
-                na_values=['None', '.', 'NA'],
+                keep_default_na=False,
+                na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan', '1.#IND',
+                           '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan', ''],
                 usecols=['FRT', 'SL_out', 'TRC_in', 'FFD', 'FPRT', 'RPD_exc', 'TFT', 'RRT', 'FPF', 'FD', 'RR', 'Fix',
                          'LP', 'word_index_in_sent', 'SL_in', 'RPD_inc', 'FPReg', 'TRC_out', 'sent_index_in_text',
                          'SFD', 'RBRT', 'text_domain_numeric', 'trial', 'gender_numeric', 'reader_domain_numeric',

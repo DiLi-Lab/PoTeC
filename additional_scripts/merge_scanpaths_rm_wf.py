@@ -24,7 +24,6 @@ def merge_scanpaths_reader_information(
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
-
     scanpath_files = Path(scanpaths_folder).glob('*.tsv')
 
     for scanpath_file in tqdm(scanpath_files, total=900):
@@ -35,7 +34,10 @@ def merge_scanpaths_reader_information(
 
         final_file_name = f'{name_components[0]}_{name_components[1]}_merged_sp_rm.tsv'
 
-        scanpath_csv = pd.read_csv(scanpath_file, sep='\t')
+        scanpath_csv = pd.read_csv(scanpath_file, sep='\t', keep_default_na=False,
+                                   na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan',
+                                              '1.#IND',
+                                              '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan', ''])
         rm_csv = pd.read_csv(Path(rm_folder) / rm_filename, sep='\t')
 
         scanpath_csv['trial'] = scanpath_csv['trial'].astype(int)

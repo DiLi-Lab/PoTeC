@@ -2,25 +2,25 @@ Column name	Possible values	Missing value	Description	Source
 fixation_index	Interval: 1-1469	Number of missing values: 0		
 text_domain	{'physics', 'bio'}	Number of missing values: 0		
 trial	Interval: 1-12	Number of missing values: 0		
-acc_bq_1	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
-acc_bq_2	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
-acc_bq_3	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
-acc_tq_1	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
-acc_tq_2	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
-acc_tq_3	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+acc_bq_1	min: 0, max: 1, mean: 0.3869028058248774, std: 0.4870417022436457	Number of missing values: 5785		
+acc_bq_2	min: 0, max: 1, mean: 0.35635355651159584, std: 0.4789219922412217	Number of missing values: 5785		
+acc_bq_3	min: 0, max: 1, mean: 0.4216814880780664, std: 0.4938287379699594	Number of missing values: 5785		
+acc_tq_1	min: 0, max: 1, mean: 0.662498275364682, std: 0.47285819375871885	Number of missing values: 5785		
+acc_tq_2	min: 0, max: 1, mean: 0.6326188116949089, std: 0.4820921424440314	Number of missing values: 5785		
+acc_tq_3	min: 0, max: 1, mean: 0.6563598279127523, std: 0.4749233306822801	Number of missing values: 5785		
 fixation_duration	Interval: 2-4474	Number of missing values: 0		
-next_saccade_duration	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
-previous_saccade_duration	more than one dtype: [dtype('int64'), dtype('O')]	Number of missing values: 0		
+next_saccade_duration	min: 1, max: 9491, mean: 41.056784066235714, std: 52.18004573131457	Number of missing values: 46		
+previous_saccade_duration	min: 1.0, max: 9491.0, mean: 40.452348943439674, std: 49.60583784942168	Number of missing values: 515		
 version	Interval: 0-105	Number of missing values: 0		
 line	Interval: 1-12	Number of missing values: 0		
 roi	Interval: 1-1121	Number of missing values: 0		
 char_index_in_line	Interval: 1-100	Number of missing values: 0		
 original_fixation_index	Interval: 1-1478	Number of missing values: 0		
-is_fixation_adjusted	[dtype('bool')]	Number of missing values: 0		
+is_fixation_adjusted	True/False	Number of missing values: 0		
 reader_id	Interval: 0-105	Number of missing values: 0		
-text_id	object	Number of missing values: 0		
-word_index_in_text	more than one dtype: [dtype('int64'), dtype('float64')]	Number of missing values: 0		
-sent_index_in_text	more than one dtype: [dtype('int64'), dtype('float64')]	Number of missing values: 0		
+text_id	{'p2', 'b5', 'p4', 'b1', 'b3', 'p5', 'b0', 'p0', 'p1', 'b4', 'b2', 'p3'}	Number of missing values: 0		
+word_index_in_text	min: 1, max: 180, mean: 77.4595699961673, std: 47.27571952647432	Number of missing values: 5		
+sent_index_in_text	min: 1, max: 12, mean: 4.692246825661758, std: 2.77838242910269	Number of missing values: 5		
 char_index_in_text	Interval: 1-1121	Number of missing values: 0		
-word	object	Number of missing values: 0		
-character	object	Number of missing values: 0		
+word	object	Number of missing values: 5		
+character	object	Number of missing values: 5		

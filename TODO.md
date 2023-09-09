@@ -18,6 +18,9 @@
 - [ ] Und es fehlt auch noch Informationen zu den comprehension questions und wie sie kodiert sind. 
 - [ ] [error log files](preprocessing_scripts/rm_error_log.txt), delete
 - [ ] merge this [rm definition](reading-measures_definitions.md) with Codebook
+- [ ] for some readers we do not have accuracy values (?) --> add to the codebook missing values column which ones are missing (the raw nan count is not really informative)
+- [ ] clean contains and is abbr --> is_abbr sollte nur 1 sein wenn es ein abbr ist, contains_abbr sollte 1 sein wenn es ein abbr enthält (but check first if true)
+- [ ] update running instructions, requirements files etc.
 - [x] ~~participants file: alle buchstaben ausschreiben, group hier definieren,~~ 
 - [x] ~~all column headers should be the same in all data files (good & informative names)~~
   - [X] ~~camel case or underscores? --> underscores!~~

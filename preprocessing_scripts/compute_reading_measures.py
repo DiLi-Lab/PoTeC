@@ -79,7 +79,10 @@ def compute_reading_measures(
         domain_expert_status_numeric = reader_row['domain_expert_status_numeric'].item()
         age = reader_row['age'].item()
 
-        fixation_file = pd.read_csv(fixation_file_path, delimiter=DELIMITER)
+        fixation_file = pd.read_csv(fixation_file_path, delimiter=DELIMITER, keep_default_na=False,
+                                    na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan',
+                                               '1.#IND', '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a',
+                                               'nan', ''])
 
         # make sure fixations are sorted by their index
         fixation_file_sorted = fixation_file.sort_values(by=[FIX_INDEX_COL_NAME])

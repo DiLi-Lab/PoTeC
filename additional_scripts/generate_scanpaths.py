@@ -49,7 +49,9 @@ def create_scanpaths(
         text_id = fixation_file_name.split('_')[1]
 
         wf_file = Path(wf_folder) / f'word_features_{text_id}.tsv'
-        wf_csv = pd.read_csv(wf_file, sep='\t')
+        wf_csv = pd.read_csv(wf_file, sep='\t', keep_default_na=False,
+                             na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan', '1.#IND',
+                                        '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan', ''])
 
         # get aoi file for the text
         aoi_file = Path(ias_folder) / f'{text_id}.ias'
@@ -96,7 +98,7 @@ def create_scanpaths(
 
         scanpath_file = re.sub('fixations', 'scanpath', fixation_file_name)
 
-        fix_csv.to_csv(Path(output_folder) / scanpath_file, sep='\t', index=False)
+        fix_csv.to_csv(Path(output_folder) / scanpath_file, sep='\t', index=False, na_rep='NA')
 
 
 def create_parser():

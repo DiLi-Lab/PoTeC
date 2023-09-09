@@ -64,20 +64,20 @@ TRC_in	Interval: 0-12	Number of missing values: 0
 LP	Interval: 0-28	Number of missing values: 0		
 SL_in	Interval: -162-156	Number of missing values: 0		
 SL_out	Interval: -179-63	Number of missing values: 0		
-acc_bq_1	min: 0.0, max: 1.0, mean: 0.3922392574571761, std: 0.4882512909545087	Number of missing values: 0		
-acc_bq_2	min: 0.0, max: 1.0, mean: 0.3618540740687894, std: 0.48053860468550247	Number of missing values: 0		
-acc_bq_3	min: 0.0, max: 1.0, mean: 0.42768269278788873, std: 0.4947443313122571	Number of missing values: 0		
-acc_tq_1	min: 0.0, max: 1.0, mean: 0.6468997695605956, std: 0.477935233421278	Number of missing values: 0		
-acc_tq_2	min: 0.0, max: 1.0, mean: 0.6427832514072499, std: 0.4791811570456907	Number of missing values: 0		
-acc_tq_3	min: 0.0, max: 1.0, mean: 0.6562957044097398, std: 0.47494553593118793	Number of missing values: 0		
-mean_acc_tq	min: 0.0, max: 1.0, mean: 0.3939253414379514, std: 0.3157738758512426	Number of missing values: 0		
-mean_acc_bq	min: 0.0, max: 1.0, mean: 0.6486595751258618, std: 0.307588679147495	Number of missing values: 0		
+acc_bq_1	min: 0.0, max: 1.0, mean: 0.3922392574571761, std: 0.4882512909545087	Number of missing values: 1958		
+acc_bq_2	min: 0.0, max: 1.0, mean: 0.3618540740687894, std: 0.48053860468550247	Number of missing values: 1958		
+acc_bq_3	min: 0.0, max: 1.0, mean: 0.42768269278788873, std: 0.4947443313122571	Number of missing values: 1958		
+acc_tq_1	min: 0.0, max: 1.0, mean: 0.6468997695605956, std: 0.477935233421278	Number of missing values: 1958		
+acc_tq_2	min: 0.0, max: 1.0, mean: 0.6427832514072499, std: 0.4791811570456907	Number of missing values: 1958		
+acc_tq_3	min: 0.0, max: 1.0, mean: 0.6562957044097398, std: 0.47494553593118793	Number of missing values: 1958		
+mean_acc_tq	min: 0.0, max: 1.0, mean: 0.3939253414379514, std: 0.3157738758512426	Number of missing values: 1958		
+mean_acc_bq	min: 0.0, max: 1.0, mean: 0.6486595751258618, std: 0.307588679147495	Number of missing values: 1958		
 text_domain_numeric	{0, 1}	Number of missing values: 0		
 trial	Interval: 1-12	Number of missing values: 0		
-text_id	object	Number of missing values: 0		
+text_id	{'p2', 'b5', 'b1', 'p5', 'p3', 'b3', 'b0', 'p0', 'p1', 'b4', 'b2', 'p4'}	Number of missing values: 0		
 reader_id	Interval: 0-105	Number of missing values: 0		
-gender_numeric	min: 0.0, max: 1.0, mean: 0.527027027027027, std: 0.4992707856455908	Number of missing values: 0		
+gender_numeric	min: 0.0, max: 1.0, mean: 0.527027027027027, std: 0.4992707856455908	Number of missing values: 1895		
 reader_domain_numeric	{0, 1}	Number of missing values: 0		
-age	min: 18.0, max: 41.0, mean: 24.164383561643834, std: 4.180903457306639	Number of missing values: 0		
+age	min: 18.0, max: 41.0, mean: 24.164383561643834, std: 4.180903457306639	Number of missing values: 3790		
 expert_status_numeric	{0, 1}	Number of missing values: 0		
 domain_expert_status_numeric	{0, 1, 2, 3}	Number of missing values: 0		
