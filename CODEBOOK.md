@@ -1,5 +1,7 @@
 # Codebook
 
+!! update with actual table from codebook tables
+
 ## Stimuli
 
 [Text and comprehension questions](stimuli/texts_and_questions)

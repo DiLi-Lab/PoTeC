@@ -1,7 +1,7 @@
 Column name	Possible values	Missing value	Description	Source
 version	Interval: 0-119	Number of missing values: 0		
-text_id	{'p2', 'b5', 'p4', 'b1', 'b3', 'p5', 'b0', 'p0', 'p1', 'b4', 'b2', 'p3'}	Number of missing values: 0		
-text_domain	{'physics', 'bio'}	Number of missing values: 0		
+text_id	{'p0', 'p4', 'b3', 'p5', 'p1', 'b5', 'p3', 'b4', 'b0', 'b2', 'b1', 'p2'}	Number of missing values: 0		
+text_domain	{'bio', 'physics'}	Number of missing values: 0		
 text	object	Number of missing values: 0		
 headline	object	Number of missing values: 0		
 tq_1	object	Number of missing values: 0		

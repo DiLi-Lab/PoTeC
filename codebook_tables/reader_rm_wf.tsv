@@ -9,7 +9,7 @@ is_in_quote	{0, 1}	Number of missing values: 0
 is_in_parentheses	{0, 1}	Number of missing values: 0		
 is_clause_beginning	{0, 1}	Number of missing values: 0		
 is_sent_beginning	{0, 1}	Number of missing values: 0		
-is_abbreviation	{0, 1, 2}	Number of missing values: 0		
+is_abbreviation	{0, 1}	Number of missing values: 0		
 contains_symbol	{0, 1}	Number of missing values: 0		
 contains_hyphen	{0, 1}	Number of missing values: 0		
 contains_abbreviation	{0, 1}	Number of missing values: 0		
@@ -74,7 +74,7 @@ mean_acc_tq	min: 0.0, max: 1.0, mean: 0.3939253414379514, std: 0.315773875851242
 mean_acc_bq	min: 0.0, max: 1.0, mean: 0.6486595751258618, std: 0.307588679147495	Number of missing values: 1958		
 text_domain_numeric	{0, 1}	Number of missing values: 0		
 trial	Interval: 1-12	Number of missing values: 0		
-text_id	{'p2', 'b5', 'b1', 'p5', 'p3', 'b3', 'b0', 'p0', 'p1', 'b4', 'b2', 'p4'}	Number of missing values: 0		
+text_id	{'p0', 'p4', 'b3', 'p5', 'p1', 'b5', 'p3', 'b4', 'b0', 'b2', 'b1', 'p2'}	Number of missing values: 0		
 reader_id	Interval: 0-105	Number of missing values: 0		
 gender_numeric	min: 0.0, max: 1.0, mean: 0.527027027027027, std: 0.4992707856455908	Number of missing values: 1895		
 reader_domain_numeric	{0, 1}	Number of missing values: 0		
