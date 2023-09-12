@@ -13,7 +13,7 @@ The data for this corpus has been preprocessed in the following steps:
 : .edf files converted to human-readable files, includes eye-tracker messages etc. 
 
 3. <mark>published</mark>: ``.csv`` files
-: .asc files parsed into .csv files, contains one sample per line. Script ``parse_asc_files.py`` creates the ``.csv`` file from the `.asc` files.
+: .asc files parsed into .tsv files, contains one sample per line. Script ``parse_asc_files.py`` creates the ``.csv`` file from the `.asc` files.
 
 4. <mark>published</mark>: Original fixation report
 : Based on the csv files we used the SR Research Data Viewer to create a fixation report. ``OSF/eyetracking_data/FixRep_20_Mai_2017.txt``.
@@ -32,7 +32,7 @@ All these scripts can be run from the `preprocessing_scripts` folder without pro
 If they are run from another location, all paths need to be provided as arguments.
 
 ### `char_index_to_word_index.py`
-Used to create the file `mappingRoiToWordIndex.csv` (see below).
+Used to create the file `roi_to_word.tsv` (see below).
 
 *Old comment: March 7, 2017
 Lena Jaeger
@@ -76,6 +76,6 @@ limits are computed in the script ``create_word_roi_limits.py``
 
 The same is true for the sentence limits, just on sentence level.
 
-### `mappingRoiToWordIndex.csv`
+### `roi_to_word.tsv`
 
 This file contains a mapping from the roi (=char index) to the word index in each text. This file is created by the script ``char_index_to_word_index.py``.

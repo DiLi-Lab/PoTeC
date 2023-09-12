@@ -18,7 +18,7 @@ def create_word_roi_limits(
         output_file_wl: str,
         output_file_sl: str,
 ) -> None:
-    wf_paths = list(Path(word_features_folder).glob('*.csv'))
+    wf_paths = list(Path(word_features_folder).glob('*.tsv'))
 
     word_limits_dict = {}
     sent_limits_dict = {}
@@ -90,9 +90,12 @@ def create_parser():
 
     return pars
 
-
-if __name__ == '__main__':
+def main() -> int:
     parser = create_parser()
     args = vars(parser.parse_args())
 
     create_word_roi_limits(**args)
+    return 0
+
+if __name__ == '__main__':
+    raise SystemExit(main())
