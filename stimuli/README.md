@@ -3,7 +3,7 @@ The stimuli text and the comprehension questions are contained in this folder.
 More detailed information on the content of the files (e.g. column names and data types) is found in the [codebook](./CODEBOOK.md).
 
 ## Texts and questions
-All text and questions are contained in a [csv-file](./texts_and_questions.csv). In addition, the texts are also provided as separate text files in the [texts](./texts) folder. 
+All text and questions are contained in a [tsv-file](./texts_and_questions/text_and_questions.tsv). In addition, the texts are also provided as separate text files in the [texts](./texts) folder. 
 With all of the questions listed.
 
 ### Sources
