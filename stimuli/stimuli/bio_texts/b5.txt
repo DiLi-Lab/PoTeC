@@ -1,0 +1,37 @@
+Prionen[NN-TTT]
+Ein[ART] Prion[NN-TTT] ist[VAFIN] ein[ART] infektiöses[ADJA-TT] Protein[NN-TT],[$,] das[PRELS] von[APPR] einem[ART] endogenen[ADJA-TTT],[$,] zellulären[ADJA-TT] Protein[NN-TT] abstammt[VVFIN] und[KON] dessen[PRELAT] Primärstruktur[NN-TTT] besitzt[VVFIN],[$,] sich[PRF] aber[ADV] in[APPR] Sekundär-[TRUNC],[$,] Tertiär-[TRUNC] und[KON] Quartärstrukturen[NN-TTT] von[APPR] diesem[PDS] unterscheidet[VVFIN].[$.] Seine[PPOSAT] strukturellen[ADJA] Eigenschaften[NN] verleihen[VVFIN] dem[ART] Prion[NN-TTT] die[ART] Fähigkeit[NN],[$,] sich[PRF] durch[APPR] Autokatalyse[NN-TTT] von[APPR] einem[ART] Wildtypprotein[NN-TTT] zum[APPRART] Prionenprotein[NN-TTT] umzuwandeln[VVIZU].[$.] Dieses[PDAT] Ereignis[NN] kann[VMFIN] spontan[ADJD] oder[KON] durch[APPR] die[ART] Aufnahme[NN] eines[ART] anderen[ADJA] Prions[NN-TTT] erfolgen[VVINF].[$.] Die[ART] Ausbildung[NN] amyloider[ADJA-TTT] Fasern[NN-TT] und[KON] der[ART] infektiöse[ADJA-TTT] Charakter[NN] sind[VAFIN] eng[ADJD] miteinander[ADV] verknüpft[VVPP].[$.] Der[ART] Begriff[NN] Amyloid[NN-TTT] ist[VAFIN] allgemein[ADJD] gehalten[VVPP] und[KON] umfasst[VVFIN] Proteinaggregate[NN-TTT],[$,] die[PRELS] auf[APPR] eine[ART] besondere[ADJA] physikalisch-chemische[ADJA-Hyph] Weise[NN] angeordnet[VVPP] sind[VAFIN]:[$.] eine[ART] Fadenform[NN-TT],[$,] in[APPR] der[PRELS] zum[APPRART] Großteil[NN] β-Faltblattstrukturen[NN-TTT-Hyph-Symb] zu[PTKZU] finden[VVINF] sind[VAFIN] und[KON] in[APPR] der[PRELS] eine[ART] Doppelbrechung[NN-TT] von[APPR] polarisiertem[ADJA-TT] Licht[NN] nach[APPR] Färbung[NN] mit[APPR] Kongorot[NN-TTT] auftritt[VVFIN].[$.] Das[ART] Prion[NN-TTT] bringt[VVFIN] keine[PIAT] genetische[ADJA] Veränderung[NN] mit[PTKVZ] sich[PRF],[$,] denn[KON] das[ART] verantwortliche[ADJA] Gen[NN-TT] führt[VVFIN] weiterhin[ADV] zur[APPRART] Expression[NN-TT] von[APPR] Proteinen[NN-TT] mit[APPR] normaler[ADJA] Primärstruktur[NN-TTT].[$.] Die[ART] Prionenform[NN-TTT] vermehrt[VVFIN] sich[PRF] somit[ADV] über[APPR] die[ART] Umwandlung[NN] vom[APPRART] Wildtypprotein[NN-TTT] zum[APPRART] amyloiden[ADJA-TTT] Typ[NN].[$.] Eine[ART] Deletion[NN-TT] des[ART] codierenden[ADJA-TT] Gens[NN-TT] des[ART] zellulären[ADJA-TT] Proteins[NN-TT] würde[VAFIN] somit[ADV] eine[ART] Prioneninfektion[NN-TTT] verhindern[VVINF].[$.]
+
+Fragen:
+ Text:
+  Welche Struktur kommt im Prion im Vergleich zum Wildtypprotein häufiger vor?
+   Beta-Faltblatt.
+   Alpha-Helix.
+   Beta-Fass.
+   Alpha-Faden.
+  Wie entstehen Aggregate aus Prionen?
+   Durch Umwandlung aus dem nativen Protein.
+   Durch Genmutation im nativen Protein.
+   Durch Virenbefall der Zelle.
+   Durch Vitaminmangel.
+  Was haben Prionen und das entsprechende zelluläre Protein gemeinsam?
+   Das codierende Gen.
+   Die räumliche Struktur.
+   Die Fadenform.
+   Doppelbrechung von polarisiertem Licht.
+ Wissen:
+  Welche Orientierung der Polypeptidketten gibt es innerhalb von Beta-Faltblättern nicht?
+   Orthogonale Orientierung.
+   Parallele Orientierung.
+   Antiparallele Orientierung.
+   Gemischte Orientierung.
+  Was haben Prionen und das entsprechende zelluläre Protein gemeinsam?
+   Die Aminosäuresequenz.
+   Die räumliche Struktur.
+   Die Quartärstruktur.
+   Die Faltung.
+  In welchem Zusammenhang sind die Prionen von Relevanz?
+   Auslösung der Krankheit BSE.
+   Verwendung als Antitumorwirkstoff.
+   Auslösung von Cholera.
+   Verwendung als Impfstoff.
+Quelle: Boujard et al. (2014): Zell- und Molekularbiologie im Überblick, Springer, 2014.

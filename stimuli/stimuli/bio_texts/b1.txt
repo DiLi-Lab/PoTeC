@@ -1,0 +1,37 @@
+Homologe[ADJA-TTT] Rekombinationsreparatur[NN-TTT]
+In[APPR] der[ART] homologen[ADJA-TTT] Rekombinationsreparatur[NN-TTT] veranlasst[VVFIN] RecA[NN-TTT-Abbr1] in[APPR] Verbindung[NN] mit[APPR] einer[ART] Reihe[NN] weiterer[ADJA] Proteine[NN-TT] die[ART] Auflösung[NN-TT] der[ART] angehaltenen[ADJA] Replikationsgabel[NN-TTT]:[$.] Kommt[VVFIN] der[ART] Replikationskomplex[NN-TTT] an[APPR] eine[ART] schadhafte[ADJA] DNA-Stelle[NN-TT-Abbr2-Hyph],[$,] löst[VVFIN] er[PPER] sich[PRF] und[KON] überspringt[VVFIN] den[ART] Schaden[NN],[$,] um[KOUI] an[APPR] anderer[ADJA] Stelle[NN] fortzufahren[VVIZU].[$.] Es[PPER] entsteht[VVFIN] eine[ART] Replikationslücke[NN-TTT] im[APPRART] Tochterstrang[NN-TT],[$,] die[PRELS] über[ADV] 800[CARD] Basen[NN-TT] umfassen[VVINF] kann[VMFIN].[$.] Bei[APPR] der[ART] "[$(]rekombinatorischen[ADJA-TTT] Reparatur[NN]"[$(] bindet[VVFIN] das[ART] RecA-Protein[NN-TTT-Abbr2-Hyph] an[APPR] die[ART] Einzelstrang-DNA-Enden[NN-TT-Abbr2-Hyph] links[ADV] und[KON] rechts[ADV] der[ART] Replikationslücke[NN-TTT] und[KON] sucht[VVFIN] die[ART] Schwesterchromatide[NN-TTT] oder[KON] das[ART] homologe[ADJA-TTT] Chromosom[NN-TT] nach[APPR] homologen[ADJA-TTT] Sequenzen[NN-TT] ab[PTKVZ].[$.] Ist[VAFIN] eine[ART] solche[PIDAT] Stelle[NN] gefunden[VVPP],[$,] dringt[VVFIN] der[ART] Komplex[NN-TT] in[APPR] die[ART] Doppelhelix[NN-TT] ein[PTKVZ],[$,] verdrängt[VVFIN] den[ART] homologen[ADJA-TTT] und[KON] bindet[VVFIN] den[ART] komplementären[ADJA-TT] Strang[NN].[$.] Dieser[PDS] dient[VVFIN] dann[ADV] als[KOKOM] Matrize[NN-TTT] zum[APPRART] Auffüllen[NN] der[ART] Replikationslücke[NN-TTT].[$.] Der[ART] verdrängte[ADJA] Strang[NN] paart[VVFIN] sich[PRF] mit[APPR] dem[ART] Strang[NN],[$,] der[PRELS] den[ART] DNA-Schaden[NN-TT-Abbr2-Hyph] aufweist[VVFIN].[$.] Durch[APPR] Endonuklease-Schnitte[NN-TTT-Hyph] und[KON] anschließende[ADJA] Ligation[NN-TTT] bilden[VVFIN] sich[PRF] letztendlich[ADV] wieder[ADV] zwei[CARD] komplette[ADJA] Doppelhelices[NN-TT] aus[PTKVZ].[$.] Zu[PTKZU] beachten[VVINF] ist[VAFIN],[$,] dass[KOUS] der[ART] ursprüngliche[ADJA] DNA-Schaden[NN-TT-Abbr2-Hyph] bei[APPR] dieser[PDAT] Reparatur[NN] nicht[PTKNEG] behoben[VVPP] wird[VAFIN],[$,] sondern[KON] nur[ADV] die[ART] Lücke[NN] im[APPRART] Tochterstrang[NN-TT].[$.] In[APPR] Hefen[NN-TT] und[KON] höheren[ADJA] Eukaryoten[NN-TTT] ist[VAFIN] dieses[PDAT] System[NN] in[APPR] ähnlicher[ADJA] Form[NN] ebenfalls[ADV] vorhanden[ADJD].[$.]
+
+Fragen:
+ Text:
+  Was ist RecA?
+   Ein Protein.
+   Eine Nukleinsäure.
+   Ein Zuckermolekül.
+   Ein Cofaktor.
+  Was passiert bei der Ligation?
+   Die Lücke im DNA-Rückgrat wird geschlossen.
+   Sie sucht nach homologen Sequenzen.
+   Sie behebt den Schaden in der DNA.
+   Sie stoppt die Replikationsgabel.
+  Woher kommen die Informationen über die korrekte Basensequenz?
+   Von einer homologen Sequenz.
+   Von einem Tochterstrang.
+   Von einem Parentalstrang.
+   Durch Endonuklease-Schnitte.
+ Wissen:
+  In welchem Organismus läuft die Rekombinationsreparatur wie im Text beschrieben ab?
+   In Escherichia coli (Darmbakterium).
+   In Homo sapiens (Mensch).
+   In Saccharomyces cerevisiae (Bäckerhefe).
+   In Amanita muscaria (Fliegenpilz).
+  Welche Funktion erfüllt die DNA-Ligase?
+   Sie führt eine Phosphodiesterbindung im DNA-Rückgrat ein.
+   Sie spaltet eine Phosphodiesterbindung im DNA-Rückgrat.
+   Sie unterstützt die Ausbildung von Wasserstoffbrückenbindungen zwischen zwei DNA-Strängen.
+   Sie hemmt die Ausbildung von Wasserstoffbrückenbindungen zwischen zwei DNA-Strängen.
+  Welche Schäden werden in der Regel mit homologer Rekombinationsreparatur behoben?
+   Starke Strukturveränderung im Parentalstrang.
+   Dimerbildung zwischen Thymidinen.
+   Tautomerie bei den Basen.
+   Alkylierung bei den Basen.
+Quelle: J. Graw: Genetik, Springer, 2015.

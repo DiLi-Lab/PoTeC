@@ -1,0 +1,37 @@
+Holografische[ADJA-TTT] Interferometrie[NN-TTT]
+Das[ART] Ziel[NN] der[ART] holografischen[ADJA-TTT] Interferometrie[NN-TTT] ist[VAFIN] es[PPER],[$,] Veränderungen[NN] an[APPR] Objekten[NN] durch[APPR] Belastungen[NN],[$,] thermische[ADJA-TT] Ausdehnung[NN],[$,] Schwingungen[NN] usw.[ADV-Abbr1] qualitativ[ADJD] und[KON] quantitativ[ADJD] zu[PTKZU] erfassen[VVINF].[$.] Beim[APPRART] Echtzeitverfahren[NN] der[ART] holografischen[ADJA-TTT] Interferometrie[NN-TTT] wird[VAFIN] von[APPR] einem[ART] Objekt[NN] in[APPR] Ruhe[NN] ein[ART] Hologramm[NN-TTT] aufgenommen[VVPP].[$.] Die[ART] Hologrammplatte[NN-TTT] wird[VAFIN] dann[ADV],[$,] ohne[KOUI] sie[PPER] zu[PTKZU] bewegen[VVINF],[$,] am[APPRART] festen[ADJA] Ort[NN] der[ART] Aufnahme[NN] entwickelt[VVPP] und[KON] mit[APPR] der[ART] Referenzwelle[NN-TT] beleuchtet[VVPP],[$,] sodass[KOUS] ein[ART] Hologrammbild[NN-TTT] erzeugt[VVPP] wird[VAFIN].[$.] Nimmt[VVFIN] man[PIS] am[APPRART] Objekt[NN] nur[ADV] sehr[ADV] kleine[ADJA] Änderungen[NN] vor[PTKVZ] und[KON] beleuchtet[VVFIN] es[PPER] am[APPRART] gleichen[ADJA] Ort[NN] wieder[ADV] genau[ADJD] wie[KOKOM] bei[APPR] der[ART] ersten[ADJA] Aufnahme[NN],[$,] so[ADV] werden[VAFIN] sich[PRF] diese[PDAT] Änderungen[NN] in[APPR] Phasenverschiebungen[NN-TTT] der[ART] Signalwelle[NN-TT] äußern[VVINF].[$.] Die[ART] Überlagerung[NN-TT] dieser[PDAT] Signalwelle[NN-TT] vom[APPRART] veränderten[ADJA] Objekt[NN] mit[APPR] der[ART] Rekonstruktionswelle[NN-TTT] vom[APPRART] Hologramm[NN-TTT] des[ART] unveränderten[ADJA] Objektes[NN] führt[VVFIN] zu[APPR] Interferenzstrukturen[NN-TTT] im[APPRART] holografischen[ADJA-TTT] Bild[NN],[$,] die[PRELS] nur[ADV] für[APPR] diejenigen[PDAT] Teile[NN] des[ART] Objektes[NN] auftreten[VVFIN],[$,] die[PRELS] sich[PRF] verändert[VVPP] haben[VAFIN].[$.] Auf[APPR] diese[PDAT] Weise[NN] kann[VMFIN] man[PIS] Gestaltsänderungen[NN] feststellen[VVINF],[$,] die[PRELS] wesentlich[ADJD] kleiner[ADJD] als[KOKOM] eine[ART] Wellenlänge[NN-TT] des[ART] beleuchtenden[ADJA] Lichtes[NN] sind[VAFIN].[$.]
+
+Fragen:
+ Text:
+  Wozu kann holografische Interferometrie verwendet werden?
+   Um kleinste Gestaltsänderungen an einem Objekt erkennen zu können.
+   Um Interferenzstrukturen in Rekonstruktionswellen zu untersuchen.
+   Um veränderte Objekte mit kleinen Veränderungen zu rekonstruieren.
+   Um veränderte Objekte mit dem Hologramm des Originals zu vergleichen.
+  Warum muss das Hologramm am selben Ort bleiben?
+   Dass sich die Signalwelle vom Objekt und die Rekonstruktionswelle vom Hologramm so überlagern, dass unveränderte Bereiche im holografischen Bild nicht zu sehen sind.
+   Dass die Signal- und Rekonstruktionswelle nicht interferieren.
+   Dass die Phasenverschiebung von Signal- und Rekonstruktionswelle überall gleich ist.
+   Damit man das Objekt wieder in den ursprünglichen Zustand zurückversetzen kann.
+  Worin äußern sich Änderungen am Objekt?
+   In Phasenverschiebungen der Signalwelle.
+   In Interferenzstrukturen in der Signalwelle.
+   In Interferenzstrukturen im holografischen Bild der Signalwelle.
+   In Stauchung der Signalwelle.
+ Wissen:
+  Welche Anforderung muss die Referenzwelle erfüllen?
+   Sie muss kohärent sein.
+   Sie muss zirkular polarisiert sein.
+   Sie muss linear polarisiert sein.
+   Sie muss die doppelte Wellenlänge der Signalwelle haben.
+  Was wird bei einem Hologramm aufgezeichnet?
+   Das Interferenzmuster der gestreuten und der nicht gestreuten Beleuchtungswelle.
+   Die Streuung der Beleuchtungswelle am Objekt.
+   Die Phasenverschiebung der Referenz- und der Signalwelle.
+   Die Überlagerung der Rekonstruktions- und der Signalwelle.
+  Wohin wird ein Punkt des Objekts bei einer Hologrammaufnahme gespeichert?
+   Auf die gesamte Photoplatte.
+   Auf einen Punkt auf der Photoplatte.
+   Auf eine Linie auf der Photoplatte.
+   Auf Kreislinien auf der Photoplatte.
+Quelle: W. Demtröder: Experimentalphysik 2, Springer, 2009.

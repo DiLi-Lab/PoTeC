@@ -1,0 +1,37 @@
+Mößbauereffekt[NN-TTT]
+Wenn[KOUS] ein[ART] ruhendes[ADJA] Atom[NN-TT] ein[ART] Photon[NN-TTT] absorbiert[VVFIN],[$,] so[ADV] nimmt[VVFIN] es[PPER] bei[APPR] der[ART] Absorption[NN-TT] den[ART] Photonenimpuls[NN-TTT] auf[PTKVZ] und[KON] erfährt[VVFIN] deshalb[PAV] einen[ART] Rückstoßimpuls[NN-TT],[$,] der[PRELS] zu[APPR] einer[ART] kinetischen[ADJA-TTT] Rückstoßenergie[NN-TT] führt[VVFIN].[$.] Die[ART] Photonenenergie[NN-TTT] wird[VAFIN] dabei[PAV] zum[APPRART] einen[PIS] als[KOKOM] Rückstoßenergie[NN-TT] und[KON] zum[APPRART] anderen[PIS] als[KOKOM] Anregungsenergie[NN-TT] auf[APPR] das[ART] Atom[NN-TT] übertragen[VVINF].[$.] Die[ART] Frequenz[NN-TT] der[ART] Anregung[NN-TT] unterscheidet[VVFIN] sich[PRF] also[ADV] von[APPR] der[PDS] des[ART] Photons[NN-TTT] um[APPR] einen[ART] gewissen[ADJA] Betrag[NN].[$.] Auch[ADV] bei[APPR] der[ART] Emission[NN-TT] eines[ART] Photons[NN-TTT] erfährt[VVFIN] das[ART] Atom[NN-TT] einen[ART] Rückstoß[NN-TT].[$.] Die[ART] dabei[PAV] erzeugte[ADJA] Rückstoßenergie[NN-TT] fehlt[VVFIN] dem[ART] emittierten[ADJA-TT] Photon[NN-TTT],[$,] so[ADV] dass[KOUS] dessen[PRELAT] Wellenlänge[NN-TT] ebenfalls[ADV] von[APPR] jener[PDS] der[ART] Anregung[NN-TT] verschieden[ADJD] ist[VAFIN].[$.] Atome[NN-TT],[$,] die[PRELS] sich[PRF] nur[ADV] in[APPR] ihrem[PPOSAT] Impuls[NN-TT] unterscheiden[VVFIN],[$,] können[VMFIN] also[ADV] Photonen[NN-TTT] mit[APPR] unterschiedlicher[ADJA] Frequenz[NN-TT] absorbieren[VVINF-TT] bzw.[KON-Abbr1] emittieren[VVINF-TT].[$.] Befindet[VVFIN] sich[PRF] ein[ART] Atom[NN-TT] in[APPR] einem[ART] Kristallgitter[NN-TT],[$,] überträgt[VVFIN] sich[PRF] der[ART] Rückstoß[NN-TT] auf[APPR] dieses[PDS] und[KON] die[ART] Energie[NN-TT] von[APPR] absorbiertem[ADJA-TT] und[KON] emittiertem[ADJA-TT] Photon[NN-TTT] entsprechen[VVFIN] in[APPR] etwa[ADV] der[ART] Anregungsenergie[NN-TT].[$.] Dies[PDS] wird[VAFIN] in[APPR] der[ART] Mößbauerspektroskopie[NN-TTT] benutzt[VVFIN],[$,] um[KOUI] mit[APPR] Hilfe[NN] der[ART] Dopplerverschiebung[NN-TTT] der[ART] Emissionslinien[NN-TTT] etwa[ADV] Hyperfeinstrukturenaufspaltungen[NN-TTT] in[APPR] einer[ART] Probe[NN] zu[PTKZU] analysieren[VVINF].[$.]
+
+Fragen:
+ Text:
+  Welchem Wert muss die Geschwindigkeitsdifferenz eines absorbierenden und eines emittierenden Atoms entsprechen, so dass die Anregungen dieselbe Frequenz haben?
+   Der doppelten Rückstoßgeschwindigkeit.
+   Der Rückstoßgeschwindigkeit.
+   Dem Produkt aus der Wellenlänge und dem Frequenzunterschied von Photon und Anregung.
+   Dem Produkt aus der doppelten Wellenlänge und dem Frequenzunterschied von Photon und Anregung.
+  Welche Aussage ist für die Absorption richtig?
+   Anregungsenergie = Photonenenergie  - Rückstoßenergie
+   Photonenenergie  = Anregungsenergie - Rückstoßenergie
+   Anregungsenergie = Photonenenergie  + Rückstoßenergie
+   Rückstoßenergie  = Anregungsenergie + Rückstoßenergie
+  Welche Aussage ist für die Emission richtig?
+   Anregungsenergie = Photonenenergie  + Rückstoßenergie
+   Photonenenergie  = Anregungsenergie + Rückstoßenergie
+   Photonenenergie  = Rückstoßenergie  - Anregungsenergie
+   Rückstoßenergie  = Photonenenergie  - Rückstoßenergie
+ Wissen:
+  Wie kann die Rückstoßenergie noch von dem Kristall aufgenommen werden?
+   Es entstehen Phononen.
+   Es entstehen Photonen.
+   Es entstehen Plasmonen.
+   Es entstehen Polaronen.
+  In welchem Bereich des elektromagnetischen Spektrums kann man den Mößbauereffekt beobachten?
+   Gammastrahlung.
+   Sichtbares Licht.
+   Terahertzstrahlung.
+   Radiowellen.
+  Warum überträgt sich der Rückstoß, nicht aber die Energie auf den Kristall?
+   Weil der Kristall eine große Masse besitzt.
+   Weil der Kristall nur sehr wenig Impuls aufnimmt.
+   Weil der Kristall nicht beschleunigt werden kann.
+   Weil sich die Energie auf die einzelnen Kristallatome verteilt.
+Quelle: W. Demtröder: Experimentalphysik 4, Springer, 2014.

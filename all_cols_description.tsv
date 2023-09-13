@@ -1,0 +1,160 @@
+Column_name	Description	Source	Missing value description
+order_tq_2_ans	See description of order_bq_1_ans
+reader_domain_numeric	Numerical encoding of the reader domain.
+Fix	Fixation: 1 if the word was fixated, otherwise 0 (FPF or RR)
+text_domain_numeric	Numerical value of text_domain.
+tq_1_option3	Option 3 for text question 1
+original_fixation_index	The index of the uncorrected fixation.
+neighbors_coltheart_higher_freq_cum_freq_normalized		dlexDB
+tq_1_option1	Option 1 for text question 1
+document_frequency_normalized		dlexDB
+annotated_type_frequency_normalized	"""The number of occurrences of an annotated type in corpus. An annotated type is a unique combination of a type, its part-of-speech tag and its lemma."""	dlexDB
+acc_bq_1	The accuracy of background question 1. The answer can be either true or false, so the value is either 0 or 1.
+text	The stimulus text.
+RR	Re-reading: 1 if the word was fixated after the first-pass reading, otherwise 0 (sign(RRT))
+bq_3_option3	Option 3 for background question 3
+FPReg	First-pass regression: 1 if a regression was initiated in the first-pass reading of the word, otherwise 0 (sign(RPD exc))
+type_length_chars	The length of the type of a word in characters. See the description of word length for a definition of how characters are counted.
+trial	Each participant reads all 12 texts, the order of which follows their trial number. If text b0 has trial number 2 for participant 5, this participant read text b0 as the second text.
+reader_domain	The area of expertise of the reader. All readers are students whose major is either physics or biology.
+neighbors_levenshtein_higher_freq_cum_freq_normalized		dlexDB
+bq_2_option3	Option 3 for background question 2
+TFT	Total-fixation time: sum of all fixations on a word (FPRT+RRT)
+PoS_tag	Part-of-speech tag as defined by the dlexDB query.	dlexDB
+TRC_in	Total count of outgoing regressions: total number of regressive saccades landing on this word
+sent_index_in_text	The index of a sentence in the respective text. Indexing starts at 1.
+headline	The header of the respective stimulus text.
+SL_in	Incoming saccade length: length of the saccade that leads to first fixation on a word in number of words; positive sign if the saccade is a progressive one, negative sign if it is a regression
+tq_3_option2	Option 2 for text question 3
+FRT	First-reading time: sum of the duration of all fixations from first fixating the word (independent if the first fixations occurs in first-pass reading) until leaving the word for the first time (equals FPRT in case the word was fixated in the first-pass)
+tq_1_option4	Option 4 for text question 1
+text_domain	The domain of the stimulus text.
+version	Specifies the version of the items. In each version, the order of the stimuli and the order of the answer options for each question differs. The specifics of each version can be found in the items.tsv.
+expert_status_numeric	Numerical value of expert_status
+neighbors_levenshtein_higher_freq_count_normalized		dlexDB
+is_in_parentheses	Whether or not the word is part of a phrase in parentheses.	Manually tagged
+acc_bq_2	The accuracy of background question 2. The answer can be either true or false, so the value is either 0 or 1.
+type	"""The orthographical representation of a word as found in the corpus; this data is case sensitive, i.e. there is a distinction between name and Name."""	dlexDB
+roi	The region of interest specified as character index in the text (see char_index_in_text). Defines which character has been fixated.
+lemma_frequency_normalized		dlexDB
+neighbors_levenshtein_all_cum_freq_normalized		dlexDB
+sentence_frequency_normalized		dlexDB
+bq_1_option3	Option 3 for background question 1
+reader_id	The unique identifier given to each reader. Reader IDs start at 0.
+correct_ans_tq_3	"The index of the correct answer for text question 3. Specified as option number of the questions in that file. For example: 2 means that the answer that is specified in the column ""tq_3_option2"" is the correct answer to this questions. "
+is_sent_beginning	Whether or not the word is the beginning of a new sentence.	Manually tagged
+char_index_in_text	Index of a character in the text. Indexing starts at 1.
+lemma_length_chars		dlexDB
+tq_1_option2	Option 2 for text question 1
+word_index_in_sent	The index of the word in the sentence. Indexing starts at 1.
+word	Words as they appear in the stimuli texts. Words are split at white-space.
+bq_3_option4	Option 4 for background question 3
+RPD_exc	Exclusive regression-path duration: Sum of all fixation durations after initiating a first-pass regression from a word until fixating a word to the right of this word, without counting fixations on the word itself (RPD_inc-RBRT)
+tq_2_option2	Option 2 for text question 2
+tq_2_option1	Option 1 for text question 2
+start_y	The y-coordinate in pixels of the top left corner of the aoi rectangle.
+STTS_PoS_tag	Part-of-speech tags according to the STTS-tagset. See stimuli/ANNOTATION.MD for more information. 	Manually tagged
+word_length	Word length is defined in number of characters including symbols like hyphens but without sentence punctuation at the end (i.e., z.B. = 4 characters; DNA-Kette =9 characters; eats.=4 characters
+initial_trigram_frequency_normalized		dlexDB
+acc_tq_1	The accuracy of text question 1. The answer can be either true or false, so the value is either 0 or 1.
+bq_2_option1	Option 1 for background question 2
+cumulative_syllable_corpus_frequency_normalized		dlexDB
+fixation_duration	The duration of the fixation in milliseconds.
+next_saccade_duration	The duration in milliseconds of the saccade that follows a fixation.
+word_limit_char_indices	Specifies the limits of each word in character indices. Format: [word_start],[word_end]. For example: 3,7 means a word starts at character index 3 in the text and ends at character index 7. The properties fo the character indices are specified for char_index_in_text.
+type_length_syllables		dlexDB
+bq_3_option1	Option 1 for background question 3
+is_technical_term	"1 if the word is a technical term that is generally understandable (""elektrisch""). 2 if the word is a technical term that is not generally understandable (""Agarose"").  "	Manually tagged
+previous_saccade_duration	The duration of a saccade in milliseconds that preceeds a fixation.
+regularity_normalized		dlexDB
+bq_3_option2	Option 2 for background question 3
+contains_symbol	Whether or not the word contains a symbol.
+tq_1	Text question 1.
+expert_status	Reader's expert status. Readers are considered experts if they are either MSc or PhD students. 1st semester BSc students are considered beginners.
+bq_2_option4	Option 4 for background question 2
+mean_acc_tq	The mean accuracy of all background questions for one text read by one reader.
+avg_cond_prob_in_bigrams	"""The conditional probability of the bigram, given the occurrence of its first component. In other words, how likely it is for the second component to follow directly after the first. Here, this measure is computed on the basis of the annotated type information."""	dlexDB
+familiarity_normalized		dlexDB
+gender_numeric	Numerical value of gender.
+bq_3	Background question 3.
+is_abbreviation	Whether or not the entire word is an abbreviation.	Manually tagged
+FPF	First-pass fixation: 1 if the word was fixated in the first-pass, otherwise 0
+initial_bigram_frequency_normalized		dlexDB
+is_in_quote	Whether or not the word is part of an expression in quotes.	Manually tagged
+FFD	First-fixation duration: duration of the first fixation on a word if this word is fixated in first-pass reading, otherwise 0
+neighbors_coltheart_all_count_normalized		dlexDB
+FPRT	First-pass reading time: sum of the durations of all first-pass fixations on a word (0 if the word was skipped in the first-pass)
+order_tq_3_ans	See description of order_bq_1_ans
+cumulative_character_bigram_lexicon_frequency_normalized		dlexDB
+order_bq_3_ans	See description of order_bq_1_ans
+is_clause_beginning	Whether or not the word is the beginning of a clause. 	Manually tagged
+line	The texts were presented on the screen in multiple lines. Specifies the line of the respective row; indexing starts at 1.
+cumulative_syllable_lexicon_frequency_normalized		dlexDB
+type_frequency_normalized	""	dlexDB
+tq_2	Text question 2.
+STTS_punctuation_before	If a word is preceded by a punctuation mark, the STTS-PoS-tag of the punctuation mark is added here.
+initial_letter_frequency_normalized		dlexDB
+acc_tq_3	The accuracy of text question 3. The answer can be either true or false, so the value is either 0 or 1.
+tq_3_option1	Option 1 for text question 3
+end_y	The y-coordinate in pixels of the bottom right corner of the aoi rectangle.
+bq_2	Background question 2.
+cumulative_character_trigram_lexicon_frequency_normalized		dlexDB
+order_bq_2_ans	See description of order_bq_1_ans
+correct_ans_bq_1	"The index of the correct answer for background question 1. Specified as option number of the questions in that file. For example: 2 means that the answer that is specified in the column ""tq_3_option2"" is the correct answer to this questions. "
+cumulative_character_bigram_corpus_frequency_normalized		dlexDB
+mean_acc_bq	The mean accuracy of all text questions for one text read by one reader.
+lemma		dlexDB
+avg_cond_prob_in_trigrams	"""The conditional probability of the trigram, given the occurrence of its initial bigram. In other words, how likely it is for the third component to follow directly after the initial pair. Here, this measure is computed on the basis of the annotated type information."""	dlexDB
+correct_ans_bq_3	"The index of the correct answer for background question 3. Specified as option number of the questions in that file. For example: 2 means that the answer that is specified in the column ""tq_3_option2"" is the correct answer to this questions. "
+order_tq_1_ans	See description of order_bq_1_ans
+correct_ans_tq_1	"The index of the correct answer for text question 1. Specified as option number of the questions in that file. For example: 2 means that the answer that is specified in the column ""tq_3_option2"" is the correct answer to this questions. "
+cumulative_character_corpus_frequency_normalized		dlexDB
+text_id	Unique identifier given to each stimulus text.
+neighbors_coltheart_all_cum_freq_normalized		dlexDB
+neighbors_coltheart_higher_freq_count_normalized		dlexDB
+RPD_inc	Inclusive regression-path duration: Sum of all fixation durations starting from the first first-pass fixation on a word until fixation a word to the right of this word (including all regressive fixations on previous words), 0 if the word was not fixated in the first-pass (RPD_exc+RBRT)
+neighbors_levenshtein_all_count_normalized		dlexDB
+alcohol	Whether or not a participant consumed alcohol within 24 hours before the experiment start.
+end_x	The x-coordinate in pixels of the bottom right corner of the aoi rectangle.
+order_bq_1_ans	The order in which the answers for background question 1 where presented.
+tq_2_option4	Option 4 for text question 2
+character	Character as text.
+correct_ans_bq_2	"The index of the correct answer for background question 2. Specified as option number of the questions in that file. For example: 2 means that the answer that is specified in the column ""tq_3_option2"" is the correct answer to this questions. "
+domain_expert_status	The combination of the readers' major (reader_domain) and their expertise (expert_status).
+start_x	The x-coorindate in pixels of the top left corner of the aoi rectangle.
+word_index_in_text	The index of the word in the text. Indexing starts at 1.
+bq_1	Background question 1.
+gender	Reader's gender.
+hours_sleep	The hours of sleep of the participant before the experiment. In half hours.
+cumulative_character_lexicon_frequency_normalized		dlexDB
+correct_ans_tq_2	"The index of the correct answer for text question 2. Specified as option number of the questions in that file. For example: 2 means that the answer that is specified in the column ""tq_3_option2"" is the correct answer to this questions. "
+syllables		dlexDB
+cumulative_character_trigram_corpus_frequency_normalized		dlexDB
+acc_bq_3	The accuracy of background question 3. The answer can be either true or false, so the value is either 0 or 1.
+contains_abbreviation	Whether or not the word contains an abbreviation. 0 for words that are only an abbreviation. See is_abbreviation. E.g.: 1 for DNA-Fragment, 0 for DNA
+tq_3_option4	Option 4 for text question 3
+is_fixation_adjusted	Whether or not the fixation has been adjusted manually.	Manually tagged
+char_index_in_line	Index of a character in the line. Indexing starts at 1.
+age	Reader's age.
+bq_2_option2	Option 2 for background question 2
+glasses	Whether or not reader is wearing glasses.
+domain_expert_status_numeric	Numerical value of domain_expert_status
+tq_3_option3	Option 3 for text question 3
+RRT	Re-reading time: sum of the durations of all fixations on a word that do not belong to the first-pass (TFT-FPRT)
+RBRT	Right-bounded reading time: Sum of all fixation durations on a word until a word to the right of this word is fixated (RPD_inc-RDP_exc)
+LP	Landing position: position of the first saccade on the word expressed by ordinal position of the fixated character
+TRC_out	Total count of incoming regressions: total number of regressive saccades initiated from this word
+tq_2_option3	Option 3 for text question 2
+fixation_index	The index of the fixation in temporal order.
+acc_tq_2	The accuracy of text question 2. The answer can be either true or false, so the value is either 0 or 1.
+bq_1_option4	Option 4 for background question 1
+bq_1_option1	Option 1 for background question 1
+STTS_punctuation_after	If a word is followed by a punctuation mark, the STTS-PoS-tag of the punctuation mark is added here.
+SL_out	Outgoing saccade length: length of the first saccade that leaves the word in number of words; positive sign if the saccade is a progressive one, negative sign if it is a regression; 0 if the word is never fixated
+handedness	Reader's handedness.
+bq_1_option2	Option 2 for background question 1
+SFD	Single-fixation duration: duration of the only first-pass fixation on a word, 0 if the word was skipped or more than one fixations occurred in the first-pass (equals FFD in case of a single first-pass fixation)
+tq_3	Text question 3.
+contains_hyphen	Whether or not the word contains a hpythen. E.g.: 1 for DNA-Fragment. (*nicht* Wörter, die Tag TRUNC (Kompositions-ERstglieg) haben)
+FD	First duration: duration of the first fixation on a word (identical to FFD if not skipped in the first-pass)
+aoi_type	The shape of the area of interest. In this corpus, all aois are rectangles around the characters.

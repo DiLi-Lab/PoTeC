@@ -1,0 +1,37 @@
+Aufrechterhaltung[NN] eines[ART] kontinuierlichen[ADJA] Exports[NN] aus[APPR] der[ART] chlorophyllhaltigen[ADJA-TT] Zelle[NN-TT]
+Eine[ART] chlorophyllhaltige[ADJA-TT] Parenchymzelle[NN-TTT] in[APPR] einem[ART] Angiospermenblatt[NN-TTT] exportiert[VVFIN] organisches[ADJA-TT] Material[NN] in[APPR] Form[NN] von[APPR] Saccharose[NN-TT] aus[APPR] der[ART] Zelle[NN-TT] und[KON] versorgt[VVFIN] damit[PAV] selbst[ADV] in[APPR] der[ART] Nacht[NN] alle[PIDAT] chlorophyllfreien[ADJA-TT] Zellen[NN-TT] der[ART] Pflanze[NN].[$.] Das[ART] Prinzip[NN] ist[VAFIN] einfach[ADJD]:[$.] Am[APPRART] Tag[NN] speichert[VVFIN] der[ART] Chloroplast[NN-TTT] die[ART] gebildete[ADJA] und[KON] überschüssige[ADJA] Glucose[NN-TT] aus[APPR] der[ART] Photosynthese[NN-TT] als[KOKOM] Stärke[NN-TT];[$.] in[APPR] der[ART] Nacht[NN] kommt[VMFIN] es[PPER] zu[APPR] einer[ART] Stoffentnahme[NN] aus[APPR] diesem[PDAT] Speicher[NN].[$.] Die[ART] Zelle[NN-TT] kann[VMFIN] auf[APPR] diese[PDAT] Weise[NN] Tag[NN] und[KON] Nacht[NN] einen[ART] Export[NN] gewährleisten[VVINF].[$.] Saccharose[NN-TT] ist[VAFIN] ein[ART] Dimer[NN-TTT] und[KON] wirkt[VVFIN] nicht[PTKNEG] reduzierend[ADJD],[$,] sie[PPER] wird[VAFIN] in[APPR] der[ART] Pflanze[NN] vor[APPR] allem[PIS] als[KOKOM] leicht[ADJD] verfügbarer[ADJA] Speicherstoff[NN] verwendet[VVPP].[$.] Stärke[NN-TT] ist[VAFIN] ein[ART] großes[ADJA] Polymer[NN-TTT] aus[APPR] Glucose[NN-TT],[$,] wirkt[VVFIN] ebenfalls[ADV] nicht[PTKNEG] reduzierend[ADJD] und[KON] ist[VAFIN] hauptsächlich[ADV] in[APPR] Speicherorganen[NN-TT] zu[PTKZU] finden[VVINF].[$.] Das[ART] am[PTKA] häufigsten[ADJD] in[APPR] der[ART] Biosphäre[NN-TT] vorkommende[ADJA] Kohlenhydrat[NN-TT] ist[VAFIN] unbestritten[ADJD] die[ART] Cellulose[NN-TT].[$.] Sie[PPER] ist[VAFIN] ein[ART] lineares[ADJA-TT] Polymer[NN-TTT] aus[APPR] β-D-Glucose[NN-TTT-Hyph-Symb] und[KON] liegt[VVFIN] hauptsächlich[ADV] extrazellulär[ADJD-TT] vor[PTKVZ].[$.] Dieses[PDAT] Molekül[NN-TT] wird[VAFIN] durch[APPR] membranständige[ADJA-TTT] Cellulose-Synthasekomplexe[NN-TTT-Hyph] synthetisiert[VVPP-TT],[$,] die[PRELS] in[APPR] der[ART] Membran[NN-TT] zirkulieren[VVFIN] und[KON] in[APPR] gewisser[ADJA] Weise[NN] die[ART] Cellulose-Mikrofibrillen[NN-TTT-Hyph] "[$(]weben[VVFIN]"[$(],[$,] die[PRELS] die[ART] extrazelluläre[ADJA-TT] Matrix[NN-TTT] der[ART] Pflanzenzellen[NN-TT] ausmachen[VVFIN].[$.]
+
+Fragen:
+ Text:
+  Welche Substanz ist reduzierend?
+   Glucose.
+   Saccharose.
+   Stärke.
+   Chloroplast.
+  Wo wird Glucose gebildet?
+   Im Chloroplasten.
+   In Speicherorganen der Pflanze.
+   Im Extrazellularraum.
+   Im Zellkern.
+  Welches Molekül ist strukturbildend für die Pflanze?
+   Cellulose.
+   Glucose.
+   Saccharose.
+   Stärke.
+ Wissen:
+  Welches Molekül ist nicht am Aufbau von Pflanzenmaterial beteiligt?
+   Murein.
+   Cellulose.
+   Hemicellulose.
+   Lignin.
+  Wie wird Saccharose innerhalb der Pflanze transportiert?
+   Im Phloem.
+   Im Xylem.
+   In der Epidermis.
+   Nur in Form von Glucose.
+  Warum wird Glucose in Speicherstoffen gespeichert?
+   Osmotisch wirksam.
+   Instabil.
+   Großes Molekül.
+   Thermolabil.
+Quelle: Boujard et al. (2014): Zell- und Molekularbiologie im Überblick

@@ -1,0 +1,37 @@
+Photonische[ADJA-TTT] Kristalle[NN-TT]
+Photonische[ADJA-TTT] Kristalle[NN-TT] sind[VAFIN] räumlich[ADJD] periodische[ADJA-TT] Anordnungen[NN] von[APPR] dielektrischen[ADJA-TTT] Medien[NN-TT] mit[APPR] unterschiedlicher[ADJA] Dielektrizitätskonstante[NN-TTT] und[KON] damit[PAV] unterschiedlichen[ADJA] Brechzahlen[NN-TTT].[$.] Man[PIS] kann[VMFIN] sie[PPER] realisieren[VVINF] durch[APPR] transparente[ADJA-TT] Materialien[NN],[$,] in[APPR] die[ART] periodische[ADJA-TT] Strukturen[NN] ([$(]z.B.[KON-Abbr1] dielektrische[ADJA-TTT] Mikrozylinder[NN-TT] oder[KON] Kügelchen[NN])[$(] eingebaut[VVPP] sind[VAFIN],[$,] deren[PRELAT] Abstände[NN] in[APPR] der[ART] Größenordnung[NN] der[ART] optischen[ADJA-TT] Wellenlänge[NN-TT] liegen[VVFIN].[$.] Sie[PPER] beeinflussen[VVFIN] deshalb[PAV] die[ART] Ausbreitung[NN] von[APPR] Licht[NN] in[APPR] diesen[PDAT] Materialien[NN].[$.] Fällt[VVFIN] eine[ART] Lichtwelle[NN-TT] auf[APPR] diese[PDAT] Struktur[NN],[$,] so[ADV] wird[VAFIN] ein[ART] Teil[NN] der[ART] Wellenamplitude[NN-TTT] an[APPR] den[ART] Grenzflächen[NN] der[ART] periodischen[ADJA-TT] Struktur[NN] reflektiert[VVPP-TT].[$.] Ist[VAFIN] die[ART] Periode[NN-TT] der[ART] Struktur[NN] ein[ART] π-vielfaches[NN-TT-Hyph-Symb] der[ART] Wellenlänge[NN-TT],[$,] überlagern[VVFIN] sich[PRF] die[ART] reflektierten[ADJA-TT] Anteile[NN] phasenrichtig[ADJD-TTT] und[KON] addieren[VVFIN] sich[PRF] deshalb[PAV].[$.] Das[ART] Reflexionsvermögen[NN-TT] des[ART] Kristalls[NN-TT] wird[VAFIN] erhöht[VVPP].[$.] Ist[VAFIN] die[ART] Periode[NN-TT] der[ART] Struktur[NN] ein[ART] ungeradzahlig[ADJD] π-vielfaches[NN-TT-Hyph-Symb] der[ART] halben[ADJA] Wellenlänge[NN-TT],[$,] sind[VAFIN] die[ART] Phasen[NN-TTT] der[ART] reflektierten[ADJA-TT] Wellen[NN-TT] gegeneinander[ADV] verschoben[VVPP] und[KON] die[ART] reflektierten[ADJA-TT] Anteile[NN] löschen[VVFIN] sich[PRF] teilweise[ADV] oder[KON] ganz[ADV] aus[PTKVZ].[$.]
+
+Fragen:
+ Text:
+  Welche Eigenschaft besitzen photonische Kristalle?
+   Sie besitzen eine räumlich periodische Variation der Dielektrizitätskonstante.
+   Sie besitzen periodisch eingebaute Mikrostrukturen.
+   Sie sind durchsichtig.
+   Sie sind kristallin.
+  Ist die Periode der Struktur ein ungeradzahlig π-vielfaches der Wellenlänge, wird
+   das Reflexionsvermögen verringert.
+   das Reflexionsvermögen erhöht.
+   die Wellenlänge bei der Brechung verringert.
+   die Wellenlänge bei der Brechung erhöht.
+  Wie kann man photonische Kristalle realisieren?
+   Durch transparente Materialien mit periodischen Strukturen, deren Abstände in der Größenordnung der optischen Wellenlänge liegen.
+   Durch transparente Materialien mit periodischen Strukturen, deren Abstände ein π-vielfaches optischen Wellenlänge sind.
+   Durch transparente Materialien mit periodischen Strukturen, deren Abstände ein ungeradzahlig π-vielfaches der halben Wellenlänge sind.
+   Durch transparente Materialien mit periodischen Strukturen, deren Abstände sehr viel kleiner als die optische Wellenlänge sind.
+ Wissen:
+  Was gilt nicht für den Brechungsindex und die Phasengeschwindigkeit einer Welle in einem Material?
+   Sie sind abhängig von der Dicke des Materials.
+   Ihr Produkt ergibt die Phasengeschwindigkeit der Welle im Vakuum.
+   Sie sind abhängig von der Wellenlänge.
+   Ist der Brechungsindex nicht komplex, ist sein Betrag größer gleich 1.
+  Was sind photonische Bandlücken?
+   Ein Energiebereich, für den keine Photonen durch einen photonischen Kristall propagieren.
+   Ein Energiebereich, für den Photonen von einem photonischen Kristall absorbiert werden.
+   Ein Energiebereich, für den ein photonischer Kristall elektrisch isolierend ist.
+   Ein Energiebereich, für den ein photonischer Kristall elektrisch leitend ist.
+  Wofür können photonische Kristalle verwendet werden?
+   Als Wellenleiter mit wenig Verlusten.
+   Als Wellenleiter für extrem kleine Wellenlängen.
+   Als Wellenleiter für breitbandige Signale.
+   Als Wellenleiter für extrem starke Signale.
+Quelle: W. Demtröder: Experimentalphysik 2, Springer, 2009.
