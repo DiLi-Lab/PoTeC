@@ -14,11 +14,11 @@ import pandas as pd
 # Aufruf: python create_word_roi_limits.py
 
 def create_word_roi_limits(
-        word_features_folder: str,
-        output_file_wl: str,
-        output_file_sl: str,
+        word_features_folder: Path,
+        output_file_wl: Path,
+        output_file_sl: Path,
 ) -> None:
-    wf_paths = list(Path(word_features_folder).glob('*.tsv'))
+    wf_paths = list(word_features_folder.glob('*.tsv'))
 
     word_limits_dict = {}
     sent_limits_dict = {}
@@ -69,33 +69,21 @@ def create_word_roi_limits(
         json.dump(sent_limits_dict, sent_limits_file, indent=2, sort_keys=True)
 
 
-def create_parser():
-    base_path = Path(os.getcwd()).parent
-    pars = argparse.ArgumentParser()
-
-    pars.add_argument(
-        '--word_features-folder', '-wf',
-        default=base_path / 'stimuli/word_features',
-    )
-
-    pars.add_argument(
-        '--output-file_wl', '-ow',
-        default=base_path / 'preprocessing_scripts/word_limits.json',
-    )
-
-    pars.add_argument(
-        '--output-file_sl', '-os',
-        default=base_path / 'preprocessing_scripts/sent_limits.json',
-    )
-
-    return pars
-
 def main() -> int:
-    parser = create_parser()
-    args = vars(parser.parse_args())
+    base_path = Path(__file__).parent.parent
 
-    create_word_roi_limits(**args)
+    word_features = base_path / 'stimuli' / 'word_features'
+    output_wl = base_path / 'preprocessing_scripts/word_limits.json'
+    output_sl = base_path / 'preprocessing_scripts/sent_limits.json'
+
+    create_word_roi_limits(
+        word_features,
+        output_wl,
+        output_sl
+    )
+
     return 0
+
 
 if __name__ == '__main__':
     raise SystemExit(main())

@@ -4,19 +4,13 @@
 
 ## Stimuli
 
-[Text and comprehension questions](stimuli/texts_and_questions)
+[Text and comprehension questions](stimuli/stimuli)
 
 
 
 
 [Word features](stimuli/OLD/word_features)
 
-
-
-
-todos:
-- check whether text and word columns are always exactly equal, if yes, delete text, but move word to the first column
-  - there are some that are not the same, why??
 
 | Column                                                    | Data type   | Description   |
 |:----------------------------------------------------------|:------------|:--------------|
@@ -150,8 +144,6 @@ todos:
 
 [Fixations](./eyetracking_data/fixations)
 
-TODO:
-- (uncorrected) fixation data: is the value of the RECORDING_SESSION_LABEL column always identical to the reader-ID in the filename?
 
 | Column                    | Data type   | Description   |
 |:--------------------------|:------------|:--------------|

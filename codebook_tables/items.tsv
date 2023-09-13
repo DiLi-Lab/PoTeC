@@ -1,0 +1,11 @@
+Column name	Possible values	Value type	Description	Num missing values	Missing value description	Source
+version	0-119	Integer	Specifies the version of the items. In each version, the order of the stimuli and the order of the answer options for each question differs. The specifics of each version can be found in the items.tsv.	0		
+text_id	p0: 120, b0: 120, p3: 120, b2: 120, b1: 120, p2: 120, b4: 120, b3: 120, p1: 120, b5: 120, p4: 120, p5: 120	Categorical	Unique identifier given to each stimulus text.	0		
+text_domain	physics: 720, bio: 720	Categorical	The domain of the stimulus text.	0		
+order_bq_1_ans	no stats?		The order in which the answers for background question 1 where presented.	0		
+order_bq_2_ans	no stats?		See description of order_bq_1_ans	0		
+order_bq_3_ans	no stats?		See description of order_bq_1_ans	0		
+order_tq_1_ans	no stats?		See description of order_bq_1_ans	0		
+order_tq_2_ans	no stats?		See description of order_bq_1_ans	0		
+order_tq_3_ans	no stats?		See description of order_bq_1_ans	0		
+trial	1-12	Integer	Each participant reads all 12 texts, the order of which follows their trial number. If text b0 has trial number 2 for participant 5, this participant read text b0 as the second text.	0		

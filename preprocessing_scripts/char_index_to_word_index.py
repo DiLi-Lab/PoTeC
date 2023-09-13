@@ -26,7 +26,7 @@ def roi2word(roi: int, word_limits: list) -> int:
             return - index - 1
 
 
-def char_index_to_word_index(limits_file: str, output_file: str) -> None:
+def char_index_to_word_index(limits_file: Path, output_file: Path) -> None:
     with open(limits_file, 'r') as limits_json:
         limits = json.load(limits_json)
 
@@ -60,25 +60,19 @@ def char_index_to_word_index(limits_file: str, output_file: str) -> None:
     data_df.to_csv(output_file, sep='\t', index=False)
 
 
-def create_parser():
-    base_path = Path(os.getcwd()).parent
-    pars = argparse.ArgumentParser()
+def main() -> int:
+    base_path = Path(__file__).parent.parent
+    word_limits = base_path / 'preprocessing_scripts/word_limits.json'
+    output = base_path / 'preprocessing_scripts/roi_to_word.tsv'
 
-    pars.add_argument(
-        '--limits-file',
-        default=base_path / 'preprocessing_scripts/word_limits.json',
+    char_index_to_word_index(
+        word_limits,
+        output
     )
 
-    pars.add_argument(
-        '--output-file',
-        default=base_path / 'preprocessing_scripts/roi_to_word.tsv',
-    )
-
-    return pars
+    return 0
 
 
 if __name__ == '__main__':
-    parser = create_parser()
-    args = vars(parser.parse_args())
+    raise SystemExit(main())
 
-    char_index_to_word_index(**args)
