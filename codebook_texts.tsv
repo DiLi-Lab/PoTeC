@@ -1,0 +1,12 @@
+section	text	link	title
+stimuli/stimuli/items.tsv	 	[Items](stimuli/stimuli/items.tsv)	Items
+stimuli/stimuli/stimuli.tsv	 	[Stimuli including comprehension questions](stimuli/stimuli/stimuli.tsv)	Stimuli and comprehension questions
+stimuli/aoi_texts/aoi/	 	[AOI](stimuli/aoi_texts/aoi)	Areas of interest (AOI)
+stimuli/word_features/	 	[Word features](stimuli/word_features)	Word features
+participants/	 	[Participant information](participants/participant_data.tsv)	Participants
+eyetracking_data/fixations/	 	[Fixations](eyetracking_data/fixations)	Fixations
+eyetracking_data/reading_measures/	 	[Reading measures](eyetracking_data/reading_measures)	Reading measures
+eyetracking_data/reader_rm_wf/	 	Merged: [fixations, reading measures, participant information and word features](eyetracking_data/reader_rm_wf)	Merged: fixations, participant info, reading measures and word features
+eyetracking_data/scanpaths/	 	[Scanpaths](eyetracking_data/scanpaths)	Scanpaths
+eyetracking_data/scanpaths_reader_rm_wf/	 	Merged: [scanpaths, participant information, reading measures and word features](eyetracking_data/scanpaths_reader_rm_wf)	Merged: scanpaths, participant info, reading measures and word features
+preprocessing_scripts/roi_to_word.tsv	 	[ROI to word mapping](preprocessing_scripts/roi_to_word.tsv)	ROI to word mapping

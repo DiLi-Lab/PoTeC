@@ -5,6 +5,7 @@ Before running this script you need to run the following script:
 python generate_scanpaths.py
 Call: TODO
 """
+from __future__ import annotations
 
 import argparse
 import os
@@ -16,9 +17,9 @@ from tqdm import tqdm
 
 
 def merge_scanpaths_reader_information(
-        scanpaths_folder: str,
-        rm_folder: str,
-        output_folder: str,
+        scanpaths_folder: str | Path,
+        rm_folder: str | Path,
+        output_folder: str | Path,
 ) -> None:
     # create the output folder if it does not exist
     if not os.path.exists(output_folder):
@@ -58,30 +59,21 @@ def merge_scanpaths_reader_information(
         merged_df.to_csv(Path(output_folder) / final_file_name, sep='\t', index=False, na_rep='NA')
 
 
-def create_parser():
-    base_path = Path(os.getcwd()).parent
-    pars = argparse.ArgumentParser()
+def main() -> int:
+    repo_root = Path(__file__).parent.parent
 
-    pars.add_argument(
-        '--scanpaths-folder', '-sp',
-        default=base_path / 'eyetracking_data/scanpaths/',
+    scanpaths_folder = repo_root / 'eyetracking_data/scanpaths/'
+    rm_folder = repo_root / 'eyetracking_data/reader_rm_wf/'
+    output_folder = repo_root / 'eyetracking_data/scanpaths_reader_rm_wf/'
+
+    merge_scanpaths_reader_information(
+        scanpaths_folder=scanpaths_folder,
+        rm_folder=rm_folder,
+        output_folder=output_folder,
     )
 
-    pars.add_argument(
-        '--rm-folder', '-rm',
-        default=base_path / 'eyetracking_data/reader_rm_wf/',
-    )
-
-    pars.add_argument(
-        '--output-folder', '-o',
-        default=base_path / 'eyetracking_data/scanpaths_reader_rm_wf/',
-    )
-
-    return pars
+    return 0
 
 
 if __name__ == '__main__':
-    parser = create_parser()
-    args = vars(parser.parse_args())
-
-    merge_scanpaths_reader_information(**args)
+    raise SystemExit(main())

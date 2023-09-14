@@ -4,6 +4,8 @@ TODO: clean again, r is never closed?
 Call: python3 merge_rm_wf.py
 To specify custom file paths see argparse arguments at the bottom of the file.
 """
+from __future__ import annotations
+
 import argparse
 import csv
 import os
@@ -14,10 +16,10 @@ from tqdm import tqdm
 
 
 def merge_rm_word_features(
-        reading_measure_folder: str,
-        word_features_folder: str,
-        participants_file: str,
-        output_folder: str,
+        reading_measure_folder: str | Path,
+        word_features_folder: str | Path,
+        participants_file: str | Path,
+        output_folder: str | Path,
 ):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
@@ -118,34 +120,23 @@ def merge_rm_word_features(
             merged_df.to_csv(path_or_buf=filename_merged_data, header=True, na_rep='NA', sep='\t', index=False)
 
 
-def create_parser():
-    base_path = Path(os.getcwd()).parent
-    pars = argparse.ArgumentParser()
+def main() -> int:
+    repo_root = Path(__file__).parent.parent
 
-    pars.add_argument(
-        '--reading_measure_folder', '-rm',
-        default=base_path / 'eyetracking_data/reading_measures',
+    reading_measure_folder = repo_root / 'eyetracking_data/reading_measures'
+    word_features_folder = repo_root / 'stimuli/word_features'
+    participants_file = repo_root / 'participants/participant_data.tsv'
+    output_folder = repo_root / 'eyetracking_data/reader_rm_wf'
+
+    merge_rm_word_features(
+        reading_measure_folder=reading_measure_folder,
+        word_features_folder=word_features_folder,
+        participants_file=participants_file,
+        output_folder=output_folder,
     )
 
-    pars.add_argument(
-        '--word_features_folder', '-wf',
-        default=base_path / 'stimuli/word_features',
-    )
-
-    pars.add_argument(
-        '--participants_file', '-p',
-        default=base_path / 'participants/participant_data.tsv',
-    )
-
-    pars.add_argument(
-        '--output_folder', '-o',
-        default=base_path / 'eyetracking_data/reader_rm_wf',
-    )
-
-    return pars
+    return 0
 
 
 if __name__ == '__main__':
-    parser = create_parser()
-    args = vars(parser.parse_args())
-    merge_rm_word_features(**args)
+    raise SystemExit(main())

@@ -68,7 +68,7 @@ is_technical_term	"1 if the word is a technical term that is generally understan
 previous_saccade_duration	The duration of a saccade in milliseconds that preceeds a fixation.
 regularity_normalized		dlexDB
 bq_3_option2	Option 2 for background question 3
-contains_symbol	Whether or not the word contains a symbol.
+contains_symbol	Whether or not the word contains a symbol. E.g.: β-D-Glucose
 tq_1	Text question 1.
 expert_status	Reader's expert status. Readers are considered experts if they are either MSc or PhD students. 1st semester BSc students are considered beginners.
 bq_2_option4	Option 4 for background question 2

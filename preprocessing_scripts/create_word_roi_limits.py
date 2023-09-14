@@ -3,6 +3,8 @@
 #TODO
 Call: #TODO
 """
+from __future__ import annotations
+
 import argparse
 import json
 import os
@@ -11,14 +13,12 @@ from pathlib import Path
 import pandas as pd
 
 
-# Aufruf: python create_word_roi_limits.py
-
 def create_word_roi_limits(
-        word_features_folder: Path,
-        output_file_wl: Path,
-        output_file_sl: Path,
+        word_features_folder: str | Path,
+        output_file_wl: str | Path,
+        output_file_sl: str | Path,
 ) -> None:
-    wf_paths = list(word_features_folder.glob('*.tsv'))
+    wf_paths = list(Path(word_features_folder).glob('*.tsv'))
 
     word_limits_dict = {}
     sent_limits_dict = {}

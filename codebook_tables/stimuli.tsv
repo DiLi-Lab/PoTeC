@@ -1,5 +1,5 @@
 Column name	Possible values	Value type	Description	Num missing values	Missing value description	Source
-text_id	p0: 1, b0: 1, p3: 1, b2: 1, b1: 1, p2: 1, b4: 1, b3: 1, p1: 1, b5: 1, p4: 1, p5: 1	Categorical	Unique identifier given to each stimulus text.	0		
+text_id	b0, b1, b2, b3, b4, b5, p0, p1, p2, p3, p4, p5		Unique identifier given to each stimulus text.	0		
 text_domain	physics: 6, bio: 6	Categorical	The domain of the stimulus text.	0		
 text		string	The stimulus text.	0		
 headline		string	The header of the respective stimulus text.	0		

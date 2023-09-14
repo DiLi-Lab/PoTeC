@@ -4,6 +4,8 @@ Creates scanpaths for given fixations files and text information.
 Call: python3 generate_scanpaths.py
 To specify custom file paths see argparse below.
 """
+from __future__ import annotations
+
 import argparse
 import os
 import re
@@ -14,11 +16,11 @@ from tqdm import tqdm
 
 
 def create_scanpaths(
-        fixation_folder: str,
-        roi2word_file: str,
-        wf_folder: str,
-        ias_folder: str,
-        output_folder: str,
+        fixation_folder: str | Path,
+        roi2word_file: str | Path,
+        wf_folder: str | Path,
+        ias_folder: str | Path,
+        output_folder: str | Path,
 ) -> None:
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
@@ -101,41 +103,26 @@ def create_scanpaths(
         fix_csv.to_csv(Path(output_folder) / scanpath_file, sep='\t', index=False, na_rep='NA')
 
 
-def create_parser():
-    base_path = Path(os.getcwd()).parent
-    pars = argparse.ArgumentParser()
+def main() -> int:
+    repo_root = Path(__file__).parent.parent
 
-    pars.add_argument(
-        '--fixation-folder',
-        default=base_path / 'eyetracking_data/fixations/',
-        help='Path to fixation data'
+    # rewrite args as hardcoded paths using the repo root
+    fixation_folder = repo_root / 'eyetracking_data/fixations/'
+    roi2word_file = repo_root / 'preprocessing_scripts/roi_to_word.tsv'
+    wf_folder = repo_root / 'stimuli/word_features/'
+    ias_folder = repo_root / 'stimuli/aoi_texts/aoi/'
+    output_folder = repo_root / 'eyetracking_data/scanpaths/'
+
+    create_scanpaths(
+        fixation_folder=fixation_folder,
+        roi2word_file=roi2word_file,
+        wf_folder=wf_folder,
+        ias_folder=ias_folder,
+        output_folder=output_folder,
     )
 
-    pars.add_argument(
-        '--roi2word-file',
-        default=base_path / 'preprocessing_scripts/roi_to_word.tsv',
-    )
-
-    pars.add_argument(
-        '--wf-folder',
-        default=base_path / 'stimuli/word_features/',
-    )
-
-    pars.add_argument(
-        '--ias-folder',
-        default=base_path / 'stimuli/aoi_texts/aoi/'
-    )
-
-    pars.add_argument(
-        '--output-folder',
-        default=base_path / 'eyetracking_data/scanpaths/',
-    )
-
-    return pars
+    return 0
 
 
 if __name__ == '__main__':
-    parser = create_parser()
-    args = vars(parser.parse_args())
-
-    create_scanpaths(**args)
+    raise SystemExit(main())

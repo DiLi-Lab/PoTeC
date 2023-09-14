@@ -22,7 +22,7 @@ SL_in	-162-156	Integer	Incoming saccade length: length of the saccade that leads
 SL_out	-179-63	Integer	Outgoing saccade length: length of the first saccade that leaves the word in number of words; positive sign if the saccade is a progressive one, negative sign if it is a regression; 0 if the word is never fixated	0		
 text_domain_numeric	1: 71550, 0: 70575	Categorical	Numerical value of text_domain.	0		
 trial	1-12	Integer	Each participant reads all 12 texts, the order of which follows their trial number. If text b0 has trial number 2 for participant 5, this participant read text b0 as the second text.	0		
-text_id	b3: 13500, p0: 13200, p3: 13200, p5: 12750, b1: 12150, b4: 11850, b5: 11625, p1: 11400, b2: 11250, b0: 11175, p4: 10575, p2: 9450	Categorical	Unique identifier given to each stimulus text.	0		
+text_id	b0, b1, b2, b3, b4, b5, p0, p1, p2, p3, p4, p5		Unique identifier given to each stimulus text.	0		
 reader_id	0-105	Integer	The unique identifier given to each reader. Reader IDs start at 0.	0		
 gender_numeric	1.0: 73905, 0.0: 66325, nan: 1895	Categorical	Numerical value of gender.	1895		
 reader_domain_numeric	0: 81485, 1: 60640	Categorical	Numerical encoding of the reader domain.	0		

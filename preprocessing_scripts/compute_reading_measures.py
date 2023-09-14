@@ -4,9 +4,7 @@ Computes reading measures based on fixation data
 Call: python3 compute_reading_measures.py
 """
 
-import argparse
 import json
-import logging
 import os
 import statistics
 from pathlib import Path
@@ -14,7 +12,6 @@ from pathlib import Path
 import pandas as pd
 from tqdm import tqdm
 
-logging.basicConfig(filename='rm_error_log.txt', level=logging.ERROR)
 
 FIX_INDEX_COL_NAME = 'fixation_index'
 FIX_DUR_COL_NAME = 'fixation_duration'
@@ -39,11 +36,11 @@ def roi2word(roi: int, word_limits: list) -> int:
 
 
 def compute_reading_measures(
-        fixation_folder: str,
-        output_folder: str,
-        participants_file: str,
-        word_limits_json: str,
-        sent_limits_json: str,
+        fixation_folder: Path,
+        output_folder: Path,
+        participants_file: Path,
+        word_limits_json: Path,
+        sent_limits_json: Path,
 ) -> None:
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
@@ -187,7 +184,6 @@ def compute_reading_measures(
         except (ValueError, TypeError):
             # if no accuracy information is available, code with -1
             acc_tq1 = acc_tq2 = acc_tq3 = acc_bq1 = acc_bq2 = acc_bq3 = mean_acc_tq = mean_acc_bq = pd.NA
-            logging.error(f"No accuracy values for {fixation_file_path}")
 
         # Coding of topic: bio=1, phy=0
         if fixation_file_sorted.loc[1, 'text_domain'] == 'bio':
@@ -196,7 +192,6 @@ def compute_reading_measures(
             text_domain_numeric = 0
         else:
             text_domain_numeric = pd.NA
-            logging.error(f"Topic not defined for {fixation_file_path}")
 
         trial = fixation_file_sorted.loc[1, 'trial']
         text_id = fixation_file_sorted.loc[1, 'text_id']
@@ -240,40 +235,25 @@ def compute_reading_measures(
         rm_reader_text_pair_df.to_csv(output_file_name, index=False, sep='\t')
 
 
-def create_parser():
-    base_path = Path(os.getcwd()).parent
-    pars = argparse.ArgumentParser()
+def main() -> int:
+    repo_root = Path(__file__).parent.parent
 
-    pars.add_argument(
-        '--fixation-folder',
-        default=base_path / 'eyetracking_data/fixations',
+    sent_limits = repo_root / 'preprocessing_scripts/sent_limits.json'
+    word_limits = repo_root / 'preprocessing_scripts/word_limits.json'
+    participants = repo_root / 'participants/participant_data.tsv'
+    fixation_folder = repo_root / 'eyetracking_data/fixations'
+    output_folder = repo_root / 'eyetracking_data/reading_measures'
+
+    compute_reading_measures(
+        fixation_folder=fixation_folder,
+        output_folder=output_folder,
+        participants_file=participants,
+        sent_limits_json=sent_limits,
+        word_limits_json=word_limits
     )
 
-    pars.add_argument(
-        '--participants-file',
-        default=base_path / 'participants/participant_data.tsv',
-    )
-
-    pars.add_argument(
-        '--word-limits-json',
-        default=base_path / 'preprocessing_scripts/word_limits.json',
-    )
-
-    pars.add_argument(
-        '--sent-limits-json',
-        default=base_path / 'preprocessing_scripts/sent_limits.json',
-    )
-
-    pars.add_argument(
-        '--output-folder',
-        default=base_path / 'eyetracking_data/reading_measures',
-    )
-
-    return pars
+    return 0
 
 
 if __name__ == '__main__':
-    parser = create_parser()
-    args = vars(parser.parse_args())
-
-    compute_reading_measures(**args)
+    raise SystemExit(main())

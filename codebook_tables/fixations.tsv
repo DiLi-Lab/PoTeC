@@ -18,4 +18,4 @@ char_index_in_line	1-100	Integer	Index of a character in the line. Indexing star
 original_fixation_index	1-1478	Integer	The index of the uncorrected fixation.	0		
 is_fixation_adjusted	False: 382202, True: 22218	Categorical	Whether or not the fixation has been adjusted manually.	0		Manually tagged
 reader_id	0-105	Integer	The unique identifier given to each reader. Reader IDs start at 0.	0		
-text_id	p5: 41791, b3: 39609, b5: 37764, b1: 36315, p3: 34077, p0: 33107, p1: 32537, b2: 32002, b4: 31624, p2: 30744, p4: 27465, b0: 27385	Categorical	Unique identifier given to each stimulus text.	0		
+text_id	b0, b1, b2, b3, b4, b5, p0, p1, p2, p3, p4, p5		Unique identifier given to each stimulus text.	0		

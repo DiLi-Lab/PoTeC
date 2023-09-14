@@ -61,13 +61,14 @@ def char_index_to_word_index(limits_file: Path, output_file: Path) -> None:
 
 
 def main() -> int:
-    base_path = Path(__file__).parent.parent
-    word_limits = base_path / 'preprocessing_scripts/word_limits.json'
-    output = base_path / 'preprocessing_scripts/roi_to_word.tsv'
+    repo_root = Path(__file__).parent.parent
+
+    word_limits = repo_root / 'preprocessing_scripts/word_limits.json'
+    output_file = repo_root / 'preprocessing_scripts/roi_to_word.tsv'
 
     char_index_to_word_index(
         word_limits,
-        output
+        output_file
     )
 
     return 0

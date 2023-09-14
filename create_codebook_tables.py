@@ -3,16 +3,17 @@ from pathlib import Path
 import pandas as pd
 
 PATHS_FOLDERS = [
-    'stimuli/aoi_texts/aoi/',
-    'stimuli/word_features/',
-    'eyetracking_data/fixations/',
-    'eyetracking_data/reader_rm_wf/',
-    'eyetracking_data/reading_measures/',
-    'eyetracking_data/scanpaths/',
-    'eyetracking_data/scanpaths_reader_rm_wf/',
     'stimuli/stimuli/items.tsv',
     'stimuli/stimuli/stimuli.tsv',
+    'stimuli/aoi_texts/aoi/',
+    'stimuli/word_features/',
     'participants/',
+    'eyetracking_data/fixations/',
+    'eyetracking_data/reading_measures/',
+    'eyetracking_data/reader_rm_wf/',
+    'eyetracking_data/scanpaths/',
+    'eyetracking_data/scanpaths_reader_rm_wf/',
+    'preprocessing_scripts/roi_to_word.tsv',
 ]
 
 text_vars = [
@@ -193,8 +194,14 @@ def create_codebook_tables():
 
     all_cols = set()
 
-    with open('markdown_tables_for_codebook.txt', 'w', encoding='utf8') as md_tables:
-        md_tables.write('Can be copied to the codebook MD later\n\n')
+    codebook_text = pd.read_csv('codebook_texts.tsv', sep='\t') #.to_dict()
+
+    with open('CODEBOOK.md', 'w', encoding='utf8') as md_tables:
+        codebook_header = (f'# Codebook\n'
+                           f'The codebook specifies the data types, possible values, and other information '
+                           f'for each column in the data files.\n\n')
+
+        md_tables.write(codebook_header)
 
     for folder in PATHS_FOLDERS:
         # iterate over all tsv files in all folders
@@ -229,6 +236,10 @@ def create_codebook_tables():
             if col_name in no_stats:
                 col_dict['possible_values'] = 'no stats?'
                 col_dict['value_type'] = pd.NA
+
+            elif col_name in ['text_id']:
+                col_dict['possible_values'] = ', '.join(sorted(list(set(col_dict['values']))))
+                col_dict['value_type'] = ''
 
             elif col_name in cont_vars:
                 col_dict['value_type'] = 'Float'
@@ -276,9 +287,14 @@ def create_codebook_tables():
         df = pd.DataFrame(df_lists)
         df.to_csv(f'codebook_tables/{Path(folder).stem}.tsv', sep='\t', index=False)
 
-        with open('markdown_tables_for_codebook.txt', 'a', encoding='utf8') as md_tables:
-            md = df.to_markdown()
-            md_tables.write(Path(folder).stem + '\n')
+        with open('CODEBOOK.md', 'a', encoding='utf8') as md_tables:
+            title = codebook_text[codebook_text['section'] == folder]['title'].values[0]
+            description = codebook_text[codebook_text['section'] == folder]['text'].values[0]
+            link = codebook_text[codebook_text['section'] == folder]['link'].values[0]
+
+            md = df.to_markdown(index=False)
+            md_tables.write(f'## {title}\n')
+            md_tables.write(f'{description}\n\n{link}\n\n')
             md_tables.write(md)
 
             md_tables.write('\n\n\n')

@@ -4,7 +4,7 @@ word_index_in_text	1-180	Integer	The index of the word in the text. Indexing sta
 word_index_in_sent	1-51	Integer	The index of the word in the sentence. Indexing starts at 1.	0		
 sent_index_in_text	1-12	Integer	The index of a sentence in the respective text. Indexing starts at 1.	0		
 word_limit_char_indices	no stats?		Specifies the limits of each word in character indices. Format: [word_start],[word_end]. For example: 3,7 means a word starts at character index 3 in the text and ends at character index 7. The properties fo the character indices are specified for char_index_in_text.	0		
-text_id	b3: 180, p3: 176, p0: 176, p5: 170, b1: 162, b4: 158, b5: 155, p1: 152, b2: 150, b0: 149, p4: 141, p2: 126	Categorical	Unique identifier given to each stimulus text.	0		
+text_id	b0, b1, b2, b3, b4, b5, p0, p1, p2, p3, p4, p5		Unique identifier given to each stimulus text.	0		
 is_technical_term	0: 1491, 1: 249, 2: 155	Categorical	"1 if the word is a technical term that is generally understandable (""elektrisch""). 2 if the word is a technical term that is not generally understandable (""Agarose"").  "	0		Manually tagged
 word_length	2-33	Integer	Word length is defined in number of characters including symbols like hyphens but without sentence punctuation at the end (i.e., z.B. = 4 characters; DNA-Kette =9 characters; eats.=4 characters	0		
 STTS_punctuation_before	nan: 1883, $(: 12	Categorical	If a word is preceded by a punctuation mark, the STTS-PoS-tag of the punctuation mark is added here.	1883		
@@ -14,8 +14,8 @@ is_in_parentheses	0: 1890, 1: 5	Categorical	Whether or not the word is part of a
 is_clause_beginning	0: 1796, 1: 99	Categorical	Whether or not the word is the beginning of a clause. 	0		Manually tagged
 is_sent_beginning	0: 1798, 1: 97	Categorical	Whether or not the word is the beginning of a new sentence.	0		Manually tagged
 is_abbreviation	0: 1890, 1: 5	Categorical	Whether or not the entire word is an abbreviation.	0		Manually tagged
-contains_symbol	0: 1887, 1: 8	Categorical	Whether or not the word contains a symbol.	0		
-contains_hyphen	0: 1866, 1: 29	Categorical	Whether or not the word contains a hpythen. E.g.: 1 for DNA-Fragment	0		
+contains_symbol	0: 1887, 1: 8	Categorical	Whether or not the word contains a symbol. E.g.: β-D-Glucose	0		
+contains_hyphen	0: 1866, 1: 29	Categorical	Whether or not the word contains a hpythen. E.g.: 1 for DNA-Fragment. (*nicht* Wörter, die Tag TRUNC (Kompositions-ERstglieg) haben)	0		
 contains_abbreviation	0: 1883, 1: 12	Categorical	Whether or not the word contains an abbreviation. 0 for words that are only an abbreviation. See is_abbreviation. E.g.: 1 for DNA-Fragment, 0 for DNA	0		
 STTS_PoS_tag	NN: 515, ART: 276, APPR: 184, ADJA: 154, VVFIN: 102, VAFIN: 73, ADV: 73, KON: 66, ADJD: 53, APPRART: 48, VVPP: 38, VVINF: 33, PRELS: 29, PRF: 25, VMFIN: 25, PPER: 25, PAV: 18, KOKOM: 17, PDAT: 16, KOUS: 16, PTKVZ: 13, PIS: 10, PTKZU: 10, PIDAT: 9, CARD: 9, VAINF: 8, PPOSAT: 7, PDS: 7, KOUI: 6, PRELAT: 6, PIAT: 5, TRUNC: 5, PTKNEG: 4, NE: 4, VVIZU: 2, VMINF: 1, PWAV: 1, PTKA: 1, APZR: 1	Categorical	Part-of-speech tags according to the STTS-tagset. See stimuli/ANNOTATION.MD for more information. 	0		Manually tagged
 type		string	"""The orthographical representation of a word as found in the corpus; this data is case sensitive, i.e. there is a distinction between name and Name."""	6		dlexDB
