@@ -110,7 +110,7 @@ def main() -> int:
     fixation_folder = repo_root / 'eyetracking_data/fixations/'
     roi2word_file = repo_root / 'preprocessing_scripts/roi_to_word.tsv'
     wf_folder = repo_root / 'stimuli/word_features/'
-    ias_folder = repo_root / 'stimuli/aoi_texts/aoi/'
+    ias_folder = repo_root / 'stimuli/aoi_texts/'
     output_folder = repo_root / 'eyetracking_data/scanpaths/'
 
     create_scanpaths(
