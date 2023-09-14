@@ -6,10 +6,10 @@
 - [ ] rewrite scripts such that they can be run from correct folder
 - [ ] write bsh script to run all scripts in correct order with correct arguments
 - [ ] add syllables to abbr e.g. dna-fragment we're doing it phonetically
-- [ ] [codebook](./CODEBOOK.md)
+- [ ] [codebook](../CODEBOOK.md)
 - [ ] add table of contents to codebook
 - [ ] spell check
-- [ ] there is a folder [RANDOM](./RANDOM) where I put all the files that I don't know what to do with, can someone check those?
+- [ ] there is a folder [RANDOM](RANDOM) where I put all the files that I don't know what to do with, can someone check those?
 - [ ] Und es fehlt auch noch Informationen zu den comprehension questions und wie sie kodiert sind. 
 - [ ] for some readers we do not have accuracy values (?) --> add to the codebook missing values column which ones are missing (the raw nan count is not really informative)
 - [ ] update running instructions, requirements files etc.

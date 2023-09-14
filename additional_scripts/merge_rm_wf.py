@@ -38,39 +38,11 @@ def merge_rm_word_features(
             filename_features, sep='\t', keep_default_na=False,
             na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan', '1.#IND',
                        '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan', ''],
-            usecols=['word', 'is_technical_term', 'word_index_in_sent', 'sent_index_in_text', 'word_length',
-                     'word_index_in_text', 'is_in_quote', 'is_in_parentheses', 'is_clause_beginning',
-                     'is_sent_beginning',
-                     'is_abbreviation', 'contains_abbreviation', 'contains_hyphen', 'contains_symbol',
-                     'type', 'lemma',
-                     'lemma_length_chars', 'type_length_syllables',
-                     'annotated_type_frequency_normalized', 'type_frequency_normalized',
-                     'lemma_frequency_normalized', 'familiarity_normalized',
-                     'regularity_normalized', 'document_frequency_normalized',
-                     'sentence_frequency_normalized',
-                     'cumulative_syllable_corpus_frequency_normalized',
-                     'cumulative_syllable_lexicon_frequency_normalized',
-                     'cumulative_character_corpus_frequency_normalized',
-                     'cumulative_character_lexicon_frequency_normalized',
-                     'cumulative_character_bigram_corpus_frequency_normalized',
-                     'cumulative_character_bigram_lexicon_frequency_normalized',
-                     'cumulative_character_trigram_corpus_frequency_normalized',
-                     'cumulative_character_trigram_lexicon_frequency_normalized',
-                     'initial_letter_frequency_normalized',
-                     'initial_bigram_frequency_normalized',
-                     'initial_trigram_frequency_normalized', 'avg_cond_prob_in_bigrams',
-                     'avg_cond_prob_in_trigrams',
-                     'neighbors_coltheart_higher_freq_cum_freq_normalized',
-                     'neighbors_coltheart_higher_freq_count_normalized',
-                     'neighbors_coltheart_all_cum_freq_normalized',
-                     'neighbors_coltheart_all_count_normalized',
-                     'neighbors_levenshtein_higher_freq_cum_freq_normalized',
-                     'neighbors_levenshtein_higher_freq_count_normalized',
-                     'neighbors_levenshtein_all_cum_freq_normalized',
-                     'neighbors_levenshtein_all_count_normalized'],
             encoding='utf-8',
             engine='python',
         )
+
+        word_features = word_features.drop(columns=['text_id', 'word_limit_char_indices'])
 
         # replace missing values with 0s (affects frequency measures: if word does not occur in corpus, frequency = 0)
         word_features = word_features.fillna(0)
@@ -81,18 +53,13 @@ def merge_rm_word_features(
                 reading_measure_folder,
                 'reader' + str(reader) + '_' + text + '_rm.tsv'
             )
+
             reading_measure_csv = pd.read_csv(
                 filename_reading_measures,
                 sep='\t',
                 keep_default_na=False,
                 na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan', '1.#IND',
                            '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan', ''],
-                usecols=['FRT', 'SL_out', 'TRC_in', 'FFD', 'FPRT', 'RPD_exc', 'TFT', 'RRT', 'FPF', 'FD', 'RR', 'Fix',
-                         'LP', 'word_index_in_sent', 'SL_in', 'RPD_inc', 'FPReg', 'TRC_out', 'sent_index_in_text',
-                         'SFD', 'RBRT', 'text_domain_numeric', 'trial', 'gender_numeric', 'reader_domain_numeric',
-                         'expert_status_numeric', 'age', 'acc_bq_1',
-                         'acc_bq_2', 'acc_bq_3', 'acc_tq_1', 'acc_tq_2', 'acc_tq_3', 'mean_acc_bq', 'mean_acc_tq',
-                         'domain_expert_status_numeric', 'text_id', 'reader_id']
             )
 
             # sort columns. Necessary because different col ordering in different input files

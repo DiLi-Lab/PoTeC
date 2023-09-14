@@ -196,7 +196,7 @@ def create_codebook_tables():
 
     codebook_text = pd.read_csv('codebook_texts.tsv', sep='\t') #.to_dict()
 
-    with open('CODEBOOK.md', 'w', encoding='utf8') as md_tables:
+    with open('../CODEBOOK.md', 'w', encoding='utf8') as md_tables:
         codebook_header = (f'# Codebook\n'
                            f'The codebook specifies the data types, possible values, and other information '
                            f'for each column in the data files.\n\n')
@@ -287,7 +287,7 @@ def create_codebook_tables():
         df = pd.DataFrame(df_lists)
         df.to_csv(f'codebook_tables/{Path(folder).stem}.tsv', sep='\t', index=False)
 
-        with open('CODEBOOK.md', 'a', encoding='utf8') as md_tables:
+        with open('../CODEBOOK.md', 'a', encoding='utf8') as md_tables:
             title = codebook_text[codebook_text['section'] == folder]['title'].values[0]
             description = codebook_text[codebook_text['section'] == folder]['text'].values[0]
             link = codebook_text[codebook_text['section'] == folder]['link'].values[0]
