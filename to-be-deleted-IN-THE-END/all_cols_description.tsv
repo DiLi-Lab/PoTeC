@@ -64,7 +64,7 @@ next_saccade_duration	The duration in milliseconds of the saccade that follows a
 word_limit_char_indices	Specifies the limits of each word in character indices. Format: [word_start],[word_end]. For example: 3,7 means a word starts at character index 3 in the text and ends at character index 7. The properties fo the character indices are specified for char_index_in_text.
 type_length_syllables		dlexDB
 bq_3_option1	Option 1 for background question 3
-is_technical_term	"1 if the word is a technical term that is generally understandable (""elektrisch""). 2 if the word is a technical term that is not generally understandable (""Agarose"").  "	Manually tagged
+is_expert_technical_term	"1 if the word is a technical term that is not generally understandable. E.g.: ""Agarose""  "	Manually tagged
 previous_saccade_duration	The duration of a saccade in milliseconds that preceeds a fixation.
 regularity_normalized		dlexDB
 bq_3_option2	Option 2 for background question 3
@@ -158,3 +158,4 @@ tq_3	Text question 3.
 contains_hyphen	Whether or not the word contains a hpythen. E.g.: 1 for DNA-Fragment. (*nicht* Wörter, die Tag TRUNC (Kompositions-ERstglieg) haben)
 FD	First duration: duration of the first fixation on a word (identical to FFD if not skipped in the first-pass)
 aoi_type	The shape of the area of interest. In this corpus, all aois are rectangles around the characters.
+is_general_technical_term	"1 if the word is a technical term that is generally understandable. E.g.: ""elektrisch"""

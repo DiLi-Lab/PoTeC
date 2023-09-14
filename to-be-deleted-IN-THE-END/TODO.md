@@ -16,6 +16,7 @@
 - [ ] --> Kannst du vielleicht auch noch eine Art Baum zeichnen, der darstellt, wie das preprocessing durchgeführt wird/wurde (also welches skript angewendet wird um dann welchen datensatz zu erzeugen)?
 - [ ] fix mismatching pos tags (see stuff to check)
 - [ ] layout der button box irgendwo darstellen
+- [ ] Bei mapping mit rois: Interpunktion ist NICHT teil einer ROI! Leerzeichen sind auch NICHT Teil einer roi!
 
 old notes:
 * TODO

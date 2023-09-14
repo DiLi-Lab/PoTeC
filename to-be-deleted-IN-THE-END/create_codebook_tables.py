@@ -3,17 +3,17 @@ from pathlib import Path
 import pandas as pd
 
 PATHS_FOLDERS = [
-    'stimuli/stimuli/items.tsv',
-    'stimuli/stimuli/stimuli.tsv',
-    'stimuli/aoi_texts/aoi/',
-    'stimuli/word_features/',
-    'participants/',
-    'eyetracking_data/fixations/',
-    'eyetracking_data/reading_measures/',
-    'eyetracking_data/reader_rm_wf/',
-    'eyetracking_data/scanpaths/',
-    'eyetracking_data/scanpaths_reader_rm_wf/',
-    'preprocessing_scripts/roi_to_word.tsv',
+    '../stimuli/stimuli/items.tsv',
+    '../stimuli/stimuli/stimuli.tsv',
+    '../stimuli/aoi_texts/aoi/',
+    '../stimuli/word_features/',
+    '../participants/',
+    '../eyetracking_data/fixations/',
+    '../eyetracking_data/reading_measures/',
+    '../eyetracking_data/reader_rm_wf/',
+    '../eyetracking_data/scanpaths/',
+    '../eyetracking_data/scanpaths_reader_rm_wf/',
+    '../preprocessing_scripts/roi_to_word.tsv',
 ]
 
 text_vars = [
@@ -285,12 +285,12 @@ def create_codebook_tables():
             df_lists['Source'].append(info_tsv[info_tsv['Column_name'] == k]['Source'].values[0])
 
         df = pd.DataFrame(df_lists)
-        df.to_csv(f'codebook_tables/{Path(folder).stem}.tsv', sep='\t', index=False)
+        df.to_csv(f'../codebook_tables/{Path(folder).stem}.tsv', sep='\t', index=False)
 
         with open('../CODEBOOK.md', 'a', encoding='utf8') as md_tables:
-            title = codebook_text[codebook_text['section'] == folder]['title'].values[0]
-            description = codebook_text[codebook_text['section'] == folder]['text'].values[0]
-            link = codebook_text[codebook_text['section'] == folder]['link'].values[0]
+            title = codebook_text[codebook_text['section'] == folder[3:]]['title'].values[0]
+            description = codebook_text[codebook_text['section'] == folder[3:]]['text'].values[0]
+            link = codebook_text[codebook_text['section'] == folder[3:]]['link'].values[0]
 
             md = df.to_markdown(index=False)
             md_tables.write(f'## {title}\n')

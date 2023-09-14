@@ -187,6 +187,6 @@ venv
 eyetracking_data/*/
 eyetracking_data/*.csv
 eyetracking_data/*.txt
-stimuli/OLD/*
+to-be-deleted-IN-THE-END/OLD/*
 
 
