@@ -5,7 +5,7 @@ import pandas as pd
 PATHS_FOLDERS = [
     '../stimuli/stimuli/items.tsv',
     '../stimuli/stimuli/stimuli.tsv',
-    '../stimuli/aoi_texts/aoi/',
+    '../stimuli/aoi_texts/',
     '../stimuli/word_features/',
     '../participants/',
     '../eyetracking_data/fixations/',
@@ -194,7 +194,7 @@ def create_codebook_tables():
 
     all_cols = set()
 
-    codebook_text = pd.read_csv('codebook_texts.tsv', sep='\t') #.to_dict()
+    codebook_text = pd.read_csv('codebook_texts.tsv', sep='\t')
 
     with open('../CODEBOOK.md', 'w', encoding='utf8') as md_tables:
         codebook_header = (f'# Codebook\n'
@@ -211,7 +211,7 @@ def create_codebook_tables():
         if folder.endswith('.tsv'):
             files = [folder]
         else:
-            suffix = '.ias' if folder == 'stimuli/aoi_texts/aoi/' else '.tsv'
+            suffix = '.ias' if folder == '../stimuli/aoi_texts/' else '.tsv'
             files = Path(folder).glob(f'*{suffix}')
 
         for file in files:

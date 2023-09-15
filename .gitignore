@@ -188,5 +188,8 @@ eyetracking_data/*/
 eyetracking_data/*.csv
 eyetracking_data/*.txt
 to-be-deleted-IN-THE-END/OLD/*
+#to-be-deleted-IN-THE-END
+#codebook_tables
+structure.txt
 
 

@@ -27,7 +27,7 @@ More information is found in the following README'S:
 
 
 ## Data Overview
-All the data that was used to create the corpus and that was obtained during the experiments is made available. 
+The data that was used to create the corpus and that was obtained during the experiments is made available in various stages. 
 The data is stored in respective sub folders each of which contains a README that provides more information 
 about the data and how to use it. **For a detailed description of the data types, format and content, please refer to the 
 [CODEBOOK](./CODEBOOK.md).**
@@ -42,8 +42,7 @@ This repository contains the following data:
   * scripts to preprocess the data
   * additional scripts that can be used to process the data further
 
-The scripts were run using Python 3.9 with the dependencies specified in the `requirements.txt` file 
-in the top folder.
+The scripts were run using Python 3.9 with the dependencies specified in the `requirements.txt` file.
 
 
 ## Stimuli Annotation
@@ -51,35 +50,84 @@ The stimuli have been manually annoted with part-of-speech tags and other lingui
 in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
 
 ## Repository Structure
-    PoTeC
-    ├── eyetracking_data
-    │ ├── fixations
-    │ ├── raw_data
-    │ └── ... [other folders depending on the additional scripts]
-    ├── participants
-    │ ├── participant_data.csv
-    │ └── readerIDs.txt
-    ├── additional_scripts
-    │ ├── merge_fixations+word+char.py
-    │ ├── merge_reading_measures+word_features.py
-    │ └── merge_scanpaths+reader_information.py
-    ├── preprocessing
-    │ ├── ...
-    │ ├── ...
-    │ ├── ...
-    │ ├── ...
-    │ ├── ...
-    │ ├── ...
-    │ ├── ...
-    │ └── ...
-    ├──  stimuli
-    │ ├── aoi_texts
-    │ ├── text_tags
-    │ ├── text_examples
-    │ ├── texts
-    │ └── word_features
-    ├── comprehension_questions
+(to be deleted: to recreate structure adapt gitignore temporarily and do this:  tree --gitignore --filelimit 25 | tr '\240\240' ' ' > structure.txt)
+
+    PoTeC-data
     ├── CODEBOOK.md
-    └── README.md
-
-
+    ├── README.md
+    ├── requirements.txt
+    ├── additional_scripts
+    │   ├── README.md
+    │   ├── compute_reading_measures.py
+    │   ├── errors
+    │   │   └── merge_fixations_word_char_errors.txt
+    │   ├── generate_scanpaths.py
+    │   ├── merge_rm_wf.py
+    │   └── merge_scanpaths_rm_wf.py
+    ├── eyetracking_data
+    │   ├── README.md
+    │   ├── fixations
+    │   ├── original_uncorrected_fixation_report.txt
+    │   ├── raw_data 
+    │   ├── reader_rm_wf
+    │   ├── reading_measures
+    │   ├── scanpaths
+    │   └── scanpaths_reader_rm_wf
+    ├── participants
+    │   ├── README.md
+    │   └── participant_data.tsv
+    ├── preprocessing_scripts
+    │   ├── README.md
+    │   ├── char_index_to_word_index.py
+    │   ├── create_word_roi_limits.py
+    │   ├── roi_to_word.tsv
+    │   ├── sent_limits.json
+    │   └── word_limits.json
+    └── stimuli
+        ├── ANNOTATION.md
+        ├── README.md
+        ├── aoi_texts
+        │   ├── b0.ias
+        │   ├── b1.ias
+        │   ├── b2.ias
+        │   ├── b3.ias
+        │   ├── b4.ias
+        │   ├── b5.ias
+        │   ├── p0.ias
+        │   ├── p1.ias
+        │   ├── p2.ias
+        │   ├── p3.ias
+        │   ├── p4.ias
+        │   └── p5.ias
+        ├── practice_items.txt
+        ├── stimuli
+        │   ├── bio_texts
+        │   │   ├── b0.txt
+        │   │   ├── b1.txt
+        │   │   ├── b2.txt
+        │   │   ├── b3.txt
+        │   │   ├── b4.txt
+        │   │   └── b5.txt
+        │   ├── items.tsv
+        │   ├── physics_texts
+        │   │   ├── p0.txt
+        │   │   ├── p1.txt
+        │   │   ├── p2.txt
+        │   │   ├── p3.txt
+        │   │   ├── p4.txt
+        │   │   └── p5.txt
+        │   └── stimuli.tsv
+        ├── stimuli.bib
+        └── word_features
+            ├── word_features_b0.tsv
+            ├── word_features_b1.tsv
+            ├── word_features_b2.tsv
+            ├── word_features_b3.tsv
+            ├── word_features_b4.tsv
+            ├── word_features_b5.tsv
+            ├── word_features_p0.tsv
+            ├── word_features_p1.tsv
+            ├── word_features_p2.tsv
+            ├── word_features_p3.tsv
+            ├── word_features_p4.tsv
+            └── word_features_p5.tsv

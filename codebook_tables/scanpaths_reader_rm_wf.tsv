@@ -25,19 +25,26 @@ char_index_in_text	1-1121	Integer	Index of a character in the text. Indexing sta
 word		string	Words as they appear in the stimuli texts. Words are split at white-space.	0		
 character		string	Character as text.	0		
 word_index_in_sent	1-51	Integer	The index of the word in the sentence. Indexing starts at 1.	0		
-is_technical_term	0: 253262, 1: 79087, 2: 72066	Categorical	"1 if the word is a technical term that is generally understandable (""elektrisch""). 2 if the word is a technical term that is not generally understandable (""Agarose"").  "	0		Manually tagged
 word_length	2-33	Integer	Word length is defined in number of characters including symbols like hyphens but without sentence punctuation at the end (i.e., z.B. = 4 characters; DNA-Kette =9 characters; eats.=4 characters	0		
+STTS_punctuation_before	0.0: 211105, 0: 189405, $(: 3905	Categorical	If a word is preceded by a punctuation mark, the STTS-PoS-tag of the punctuation mark is added here.	0		
+STTS_punctuation_after	0: 352234, $.: 25789, $,: 22559, $(: 3260, $($,: 573	Categorical	If a word is followed by a punctuation mark, the STTS-PoS-tag of the punctuation mark is added here.	0		
 is_in_quote	0: 399710, 1: 4705	Categorical	Whether or not the word is part of an expression in quotes.	0		Manually tagged
 is_in_parentheses	0: 403150, 1: 1265	Categorical	Whether or not the word is part of a phrase in parentheses.	0		Manually tagged
 is_clause_beginning	0: 388227, 1: 16188	Categorical	Whether or not the word is the beginning of a clause. 	0		Manually tagged
 is_sent_beginning	0: 386676, 1: 17739	Categorical	Whether or not the word is the beginning of a new sentence.	0		Manually tagged
 is_abbreviation	0: 403473, 1: 942	Categorical	Whether or not the entire word is an abbreviation.	0		Manually tagged
+is_expert_technical_term			"1 if the word is a technical term that is not generally understandable. E.g.: ""Agarose""  "	0		Manually tagged
+is_general_technical_term			"1 if the word is a technical term that is generally understandable. E.g.: ""elektrisch"""	0		
 contains_symbol	0: 400453, 1: 3962	Categorical	Whether or not the word contains a symbol. E.g.: β-D-Glucose	0		
 contains_hyphen	0: 388144, 1: 16271	Categorical	Whether or not the word contains a hpythen. E.g.: 1 for DNA-Fragment. (*nicht* Wörter, die Tag TRUNC (Kompositions-ERstglieg) haben)	0		
 contains_abbreviation	0: 399418, 1: 4997	Categorical	Whether or not the word contains an abbreviation. 0 for words that are only an abbreviation. See is_abbreviation. E.g.: 1 for DNA-Fragment, 0 for DNA	0		
+STTS_PoS_tag	NN: 162980, ADJA: 51041, ART: 37340, VVFIN: 23853, APPR: 22470, ADJD: 12713, ADV: 12236, VAFIN: 10340, VVPP: 9317, VVINF: 7710, KON: 5798, APPRART: 5566, PRELS: 4193, VMFIN: 3953, PRF: 3606, PAV: 3444, PDAT: 3292, KOUS: 2521, PPER: 2511, KOKOM: 2428, PIDAT: 1653, CARD: 1594, PTKVZ: 1490, PDS: 1374, PPOSAT: 1360, PIS: 1322, PRELAT: 1302, VAINF: 1206, TRUNC: 1137, NE: 955, PIAT: 791, PTKNEG: 687, KOUI: 654, PTKZU: 583, VVIZU: 578, VMINF: 153, PTKA: 97, APZR: 91, PWAV: 76	Categorical	Part-of-speech tags according to the STTS-tagset. See stimuli/ANNOTATION.MD for more information. 	0		Manually tagged
 type		string	"""The orthographical representation of a word as found in the corpus; this data is case sensitive, i.e. there is a distinction between name and Name."""	0		dlexDB
+type_length_chars	0.0-33.0	Integer	The length of the type of a word in characters. See the description of word length for a definition of how characters are counted.	0		
+PoS_tag	nn: 160585, adja: 53330, art: 37918, vvfin: 23977, appr: 22193, adv: 15728, adjd: 12225, vafin: 10340, vvpp: 9317, vvinf: 7710, apprart: 5566, kon: 5405, prels: 4076, vmfin: 3829, prf: 3606, pdat: 3292, kous: 2521, pper: 2434, kokom: 2428, pis: 2063, ptkvz: 1891, card: 1594, ne: 1386, pds: 1374, pposat: 1360, prelat: 1302, vainf: 1206, trunc: 1137, piat: 791, xy: 746, ptkneg: 687, ptkzu: 583, vvizu: 578, koui: 559, pidat: 352, vminf: 153, ptka: 97, pwav: 76	Categorical	Part-of-speech tag as defined by the dlexDB query.	0		dlexDB
 lemma		string		0		dlexDB
 lemma_length_chars	0.0-32.0	Integer		0		dlexDB
+syllables		string		0		dlexDB
 type_length_syllables	0.0-14.0	Integer		0		dlexDB
 annotated_type_frequency_normalized	min: 0.0, max: 24738.5901996, mean: 1950.9292704098993, std: 5185.328282943734	Float	"""The number of occurrences of an annotated type in corpus. An annotated type is a unique combination of a type, its part-of-speech tag and its lemma."""	0		dlexDB
 type_frequency_normalized	min: 0.0, max: 26530.3631386, mean: 2247.4796419198296, std: 5847.249653269257	Float		0		dlexDB

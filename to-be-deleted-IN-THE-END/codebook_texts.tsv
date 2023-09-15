@@ -1,7 +1,7 @@
 section	text	link	title
 stimuli/stimuli/items.tsv	 	[Items](stimuli/stimuli/items.tsv)	Items
 stimuli/stimuli/stimuli.tsv	 	[Stimuli including comprehension questions](stimuli/stimuli/stimuli.tsv)	Stimuli and comprehension questions
-stimuli/aoi_texts/aoi/	 	[AOI](stimuli/aoi_texts/aoi)	Areas of interest (AOI)
+stimuli/aoi_texts/	 	[AOI](stimuli/aoi_texts)	Areas of interest (AOI)
 stimuli/word_features/	 	[Word features](stimuli/word_features)	Word features
 participants/	 	[Participant information](participants/participant_data.tsv)	Participants
 eyetracking_data/fixations/	 	[Fixations](eyetracking_data/fixations)	Fixations
