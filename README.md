@@ -20,7 +20,7 @@ knowledge in the topics presented in the texts were assessed by multiple-choice 
 More information is found in the following README'S:
 * [preprocessing](./preprocessing_scripts/README.md)
 * [participants](./participants/README.md)
-* [stimuli](./stimuli/README.md)
+* [stimuli and questions](./stimuli/README.md)
 * [eye-tracking data](./eyetracking_data/README.md)
 * [additional processing](./additional_scripts/README.md)
 
@@ -36,7 +36,9 @@ This repository contains the following data:
 * **Eye-tracking data**
   * raw eye-tracking data
   * preprocessed eye-tracking data
-* **Stimulus texts**
+* **Stimuli**
+  * stimuli texts
+  * text and background questions
 * **Anonymized participant data**
 * **Scripts (in Python)**
   * scripts to preprocess the data
@@ -50,7 +52,7 @@ The stimuli have been manually annoted with part-of-speech tags and other lingui
 in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
 
 ## Repository Structure
-(to be deleted: to recreate structure adapt gitignore temporarily and do this:  tree --gitignore --filelimit 25 | tr '\240\240' ' ' > structure.txt)
+(to be deleted: to recreate structure adapt gitignore temporarily and do this + adapt it a bit:  tree --gitignore --filelimit 25 | tr '\240\240' ' ' > structure.txt)
 
     PoTeC-data
     ├── CODEBOOK.md
@@ -66,13 +68,19 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
     │   └── merge_scanpaths_rm_wf.py
     ├── eyetracking_data
     │   ├── README.md
-    │   ├── fixations
     │   ├── original_uncorrected_fixation_report.txt
+    │   ├── fixations
+    │   │   └── ...
     │   ├── raw_data 
+    │   │   └── ...
     │   ├── reader_rm_wf
+    │   │   └── ...
     │   ├── reading_measures
+    │   │   └── ...
     │   ├── scanpaths
+    │   │   └── ...
     │   └── scanpaths_reader_rm_wf
+    │       └── ...
     ├── participants
     │   ├── README.md
     │   └── participant_data.tsv
@@ -86,48 +94,16 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
     └── stimuli
         ├── ANNOTATION.md
         ├── README.md
+        ├── stimuli.bib
         ├── aoi_texts
-        │   ├── b0.ias
-        │   ├── b1.ias
-        │   ├── b2.ias
-        │   ├── b3.ias
-        │   ├── b4.ias
-        │   ├── b5.ias
-        │   ├── p0.ias
-        │   ├── p1.ias
-        │   ├── p2.ias
-        │   ├── p3.ias
-        │   ├── p4.ias
-        │   └── p5.ias
+        │   └── ...
         ├── practice_items.txt
         ├── stimuli
         │   ├── bio_texts
-        │   │   ├── b0.txt
-        │   │   ├── b1.txt
-        │   │   ├── b2.txt
-        │   │   ├── b3.txt
-        │   │   ├── b4.txt
-        │   │   └── b5.txt
-        │   ├── items.tsv
+        │   │   └── ...
         │   ├── physics_texts
-        │   │   ├── p0.txt
-        │   │   ├── p1.txt
-        │   │   ├── p2.txt
-        │   │   ├── p3.txt
-        │   │   ├── p4.txt
-        │   │   └── p5.txt
+        │   │   └── ...
+        │   ├── items.tsv
         │   └── stimuli.tsv
-        ├── stimuli.bib
         └── word_features
-            ├── word_features_b0.tsv
-            ├── word_features_b1.tsv
-            ├── word_features_b2.tsv
-            ├── word_features_b3.tsv
-            ├── word_features_b4.tsv
-            ├── word_features_b5.tsv
-            ├── word_features_p0.tsv
-            ├── word_features_p1.tsv
-            ├── word_features_p2.tsv
-            ├── word_features_p3.tsv
-            ├── word_features_p4.tsv
-            └── word_features_p5.tsv
+            └── ...

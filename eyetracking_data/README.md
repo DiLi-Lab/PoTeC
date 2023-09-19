@@ -8,11 +8,11 @@ One file always contains the data for one reader and one text and is named accor
 
 > **NOTE**: for all the data described below, refer to the CODEBOOK for a full overview of data types, distributions, etc.
 
-## raw_data
+## Raw data
 The raw data in available in ``.tsv`` format. The originally generated ``.edf`` files were converted to ``.asc`` using the
 SR Research `edf2asc` tool and then parsed to `.tsv` files containing one sample per line.
 
-## fixations
+## Fixations
 
 Fixations and saccades were computed from the raw data using the Eyelink Data Viewer software package provided by SR 
 Research with the default parameter settings \citep{dataviewer}. Subsequently, each fixation was mapped to the 
@@ -22,7 +22,7 @@ certain fixation sequences, vertical calibration error gradually increased over 
 semi-automatically corrected by adjusting the fixation-to-character mapping (i.e., re-mapping a fixation to the 
 character in the line above or below the currently mapped character). The files therefore contain the corrected data.
 
-## reading_measures
+## Reading measures
 
 From the fixation data, various reading measures commonly used in reading research were computed. 
 Each word (defined by the surrounding white spaces) was considered one 
@@ -33,22 +33,34 @@ Table~\ref{tab:em}. Note that several of these measures are linearly dependent.
 
 Can be (re)created using this script: ``additional_scripts/compute_reading_measures.py``.
 
-## reader_rm_wf
+> More information on the script is found in the additional scripts' [README](../additional_scripts/README.md)
+
+## Merged: reader info, word features and reading measures
 
 This folder contains the fixation data merged with the reading measures and word features ordered by word 
 order of the original stimulus.
 
 Can be (re)created using this script: ``additional_scripts/merge_rm_wf.py``.
 
-## scanpaths & scanpaths_reader_rm_wf
+> More information on the script is found in the additional scripts' [README](../additional_scripts/README.md)
 
-This folder contains the fixation data ordered temporally by fixation index.
+
+## Scanpaths
+
+This scanpaths folder contains the fixation data ordered temporally by fixation index.
 
 The scanpaths can be (re)created using this script: ``additional_scripts/generate_scanpaths.py``.
 
-These files can be easily merged with the reader information and the word features 
+> More information on the script is found in the additional scripts' [README](../additional_scripts/README.md)
+
+
+## Merged: scanpaths, reading measures, word features and reader info
+
+The scanpath files can be easily merged with the reader information, the reading measures and the word features 
 using this script `additional_scripts/merge_scanpaths_rm_wf.py`. The resulting data files will be written to the folder 
 `scanpaths_reader_rm_wf`.
+
+> More information on the script is found in the additional scripts' [README](../additional_scripts/README.md)
 
 
 ## File: ``original_uncorrected_fixation_report.txt``

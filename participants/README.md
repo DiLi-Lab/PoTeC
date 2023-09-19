@@ -1,20 +1,24 @@
 # Participants
 
-75 students of the University of Potsdam all of whom were native speakers of German with normal or 
+**75 students** of the University of Potsdam all of whom were native speakers of German with normal or 
 corrected-to-normal vision participated in the experiment. Participants with soft lenses were excluded 
 from participation as soft lenses often pose serious challenges for the calibration of the eye-tracker.
-They were either students of biology or of physics in either their first semester of the BSc program 
-(beginner) or graduate students currently attending a MSc or PhD program (expert). Participants were 
+They were **either students of biology or of physics** in either their **first semester of the BSc program (beginner) or graduate students currently attending a MSc or PhD program (expert)**. Participants were 
 requested to not  have consumed any alcohol the day of the experiment and  to not be suffering from sleep deprivation.
 Participants received a minium compensation of 10 EUR and up to 20 EUR if they answered a specific number of comprehension 
 questions correctly.
+
+|              | Physics | Biology |
+|--------------|---------|---------|
+| **Beginner** | 12      | 16      |
+| **Advanced** | 20      | 27      |
 
 ## Demographic data
 The field of studies (including  area specialization if applicable), the current semester of studies, gender, age, 
 handedness, whether the participant was wearing contact lenses or glasses, hours of sleep the night before the 
 experiment, alcohol consumption within 24h hours  before the experiment, whether or not the participant had grown 
 up bilingually, and the state (Bundesland) where the German language was acquired were recorded. Some of that data is 
-made available in the `participants.tsv` file. PLease see the CODEBOOK for more information on the available information.
+made available in the `participant_data.tsv` file. Please see the `CODEBOOK.md` for more information on the available information.
 
 
 |      column  | description | value | range/choices | 

@@ -27,17 +27,15 @@ _follow_ the current word. If there is no punctuation mark after the word, the t
 * **Hyphen**: if the word contains a hyphen (e.g. "DNA-Strang")
 * **Clause beginning**: if the word is the first word of a clause
 * **Sentence beginning**: if the word is the first word of a sentence
-* word index in text
-* word index in sentence
+* **Word/Char indices in sentence/text**: several types of positional information on the words and characters in the text or sentences was added as tags. 
 
 
 
 ## DlexDB annotations
 Moreover, for each word, several word length measures, lexical frequency measures, and lexical neighborhood measures 
-commonly used in reading research were extracted from the lexical database dlexDB  \citep{dlex, Heister2011}, which is 
-based on the reference corpus underlying the  Digital Dictionary of the German Language (DWDS) corpus \citep{dwds}. 
-All extracted values were manually corrected by a linguistic expert labeller. In particular, the  %(see \texttt{features.py}). 
- type-to-lemma mapping was disambiguated  and incorrect database entries (e.g., incorrect lemmatization) were, whenever 
+commonly used in reading research were extracted from the lexical database dlexDB  (Heister et al. 2011), which is 
+based on the reference corpus underlying the  Digital Dictionary of the German Language (DWDS) corpus (DWDS, 2016). 
+All extracted values were manually corrected by a linguistic expert labeller. In particular, the type-to-lemma mapping was disambiguated  and incorrect database entries (e.g., incorrect lemmatization) were, whenever 
 possible, corrected and otherwise re-coded as missing values.
 
 ### Manual correction
@@ -55,6 +53,12 @@ Also, as all words have previously been manually tagged, both tags were compared
  * **Wrong lemma**: If the lemma was wrong, it was manually corrected if possible and else recorded as missing value.
 
 
-Schiller, A., Teufel, S., Stöckert, C. (1999). Guidelines f ̈ur das Tagging
+# References
+
+Schiller, A., Teufel, S., Stöckert, C. (1999). Guidelines für das Tagging
 deutscher Textcorpora mit STTS (Kleines und großes Tagset). www.sfs.uni-tuebingen.de/resources/stts-1999.pdf.
 
+Heister, J., Würzner, K.-M., Bubenzer, J., Pohl, E., Hanneforth, T., Geyken, A., Kliegl, R. (2011). dlexDB – eine lexikalische Datenbank für die psychologische und linguistische Forschung. _Psychologische Rundschau, 62_(1), 10–20.
+
+
+_Das digitale Wörterbuch der deutschen Sprache (DWDS)_. (2016). Berlin-Brandenburg Academy of Science. (http://www.dwds.de)
