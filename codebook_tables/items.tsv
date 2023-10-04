@@ -1,8 +1,8 @@
 Column name	Possible values	Value type	Description	Num missing values	Missing value description	Source
-version	0-119	Integer	Specifies the version of the items. In each version, the order of the stimuli and the order of the answer options for each question differs. The specifics of each version can be found in the items.tsv.	0		
+version	0-119	Integer	Specifies the version of the items. In each version, the order of the stimuli and the order of the answer options for each question differ. The specifics of each version can be found in the items.tsv.	0		
 text_id	b0, b1, b2, b3, b4, b5, p0, p1, p2, p3, p4, p5		Unique identifier given to each stimulus text.	0		
 text_domain	physics: 720, bio: 720	Categorical	The domain of the stimulus text.	0		
-order_bq_1_ans	no stats?		The order in which the answers for background question 1 where presented.	0		
+order_bq_1_ans	no stats?		The order in which the answers for background question 1 were presented.	0		
 order_bq_2_ans	no stats?		See description of order_bq_1_ans	0		
 order_bq_3_ans	no stats?		See description of order_bq_1_ans	0		
 order_tq_1_ans	no stats?		See description of order_bq_1_ans	0		
