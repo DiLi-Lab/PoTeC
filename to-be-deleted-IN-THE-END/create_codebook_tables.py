@@ -244,7 +244,7 @@ def create_codebook_tables():
             elif col_name in cont_vars:
                 col_dict['value_type'] = 'Float'
                 col_dict[
-                    'possible_values'] = f"min: {col_dict['values'].min()}, max: {col_dict['values'].max()}, mean: {col_dict['values'].mean()}, std: {col_dict['values'].std()}"
+                    'possible_values'] = f"min: {col_dict['values'].min()}, max: {col_dict['values'].max()}, mean: {round(col_dict['values'].mean(), 4)}, std: {round(col_dict['values'].std(), 4)}"
 
             elif col_name in cat_vars:
                 counts = col_dict['values'].value_counts(dropna=False)

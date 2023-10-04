@@ -18,11 +18,11 @@ The readers' text comprehension as well as their background
 knowledge in the topics presented in the texts were assessed by multiple-choice questions. 
 
 More information is found in the following README'S:
-* [preprocessing](./preprocessing_scripts/README.md)
+* [preprocessing](./preprocessing_scripts/PREPROCESSING_SCRIPTS.md)
 * [participants](./participants/README.md)
-* [stimuli and questions](./stimuli/README.md)
-* [eye-tracking data](./eyetracking_data/README.md)
-* [additional processing](./additional_scripts/README.md)
+* [stimuli](./stimuli/STIMULI.md)
+* [eye-tracking data](./eyetracking_data/EYETRACKING_DATA.md)
+* [additional processing](./additional_scripts/ADDITIONAL_SCRIPTS.md)
 
 
 

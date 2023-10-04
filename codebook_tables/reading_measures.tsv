@@ -1,16 +1,16 @@
 Column name	Possible values	Value type	Description	Num missing values	Missing value description	Source
 word_index_in_sent	1-51	Integer	The index of the word in the sentence. Indexing starts at 1.	0		
 sent_index_in_text	1-12	Integer	The index of a sentence in the respective text. Indexing starts at 1.	0		
-FFD	min: 0, max: 2144, mean: 166.43487071240105, std: 132.83845143903443	Float	First-fixation duration: duration of the first fixation on a word if this word is fixated in first-pass reading, otherwise 0	0		
-SFD	min: 0, max: 2144, mean: 118.84760598065084, std: 135.57461158105016	Float	Single-fixation duration: duration of the only first-pass fixation on a word, 0 if the word was skipped or more than one fixations occurred in the first-pass (equals FFD in case of a single first-pass fixation)	0		
-FD	min: 0, max: 2144, mean: 203.5209709762533, std: 116.9325024000824	Float	First duration: duration of the first fixation on a word (identical to FFD if not skipped in the first-pass)	0		
-FPRT	min: 0, max: 9649, mean: 247.18019349164467, std: 298.70589104850603	Float	First-pass reading time: sum of the durations of all first-pass fixations on a word (0 if the word was skipped in the first-pass)	0		
-FRT	min: 0, max: 9649, mean: 291.8370800351803, std: 288.6538756184878	Float	First-reading time: sum of the duration of all fixations from first fixating the word (independent if the first fixations occurs in first-pass reading) until leaving the word for the first time (equals FPRT in case the word was fixated in the first-pass)	0		
-TFT	min: 0, max: 25314, mean: 632.8105259454705, std: 720.390618134976	Float	Total-fixation time: sum of all fixations on a word (FPRT+RRT)	0		
-RRT	min: 0, max: 23902, mean: 385.6303324538259, std: 597.4904769772488	Float	Re-reading time: sum of the durations of all fixations on a word that do not belong to the first-pass (TFT-FPRT)	0		
-RPD_inc	min: 0, max: 318898, mean: 632.8105259454705, std: 3881.2194268120743	Float	Inclusive regression-path duration: Sum of all fixation durations starting from the first first-pass fixation on a word until fixation a word to the right of this word (including all regressive fixations on previous words), 0 if the word was not fixated in the first-pass (RPD_exc+RBRT)	0		
-RPD_exc	min: 0, max: 315640, mean: 342.2701706244503, std: 3815.028905712223	Float	Exclusive regression-path duration: Sum of all fixation durations after initiating a first-pass regression from a word until fixating a word to the right of this word, without counting fixations on the word itself (RPD_inc-RBRT)	0		
-RBRT	min: 0, max: 10675, mean: 290.54035532102023, std: 358.8669368183595	Float	Right-bounded reading time: Sum of all fixation durations on a word until a word to the right of this word is fixated (RPD_inc-RDP_exc)	0		
+FFD	min: 0, max: 2144, mean: 166.4349, std: 132.8385	Float	First-fixation duration: duration of the first fixation on a word if this word is fixated in first-pass reading, otherwise 0	0		
+SFD	min: 0, max: 2144, mean: 118.8476, std: 135.5746	Float	Single-fixation duration: duration of the only first-pass fixation on a word, 0 if the word was skipped or more than one fixations occurred in the first-pass (equals FFD in case of a single first-pass fixation)	0		
+FD	min: 0, max: 2144, mean: 203.521, std: 116.9325	Float	First duration: duration of the first fixation on a word (identical to FFD if not skipped in the first-pass)	0		
+FPRT	min: 0, max: 9649, mean: 247.1802, std: 298.7059	Float	First-pass reading time: sum of the durations of all first-pass fixations on a word (0 if the word was skipped in the first-pass)	0		
+FRT	min: 0, max: 9649, mean: 291.8371, std: 288.6539	Float	First-reading time: sum of the duration of all fixations from first fixating the word (independent if the first fixations occurs in first-pass reading) until leaving the word for the first time (equals FPRT in case the word was fixated in the first-pass)	0		
+TFT	min: 0, max: 25314, mean: 632.8105, std: 720.3906	Float	Total-fixation time: sum of all fixations on a word (FPRT+RRT)	0		
+RRT	min: 0, max: 23902, mean: 385.6303, std: 597.4905	Float	Re-reading time: sum of the durations of all fixations on a word that do not belong to the first-pass (TFT-FPRT)	0		
+RPD_inc	min: 0, max: 318898, mean: 632.8105, std: 3881.2194	Float	Inclusive regression-path duration: Sum of all fixation durations starting from the first first-pass fixation on a word until fixation a word to the right of this word (including all regressive fixations on previous words), 0 if the word was not fixated in the first-pass (RPD_exc+RBRT)	0		
+RPD_exc	min: 0, max: 315640, mean: 342.2702, std: 3815.0289	Float	Exclusive regression-path duration: Sum of all fixation durations after initiating a first-pass regression from a word until fixating a word to the right of this word, without counting fixations on the word itself (RPD_inc-RBRT)	0		
+RBRT	min: 0, max: 10675, mean: 290.5404, std: 358.8669	Float	Right-bounded reading time: Sum of all fixation durations on a word until a word to the right of this word is fixated (RPD_inc-RDP_exc)	0		
 Fix	1: 127943, 0: 14182	Categorical	Fixation: 1 if the word was fixated, otherwise 0 (FPF or RR)	0		
 FPF	1: 103728, 0: 38397	Categorical	First-pass fixation: 1 if the word was fixated in the first-pass, otherwise 0	0		
 RR	1: 93841, 0: 48284	Categorical	Re-reading: 1 if the word was fixated after the first-pass reading, otherwise 0 (sign(RRT))	0		
@@ -28,12 +28,12 @@ gender_numeric	1.0: 73905, 0.0: 66325, nan: 1895	Categorical	Numerical value of 
 reader_domain_numeric	0: 81485, 1: 60640	Categorical	Numerical encoding of the reader domain.	0		
 expert_status_numeric	1: 89065, 0: 53060	Categorical	Numerical value of expert_status	0		
 domain_expert_status_numeric	1: 51165, 3: 37900, 0: 30320, 2: 22740	Categorical	Numerical value of domain_expert_status	0		
-age	min: 18.0, max: 41.0, mean: 24.164383561643834, std: 4.180903457306639	Float	Reader's age.	3790		
-mean_acc_bq	min: 0.0, max: 1.0, mean: 0.6486595751258616, std: 0.30758867914749494	Float	The mean accuracy of all text questions for one text read by one reader.	1958		
-mean_acc_tq	min: 0.0, max: 1.0, mean: 0.3939253414379513, std: 0.3157738758512426	Float	The mean accuracy of all background questions for one text read by one reader.	1958		
-acc_bq_1	min: 0.0, max: 1.0, mean: 0.3922392574571761, std: 0.4882512909545087	Float	The accuracy of background question 1. The answer can be either true or false, so the value is either 0 or 1.	1958		
-acc_bq_2	min: 0.0, max: 1.0, mean: 0.3618540740687894, std: 0.48053860468550247	Float	The accuracy of background question 2. The answer can be either true or false, so the value is either 0 or 1.	1958		
-acc_bq_3	min: 0.0, max: 1.0, mean: 0.42768269278788873, std: 0.4947443313122571	Float	The accuracy of background question 3. The answer can be either true or false, so the value is either 0 or 1.	1958		
-acc_tq_1	min: 0.0, max: 1.0, mean: 0.6468997695605956, std: 0.477935233421278	Float	The accuracy of text question 1. The answer can be either true or false, so the value is either 0 or 1.	1958		
-acc_tq_2	min: 0.0, max: 1.0, mean: 0.6427832514072499, std: 0.4791811570456907	Float	The accuracy of text question 2. The answer can be either true or false, so the value is either 0 or 1.	1958		
-acc_tq_3	min: 0.0, max: 1.0, mean: 0.6562957044097398, std: 0.474945535931188	Float	The accuracy of text question 3. The answer can be either true or false, so the value is either 0 or 1.	1958		
+age	min: 18.0, max: 41.0, mean: 24.1644, std: 4.1809	Float	Reader's age.	3790		
+mean_acc_bq	min: 0.0, max: 1.0, mean: 0.6487, std: 0.3076	Float	The mean accuracy of all text questions for one text read by one reader.	1958		
+mean_acc_tq	min: 0.0, max: 1.0, mean: 0.3939, std: 0.3158	Float	The mean accuracy of all background questions for one text read by one reader.	1958		
+acc_bq_1	min: 0.0, max: 1.0, mean: 0.3922, std: 0.4883	Float	The accuracy of background question 1. The answer can be either true or false, so the value is either 0 or 1.	1958		
+acc_bq_2	min: 0.0, max: 1.0, mean: 0.3619, std: 0.4805	Float	The accuracy of background question 2. The answer can be either true or false, so the value is either 0 or 1.	1958		
+acc_bq_3	min: 0.0, max: 1.0, mean: 0.4277, std: 0.4947	Float	The accuracy of background question 3. The answer can be either true or false, so the value is either 0 or 1.	1958		
+acc_tq_1	min: 0.0, max: 1.0, mean: 0.6469, std: 0.4779	Float	The accuracy of text question 1. The answer can be either true or false, so the value is either 0 or 1.	1958		
+acc_tq_2	min: 0.0, max: 1.0, mean: 0.6428, std: 0.4792	Float	The accuracy of text question 2. The answer can be either true or false, so the value is either 0 or 1.	1958		
+acc_tq_3	min: 0.0, max: 1.0, mean: 0.6563, std: 0.4749	Float	The accuracy of text question 3. The answer can be either true or false, so the value is either 0 or 1.	1958		

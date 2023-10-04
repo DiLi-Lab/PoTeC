@@ -20,4 +20,5 @@
 old notes (not entirely sure what to do with it):
 * TODO
     * " wird als [$(] getaggt 
-    * ( wird als [$(] getaggt 
+    * ( wird als [$(] getaggt
+    * check that those are displayed correctly in the codebook

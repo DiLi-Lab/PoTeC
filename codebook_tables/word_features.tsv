@@ -26,31 +26,31 @@ lemma		string		5		dlexDB
 lemma_length_chars	1.0-32.0	Integer		3		dlexDB
 syllables		string		25		dlexDB
 type_length_syllables	1.0-14.0	Integer		24		dlexDB
-annotated_type_frequency_normalized	min: 0.00817507899599, max: 24738.5901996, mean: 3889.8532426390702, std: 6967.088993039663	Float	"""The number of occurrences of an annotated type in corpus. An annotated type is a unique combination of a type, its part-of-speech tag and its lemma."""	127		dlexDB
-type_frequency_normalized	min: 0.00817507899599, max: 26530.3631386, mean: 4409.228254840187, std: 7712.528700733406	Float		115		dlexDB
-lemma_frequency_normalized	min: 0.00817507899599, max: 80100.3069113, mean: 13063.805716400366, std: 25247.18978415099	Float		115		dlexDB
-familiarity_normalized	min: 0.0, max: 26530.3631386, mean: 4074.036235400772, std: 7634.060201424037	Float		117		dlexDB
-regularity_normalized	min: 0.0, max: 2123.30585022, mean: 37.611878458019504, std: 123.3575169015009	Float		116		dlexDB
-document_frequency_normalized	min: 0.126068429944, max: 9372.80956103, mean: 3073.6225174463298, std: 3377.454858436317	Float		116		dlexDB
-sentence_frequency_normalized	min: 0.0155184320176, max: 30912.3596552, mean: 6119.801893911904, std: 9642.456998173624	Float		116		dlexDB
-cumulative_syllable_corpus_frequency_normalized	min: 1.40611358731, max: 125126.524676, mean: 16825.507968819293, std: 15793.390004035991	Float		116		dlexDB
-cumulative_syllable_lexicon_frequency_normalized	min: 0.428085856899, max: 218985.607753, mean: 23221.261323739203, std: 31879.014252338464	Float		119		dlexDB
-cumulative_character_corpus_frequency_normalized	min: 15533.2550482, max: 7810554.20193, mean: 1917789.2640995327, std: 1253328.3202480578	Float		116		dlexDB
-cumulative_character_lexicon_frequency_normalized	min: 47003.8270876, max: 18380479.713, mean: 4265792.357010431, std: 2812004.0938315024	Float		116		dlexDB
-cumulative_character_bigram_corpus_frequency_normalized	min: 5138.64210483, max: 1322150.62097, mean: 363265.3368013265, std: 217175.5613113575	Float		116		dlexDB
-cumulative_character_bigram_lexicon_frequency_normalized	min: 12677.7626521, max: 2788357.77704, mean: 590209.5888622531, std: 442407.5129174885	Float		116		dlexDB
-cumulative_character_trigram_corpus_frequency_normalized	min: 4358.04468689, max: 603427.130456, mean: 227949.91579475388, std: 122856.94324583188	Float		116		dlexDB
-cumulative_character_trigram_lexicon_frequency_normalized	min: 11942.3111499, max: 899592.89035, mean: 237804.6838521761, std: 171696.67122514444	Float		116		dlexDB
-initial_letter_frequency_normalized	min: 199.202149895, max: 110461.430317, mean: 38381.096250742004, std: 33346.99837502738	Float		116		dlexDB
-initial_bigram_frequency_normalized	min: 1.57779024623, max: 53801.2331077, mean: 12768.020258811055, std: 14670.963067577793	Float		116		dlexDB
-initial_trigram_frequency_normalized	min: -0.00817507899599, max: 29048.3692201, mean: 5888.498077936312, std: 8949.432512238907	Float		116		dlexDB
-avg_cond_prob_in_bigrams	min: 1.2e-07, max: 0.5006180465, mean: 0.04507207475410552, std: 0.04480276371935339	Float	"""The conditional probability of the bigram, given the occurrence of its first component. In other words, how likely it is for the second component to follow directly after the first. Here, this measure is computed on the basis of the annotated type information."""	116		dlexDB
-avg_cond_prob_in_trigrams	min: 3.153e-06, max: 25.0, mean: 0.2525640412672185, std: 0.6009175545916088	Float	"""The conditional probability of the trigram, given the occurrence of its initial bigram. In other words, how likely it is for the third component to follow directly after the initial pair. Here, this measure is computed on the basis of the annotated type information."""	116		dlexDB
-neighbors_coltheart_higher_freq_cum_freq_normalized	min: 0.0, max: 44055.247282, mean: 2248.7136212810688, std: 7540.558192568154	Float		116		dlexDB
-neighbors_coltheart_higher_freq_count_normalized	min: 0.0, max: 8.13363128109, mean: 0.207666157675258, std: 0.5007010526293203	Float		116		dlexDB
-neighbors_coltheart_all_cum_freq_normalized	min: 0.0, max: 49782.1108458, mean: 5076.603171956833, std: 10127.103344837997	Float		116		dlexDB
-neighbors_coltheart_all_count_normalized	min: 0.0, max: 47.5175301158, mean: 15.797065954895421, std: 14.415261366959847	Float		116		dlexDB
-neighbors_levenshtein_higher_freq_cum_freq_normalized	min: 0.0, max: 44055.247282, mean: 2879.4345771672547, std: 7921.044755452329	Float		116		dlexDB
-neighbors_levenshtein_higher_freq_count_normalized	min: 0.0, max: 11.9864039932, mean: 0.3277419545234649, std: 0.6575732905136784	Float		116		dlexDB
-neighbors_levenshtein_all_cum_freq_normalized	min: 0.0, max: 54875.2749862, mean: 6722.365983309461, std: 11598.260087811945	Float		116		dlexDB
-neighbors_levenshtein_all_count_normalized	min: 0.0, max: 75.7711966712, mean: 24.64176733554289, std: 22.529466740412182	Float		116		dlexDB
+annotated_type_frequency_normalized	min: 0.00817507899599, max: 24738.5901996, mean: 3889.8532, std: 6967.089	Float	"""The number of occurrences of an annotated type in corpus. An annotated type is a unique combination of a type, its part-of-speech tag and its lemma."""	127		dlexDB
+type_frequency_normalized	min: 0.00817507899599, max: 26530.3631386, mean: 4409.2283, std: 7712.5287	Float		115		dlexDB
+lemma_frequency_normalized	min: 0.00817507899599, max: 80100.3069113, mean: 13063.8057, std: 25247.1898	Float		115		dlexDB
+familiarity_normalized	min: 0.0, max: 26530.3631386, mean: 4074.0362, std: 7634.0602	Float		117		dlexDB
+regularity_normalized	min: 0.0, max: 2123.30585022, mean: 37.6119, std: 123.3575	Float		116		dlexDB
+document_frequency_normalized	min: 0.126068429944, max: 9372.80956103, mean: 3073.6225, std: 3377.4549	Float		116		dlexDB
+sentence_frequency_normalized	min: 0.0155184320176, max: 30912.3596552, mean: 6119.8019, std: 9642.457	Float		116		dlexDB
+cumulative_syllable_corpus_frequency_normalized	min: 1.40611358731, max: 125126.524676, mean: 16825.508, std: 15793.39	Float		116		dlexDB
+cumulative_syllable_lexicon_frequency_normalized	min: 0.428085856899, max: 218985.607753, mean: 23221.2613, std: 31879.0143	Float		119		dlexDB
+cumulative_character_corpus_frequency_normalized	min: 15533.2550482, max: 7810554.20193, mean: 1917789.2641, std: 1253328.3202	Float		116		dlexDB
+cumulative_character_lexicon_frequency_normalized	min: 47003.8270876, max: 18380479.713, mean: 4265792.357, std: 2812004.0938	Float		116		dlexDB
+cumulative_character_bigram_corpus_frequency_normalized	min: 5138.64210483, max: 1322150.62097, mean: 363265.3368, std: 217175.5613	Float		116		dlexDB
+cumulative_character_bigram_lexicon_frequency_normalized	min: 12677.7626521, max: 2788357.77704, mean: 590209.5889, std: 442407.5129	Float		116		dlexDB
+cumulative_character_trigram_corpus_frequency_normalized	min: 4358.04468689, max: 603427.130456, mean: 227949.9158, std: 122856.9432	Float		116		dlexDB
+cumulative_character_trigram_lexicon_frequency_normalized	min: 11942.3111499, max: 899592.89035, mean: 237804.6839, std: 171696.6712	Float		116		dlexDB
+initial_letter_frequency_normalized	min: 199.202149895, max: 110461.430317, mean: 38381.0963, std: 33346.9984	Float		116		dlexDB
+initial_bigram_frequency_normalized	min: 1.57779024623, max: 53801.2331077, mean: 12768.0203, std: 14670.9631	Float		116		dlexDB
+initial_trigram_frequency_normalized	min: -0.00817507899599, max: 29048.3692201, mean: 5888.4981, std: 8949.4325	Float		116		dlexDB
+avg_cond_prob_in_bigrams	min: 1.2e-07, max: 0.5006180465, mean: 0.0451, std: 0.0448	Float	"""The conditional probability of the bigram, given the occurrence of its first component. In other words, how likely it is for the second component to follow directly after the first. Here, this measure is computed on the basis of the annotated type information."""	116		dlexDB
+avg_cond_prob_in_trigrams	min: 3.153e-06, max: 25.0, mean: 0.2526, std: 0.6009	Float	"""The conditional probability of the trigram, given the occurrence of its initial bigram. In other words, how likely it is for the third component to follow directly after the initial pair. Here, this measure is computed on the basis of the annotated type information."""	116		dlexDB
+neighbors_coltheart_higher_freq_cum_freq_normalized	min: 0.0, max: 44055.247282, mean: 2248.7136, std: 7540.5582	Float		116		dlexDB
+neighbors_coltheart_higher_freq_count_normalized	min: 0.0, max: 8.13363128109, mean: 0.2077, std: 0.5007	Float		116		dlexDB
+neighbors_coltheart_all_cum_freq_normalized	min: 0.0, max: 49782.1108458, mean: 5076.6032, std: 10127.1033	Float		116		dlexDB
+neighbors_coltheart_all_count_normalized	min: 0.0, max: 47.5175301158, mean: 15.7971, std: 14.4153	Float		116		dlexDB
+neighbors_levenshtein_higher_freq_cum_freq_normalized	min: 0.0, max: 44055.247282, mean: 2879.4346, std: 7921.0448	Float		116		dlexDB
+neighbors_levenshtein_higher_freq_count_normalized	min: 0.0, max: 11.9864039932, mean: 0.3277, std: 0.6576	Float		116		dlexDB
+neighbors_levenshtein_all_cum_freq_normalized	min: 0.0, max: 54875.2749862, mean: 6722.366, std: 11598.2601	Float		116		dlexDB
+neighbors_levenshtein_all_count_normalized	min: 0.0, max: 75.7711966712, mean: 24.6418, std: 22.5295	Float		116		dlexDB

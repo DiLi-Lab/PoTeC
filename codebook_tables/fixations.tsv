@@ -2,12 +2,12 @@ Column name	Possible values	Value type	Description	Num missing values	Missing va
 fixation_index	1-1469	Integer	The index of the fixation in temporal order.	0		
 text_domain	bio: 204699, physics: 199721	Categorical	The domain of the stimulus text.	0		
 trial	1-12	Integer	Each participant reads all 12 texts, the order of which follows their trial number. If text b0 has trial number 2 for participant 5, this participant read text b0 as the second text.	0		
-acc_bq_1	min: 0.0, max: 1.0, mean: 0.3869028058248774, std: 0.4870417022436458	Float	The accuracy of background question 1. The answer can be either true or false, so the value is either 0 or 1.	5785		
-acc_bq_2	min: 0.0, max: 1.0, mean: 0.35635355651159584, std: 0.4789219922412217	Float	The accuracy of background question 2. The answer can be either true or false, so the value is either 0 or 1.	5785		
-acc_bq_3	min: 0.0, max: 1.0, mean: 0.4216814880780664, std: 0.49382873796995946	Float	The accuracy of background question 3. The answer can be either true or false, so the value is either 0 or 1.	5785		
-acc_tq_1	min: 0.0, max: 1.0, mean: 0.662498275364682, std: 0.4728581937587188	Float	The accuracy of text question 1. The answer can be either true or false, so the value is either 0 or 1.	5785		
-acc_tq_2	min: 0.0, max: 1.0, mean: 0.6326188116949089, std: 0.48209214244403137	Float	The accuracy of text question 2. The answer can be either true or false, so the value is either 0 or 1.	5785		
-acc_tq_3	min: 0.0, max: 1.0, mean: 0.6563598279127523, std: 0.4749233306822801	Float	The accuracy of text question 3. The answer can be either true or false, so the value is either 0 or 1.	5785		
+acc_bq_1	min: 0.0, max: 1.0, mean: 0.3869, std: 0.487	Float	The accuracy of background question 1. The answer can be either true or false, so the value is either 0 or 1.	5785		
+acc_bq_2	min: 0.0, max: 1.0, mean: 0.3564, std: 0.4789	Float	The accuracy of background question 2. The answer can be either true or false, so the value is either 0 or 1.	5785		
+acc_bq_3	min: 0.0, max: 1.0, mean: 0.4217, std: 0.4938	Float	The accuracy of background question 3. The answer can be either true or false, so the value is either 0 or 1.	5785		
+acc_tq_1	min: 0.0, max: 1.0, mean: 0.6625, std: 0.4729	Float	The accuracy of text question 1. The answer can be either true or false, so the value is either 0 or 1.	5785		
+acc_tq_2	min: 0.0, max: 1.0, mean: 0.6326, std: 0.4821	Float	The accuracy of text question 2. The answer can be either true or false, so the value is either 0 or 1.	5785		
+acc_tq_3	min: 0.0, max: 1.0, mean: 0.6564, std: 0.4749	Float	The accuracy of text question 3. The answer can be either true or false, so the value is either 0 or 1.	5785		
 fixation_duration	2-4474	Integer	The duration of the fixation in milliseconds.	0		
 next_saccade_duration	1.0-9491.0	Integer	The duration in milliseconds of the saccade that follows a fixation.	46		
 previous_saccade_duration	nan-nan	Integer	The duration of a saccade in milliseconds that preceeds a fixation.	515		
