@@ -3,13 +3,13 @@ reader_id	0-105	Integer	The unique identifier given to each reader. Reader IDs s
 reader_domain	biology: 43, physics: 32	Categorical	The area of expertise of the reader. All readers are students whose major is either physics or biology.	0		
 reader_domain_numeric	0: 43, 1: 32	Categorical	Numerical encoding of the reader domain.	0		
 expert_status	expert: 47, beginner: 28	Categorical	Reader's expert status. Readers are considered experts if they are either MSc or PhD students. 1st semester BSc students are considered beginners.	0		
-expert_status_numeric	1: 47, 0: 28	Categorical	Numerical value of expert_status	0		
+expert_status_numeric	1: 47, 0: 28	Categorical	Numerical value of expert_status.	0		
 domain_expert_status	biology-expert: 27, physics-expert: 20, biology-beginner: 16, physics-beginner: 12	Categorical	The combination of the readers' major (reader_domain) and their expertise (expert_status).	0		
-domain_expert_status_numeric	1: 27, 3: 20, 0: 16, 2: 12	Categorical	Numerical value of domain_expert_status	0		
+domain_expert_status_numeric	1: 27, 3: 20, 0: 16, 2: 12	Categorical	Numerical value of domain_expert_status.	0		
 glasses	no: 54, yes: 20, nan: 1	Categorical	Whether or not reader is wearing glasses.	1		
 age	min: 18.0, max: 41.0, mean: 24.164383561643834, std: 4.209822174359153	Float	Reader's age.	2		
 handedness	right: 68, left: 6, nan: 1	Categorical	Reader's handedness.	1		
-hours_sleep	min: 0.0, max: 11.0, mean: 7.20945945945946, std: 1.3138012316998877	Float	The hours of sleep of the participant before the experiment. In half hours.	1		
+hours_sleep	min: 0.0, max: 11.0, mean: 7.20945945945946, std: 1.3138012316998877	Float	The hours of sleep of the participant before the experiment.	1		
 alcohol	no: 71, yes: 3, nan: 1	Categorical	Whether or not a participant consumed alcohol within 24 hours before the experiment start.	1		
 gender	female: 39, male: 35, nan: 1	Categorical	Reader's gender.	1		
 gender_numeric	1.0: 39, 0.0: 35, nan: 1	Categorical	Numerical value of gender.	1		

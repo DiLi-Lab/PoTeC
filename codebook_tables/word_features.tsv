@@ -3,9 +3,9 @@ word		string	Words as they appear in the stimuli texts. Words are split at white
 word_index_in_text	1-180	Integer	The index of the word in the text. Indexing starts at 1.	0		
 word_index_in_sent	1-51	Integer	The index of the word in the sentence. Indexing starts at 1.	0		
 sent_index_in_text	1-12	Integer	The index of a sentence in the respective text. Indexing starts at 1.	0		
-word_limit_char_indices	no stats?		Specifies the limits of each word in character indices. Format: [word_start],[word_end]. For example: 3,7 means a word starts at character index 3 in the text and ends at character index 7. The properties fo the character indices are specified for char_index_in_text.	0		
+word_limit_char_indices	no stats?		Specifies the limits of each word in character indices. Format: [word_start],[word_end]. For example: 3,7 means a word starts at character index 3 in the text and ends at character index 7. The properties of the character indices are specified in char_index_in_text.	0		
 text_id	b0, b1, b2, b3, b4, b5, p0, p1, p2, p3, p4, p5		Unique identifier given to each stimulus text.	0		
-word_length	2-33	Integer	Word length is defined in number of characters including symbols like hyphens but without sentence punctuation at the end (i.e., z.B. = 4 characters; DNA-Kette =9 characters; eats.=4 characters	0		
+word_length	2-33	Integer	Word length is defined in number of characters including symbols like hyphens but without sentence punctuation at the end (i.e., z.B. = 4 characters; DNA-Kette =9 characters; eats.=4 characters).	0		
 STTS_punctuation_before	nan: 1883, $(: 12	Categorical	If a word is preceded by a punctuation mark, the STTS-PoS-tag of the punctuation mark is added here.	1883		
 STTS_punctuation_after	nan: 1689, $.: 101, $,: 93, $(: 10, $($,: 2	Categorical	If a word is followed by a punctuation mark, the STTS-PoS-tag of the punctuation mark is added here.	1689		
 is_in_quote	0: 1881, 1: 14	Categorical	Whether or not the word is part of an expression in quotes.	0		Manually tagged
@@ -13,39 +13,39 @@ is_in_parentheses	0: 1890, 1: 5	Categorical	Whether or not the word is part of a
 is_clause_beginning	0: 1796, 1: 99	Categorical	Whether or not the word is the beginning of a clause. 	0		Manually tagged
 is_sent_beginning	0: 1798, 1: 97	Categorical	Whether or not the word is the beginning of a new sentence.	0		Manually tagged
 is_abbreviation	0: 1890, 1: 5	Categorical	Whether or not the entire word is an abbreviation.	0		Manually tagged
-is_expert_technical_term			"1 if the word is a technical term that is not generally understandable. E.g.: ""Agarose""  "	0		Manually tagged
-is_general_technical_term			"1 if the word is a technical term that is generally understandable. E.g.: ""elektrisch"""	0		
+is_expert_technical_term			"1 if the word is a technical term that is not generally understandable. E.g.: """"Agarose""""."	0		Manually tagged
+is_general_technical_term			"1 if the word is a technical term that is generally understandable. E.g.: ""elektrisch"" "	0		
 contains_symbol	0: 1887, 1: 8	Categorical	Whether or not the word contains a symbol. E.g.: β-D-Glucose	0		
-contains_hyphen	0: 1866, 1: 29	Categorical	Whether or not the word contains a hpythen. E.g.: 1 for DNA-Fragment. (*nicht* Wörter, die Tag TRUNC (Kompositions-ERstglieg) haben)	0		
-contains_abbreviation	0: 1883, 1: 12	Categorical	Whether or not the word contains an abbreviation. 0 for words that are only an abbreviation. See is_abbreviation. E.g.: 1 for DNA-Fragment, 0 for DNA	0		
-STTS_PoS_tag	NN: 515, ART: 276, APPR: 184, ADJA: 154, VVFIN: 102, VAFIN: 73, ADV: 73, KON: 66, ADJD: 53, APPRART: 48, VVPP: 38, VVINF: 33, PRELS: 29, PRF: 25, VMFIN: 25, PPER: 25, PAV: 18, KOKOM: 17, PDAT: 16, KOUS: 16, PTKVZ: 13, PIS: 10, PTKZU: 10, PIDAT: 9, CARD: 9, VAINF: 8, PPOSAT: 7, PDS: 7, KOUI: 6, PRELAT: 6, PIAT: 5, TRUNC: 5, PTKNEG: 4, NE: 4, VVIZU: 2, VMINF: 1, PWAV: 1, PTKA: 1, APZR: 1	Categorical	Part-of-speech tags according to the STTS-tagset. See stimuli/ANNOTATION.MD for more information. 	0		Manually tagged
-type		string	"""The orthographical representation of a word as found in the corpus; this data is case sensitive, i.e. there is a distinction between name and Name."""	6		dlexDB
-type_length_chars	2.0-33.0	Integer	The length of the type of a word in characters. See the description of word length for a definition of how characters are counted.	2		
-PoS_tag	nn: 508, art: 280, appr: 182, adja: 162, vvfin: 103, adv: 91, vafin: 73, kon: 63, adjd: 54, apprart: 48, vvpp: 38, vvinf: 33, prf: 25, vmfin: 24, pper: 24, prels: 24, kokom: 17, kous: 16, pdat: 16, ptkvz: 15, pis: 14, ptkzu: 10, card: 9, vainf: 8, pposat: 7, ne: 7, pds: 7, prelat: 6, koui: 5, piat: 5, xy: 5, trunc: 5, ptkneg: 4, vvizu: 2, pidat: 2, vminf: 1, pwav: 1, ptka: 1	Categorical	Part-of-speech tag as defined by the dlexDB query.	0		dlexDB
+contains_hyphen	0: 1866, 1: 29	Categorical	"Whether or not the word contains a hyphen. E.g. 1 for DNA-Fragment (*not* words that have tag TRUNC (compositional first element, e.g. in ""Sekundär- und Tertiärstrukturen"", ""Sekundär-"" does not count as having a hyphen.))."	0		
+contains_abbreviation	0: 1883, 1: 12	Categorical	Whether or not the word contains an abbreviation. 0 for words that are only an abbreviation. See is_abbreviation. E.g. 1 for DNA-Fragment, 0 for DNA.	0		
+STTS_PoS_tag	NN: 515, ART: 276, APPR: 184, ADJA: 154, VVFIN: 102, ADV: 73, VAFIN: 73, KON: 66, ADJD: 53, APPRART: 48, VVPP: 38, VVINF: 33, PRELS: 29, PPER: 25, PRF: 25, VMFIN: 25, PAV: 18, KOKOM: 17, KOUS: 16, PDAT: 16, PTKVZ: 13, PIS: 10, PTKZU: 10, CARD: 9, PIDAT: 9, VAINF: 8, PDS: 7, PPOSAT: 7, PRELAT: 6, KOUI: 6, PIAT: 5, TRUNC: 5, NE: 4, PTKNEG: 4, VVIZU: 2, APZR: 1, PTKA: 1, VMINF: 1, PWAV: 1	Categorical	Part-of-speech tags according to the STTS-tagset. See stimuli/ANNOTATION.MD for more information. 	0		Manually tagged
+type		string	The orthographical representation of a word as found in the corpus; this data is case sensitive, i.e. there is a distinction between name and Name.	6		dlexDB
+type_length_chars	2.0-33.0	Integer	The length of the type of a word in characters. See the description of word_length for a definition of how characters are counted.	2		
+PoS_tag	nn: 508, art: 280, appr: 182, adja: 162, vvfin: 103, adv: 91, vafin: 73, kon: 63, adjd: 54, apprart: 48, vvpp: 38, vvinf: 33, prf: 25, prels: 24, vmfin: 24, pper: 24, kokom: 17, kous: 16, pdat: 16, ptkvz: 15, pis: 14, ptkzu: 10, card: 9, vainf: 8, pds: 7, pposat: 7, ne: 7, prelat: 6, trunc: 5, koui: 5, xy: 5, piat: 5, ptkneg: 4, vvizu: 2, pidat: 2, ptka: 1, vminf: 1, pwav: 1	Categorical	Part-of-speech tag as defined by the dlexDB query.	0		dlexDB
 lemma		string		5		dlexDB
 lemma_length_chars	1.0-32.0	Integer		3		dlexDB
 syllables		string		25		dlexDB
 type_length_syllables	1.0-14.0	Integer		24		dlexDB
-annotated_type_frequency_normalized	min: 0.00817507899599, max: 24738.5901996, mean: 3889.8532426390702, std: 6967.088993039663	Float	"""The number of occurrences of an annotated type in corpus. An annotated type is a unique combination of a type, its part-of-speech tag and its lemma."""	127		dlexDB
+annotated_type_frequency_normalized	min: 0.00817507899599, max: 24738.5901996, mean: 3889.85324263907, std: 6967.0889930396625	Float	The number of occurrences of an annotated type in corpus. An annotated type is a unique combination of a type, its part-of-speech tag and its lemma.	127		dlexDB
 type_frequency_normalized	min: 0.00817507899599, max: 26530.3631386, mean: 4409.228254840187, std: 7712.528700733406	Float		115		dlexDB
 lemma_frequency_normalized	min: 0.00817507899599, max: 80100.3069113, mean: 13063.805716400366, std: 25247.18978415099	Float		115		dlexDB
 familiarity_normalized	min: 0.0, max: 26530.3631386, mean: 4074.036235400772, std: 7634.060201424037	Float		117		dlexDB
 regularity_normalized	min: 0.0, max: 2123.30585022, mean: 37.611878458019504, std: 123.3575169015009	Float		116		dlexDB
-document_frequency_normalized	min: 0.126068429944, max: 9372.80956103, mean: 3073.6225174463298, std: 3377.454858436317	Float		116		dlexDB
+document_frequency_normalized	min: 0.126068429944, max: 9372.80956103, mean: 3073.6225174463298, std: 3377.4548584363174	Float		116		dlexDB
 sentence_frequency_normalized	min: 0.0155184320176, max: 30912.3596552, mean: 6119.801893911904, std: 9642.456998173624	Float		116		dlexDB
 cumulative_syllable_corpus_frequency_normalized	min: 1.40611358731, max: 125126.524676, mean: 16825.507968819293, std: 15793.390004035991	Float		116		dlexDB
 cumulative_syllable_lexicon_frequency_normalized	min: 0.428085856899, max: 218985.607753, mean: 23221.261323739203, std: 31879.014252338464	Float		119		dlexDB
 cumulative_character_corpus_frequency_normalized	min: 15533.2550482, max: 7810554.20193, mean: 1917789.2640995327, std: 1253328.3202480578	Float		116		dlexDB
-cumulative_character_lexicon_frequency_normalized	min: 47003.8270876, max: 18380479.713, mean: 4265792.357010431, std: 2812004.0938315024	Float		116		dlexDB
-cumulative_character_bigram_corpus_frequency_normalized	min: 5138.64210483, max: 1322150.62097, mean: 363265.3368013265, std: 217175.5613113575	Float		116		dlexDB
+cumulative_character_lexicon_frequency_normalized	min: 47003.8270876, max: 18380479.713, mean: 4265792.357010431, std: 2812004.093831502	Float		116		dlexDB
+cumulative_character_bigram_corpus_frequency_normalized	min: 5138.64210483, max: 1322150.62097, mean: 363265.3368013264, std: 217175.5613113575	Float		116		dlexDB
 cumulative_character_bigram_lexicon_frequency_normalized	min: 12677.7626521, max: 2788357.77704, mean: 590209.5888622531, std: 442407.5129174885	Float		116		dlexDB
-cumulative_character_trigram_corpus_frequency_normalized	min: 4358.04468689, max: 603427.130456, mean: 227949.91579475388, std: 122856.94324583188	Float		116		dlexDB
+cumulative_character_trigram_corpus_frequency_normalized	min: 4358.04468689, max: 603427.130456, mean: 227949.91579475385, std: 122856.94324583188	Float		116		dlexDB
 cumulative_character_trigram_lexicon_frequency_normalized	min: 11942.3111499, max: 899592.89035, mean: 237804.6838521761, std: 171696.67122514444	Float		116		dlexDB
 initial_letter_frequency_normalized	min: 199.202149895, max: 110461.430317, mean: 38381.096250742004, std: 33346.99837502738	Float		116		dlexDB
 initial_bigram_frequency_normalized	min: 1.57779024623, max: 53801.2331077, mean: 12768.020258811055, std: 14670.963067577793	Float		116		dlexDB
 initial_trigram_frequency_normalized	min: -0.00817507899599, max: 29048.3692201, mean: 5888.498077936312, std: 8949.432512238907	Float		116		dlexDB
-avg_cond_prob_in_bigrams	min: 1.2e-07, max: 0.5006180465, mean: 0.04507207475410552, std: 0.04480276371935339	Float	"""The conditional probability of the bigram, given the occurrence of its first component. In other words, how likely it is for the second component to follow directly after the first. Here, this measure is computed on the basis of the annotated type information."""	116		dlexDB
-avg_cond_prob_in_trigrams	min: 3.153e-06, max: 25.0, mean: 0.2525640412672185, std: 0.6009175545916088	Float	"""The conditional probability of the trigram, given the occurrence of its initial bigram. In other words, how likely it is for the third component to follow directly after the initial pair. Here, this measure is computed on the basis of the annotated type information."""	116		dlexDB
+avg_cond_prob_in_bigrams	min: 1.2e-07, max: 0.5006180465, mean: 0.045072074754105504, std: 0.044802763719353385	Float	The conditional probability of the bigram, given the occurrence of its first component. In other words, how likely it is for the second component to follow directly after the first. Here, this measure is computed on the basis of the annotated type information.	116		dlexDB
+avg_cond_prob_in_trigrams	min: 3.153e-06, max: 25.0, mean: 0.2525640412672185, std: 0.6009175545916088	Float	The conditional probability of the trigram, given the occurrence of its initial bigram. In other words, how likely it is for the third component to follow directly after the initial pair. Here, this measure is computed on the basis of the annotated type information.	116		dlexDB
 neighbors_coltheart_higher_freq_cum_freq_normalized	min: 0.0, max: 44055.247282, mean: 2248.7136212810688, std: 7540.558192568154	Float		116		dlexDB
 neighbors_coltheart_higher_freq_count_normalized	min: 0.0, max: 8.13363128109, mean: 0.207666157675258, std: 0.5007010526293203	Float		116		dlexDB
 neighbors_coltheart_all_cum_freq_normalized	min: 0.0, max: 49782.1108458, mean: 5076.603171956833, std: 10127.103344837997	Float		116		dlexDB
@@ -53,4 +53,4 @@ neighbors_coltheart_all_count_normalized	min: 0.0, max: 47.5175301158, mean: 15.
 neighbors_levenshtein_higher_freq_cum_freq_normalized	min: 0.0, max: 44055.247282, mean: 2879.4345771672547, std: 7921.044755452329	Float		116		dlexDB
 neighbors_levenshtein_higher_freq_count_normalized	min: 0.0, max: 11.9864039932, mean: 0.3277419545234649, std: 0.6575732905136784	Float		116		dlexDB
 neighbors_levenshtein_all_cum_freq_normalized	min: 0.0, max: 54875.2749862, mean: 6722.365983309461, std: 11598.260087811945	Float		116		dlexDB
-neighbors_levenshtein_all_count_normalized	min: 0.0, max: 75.7711966712, mean: 24.64176733554289, std: 22.529466740412182	Float		116		dlexDB
+neighbors_levenshtein_all_count_normalized	min: 0.0, max: 75.7711966712, mean: 24.641767335542887, std: 22.529466740412186	Float		116		dlexDB

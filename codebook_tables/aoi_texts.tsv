@@ -1,7 +1,7 @@
 Column name	Possible values	Value type	Description	Num missing values	Missing value description	Source
 aoi_type			The shape of the area of interest. In this corpus, all aois are rectangles around the characters.	0		
 roi	1-1121	Integer	The region of interest specified as character index in the text (see char_index_in_text). Defines which character has been fixated.	0		
-start_x	80-1622	Integer	The x-coorindate in pixels of the top left corner of the aoi rectangle.	0		
+start_x	80-1622	Integer	The x-coordinate in pixels of the top left corner of the aoi rectangle.	0		
 start_y	21-920	Integer	The y-coordinate in pixels of the top left corner of the aoi rectangle.	0		
 end_x	92-1634	Integer	The x-coordinate in pixels of the bottom right corner of the aoi rectangle.	0		
 end_y	99-998	Integer	The y-coordinate in pixels of the bottom right corner of the aoi rectangle.	0		
