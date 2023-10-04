@@ -12,7 +12,8 @@ The script is made to compute a number of commonly used reading measures for eye
 
 **How to run:**
  ```bash
- python compute_reading_measures.py
+ # python or python3
+ python [path_to_additional_scripts]/compute_reading_measures.py
  ```
 
  **Results**
@@ -26,7 +27,8 @@ Generates the scanpaths for each reader and text.
 
 **How to run:**
  ```bash
- python generate_scanpaths.py
+ # python or python3
+ python [path_to_additional_scripts]/generate_scanpaths.py
  ```
 
  **Results**
@@ -40,7 +42,8 @@ Merges the reading measures for each reader and each text with the word features
 
 **How to run:**
  ```bash
- python merge_rm_wf.py
+ # python or python3
+ python [path_to_additional_scripts]/merge_rm_wf.py
  ```
 
  **Results**
@@ -55,7 +58,8 @@ Merges the scanpath for each reader and text with the reading measures, word fea
 
 **How to run:**
  ```bash
- python merge_scanpaths_rm_wf.py
+ # python or python3
+ python [path_to_additional_scripts]/merge_scanpaths_rm_wf.py
  ```
 
  **Results**

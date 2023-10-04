@@ -50,7 +50,7 @@ All different items are specified in the [items.csv](./stimuli/items.tsv) file.
 ## AOI texts
 For each of the 12 stimuli texts there is an `.ias` file that contains the areas-of-interest (AOI). AOIs are specified as character indices in the text and are defined as a rectangle around each character. Those files have been automatically created by the SR Research Data Viewer Software.
 Interest areas for questions are deleted. 
-Quotes symbols are replaced by * (for csv reader to open without regexp problems)
+Quotes symbols are replaced by * (for csv reader to open without regexp problems).
 No other changes were made to these files.
 
 > Refer to the [CODEBOOK](../CODEBOOK.md) for more information.

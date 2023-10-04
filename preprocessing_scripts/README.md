@@ -46,5 +46,5 @@ The same is true for the sentence limits, just on sentence level.
 
 ### `roi_to_word.tsv`
 
-This file contains a mapping from the roi (=char_index_in_text) to the word index in each text (word_index_in_text). 
+This file contains a mapping from the roi (char_index_in_text) to the word index in each text (word_index_in_text). 
 This file is created by the script ``char_index_to_word_index.py``.

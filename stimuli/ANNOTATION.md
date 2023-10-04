@@ -1,14 +1,16 @@
 # Data annotation process
 
 All stimuli texts were annotated with corpus based and syntactic features, but also lexical and orthographic features.
-A short description of all annotation tags can be found in the [CODEBOOK.md](CODEBOOK.md) while the decision 
+A short description of all annotation tags can be found in the [CODEBOOK.md](../CODEBOOK.md) while the decision 
 process and more detailed descriptions of manual tags is explained in more detail in the following sections.
 
 ## Manual annotation
+
 All text were manually PoS-tagged according to the Suttgart-Tübingen-Tagset 
 (Schiller et al. (1999), [STTS](http://www.sfs.uni-tuebingen.de/resources/stts-1999.pdf)).
 
 ### Hand-crafted tags
+
 In addition to the standard STTS tags, the following tags were added manually. Those tags reflect features of words 
 that are important for studying eye-movements and that might show an effect on eye-movements. 
 
@@ -21,22 +23,20 @@ understandable for a domain expert (e.g. "DNA-Strang").
 _precede_ the current word. If there is no punctuation mark before the word, the tag is "NA".
 * **Punctuation _after_ the word**: The tags of the punctuation mark(s) (can be more than one) that directly 
 _follow_ the current word. If there is no punctuation mark after the word, the tag is "NA".
-* **Quote**: if the word is part of a quote
-* **Parentheses**: if the word is part of an expression in parentheses
-* **Symbol**: if the word contains a symbol (e.g. "+Ende" contains the symbol "+") or other non-latin character
-* **Hyphen**: if the word contains a hyphen (e.g. "DNA-Strang")
-* **Clause beginning**: if the word is the first word of a clause
-* **Sentence beginning**: if the word is the first word of a sentence
-* **Word/Char indices in sentence/text**: several types of positional information on the words and characters in the text or sentences was added as tags. 
-
-
+* **Quote**: If the word is part of a quote.
+* **Parentheses**: If the word is part of an expression in parentheses.
+* **Symbol**: If the word contains a symbol (e.g. "+Ende" contains the symbol "+") or other non-latin character.
+* **Hyphen**: If the word contains a hyphen (e.g. "DNA-Strang").
+* **Clause beginning**: If the word is the first word of a clause.
+* **Sentence beginning**: If the word is the first word of a sentence.
+* **Word/Char indices in sentence/text**: Several types of positional information on the words and characters in the text or sentences was added as tags. 
 
 ## DlexDB annotations
+
 Moreover, for each word, several word length measures, lexical frequency measures, and lexical neighborhood measures 
 commonly used in reading research were extracted from the lexical database dlexDB  (Heister et al. 2011), which is 
 based on the reference corpus underlying the  Digital Dictionary of the German Language (DWDS) corpus (DWDS, 2016). 
-All extracted values were manually corrected by a linguistic expert labeller. In particular, the type-to-lemma mapping was disambiguated  and incorrect database entries (e.g., incorrect lemmatization) were, whenever 
-possible, corrected and otherwise re-coded as missing values.
+All extracted values were manually corrected by a linguistic expert labeller. In particular, the type-to-lemma mapping was disambiguated and incorrect database entries (e.g., incorrect lemmatization) were, whenever possible, corrected and otherwise re-coded as missing values.
 
 ### Manual correction
 
@@ -51,7 +51,6 @@ set to "None" for those words. The same is true for types with too many wrong ta
 Also, as all words have previously been manually tagged, both tags were compared. If there was a mismatch, the tag was corrected.
  * **No entry**: For words without entry in the dlexDB, the lemma, lemma length, syllables and type length in syllables were added manually.
  * **Wrong lemma**: If the lemma was wrong, it was manually corrected if possible and else recorded as missing value.
-
 
 # References
 
