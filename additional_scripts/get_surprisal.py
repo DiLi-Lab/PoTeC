@@ -55,7 +55,7 @@ class Annotations:
                     surprisal = self.get_per_word_surprisal(offset, probs, sent, words)
                     all_surprisal.extend(surprisal)
                 df['surprisal'] = all_surprisal
-                out_file = f'{self.stimulus_path}/surprisal_{file.split("/")[-1]}'
+                out_file = f'{self.stimulus_path}/{file.split("/")[-1]}'
                 df.to_csv(out_file, sep="\t", index=False)
     
 
