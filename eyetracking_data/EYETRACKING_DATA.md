@@ -16,7 +16,8 @@ SR Research `edf2asc` tool and then parsed to `.tsv` files containing one sample
 
 Fixations and saccades were computed from the raw data using the Eyelink Data Viewer software package provided by SR 
 Research with the default parameter settings (SR Research Ltd. 2011). Subsequently, each fixation was mapped to the 
-character in the text that was fixated, the original screen coordinates (in pixels) were discarded. Fixations on the 
+character in the text that was fixated annotated with the line index and the character index in the line, 
+the original screen coordinates (in pixels) were discarded. Fixations on the 
 white space between two words were mapped to the closest character. Visual inspection of the data revealed that in 
 certain fixation sequences, vertical calibration error gradually increased over time. This measurement error was 
 semi-automatically corrected by adjusting the fixation-to-character mapping (i.e., re-mapping a fixation to the 
@@ -35,9 +36,9 @@ Can be (re)created using this script: ``additional_scripts/compute_reading_measu
 
 > More information on the script is found in the additional scripts' [README](../additional_scripts/README.md)
 
-## Merged: reader info, word features and reading measures
+## Reading measures merged
 
-This folder contains the fixation data merged with the reading measures and word features ordered by word 
+This folder contains the reading measures merged with word features and reader information ordered by word 
 order of the original stimulus.
 
 Can be (re)created using this script: ``additional_scripts/merge_rm_wf.py``.
@@ -54,7 +55,7 @@ The scanpaths can be (re)created using this script: ``additional_scripts/generat
 > More information on the script is found in the additional scripts' [README](../additional_scripts/README.md)
 
 
-## Merged: scanpaths, reading measures, word features and reader info
+## Scanpaths merged
 
 The scanpath files can be easily merged with the reader information, the reading measures and the word features 
 using this script `additional_scripts/merge_scanpaths_rm_wf.py`. The resulting data files will be written to the folder 

@@ -11,23 +11,23 @@ RRT	min: 0, max: 23902, mean: 385.6303, std: 597.4905	Float	Re-reading time: sum
 RPD_inc	min: 0, max: 318898, mean: 632.8105, std: 3881.2194	Float	Inclusive regression-path duration: Sum of all fixation durations starting from the first first-pass fixation on a word until fixation on a word to the right of this word (including all regressive fixations on previous words), 0 if the word was not fixated in the first-pass (RPD_exc+RBRT).	0		
 RPD_exc	min: 0, max: 315640, mean: 342.2702, std: 3815.0289	Float	Exclusive regression-path duration: Sum of all fixation durations after initiating a first-pass regression from a word until fixating a word to the right of this word, without counting fixations on the word itself (RPD_inc-RBRT).	0		
 RBRT	min: 0, max: 10675, mean: 290.5404, std: 358.8669	Float	Right-bounded reading time: Sum of all fixation durations on a word until a word to the right of this word is fixated (RPD_inc-RDP_exc).	0		
-Fix	1: 127943, 0: 14182	Categorical	Fixation: 1 if the word was fixated, otherwise 0 (FPF or RR).	0		
-FPF	1: 103728, 0: 38397	Categorical	First-pass fixation: 1 if the word was fixated in the first-pass, otherwise 0.	0		
-RR	1: 93841, 0: 48284	Categorical	Re-reading: 1 if the word was fixated after the first-pass reading, otherwise 0 (sign(RRT)).	0		
+Fix	0: 14182, 1: 127943	Categorical	Fixation: 1 if the word was fixated, otherwise 0 (FPF or RR).	0		
+FPF	0: 38397, 1: 103728	Categorical	First-pass fixation: 1 if the word was fixated in the first-pass, otherwise 0.	0		
+RR	0: 48284, 1: 93841	Categorical	Re-reading: 1 if the word was fixated after the first-pass reading, otherwise 0 (sign(RRT)).	0		
 FPReg	0: 119060, 1: 23065	Categorical	First-pass regression: 1 if a regression was initiated in the first-pass reading of the word, otherwise 0 (sign(RPD exc)).	0		
 TRC_out	0-15	Integer	Total count of outgoing regressions: total number of regressive saccades initiated from this word.	0		
 TRC_in	0-12	Integer	Total count of incoming regressions: total number of regressive saccades landing on this word.	0		
 LP	0-28	Integer	Landing position: position of the first saccade on the word expressed by ordinal position of the fixated character.	0		
 SL_in	-162-156	Integer	Incoming saccade length: length of the saccade that leads to first fixation on a word in number of words; positive sign if the saccade is a progressive one, negative sign if it is a regression.	0		
 SL_out	-179-63	Integer	Outgoing saccade length: length of the first saccade that leaves the word in number of words; positive sign if the saccade is a progressive one, negative sign if it is a regression; 0 if the word is never fixated.	0		
-text_domain_numeric	1: 71550, 0: 70575	Categorical	Numerical value of text_domain.	0		
+text_domain_numeric	0: 70575, 1: 71550	Categorical	Numerical value of text_domain; 0=biology, 1=physics.	0		
 trial	1-12	Integer	Each participant reads all 12 texts, the order of which follows their trial number. If text b0 has trial number 2 for participant 5, this participant read text b0 as the second text.	0		
 text_id	b0, b1, b2, b3, b4, b5, p0, p1, p2, p3, p4, p5		Unique identifier given to each stimulus text.	0		
 reader_id	0-105	Integer	The unique identifier given to each reader. Reader IDs start at 0.	0		
-gender_numeric	1.0: 73905, 0.0: 66325, nan: 1895	Categorical	Numerical value of gender.	1895		
-reader_domain_numeric	0: 81485, 1: 60640	Categorical	Numerical encoding of the reader domain.	0		
-expert_status_numeric	1: 89065, 0: 53060	Categorical	Numerical value of expert_status.	0		
-domain_expert_status_numeric	1: 51165, 3: 37900, 0: 30320, 2: 22740	Categorical	Numerical value of domain_expert_status.	0		
+gender_numeric	0.0: 66325, 1.0: 73905, nan: 1895	Categorical	Numerical value of gender; 0=male, 1=female.	1895		
+reader_domain_numeric	0: 81485, 1: 60640	Categorical	Numerical encoding of the reader domain; 0=biology, 1=physics.	0		
+expert_status_numeric	0: 53060, 1: 89065	Categorical	Numerical value of expert_status; 0=beginner, 1=expert.	0		
+domain_expert_status_numeric	0: 30320, 1: 51165, 2: 22740, 3: 37900	Categorical	Numerical value of domain_expert_status; 0=biology-beginner, 1=biology-expert, 2=physics-beginner, 3=physics-expert.	0		
 age	min: 18.0, max: 41.0, mean: 24.1644, std: 4.1809	Float	Reader's age.	3790		
 mean_acc_bq	min: 0.0, max: 1.0, mean: 0.6487, std: 0.3076	Float	The mean accuracy of all text questions for one text read by one reader.	1958		
 mean_acc_tq	min: 0.0, max: 1.0, mean: 0.3939, std: 0.3158	Float	The mean accuracy of all background questions for one text read by one reader.	1958		

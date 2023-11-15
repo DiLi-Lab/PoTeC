@@ -1,17 +1,17 @@
 # PoTeC - Potsdam Textbook Corpus
 
 This repository contains Potsdam Textbook Corpus (PoTeC) which is a natural reading eye-tracking corpus.
-Four groups of participants (advanced/beginner level students of physics and biology) read 12 short 
+Four groups of participants (expert/beginner level students of physics and biology) read 12 short 
 texts taken from textbooks of physics and biology while their eye movements were monitored. 
 The final dataset contains the reading data for 75 participants each reading all 12 texts.
 The study follows a 2x2 fully-crossed factorial design:
 * _Factor 1_: Study major with the levels either physics or biology
-* _Factor 2_: Level of expertise with the levels either beginner or advanced
+* _Factor 2_: Level of expertise with the levels either beginner or expert
 
 |              | Physics | Biology |
 |--------------|---------|---------|
 | **Beginner** | 12      | 16      |
-| **Advanced** | 20      | 27      |
+| **Expert**   | 20      | 27      |
 
 Both factors are quasi-experimental and manipulated between subjects.
 The readers' text comprehension as well as their background 
@@ -42,10 +42,29 @@ This repository contains the following data:
 * **Anonymized participant data**
 * **Scripts (in Python)**
   * scripts to preprocess the data
-  * additional scripts that can be used to process the data further
+  * additional scripts that have been used to process the data further
 
 The scripts were run using Python 3.9 with the dependencies specified in the `requirements.txt` file.
 
+## Technical set-up
+The experiment was run with the following technical set-up:
+
+|                           | **Setting**            | **Value**                                                    |
+|---------------------------|------------------------|--------------------------------------------------------------|
+|                           |                        |                                                              |
+| **Technical set-up**      | Eye-tracking device    | Eyelink 1000, dektop mounted camera system with a 35 mm lens |
+|                           | Sampling rate          | 1000 Hz                                                      |
+|                           | Monitor size           | 22 inch                                                      |
+|                           | Monitor resolution     | 1680x1050 pixels                                             |
+|                           | Eye-to-screen distance | 61 cm                                                        |
+|                           | Eye-to-camera distance | 65 cm                                                        |
+|                           | Experiment software    | Experiment Builder software provided by SR Research          |
+|                           |                        |                                                              |
+| **Stimulus presentation** | Background color       | Black                                                        |
+|                           | Font color             | White                                                        |
+|                           | Font size              | 18                                                           |
+|                           | Font                   | Courier                                                      |
+|                           |                        |                                                              |
 
 ## Stimuli Annotation
 The stimuli have been manually annoted with part-of-speech tags and other linguistic information. The annotations are described

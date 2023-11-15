@@ -10,13 +10,15 @@ import spacy
 # Path("./pl_analysis/reading_measures").mkdir(exist_ok=True)
 STOP_CHARS_SURP = []
 
+
 class Annotations:
     """
     Class for annotations
     """
+
     def __init__(
-        self,
-        stimulus_path
+            self,
+            stimulus_path
     ):
         self.stimulus_path = stimulus_path
         self.stimuli = self.load_stimuli(stimulus_path)
@@ -31,14 +33,14 @@ class Annotations:
         # return pd.read_csv(stimulus_path, sep="\t")
 
     def compute_surprisal(self):
-        from Surprisal import SurprisalScorer
+        from surprisal import SurprisalScorer
         S = SurprisalScorer(model_name="gpt")
         # compute surprisal for each word in each sentence
         # check if surprisal already computed
         if os.path.exists('surprisal.pickle'):
             self.surprisal = pickle.load('surprisal.pickle')
         else:
-            # iterate over texts (rows in stimuli.tsv)
+            # iterate over texts (rows in stimuli.tsv)
             for file in self.stimuli:
                 all_surprisal = []
                 df = pd.read_csv(file, sep="\t")
@@ -47,7 +49,7 @@ class Annotations:
                 # join words in each sentence, force to string
                 sents = grouped_df['word'].agg(' '.join)
                 for sent in sents:
-                    # replace all greek symbols with their names
+                    # replace all greek symbols with their names
                     sent = re.sub(r'\bβ\b', 'beta', sent)
                     sent = re.sub(r'\bπ\b', 'pi', sent)
                     words = sent.split(" ")
@@ -57,7 +59,6 @@ class Annotations:
                 df['surprisal'] = all_surprisal
                 out_file = f'{self.stimulus_path}/{file.split("/")[-1]}'
                 df.to_csv(out_file, sep="\t", index=False)
-    
 
     @staticmethod
     def get_per_word_surprisal(offset, probs, sent, words):
@@ -96,9 +97,13 @@ class Annotations:
                 break
         return surprisal
 
+
 def main() -> int:
+    repo_root = Path(__file__).parent.parent
+    word_features = repo_root / "stimuli/word_features"
+
     potec_annotations = Annotations(
-        stimulus_path=Path("./stimuli/word_features/")
+        stimulus_path=word_features
     )
     potec_annotations.compute_surprisal()
     return 0
@@ -106,4 +111,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

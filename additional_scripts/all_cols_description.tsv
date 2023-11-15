@@ -1,8 +1,8 @@
 Column_name	Description	Source	Missing value description
 order_tq_2_ans	See description of order_bq_1_ans
-reader_domain_numeric	Numerical encoding of the reader domain.
+reader_domain_numeric	Numerical encoding of the reader domain; 0=biology, 1=physics.
 Fix	Fixation: 1 if the word was fixated, otherwise 0 (FPF or RR).
-text_domain_numeric	Numerical value of text_domain.
+text_domain_numeric	Numerical value of text_domain; 0=biology, 1=physics.
 tq_1_option3	Option 3 for text question 1.
 original_fixation_index	The index of the uncorrected fixation.
 neighbors_coltheart_higher_freq_cum_freq_normalized		dlexDB
@@ -30,7 +30,7 @@ FRT	First-reading time: sum of the duration of all fixations from first fixating
 tq_1_option4	Option 4 for text question 1.
 text_domain	The domain of the stimulus text.
 version	Specifies the version of the items. In each version, the order of the stimuli and the order of the answer options for each question differ. The specifics of each version can be found in the items.tsv.
-expert_status_numeric	Numerical value of expert_status.
+expert_status_numeric	Numerical value of expert_status; 0=beginner, 1=expert.
 neighbors_levenshtein_higher_freq_count_normalized		dlexDB
 is_in_parentheses	Whether or not the word is part of a phrase in parentheses.	Manually tagged
 acc_bq_2	The accuracy of background question 2. The answer can be either true or false, so the value is either 0 or 1.
@@ -75,7 +75,7 @@ bq_2_option4	Option 4 for background question 2.
 mean_acc_tq	The mean accuracy of all background questions for one text read by one reader.
 avg_cond_prob_in_bigrams	The conditional probability of the bigram, given the occurrence of its first component. In other words, how likely it is for the second component to follow directly after the first. Here, this measure is computed on the basis of the annotated type information.	dlexDB
 familiarity_normalized		dlexDB
-gender_numeric	Numerical value of gender.
+gender_numeric	Numerical value of gender; 0=male, 1=female.
 bq_3	Background question 3.
 is_abbreviation	Whether or not the entire word is an abbreviation.	Manually tagged
 FPF	First-pass fixation: 1 if the word was fixated in the first-pass, otherwise 0.
@@ -138,7 +138,7 @@ char_index_in_line	Index of a character in the line. Indexing starts at 1.
 age	Reader's age.
 bq_2_option2	Option 2 for background question 2.
 glasses	Whether or not reader is wearing glasses.
-domain_expert_status_numeric	Numerical value of domain_expert_status.
+domain_expert_status_numeric	Numerical value of domain_expert_status; 0=biology-beginner, 1=biology-expert, 2=physics-beginner, 3=physics-expert.
 tq_3_option3	Option 3 for text question 3.
 RRT	Re-reading time: sum of the durations of all fixations on a word that do not belong to the first-pass (TFT-FPRT).
 RBRT	Right-bounded reading time: Sum of all fixation durations on a word until a word to the right of this word is fixated (RPD_inc-RDP_exc).
@@ -159,3 +159,4 @@ contains_hyphen	"Whether or not the word contains a hyphen. E.g. 1 for DNA-Fragm
 FD	First duration: duration of the first fixation on a word (identical to FFD if not skipped in the first-pass).
 aoi_type	The shape of the area of interest. In this corpus, all aois are rectangles around the characters.
 is_general_technical_term	"1 if the word is a technical term that is generally understandable. E.g.: ""elektrisch"" "
+surprisal	Surprisal value extracted from a language model (GerPT2).	NA	NA

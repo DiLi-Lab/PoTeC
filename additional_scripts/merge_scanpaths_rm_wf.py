@@ -63,8 +63,8 @@ def main() -> int:
     repo_root = Path(__file__).parent.parent
 
     scanpaths_folder = repo_root / 'eyetracking_data/scanpaths/'
-    rm_folder = repo_root / 'eyetracking_data/reader_rm_wf/'
-    output_folder = repo_root / 'eyetracking_data/scanpaths_reader_rm_wf/'
+    rm_folder = repo_root / 'eyetracking_data/reading_measures_merged/'
+    output_folder = repo_root / 'eyetracking_data/scanpaths_merged/'
 
     merge_scanpaths_reader_information(
         scanpaths_folder=scanpaths_folder,

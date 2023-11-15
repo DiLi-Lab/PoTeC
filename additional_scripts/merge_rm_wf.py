@@ -93,7 +93,7 @@ def main() -> int:
     reading_measure_folder = repo_root / 'eyetracking_data/reading_measures'
     word_features_folder = repo_root / 'stimuli/word_features'
     participants_file = repo_root / 'participants/participant_data.tsv'
-    output_folder = repo_root / 'eyetracking_data/reader_rm_wf'
+    output_folder = repo_root / 'eyetracking_data/reading_measures_merged'
 
     merge_rm_word_features(
         reading_measure_folder=reading_measure_folder,

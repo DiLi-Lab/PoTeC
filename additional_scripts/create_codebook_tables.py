@@ -1,19 +1,20 @@
 from pathlib import Path
 
 import pandas as pd
+from tqdm import tqdm
 
 PATHS_FOLDERS = [
-    '../stimuli/stimuli/items.tsv',
-    '../stimuli/stimuli/stimuli.tsv',
-    '../stimuli/aoi_texts/',
-    '../stimuli/word_features/',
-    '../participants/',
-    '../eyetracking_data/fixations/',
-    '../eyetracking_data/reading_measures/',
-    '../eyetracking_data/reader_rm_wf/',
-    '../eyetracking_data/scanpaths/',
-    '../eyetracking_data/scanpaths_reader_rm_wf/',
-    '../preprocessing_scripts/roi_to_word.tsv',
+    'stimuli/word_features/',
+    'stimuli/stimuli/stimuli.tsv',
+    'stimuli/stimuli/items.tsv',
+    'stimuli/aoi_texts/',
+    'eyetracking_data/fixations/',
+    'eyetracking_data/scanpaths/',
+    'eyetracking_data/reading_measures/',
+    'eyetracking_data/reading_measures_merged/',
+    'eyetracking_data/scanpaths_merged/',
+    'preprocessing_scripts/roi_to_word.tsv',
+    'participants/',
 ]
 
 text_vars = [
@@ -70,7 +71,8 @@ cat_vars = [
     'is_in_parentheses',
     'is_in_quote',
     'is_sent_beginning',
-    'is_technical_term',
+    'is_expert_technical_term',
+    'is_general_technical_term',
     'reader_domain',
     'reader_domain_numeric',
     'FPF',
@@ -87,7 +89,6 @@ cat_vars = [
     'STTS_punctuation_before',
     'text_domain',
     'text_domain_numeric',
-
     'text_id',
 
 ]
@@ -138,9 +139,9 @@ cont_vars = [
     'type_frequency_normalized',
     'age',
     'hours_sleep',
-
     'mean_acc_bq',
     'mean_acc_tq',
+    'surprisal',
 ]
 ints = [
     'SL_in',
@@ -190,29 +191,55 @@ no_stats = [
 ]
 
 
-def create_codebook_tables():
+def create_codebook_tables(root_path, description_path, text_path, tables_folder, codebook_path) -> None:
+    """
+    Create codebook tables for all tsv files in the repository.
+    Parameters
+    ----------
+    root_path: repository root path
+    description_path: files with column descriptions
+    text_path: files with codebook text, i.e. title, description, links that are used in the codebook
+    tables_folder: folder where the codebook tables are saved as tsv files
+    codebook_path: final codebook file
+
+    """
 
     all_cols = set()
 
-    codebook_text = pd.read_csv('codebook_texts.tsv', sep='\t')
+    codebook_text = pd.read_csv(text_path, sep='\t')
 
-    with open('../CODEBOOK.md', 'w', encoding='utf8') as md_tables:
+    with open(codebook_path, 'w', encoding='utf8') as md_tables:
         codebook_header = (f'# Codebook\n'
                            f'The codebook specifies the data types, possible values, and other information '
-                           f'for each column in the data files.\n\n')
+                           f'for each column in the data files.\n\n'
+                           f'## Table of contents\n\n'
+                           '- [Items](#items)\n'
+                           '- [Stimuli and comprehension questions](#stimuli-and-comprehension-questions)\n'
+                           '- [Areas of interest (AOI)](#areas-of-interest-aoi)\n'
+                           '- [Word features](#word-features)\n'
+                           '- [Participants](#participants)\n'
+                           '- [Fixations](#fixations)\n'
+                           '- [Reading measures](#reading-measures)\n'
+                           '- [Merged fixations](#merged-fixations-participant-info-reading-measures-and-word-features)\n'
+                           '- [Scanpaths](#scanpaths)\n'
+                           '- [Merged scanpaths](#merged-scanpaths-participant-info-reading-measures-and-word-features)\n'
+                           '- [Roi to word mapping](#roi-to-word-mapping)\n\n\n'
+                           )
 
         md_tables.write(codebook_header)
 
-    for folder in PATHS_FOLDERS:
+    for folder in tqdm(PATHS_FOLDERS, desc='Creating codebook tables'):
         # iterate over all tsv files in all folders
 
         cols = {}
 
-        if folder.endswith('.tsv'):
-            files = [folder]
+        folder_full_path = root_path / folder
+
+        if folder_full_path.suffix == '.tsv':
+            files = [folder_full_path]
         else:
-            suffix = '.ias' if folder == '../stimuli/aoi_texts/' else '.tsv'
-            files = Path(folder).glob(f'*{suffix}')
+            suffix = '.ias' if folder_full_path == root_path / 'stimuli/aoi_texts/' else '.tsv'
+            files = Path(folder_full_path).glob(f'*{suffix}')
 
         for file in files:
 
@@ -247,12 +274,17 @@ def create_codebook_tables():
                     'possible_values'] = f"min: {col_dict['values'].min()}, max: {col_dict['values'].max()}, mean: {round(col_dict['values'].mean(), 4)}, std: {round(col_dict['values'].std(), 4)}"
 
             elif col_name in cat_vars:
+                # sort categorical values from 0- 10, a-z, etc.
                 counts = col_dict['values'].value_counts(dropna=False)
                 col_dict['value_type'] = 'Categorical'
 
                 count_str = ''
-                for k, v in counts.to_dict().items():
-                    count_str += f"{k}: {v}, "
+                try:
+                    for k in sorted(counts.keys()):
+                        count_str += f"{k}: {counts[k]}, "
+                except TypeError:
+                    for k, v in counts.to_dict().items():
+                        count_str += f"{k}: {v}, "
 
                 col_dict['possible_values'] = count_str[:-2]
 
@@ -271,7 +303,7 @@ def create_codebook_tables():
         df_lists = {'Column name': [], 'Possible values': [], 'Value type': [], 'Description': [],
                     'Num missing values': [], 'Missing value description': [], 'Source': []}
 
-        info_tsv = pd.read_csv('all_cols_description.tsv', sep='\t')
+        info_tsv = pd.read_csv(description_path, sep='\t')
 
         for k, v in cols.items():
             df_lists['Column name'].append(k)
@@ -285,12 +317,12 @@ def create_codebook_tables():
             df_lists['Source'].append(info_tsv[info_tsv['Column_name'] == k]['Source'].values[0])
 
         df = pd.DataFrame(df_lists)
-        df.to_csv(f'../codebook_tables/{Path(folder).stem}.tsv', sep='\t', index=False)
+        df.to_csv(tables_folder / f'{Path(folder_full_path).stem}.tsv', sep='\t', index=False)
 
-        with open('../CODEBOOK.md', 'a', encoding='utf8') as md_tables:
-            title = codebook_text[codebook_text['section'] == folder[3:]]['title'].values[0]
-            description = codebook_text[codebook_text['section'] == folder[3:]]['text'].values[0]
-            link = codebook_text[codebook_text['section'] == folder[3:]]['link'].values[0]
+        with open(codebook_path, 'a', encoding='utf8') as md_tables:
+            title = codebook_text[codebook_text['section'] == folder]['title'].values[0]
+            description = codebook_text[codebook_text['section'] == folder]['text'].values[0]
+            link = codebook_text[codebook_text['section'] == folder]['link'].values[0]
 
             md = df.to_markdown(index=False)
             md_tables.write(f'## {title}\n')
@@ -301,4 +333,11 @@ def create_codebook_tables():
 
 
 if __name__ == '__main__':
-    create_codebook_tables()
+    repo_root = Path(__file__).parent.parent
+
+    col_descriptions_path = repo_root / 'additional_scripts' / 'all_cols_description.tsv'
+    codebook_text_path = repo_root / 'additional_scripts' / 'codebook_texts.tsv'
+    codebook_tables_folder = repo_root / 'codebook_tables/'
+    final_codebook = repo_root / 'CODEBOOK.md'
+
+    create_codebook_tables(repo_root, col_descriptions_path, codebook_text_path, codebook_tables_folder, final_codebook)

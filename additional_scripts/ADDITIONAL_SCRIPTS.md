@@ -1,8 +1,6 @@
 # Additional Scripts
 
-<mark>TODO: finish/fix this file</mark>
-
-This directory contains all the necessary scripts that can be used to further process the data. All scripts described below can be run in the correct order using this script: TODO!
+This directory contains all the necessary scripts that have been used to further process the data. 
 
 > Refer to the [CODEBOOK](../CODEBOOK.md) for more information on the resulting output files.
 
@@ -65,4 +63,19 @@ Merges the scanpath for each reader and text with the reading measures, word fea
  **Results**
 
  The files will be written to a newly created folder ``../eyetracking_data/scanpaths_rm_wf``
+
+## `get_surprisal.py` & `surprisal.py`
+
+Scripts that are used to compute surprisal values for each word in the text.
+
+**How to run:**
+ ```bash
+ # python or python3
+ python [path_to_additional_scripts]/get_surprisal.py
+ ```
+
+ **Results**
+
+ The script does not create any new files but merges the surprisal values with the `word_features` files contained in
+ `stimuli/word_features/`.
 

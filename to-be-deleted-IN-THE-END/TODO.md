@@ -12,7 +12,6 @@
 - [ ] Und es fehlt auch noch Informationen zu den comprehension questions und wie sie kodiert sind. 
 - [ ] for some readers we do not have accuracy values (?) --> add to the codebook missing values column which ones are missing (the raw nan count is not really informative)
 - [ ] update running instructions, requirements files etc.
-- [ ] --> Kannst du vielleicht auch noch eine Art Baum zeichnen, der darstellt, wie das preprocessing durchgeführt wird/wurde (also welches skript angewendet wird um dann welchen datensatz zu erzeugen)?
 - [ ] fix mismatching pos tags (see stuff to check)
 - [ ] layout der button box irgendwo darstellen
 - [ ] Bei mapping mit rois: Interpunktion ist NICHT teil einer ROI! Leerzeichen sind auch NICHT Teil einer roi!

@@ -6,7 +6,6 @@ For each text, three text comprehension questions and three background questions
 
 All texts and questions for each text are contained in [stimuli.tsv](./stimuli/stimuli.tsv). 
 
-TODO: decide whether we want to do have this:
 In addition, the texts and corresponding questions are also provided as separate text files in the [biology texts](./stimuli/bio_texts) and 
 [physics texts](./stimuli/physics_texts) folder. 
 
