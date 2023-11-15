@@ -1,5 +1,5 @@
 Column name	Possible values	Value type	Description	Num missing values	Missing value description	Source
-word		string	Words as they appear in the stimuli texts. Words are split at white-space.	0		
+word		string	Words as they appear in the stimuli texts. Words are split at white-space.	1		
 word_index_in_text	1-180	Integer	The index of the word in the text. Indexing starts at 1.	0		
 word_index_in_sent	1-51	Integer	The index of the word in the sentence. Indexing starts at 1.	0		
 sent_index_in_text	1-12	Integer	The index of a sentence in the respective text. Indexing starts at 1.	0		
@@ -13,15 +13,15 @@ is_in_parentheses	0: 1890, 1: 5	Categorical	Whether or not the word is part of a
 is_clause_beginning	0: 1796, 1: 99	Categorical	Whether or not the word is the beginning of a clause. 	0		Manually tagged
 is_sent_beginning	0: 1798, 1: 97	Categorical	Whether or not the word is the beginning of a new sentence.	0		Manually tagged
 is_abbreviation	0: 1890, 1: 5	Categorical	Whether or not the entire word is an abbreviation.	0		Manually tagged
-is_expert_technical_term			"1 if the word is a technical term that is not generally understandable. E.g.: """"Agarose""""."	0		Manually tagged
-is_general_technical_term			"1 if the word is a technical term that is generally understandable. E.g.: ""elektrisch"" "	0		
+is_expert_technical_term	0: 1740, 1: 155	Categorical	"1 if the word is a technical term that is not generally understandable. E.g.: """"Agarose""""."	0		Manually tagged
+is_general_technical_term	0: 1646, 1: 249	Categorical	"1 if the word is a technical term that is generally understandable. E.g.: ""elektrisch"" "	0		
 contains_symbol	0: 1887, 1: 8	Categorical	Whether or not the word contains a symbol. E.g.: β-D-Glucose	0		
 contains_hyphen	0: 1866, 1: 29	Categorical	"Whether or not the word contains a hyphen. E.g. 1 for DNA-Fragment (*not* words that have tag TRUNC (compositional first element, e.g. in ""Sekundär- und Tertiärstrukturen"", ""Sekundär-"" does not count as having a hyphen.))."	0		
 contains_abbreviation	0: 1883, 1: 12	Categorical	Whether or not the word contains an abbreviation. 0 for words that are only an abbreviation. See is_abbreviation. E.g. 1 for DNA-Fragment, 0 for DNA.	0		
-STTS_PoS_tag	NN: 515, ART: 276, APPR: 184, ADJA: 154, VVFIN: 102, VAFIN: 73, ADV: 73, KON: 66, ADJD: 53, APPRART: 48, VVPP: 38, VVINF: 33, PRELS: 29, PRF: 25, VMFIN: 25, PPER: 25, PAV: 18, KOKOM: 17, PDAT: 16, KOUS: 16, PTKVZ: 13, PIS: 10, PTKZU: 10, PIDAT: 9, CARD: 9, VAINF: 8, PPOSAT: 7, PDS: 7, KOUI: 6, PRELAT: 6, PIAT: 5, TRUNC: 5, PTKNEG: 4, NE: 4, VVIZU: 2, VMINF: 1, PWAV: 1, PTKA: 1, APZR: 1	Categorical	Part-of-speech tags according to the STTS-tagset. See stimuli/ANNOTATION.MD for more information. 	0		Manually tagged
+STTS_PoS_tag	ADJA: 154, ADJD: 53, ADV: 73, APPR: 184, APPRART: 48, APZR: 1, ART: 276, CARD: 9, KOKOM: 17, KON: 66, KOUI: 6, KOUS: 16, NE: 4, NN: 515, PAV: 18, PDAT: 16, PDS: 7, PIAT: 5, PIDAT: 9, PIS: 10, PPER: 25, PPOSAT: 7, PRELAT: 6, PRELS: 29, PRF: 25, PTKA: 1, PTKNEG: 4, PTKVZ: 13, PTKZU: 10, PWAV: 1, TRUNC: 5, VAFIN: 73, VAINF: 8, VMFIN: 25, VMINF: 1, VVFIN: 102, VVINF: 33, VVIZU: 2, VVPP: 38	Categorical	Part-of-speech tags according to the STTS-tagset. See stimuli/ANNOTATION.MD for more information. 	0		Manually tagged
 type		string	The orthographical representation of a word as found in the corpus; this data is case sensitive, i.e. there is a distinction between name and Name.	6		dlexDB
 type_length_chars	2.0-33.0	Integer	The length of the type of a word in characters. See the description of word_length for a definition of how characters are counted.	2		
-PoS_tag	nn: 508, art: 280, appr: 182, adja: 162, vvfin: 103, adv: 91, vafin: 73, kon: 63, adjd: 54, apprart: 48, vvpp: 38, vvinf: 33, prf: 25, vmfin: 24, pper: 24, prels: 24, kokom: 17, kous: 16, pdat: 16, ptkvz: 15, pis: 14, ptkzu: 10, card: 9, vainf: 8, pposat: 7, ne: 7, pds: 7, prelat: 6, koui: 5, piat: 5, xy: 5, trunc: 5, ptkneg: 4, vvizu: 2, pidat: 2, vminf: 1, pwav: 1, ptka: 1	Categorical	Part-of-speech tag as defined by the dlexDB query.	0		dlexDB
+PoS_tag	adja: 162, adjd: 54, adv: 91, appr: 182, apprart: 48, art: 280, card: 9, kokom: 17, kon: 63, koui: 5, kous: 16, ne: 7, nn: 508, pdat: 16, pds: 7, piat: 5, pidat: 2, pis: 14, pper: 24, pposat: 7, prelat: 6, prels: 24, prf: 25, ptka: 1, ptkneg: 4, ptkvz: 15, ptkzu: 10, pwav: 1, trunc: 5, vafin: 73, vainf: 8, vmfin: 24, vminf: 1, vvfin: 103, vvinf: 33, vvizu: 2, vvpp: 38, xy: 5	Categorical	Part-of-speech tag as defined by the dlexDB query.	0		dlexDB
 lemma		string		5		dlexDB
 lemma_length_chars	1.0-32.0	Integer		3		dlexDB
 syllables		string		25		dlexDB
@@ -54,3 +54,4 @@ neighbors_levenshtein_higher_freq_cum_freq_normalized	min: 0.0, max: 44055.24728
 neighbors_levenshtein_higher_freq_count_normalized	min: 0.0, max: 11.9864039932, mean: 0.3277, std: 0.6576	Float		116		dlexDB
 neighbors_levenshtein_all_cum_freq_normalized	min: 0.0, max: 54875.2749862, mean: 6722.366, std: 11598.2601	Float		116		dlexDB
 neighbors_levenshtein_all_count_normalized	min: 0.0, max: 75.7711966712, mean: 24.6418, std: 22.5295	Float		116		dlexDB
+surprisal	min: 0.0004481265, max: 55.285538, mean: 7.0446, std: 6.421	Float	Surprisal value extracted from a language model (GerPT2).	0		

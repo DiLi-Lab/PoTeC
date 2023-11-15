@@ -64,6 +64,8 @@ The experiment was run with the following technical set-up:
 |                           | Font color             | White                                                        |
 |                           | Font size              | 18                                                           |
 |                           | Font                   | Courier                                                      |
+|                           | Stimulus size          | On average 158 words shown on multiple lines on one page     |
+|                           |                        |                                                              |
 |                           |                        |                                                              |
 
 ## Stimuli Annotation
@@ -71,7 +73,6 @@ The stimuli have been manually annoted with part-of-speech tags and other lingui
 in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
 
 ## Repository Structure
-(to be deleted: to recreate structure adapt gitignore temporarily and do this + adapt it a bit:  tree --gitignore --filelimit 25 | tr '\240\240' ' ' > structure.txt)
 
     PoTeC-data
     ├── CODEBOOK.md
@@ -126,3 +127,4 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
         │   └── stimuli.tsv
         └── word_features
             └── ...
+
