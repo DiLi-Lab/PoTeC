@@ -41,6 +41,7 @@ def compute_reading_measures(
         participants_file: Path,
         word_limits_json: Path,
         sent_limits_json: Path,
+        stimulus_overview: Path,
 ) -> None:
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
@@ -48,6 +49,7 @@ def compute_reading_measures(
     # read all the files we need
     fixation_filenames = list(Path(fixation_folder).glob('*.tsv'))
     df_participants = pd.read_csv(participants_file, delimiter="\t")
+    stimuli = pd.read_csv(stimulus_overview, delimiter="\t")
 
     with open(word_limits_json, 'r') as limits_w_json:
         word_limits = json.load(limits_w_json)
@@ -59,6 +61,8 @@ def compute_reading_measures(
         reader, text_id, _ = Path(fixation_file_path).stem.split("_")
         word_limits_text = word_limits[text_id]
         sent_limits_text = sent_limits[text_id]
+
+        text_id_numeric = stimuli.loc[stimuli['text_id'] == text_id, 'text_id_numeric'].item()
 
         output_file_name = reader + '_' + text_id + '_rm.tsv'
         output_file_name = os.path.join(output_folder, output_file_name)
@@ -198,13 +202,13 @@ def compute_reading_measures(
 
         trial_information_header = [
             'text_domain_numeric',
-            'trial', 'text_id', 'reader_id', 'gender_numeric', 'reader_domain_numeric', 'expert_status_numeric',
+            'trial', 'text_id', 'text_id_numeric', 'reader_id', 'gender_numeric', 'reader_domain_numeric', 'expert_status_numeric',
             'domain_expert_status_numeric', 'age',
             'mean_acc_bq', 'mean_acc_tq', 'acc_bq_1', 'acc_bq_2', 'acc_bq_3', 'acc_tq_1', 'acc_tq_2', 'acc_tq_3',
         ]
 
         trial_information = [
-            text_domain_numeric, trial, text_id, reader_id, gender_numeric, reader_domain_numeric,
+            text_domain_numeric, trial, text_id, text_id_numeric, reader_id, gender_numeric, reader_domain_numeric,
             expert_status_numeric, domain_expert_status_numeric, age, mean_acc_bq, mean_acc_tq,
             acc_bq1, acc_bq2, acc_bq3, acc_tq1, acc_tq2, acc_tq3,
         ]
@@ -242,6 +246,7 @@ def main() -> int:
     word_limits = repo_root / 'preprocessing_scripts/word_limits.json'
     participants = repo_root / 'participants/participant_data.tsv'
     fixation_folder = repo_root / 'eyetracking_data/fixations'
+    stimulus_overview = repo_root / 'stimuli/stimuli/stimuli.tsv'
     output_folder = repo_root / 'eyetracking_data/reading_measures'
 
     compute_reading_measures(
@@ -249,7 +254,8 @@ def main() -> int:
         output_folder=output_folder,
         participants_file=participants,
         sent_limits_json=sent_limits,
-        word_limits_json=word_limits
+        word_limits_json=word_limits,
+        stimulus_overview=stimulus_overview,
     )
 
     return 0
