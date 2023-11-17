@@ -10,3 +10,4 @@ eyetracking_data/reading_measures_merged/	 	[Reading measures merged](eyetrackin
 eyetracking_data/scanpaths/	 	[Scanpaths](eyetracking_data/scanpaths)	Scanpaths
 eyetracking_data/scanpaths_merged/	 	[Scanpaths merged](eyetracking_data/scanpaths_merged)	Merged: scanpaths, participant info, reading measures and word features
 preprocessing_scripts/roi_to_word.tsv	 	[ROI to word mapping](preprocessing_scripts/roi_to_word.tsv)	ROI to word mapping
+stimuli/dependency_trees.tsv	 	[Dependency trees](stimuli/dependency_trees.tsv)	Dependency trees

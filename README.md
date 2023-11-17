@@ -79,7 +79,7 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
     ├── README.md
     ├── requirements.txt
     ├── additional_scripts
-    │   ├── README.md
+    │   ├── ADDITIONAL_SCRIPTS.md
     │   ├── compute_reading_measures.py
     │   ├── errors
     │   │   └── merge_fixations_word_char_errors.txt
@@ -87,7 +87,7 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
     │   ├── merge_rm_wf.py
     │   └── merge_scanpaths_rm_wf.py
     ├── eyetracking_data
-    │   ├── README.md
+    │   ├── EYETRACKING_DATA.md
     │   ├── original_uncorrected_fixation_report.txt
     │   ├── fixations
     │   │   └── ...
@@ -102,10 +102,10 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
     │   └── scanpaths_reader_rm_wf
     │       └── ...
     ├── participants
-    │   ├── README.md
+    │   ├── PARTICIPANTS.md
     │   └── participant_data.tsv
     ├── preprocessing_scripts
-    │   ├── README.md
+    │   ├── PREPROCESSING_SCRIPTS.md
     │   ├── char_index_to_word_index.py
     │   ├── create_word_roi_limits.py
     │   ├── roi_to_word.tsv
@@ -113,11 +113,12 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
     │   └── word_limits.json
     └── stimuli
         ├── ANNOTATION.md
-        ├── README.md
+        ├── STIMULI.md
         ├── stimuli.bib
+        ├── practice_items.txt
+        ├── dependency_trees.tsv
         ├── aoi_texts
         │   └── ...
-        ├── practice_items.txt
         ├── stimuli
         │   ├── bio_texts
         │   │   └── ...

@@ -161,3 +161,5 @@ aoi_type	The shape of the area of interest. In this corpus, all aois are rectang
 is_general_technical_term	"1 if the word is a technical term that is generally understandable. E.g.: ""elektrisch"" "
 surprisal	Surprisal value extracted from a language model (GerPT2).	NA	NA
 text_id_numeric	Numerical value of text_id; 0=b0, 1=b1, 2=b2, 3=b3, 4=b4, 5=b5, 6=p0, 7=p1, 8=p2, 9=p3, 10=p4, 11=p5	NA	NA
+dependency_tree	The dependency tree of the sentence in the text.	NA	NA
+sentence	The sentence in the text.	NA	NA

@@ -8,6 +8,7 @@ PATHS_FOLDERS = [
     'stimuli/stimuli/stimuli.tsv',
     'stimuli/stimuli/items.tsv',
     'stimuli/aoi_texts/',
+    'stimuli/dependency_trees.tsv',
     'eyetracking_data/fixations/',
     'eyetracking_data/scanpaths/',
     'eyetracking_data/reading_measures/',
@@ -55,6 +56,8 @@ text_vars = [
     'syllables',
     'word',
     'type',
+    'sentence',
+    'dependency_tree',
 ]
 cat_vars = [
     'alcohol',
@@ -178,6 +181,7 @@ ints = [
     'fixation_duration',
     'next_saccade_duration',
     'previous_saccade_duration',
+    'text_id_numeric'
 ]
 
 no_stats = [
