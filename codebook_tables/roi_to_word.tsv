@@ -1,4 +1,0 @@
-Column name	Possible values	Value type	Description	Num missing values	Missing value description	Source
-text_id	b0, b1, b2, b3, b4, b5, p0, p1, p2, p3, p4, p5		Unique identifier given to each stimulus text.	0		
-word_index_in_text	1-180	Integer	The index of the word in the text. Indexing starts at 1.	0		
-char_index_in_text	1-1121	Integer	Index of a character in the text. Indexing starts at 1.	0		
