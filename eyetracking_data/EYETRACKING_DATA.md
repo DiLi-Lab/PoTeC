@@ -16,7 +16,7 @@ SR Research `edf2asc` tool and then parsed to `.tsv` files containing one sample
 
 Fixations and saccades were computed from the raw data using the Eyelink Data Viewer software package provided by SR 
 Research with the default parameter settings (SR Research Ltd. 2011). Subsequently, each fixation was mapped to the 
-character in the text that was fixated annotated with the line index and the character index in the line, 
+character index in the text that was fixated annotated with the line index and the character index in the line, 
 the original screen coordinates (in pixels) were discarded. Fixations on the 
 white space between two words were mapped to the closest character. Visual inspection of the data revealed that in 
 certain fixation sequences, vertical calibration error gradually increased over time. This measurement error was 

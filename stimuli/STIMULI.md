@@ -51,7 +51,9 @@ No other changes were made to these files.
 > Refer to the [CODEBOOK](../CODEBOOK.md) for more information.
 
 ## Word features
-Please see the ANNOTATIONS.md file for more information on the word features and how they were created.
+Please see the ANNOTATION.md file for more information on the word features and how they were created.
+
+> Refer to the [CODEBOOK](../CODEBOOK.md) and the [ANNOTATION](ANNOTATION.md) file for more information.
 
 ## Practice texts
 All participants received the same practice text before the real experiment started. 

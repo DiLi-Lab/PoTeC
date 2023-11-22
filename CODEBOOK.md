@@ -3,23 +3,24 @@ The codebook specifies the data types, possible values, and other information fo
 
 ## Table of contents
 
-- [Items](#items)
-- [Stimuli and comprehension questions](#stimuli-and-comprehension-questions)
-- [Areas of interest (AOI)](#areas-of-interest-aoi)
 - [Word features](#word-features)
-- [Participants](#participants)
+- [Stimuli and comprehension questions](#stimuli-and-comprehension-questions)
+- [Items](#items)
+- [Areas of interest (AOI)](#areas-of-interest-aoi)
+- [Dependency trees](#dependency-trees)
 - [Fixations](#fixations)
-- [Reading measures](#reading-measures)
-- [Merged fixations](#merged-fixations-participant-info-reading-measures-and-word-features)
 - [Scanpaths](#scanpaths)
-- [Merged scanpaths](#merged-scanpaths-participant-info-reading-measures-and-word-features)
+- [Reading measures](#reading-measures)
+- [Reading measures merged](#merged-fixations-participant-info-reading-measures-and-word-features)
+- [Scanpaths merged](#merged-scanpaths-participant-info-reading-measures-and-word-features)
 - [Roi to word mapping](#roi-to-word-mapping)
+- [Participants](#participants)
 
 
 ## Word features
- 
+TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
 
-[Word features](stimuli/word_features)
+Please find the files under this link: [Word features](stimuli/word_features)
 
 | Column name                                               | Possible values                                                                                                                                                                                                                                                                                                                                                                                      | Value type   | Description                                                                                                                                                                                                                                                                |   Num missing values |   Missing value description | Source          |
 |:----------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------:|----------------------------:|:----------------|
@@ -83,9 +84,9 @@ The codebook specifies the data types, possible values, and other information fo
 
 
 ## Stimuli and comprehension questions
- 
+TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
 
-[Stimuli including comprehension questions](stimuli/stimuli/stimuli.tsv)
+Please find the file under this link: [Stimuli including comprehension questions](stimuli/stimuli/stimuli.tsv)
 
 | Column name      | Possible values                                | Value type   | Description                                                                                                                                                                                                                                      |   Num missing values |   Missing value description |   Source |
 |:-----------------|:-----------------------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------:|----------------------------:|---------:|
@@ -139,9 +140,9 @@ The codebook specifies the data types, possible values, and other information fo
 
 
 ## Items
- 
+TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
 
-[Items](stimuli/stimuli/items.tsv)
+Please find the file under this link: [Items](stimuli/stimuli/items.tsv)
 
 | Column name    | Possible values                                | Value type   | Description                                                                                                                                                                                              |   Num missing values |   Missing value description |   Source |
 |:---------------|:-----------------------------------------------|:-------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------:|----------------------------:|---------:|
@@ -158,9 +159,9 @@ The codebook specifies the data types, possible values, and other information fo
 
 
 ## Areas of interest (AOI)
- 
+TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
 
-[AOI](stimuli/aoi_texts)
+Please find the files under this link: [AOI](stimuli/aoi_texts)
 
 | Column name   | Possible values   | Value type   | Description                                                                                                                         |   Num missing values |   Missing value description |   Source |
 |:--------------|:------------------|:-------------|:------------------------------------------------------------------------------------------------------------------------------------|---------------------:|----------------------------:|---------:|
@@ -174,9 +175,9 @@ The codebook specifies the data types, possible values, and other information fo
 
 
 ## Dependency trees
- 
+TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
 
-[Dependency trees](stimuli/dependency_trees.tsv)
+Please find the file under this link: [Dependency trees](stimuli/dependency_trees.tsv)
 
 | Column name        | Possible values                                | Value type   | Description                                                                                          |   Num missing values |   Missing value description |   Source |
 |:-------------------|:-----------------------------------------------|:-------------|:-----------------------------------------------------------------------------------------------------|---------------------:|----------------------------:|---------:|
@@ -188,9 +189,9 @@ The codebook specifies the data types, possible values, and other information fo
 
 
 ## Fixations
- 
+TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
 
-[Fixations](eyetracking_data/fixations)
+Please find the files under this link: [Fixations](eyetracking_data/fixations)
 
 | Column name               | Possible values                                | Value type   | Description                                                                                                                                                                                              |   Num missing values |   Missing value description | Source           |
 |:--------------------------|:-----------------------------------------------|:-------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------:|----------------------------:|:-----------------|
@@ -217,9 +218,9 @@ The codebook specifies the data types, possible values, and other information fo
 
 
 ## Scanpaths
- 
+TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
 
-[Scanpaths](eyetracking_data/scanpaths)
+Please find the files under this link: [Scanpaths](eyetracking_data/scanpaths)
 
 | Column name               | Possible values                                | Value type   | Description                                                                                                                                                                                              |   Num missing values |   Missing value description | Source           |
 |:--------------------------|:-----------------------------------------------|:-------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------:|----------------------------:|:-----------------|
@@ -252,9 +253,9 @@ The codebook specifies the data types, possible values, and other information fo
 
 
 ## Reading measures
- 
+TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
 
-[Reading measures](eyetracking_data/reading_measures)
+Please find the files under this link: [Reading measures](eyetracking_data/reading_measures)
 
 | Column name                  | Possible values                                     | Value type   | Description                                                                                                                                                                                                                                                                                        |   Num missing values |   Missing value description |   Source |
 |:-----------------------------|:----------------------------------------------------|:-------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------:|----------------------------:|---------:|
@@ -300,9 +301,9 @@ The codebook specifies the data types, possible values, and other information fo
 
 
 ## Merged: fixations, participant info, reading measures and word features
- 
+TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
 
-[Reading measures merged](eyetracking_data/reading_measures_merged)
+Please find the files under this link: [Reading measures merged](eyetracking_data/reading_measures_merged)
 
 | Column name                                               | Possible values                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Value type   | Description                                                                                                                                                                                                                                                                                        |   Num missing values |   Missing value description | Source          |
 |:----------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------:|----------------------------:|:----------------|
@@ -400,9 +401,9 @@ The codebook specifies the data types, possible values, and other information fo
 
 
 ## Merged: scanpaths, participant info, reading measures and word features
- 
+TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
 
-[Scanpaths merged](eyetracking_data/scanpaths_merged)
+Please find the files under this link: [Scanpaths merged](eyetracking_data/scanpaths_merged)
 
 | Column name                                               | Possible values                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Value type   | Description                                                                                                                                                                                                                                                                                        |   Num missing values |   Missing value description | Source           |
 |:----------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------:|----------------------------:|:-----------------|
@@ -513,9 +514,9 @@ The codebook specifies the data types, possible values, and other information fo
 
 
 ## ROI to word mapping
- 
+TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
 
-[ROI to word mapping](preprocessing_scripts/roi_to_word.tsv)
+Please find the file under this link: [ROI to word mapping](preprocessing_scripts/roi_to_word.tsv)
 
 | Column name        | Possible values                                | Value type   | Description                                              |   Num missing values |   Missing value description |   Source |
 |:-------------------|:-----------------------------------------------|:-------------|:---------------------------------------------------------|---------------------:|----------------------------:|---------:|
@@ -525,9 +526,9 @@ The codebook specifies the data types, possible values, and other information fo
 
 
 ## Participants
- 
+TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
 
-[Participant information](participants/participant_data.tsv)
+Please find the file under this link: [Participant information](participants/participant_data.tsv)
 
 | Column name                  | Possible values                                                                    | Value type   | Description                                                                                                                                        |   Num missing values |   Missing value description |   Source |
 |:-----------------------------|:-----------------------------------------------------------------------------------|:-------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------:|----------------------------:|---------:|

@@ -38,7 +38,7 @@ to the sentence structure. Small manual corrections were made to adjust the tree
 word features files defined by ``sent_index_in_text``. Apart from that, further manual correction might be necessary 
 to correct mistakes in the dependency trees made by the tool. 
 
-`dependency_trees_tsv`
+> `dependency_trees.tsv`
 
 ## DlexDB annotations
 

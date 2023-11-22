@@ -1,6 +1,6 @@
 # PoTeC - Potsdam Textbook Corpus
 
-This repository contains Potsdam Textbook Corpus (PoTeC) which is a natural reading eye-tracking corpus.
+This repository contains the Potsdam Textbook Corpus (PoTeC) which is a natural reading eye-tracking corpus.
 Four groups of participants (expert/beginner level students of physics and biology) read 12 short 
 texts taken from textbooks of physics and biology while their eye movements were monitored. 
 The final dataset contains the reading data for 75 participants each reading all 12 texts.

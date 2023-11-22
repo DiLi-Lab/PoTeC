@@ -1,13 +1,13 @@
 section	text	link	title
-stimuli/stimuli/items.tsv	 	[Items](stimuli/stimuli/items.tsv)	Items
-stimuli/stimuli/stimuli.tsv	 	[Stimuli including comprehension questions](stimuli/stimuli/stimuli.tsv)	Stimuli and comprehension questions
-stimuli/aoi_texts/	 	[AOI](stimuli/aoi_texts)	Areas of interest (AOI)
-stimuli/word_features/	 	[Word features](stimuli/word_features)	Word features
-participants/	 	[Participant information](participants/participant_data.tsv)	Participants
-eyetracking_data/fixations/	 	[Fixations](eyetracking_data/fixations)	Fixations
-eyetracking_data/reading_measures/	 	[Reading measures](eyetracking_data/reading_measures)	Reading measures
-eyetracking_data/reading_measures_merged/	 	[Reading measures merged](eyetracking_data/reading_measures_merged)	Merged: fixations, participant info, reading measures and word features
-eyetracking_data/scanpaths/	 	[Scanpaths](eyetracking_data/scanpaths)	Scanpaths
-eyetracking_data/scanpaths_merged/	 	[Scanpaths merged](eyetracking_data/scanpaths_merged)	Merged: scanpaths, participant info, reading measures and word features
-preprocessing_scripts/roi_to_word.tsv	 	[ROI to word mapping](preprocessing_scripts/roi_to_word.tsv)	ROI to word mapping
-stimuli/dependency_trees.tsv	 	[Dependency trees](stimuli/dependency_trees.tsv)	Dependency trees
+stimuli/stimuli/items.tsv	TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)	Please find the file under this link: [Items](stimuli/stimuli/items.tsv)	Items
+stimuli/stimuli/stimuli.tsv	TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)	Please find the file under this link: [Stimuli including comprehension questions](stimuli/stimuli/stimuli.tsv)	Stimuli and comprehension questions
+stimuli/aoi_texts/	TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)	Please find the files under this link: [AOI](stimuli/aoi_texts)	Areas of interest (AOI)
+stimuli/word_features/	TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)	Please find the files under this link: [Word features](stimuli/word_features)	Word features
+participants/	TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)	Please find the file under this link: [Participant information](participants/participant_data.tsv)	Participants
+eyetracking_data/fixations/	TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)	Please find the files under this link: [Fixations](eyetracking_data/fixations)	Fixations
+eyetracking_data/reading_measures/	TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)	Please find the files under this link: [Reading measures](eyetracking_data/reading_measures)	Reading measures
+eyetracking_data/reading_measures_merged/	TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)	Please find the files under this link: [Reading measures merged](eyetracking_data/reading_measures_merged)	Merged: fixations, participant info, reading measures and word features
+eyetracking_data/scanpaths/	TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)	Please find the files under this link: [Scanpaths](eyetracking_data/scanpaths)	Scanpaths
+eyetracking_data/scanpaths_merged/	TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)	Please find the files under this link: [Scanpaths merged](eyetracking_data/scanpaths_merged)	Merged: scanpaths, participant info, reading measures and word features
+preprocessing_scripts/roi_to_word.tsv	TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)	Please find the file under this link: [ROI to word mapping](preprocessing_scripts/roi_to_word.tsv)	ROI to word mapping
+stimuli/dependency_trees.tsv	TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)	Please find the file under this link: [Dependency trees](stimuli/dependency_trees.tsv)	Dependency trees
