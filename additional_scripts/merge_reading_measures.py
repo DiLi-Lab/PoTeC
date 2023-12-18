@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 TODO: clean again, r is never closed?
-Call: python3 merge_rm_wf.py
+Call: python3 merge_reading_measures.py
 To specify custom file paths see argparse arguments at the bottom of the file.
 """
 from __future__ import annotations

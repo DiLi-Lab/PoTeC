@@ -96,6 +96,9 @@ def create_scanpaths(
 
         new_df = pd.DataFrame(new_columns)
         new_df['text_id_numeric'] = wf_csv['text_id_numeric'].iloc[0]
+
+        text_domain_numeric = wf_csv['text_domain_numeric'].iloc[0]
+
         fix_csv = pd.concat([fix_csv, new_df], axis=1)
 
         scanpath_file = re.sub('fixations', 'scanpath', fixation_file_name)

@@ -40,7 +40,7 @@ class Annotations:
         if os.path.exists('surprisal.pickle'):
             self.surprisal = pickle.load('surprisal.pickle')
         else:
-            # iterate over texts (rows in stimuli.tsv)
+            # iterate over texts
             for file in self.stimuli:
                 all_surprisal = []
                 df = pd.read_csv(file, sep="\t")

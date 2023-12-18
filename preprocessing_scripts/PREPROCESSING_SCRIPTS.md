@@ -6,21 +6,25 @@ available in this repo. The scripts do not have to be run again as they will onl
 ## Preprocessing Pipeline
 The data for this corpus has been preprocessed in the following steps:
 
-1. <mark>not published</mark>: ``.edf`` files
+1. not published: ``.edf`` files
 : files written by the eye-tracker, non-human readable
 
-2. <mark>not published</mark>: ``.asc`` files
+2. not published: ``.asc`` files
 : .edf files converted to human-readable files, includes eye-tracker messages etc. 
 
-3. <mark>published</mark>: ``.tsv`` files
+3. published: ``.tsv`` files
 : .asc files parsed into .tsv files, contains one sample per line.
 
-4. <mark>published</mark>: Original fixation report
+4. published: Original fixation report
 : Based on the tsv files we used the SR Research Data Viewer to create a fixation report: ``eyetracking_data/original_uncorrected_fixation_report.txt``.
 
-5. <mark>published</mark>: Manually corrected fixation files
+5. published: Manually corrected fixation files
 : A script was used to manually correct the fixations as they were not always aligned correctly. The script to correct the fixations is _not published_.
 The corrected fixations files per reader and text are available in the folder ``eyetracking_data/fixations``.
+
+6. published: Additional preprocessing
+: The computed fixations were further processed to obtain the data in different format. Please refer to the folder 
+`additional_scripts` adn the respective [README](../additional_scripts/ADDITIONAL_SCRIPTS.md).
 
 
 ## Scripts

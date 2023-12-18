@@ -189,11 +189,11 @@ def compute_reading_measures(
             # if no accuracy information is available, code with -1
             acc_tq1 = acc_tq2 = acc_tq3 = acc_bq1 = acc_bq2 = acc_bq3 = mean_acc_tq = mean_acc_bq = pd.NA
 
-        # Coding of topic: bio=1, phy=0
+        # Coding of topic: bio=0, phy=1
         if fixation_file_sorted.loc[1, 'text_domain'] == 'bio':
-            text_domain_numeric = 1
-        elif fixation_file_sorted.loc[1, 'text_domain'] == 'physics':
             text_domain_numeric = 0
+        elif fixation_file_sorted.loc[1, 'text_domain'] == 'physics':
+            text_domain_numeric = 1
         else:
             text_domain_numeric = pd.NA
 
