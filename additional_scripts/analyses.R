@@ -6,6 +6,7 @@ library(dplyr)
 library(stringr)
 library(MASS)
 library(ggplot2)
+library(lemon)
 
 # detect all files
 files <- list.files(
@@ -223,3 +224,59 @@ textfeat_summary <- df_word_features %>%
     summarize(
         across(word_features[3:5], .fns = list(mean = mean, sd = sd), na.rm = TRUE)
     )
+
+
+### model analyses
+result_files <- list.files(
+    pattern = ".*csv",
+    path = "analyses/",
+    full.names = TRUE
+)
+
+#  load all files into one data frame and add file name as column
+df_results <- do.call(rbind, lapply(result_files, read_csv, col_types = cols()))
+
+results_df <- result_files %>% 
+    lapply(read_csv) %>% # read all the files at once
+    bind_rows(.id = "id")
+
+results_df$predictor <- as.factor(results_df$predictor)
+levels(results_df$predictor) <- c(
+    "Exp. reading", "Exp. reading * Exp. term", "Intercept", "Exp. term",
+    "Log-freq", "Log-freq * Exp. reading", "Surprisal", "Surprisal * Exp. reading",
+    "Word len", "Word len * Exp. reading"
+)
+
+for (i in 1:6) {
+    # remove intercept
+    plt_data <- results_df %>% filter(predictor != "Intercept")
+    plt_data <- plt_data %>% filter(id == i)
+
+    p <- ggplot(
+        plt_data,
+        aes(
+            x = predictor, y = estimate,
+            colour = reading_measure, position = "dodge"
+        )
+    ) +
+        scale_x_discrete(guide = guide_axis(angle = 20)) +
+        # scale_color_manual(values=colors) +
+        geom_point(
+            position = position_dodge(width = .5), size = 1.2, shape = 20
+        ) +
+        geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper),
+            width = .25, position = position_dodge(width = .5), linewidth = 0.4
+        ) +
+        # facet_wrap(reading_measure ~ .) +
+        # facet_wrap(id ~ .,  scales = "free_y")  +
+        geom_hline(yintercept = 0, linetype = "dashed", color = "grey51") +
+        xlab("Predictor") +
+        ylab("Posterior effect estimate") +
+        theme_light() +
+        # decrease font size of x axis ticks
+        # theme(axis.text.x = element_text(size = 6)) +
+        theme(legend.position = "top", legend.box = "horizontal") +
+        guides(colour = guide_legend(label.position = "bottom")) +
+        guides(colour = guide_legend(title = "Reading measure"))
+    ggsave(paste0("plots/lmm_", i, ".jpeg"), width = 5, height = 6, dpi = 300)
+}
