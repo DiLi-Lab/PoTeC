@@ -177,7 +177,7 @@ Please find the files under this link: [AOI](stimuli/aoi_texts)
 ## Dependency trees
 TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
 
-Please find the file under this link: [Dependency trees](stimuli/dependency_trees.tsv)
+Please find the file under this link: [Dependency trees](stimuli/dependency_trees_manually_corrected.tsv)
 
 | Column name        | Possible values                                | Value type   | Description                                                                                          |   Num missing values |   Missing value description |   Source |
 |:-------------------|:-----------------------------------------------|:-------------|:-----------------------------------------------------------------------------------------------------|---------------------:|----------------------------:|---------:|

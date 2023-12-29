@@ -4,9 +4,10 @@ This repository contains the Potsdam Textbook Corpus (PoTeC) which is a natural 
 Four groups of participants (expert/beginner level students of physics and biology) read 12 short 
 texts taken from textbooks of physics and biology while their eye movements were monitored. 
 The final dataset contains the reading data for 75 participants each reading all 12 texts.
-The study follows a 2x2 fully-crossed factorial design:
-* _Factor 1_: Study major with the levels either physics or biology
-* _Factor 2_: Level of expertise with the levels either beginner or expert
+The study follows a 2x2x2 fully-crossed factorial design:
+* _Factor 1_: Study discipline of participant with the levels either physics or biology
+* _Factor 2_: Study level of participant with the levels either beginner or expert
+* _Factor 3_: Text domain with the levels either physics or biology
 
 |              | Physics | Biology |
 |--------------|---------|---------|
@@ -23,7 +24,6 @@ More information is found in the following README'S:
 * [stimuli](./stimuli/STIMULI.md)
 * [eye-tracking data](./eyetracking_data/EYETRACKING_DATA.md)
 * [additional processing](./additional_scripts/ADDITIONAL_SCRIPTS.md)
-
 
 
 ## Data Overview
@@ -54,7 +54,7 @@ The experiment was run with the following technical set-up:
 |                           |                        |                                                              |
 | **Technical set-up**      | Eye-tracking device    | Eyelink 1000, dektop mounted camera system with a 35 mm lens |
 |                           | Sampling rate          | 1000 Hz                                                      |
-|                           | Monitor size           | 22 inch                                                      |
+|                           | Monitor size           | 47.5x30 cm, 22 inch                                          |
 |                           | Monitor resolution     | 1680x1050 pixels                                             |
 |                           | Eye-to-screen distance | 61 cm                                                        |
 |                           | Eye-to-camera distance | 65 cm                                                        |
@@ -84,8 +84,8 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
     │   ├── errors
     │   │   └── merge_fixations_word_char_errors.txt
     │   ├── generate_scanpaths.py
-    │   ├── merge_rm_wf.py
-    │   └── merge_scanpaths_rm_wf.py
+    │   ├── merge_reading_measures.py
+    │   └── merge_scanpaths.py
     ├── eyetracking_data
     │   ├── EYETRACKING_DATA.md
     │   ├── original_uncorrected_fixation_report.txt
@@ -93,13 +93,13 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
     │   │   └── ...
     │   ├── raw_data 
     │   │   └── ...
-    │   ├── reader_rm_wf
+    │   ├── reader_merged
     │   │   └── ...
     │   ├── reading_measures
     │   │   └── ...
     │   ├── scanpaths
     │   │   └── ...
-    │   └── scanpaths_reader_rm_wf
+    │   └── scanpaths_merged
     │       └── ...
     ├── participants
     │   ├── PARTICIPANTS.md

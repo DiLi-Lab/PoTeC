@@ -5,7 +5,8 @@ This directory contains all the necessary scripts that have been used to further
 > Refer to the [CODEBOOK](../CODEBOOK.md) for more information on the resulting output files.
 
 
-## `compute_reading_measures.py`
+## Computing reading measures
+
 The script is made to compute a number of commonly used reading measures for eye-tracking research.
 
 **How to run:**
@@ -19,7 +20,7 @@ The script is made to compute a number of commonly used reading measures for eye
  The files will be written to a newly created folder ``../eyetracking_data/reading_measures``
 
 
-## ```generate_scanpaths.py```
+## Generating scanpaths
 
 Generates the scanpaths for each reader and text.
 
@@ -33,22 +34,23 @@ Generates the scanpaths for each reader and text.
 
  The files will be written to a newly created folder ``../eyetracking_data/scanpaths``
 
-## ``merge_rm_wf.py``
+## Merge reading measures
 
 Merges the reading measures for each reader and each text with the word features for each text and the information on the reader.
 > Prerequisite: you need to run `compute_reading_measures.py` first.
 
+
 **How to run:**
  ```bash
  # python or python3
- python [path_to_additional_scripts]/merge_rm_wf.py
+ python [path_to_additional_scripts]/merge_reading_measures.py
  ```
 
  **Results**
 
  The files will be written to a newly created folder ``../eyetracking_data/reader_rm_wf``
 
-## `merge_scanpaths_rm_wf.py`
+## Merge scanpaths
 
 Merges the scanpath for each reader and text with the reading measures, word features for each text and the information on the reader.
 > Prerequisite: you need to run `compute_reading_measures.py` and `generate_scanpaths.py` first.
@@ -57,14 +59,14 @@ Merges the scanpath for each reader and text with the reading measures, word fea
 **How to run:**
  ```bash
  # python or python3
- python [path_to_additional_scripts]/merge_scanpaths_rm_wf.py
+ python [path_to_additional_scripts]/merge_scanpaths.py
  ```
 
  **Results**
 
  The files will be written to a newly created folder ``../eyetracking_data/scanpaths_rm_wf``
 
-## `get_surprisal.py` & `surprisal.py`
+## Compute surprisal
 
 Scripts that are used to compute surprisal values for each word in the text.
 
