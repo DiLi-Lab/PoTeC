@@ -13,11 +13,11 @@ option_list = list(
                 help = "type of experiment"),
     make_option(c("-i", "--iterations"), type = "integer", default = 3000,
                 help = "number of iterations")
-) 
- 
+)
+
 opt_parser <- OptionParser(option_list = option_list)
 opt <- parse_args(opt_parser)
-# options(mc.cores = parallel::detectCores())
+options(mc.cores = parallel::detectCores())
 ITERATIONS <- opt$iterations
 EXP <- opt$experiment
 
@@ -208,15 +208,15 @@ files <- list.files(
 
 #  load all files into one data frame
 df_raw <- do.call(rbind, lapply(files, read_tsv, col_types = cols()))
-df <- preprocess(df_raw)
 
 ############### !!!! DON'T RUN THIS AFTER NEXT PULL !!!! ################
 # switch text domain numeric to biology = 0, physics = 1x
 df_raw$text_domain_numeric <- ifelse(
     df_raw$text_domain_numeric == 0, 1, 0
 )
-############### !!!! DON'T RUN THIS AFTER NEXT PULL !!!! ################)
+##########
 
+df <- preprocess(df_raw)
 
 # CONSTANTS
 rm_of_interest <- c("RRT", "FPRT", "TFT", "FPReg")
