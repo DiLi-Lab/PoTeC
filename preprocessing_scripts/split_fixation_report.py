@@ -33,6 +33,8 @@ def split_fixation_report(
         'CURRENT_FIX_INTEREST_AREA_INDEX': 'roi',
         'topic': 'text_domain',
         'CURRENT_FIX_INDEX': 'fixation_index',
+        'CURRENT_FIX_X': 'fixation_position_x',
+        'CURRENT_FIX_Y': 'fixation_position_y',
     }
 
     fix_rep_csv = pd.read_csv(fixation_report_file, sep='\t', index_col=False)
@@ -74,36 +76,12 @@ def split_fixation_report(
     reader_item_df.to_csv(output_file_name, sep='\t', index=False)
 
 
-def create_parser():
-    base_path = Path(os.getcwd()).parent
-    pars = argparse.ArgumentParser()
-
-    pars.add_argument(
-        '-fp', '--fixation-report-file',
-        default=base_path / 'eyetracking_data/original_uncorrected_fixation_report.txt',
-    )
-
-    pars.add_argument(
-        '-c', '--columns',
-        default=['CURRENT_FIX_INDEX', 'topic', 'itemid', 'CURRENT_FIX_INTEREST_AREA_INDEX', 'CURRENT_FIX_DURATION',
-                 'NEXT_SAC_DURATION', 'PREVIOUS_SAC_DURATION', 'trial', 'ACC_B_Q1', 'ACC_B_Q2', 'ACC_B_Q3', 'ACC_T_Q1',
-                 'ACC_T_Q2', 'ACC_T_Q3', 'version', 'RECORDING_SESSION_LABEL'],
-    )
-
-    pars.add_argument(
-        '-o', '--output-folder',
-        default=base_path / 'eyetracking_data/uncorrected_fixations/',
-    )
-
-    return pars
-
-
 def main():
     repo_root = Path(__file__).parent.parent
 
     columns = ['CURRENT_FIX_INDEX', 'topic', 'trial', 'ACC_B_Q1', 'ACC_B_Q2', 'ACC_B_Q3', 'ACC_T_Q1', 'ACC_T_Q2',
                'ACC_T_Q3', 'CURRENT_FIX_DURATION', 'NEXT_SAC_DURATION', 'PREVIOUS_SAC_DURATION', 'version',
-               'CURRENT_FIX_INTEREST_AREA_INDEX', 'RECORDING_SESSION_LABEL', 'itemid']
+               'CURRENT_FIX_INTEREST_AREA_INDEX', 'RECORDING_SESSION_LABEL', 'itemid', 'CURRENT_FIX_X',	'CURRENT_FIX_Y']
     output_folder = repo_root / 'eyetracking_data/fixations_uncorrected/'
     fixation_report_file = repo_root / 'eyetracking_data/original_uncorrected_fixation_report.txt'
 
