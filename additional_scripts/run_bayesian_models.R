@@ -73,6 +73,7 @@ preprocess <- function(df) {
 
     rm_df$reader_id <- as.factor(rm_df$reader_id)
     rm_df$expert_in_domain <- as.factor(rm_df$expert_in_domain)
+    rm_df$reader_domain_numeric <- as.factor(rm_df$reader_domain_numeric)
     rm_df$is_expert_technical_term <- as.factor(rm_df$is_expert_technical_term)
     return(rm_df)
 }
@@ -81,6 +82,7 @@ fit_linear_model <- function(
         data, target, predictors,
         log_transform = FALSE, remove_zeros = FALSE, remove_outliers = FALSE) {
     data_proc <- data
+    formula <- paste0(target, "~ (1|reader_id) +", predictors)
     if (remove_zeros) {
         data_proc <- data[data[[target]] != 0, ]
     }
@@ -91,18 +93,28 @@ fit_linear_model <- function(
     if (log_transform) {
         data_proc[[target]] <- ifelse(
             data_proc[[target]] == 0, 0, log(data_proc[[target]]))
+        model <- brm(
+            formula = formula,
+            data = data_proc,
+            family = lognormal(link = "identity"),
+            warmup = ITERATIONS / 4,
+            iter = ITERATIONS,
+            chains = 4,
+            cores = 4,
+            seed = 123
+        )
+    } else {
+        model <- brm(
+            formula = formula,
+            data = data_proc,
+            family = gaussian(link = "identity"),
+            warmup = ITERATIONS / 4,
+            iter = ITERATIONS,
+            chains = 4,
+            cores = 4,
+            seed = 123
+        )
     }
-    formula <- paste0(target, "~ (1|reader_id) +", predictors)
-    model <- brm(
-        formula = formula,
-        data = data_proc,
-        family = gaussian(link = "identity"),
-        warmup = ITERATIONS / 4,
-        iter = ITERATIONS,
-        chains = 4,
-        cores = 4,
-        seed = 123
-    )
     return(model)
 }
 
@@ -227,12 +239,10 @@ rm_df <- data.frame(
 
 # nolint start
 experiments <- c(
-    "word_length + surprisal + log_freq + expert_in_domain",
-    "word_length + surprisal + log_freq + expert_in_domain + is_expert_technical_term",
-    "word_length + surprisal + log_freq + expert_in_domain*is_expert_technical_term",
-    "word_length + surprisal + log_freq + expert_in_domain + word_length:expert_in_domain + surprisal:expert_in_domain + log_freq:expert_in_domain",
-    "word_length + surprisal + log_freq + expert_in_domain + word_length:expert_in_domain + surprisal:expert_in_domain + log_freq:expert_in_domain + is_expert_technical_term",
-    "word_length + surprisal + log_freq + expert_in_domain + word_length:expert_in_domain + surprisal:expert_in_domain + log_freq:expert_in_domain + is_expert_technical_term + expert_in_domain:is_expert_technical_term"
+    "word_length + surprisal + log_freq + expert_in_domain + is_expert_technical_term + reader_domain_numeric",
+    "word_length + surprisal + log_freq + expert_in_domain*reader_domain_numeric + is_expert_technical_term",
+    "word_length + surprisal + log_freq + expert_in_domain + reader_domain_numeric + word_length:expert_in_domain + surprisal:expert_in_domain + log_freq:expert_in_domain + is_expert_technical_term",
+    "word_length + surprisal + log_freq + expert_in_domain + reader_domain_numeric + expert_in_domain:reader_domain_numeric + word_length:expert_in_domain + surprisal:expert_in_domain + log_freq:expert_in_domain + is_expert_technical_term"
 )
 
 
