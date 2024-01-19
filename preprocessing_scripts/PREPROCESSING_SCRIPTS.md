@@ -39,6 +39,19 @@ items.
 Used to create the file `roi_to_word.tsv`.
 This code creates a file containing the mapping of the character-based rois to the word-based word_index_in_text.
 
+### `asc_to_tsv.py`
+This script was used to parse the .asc files into .tsv files.
+
+### `split_fixation_report.py`
+This script splits the original fixation report into one file per text and reader. The files are stored in the folder
+`eyetracking_data/fixations_uncorrected`.
+
+### `correct_fixations.py`
+This is the script that has been used to manually correct the fixations. It allows to go through all fixation files and
+visualizes them. For each fixation the user can decide whether it is correct or not. If not, the user can correct the fixation
+and move it up or down and update the respective area of interest.
+
+
 ## Additional  files
 ### `word_limits.json` & `sent_limits.json`
 

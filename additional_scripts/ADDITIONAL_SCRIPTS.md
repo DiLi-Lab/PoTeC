@@ -20,7 +20,7 @@ The script is made to compute a number of commonly used reading measures for eye
  The files will be written to a newly created folder ``../eyetracking_data/reading_measures``
 
 
-## Generating scanpaths
+## Generate scanpaths
 
 Generates the scanpaths for each reader and text.
 
@@ -33,6 +33,20 @@ Generates the scanpaths for each reader and text.
  **Results**
 
  The files will be written to a newly created folder ``../eyetracking_data/scanpaths``
+
+## Generate syntax trees
+
+This script generates the constituency and dependency trees for each sentence in each stimulus text.
+
+**How to run:**
+ ```bash
+ # python or python3
+ python [path_to_additional_scripts]/generate_scanpaths.py
+ ```
+
+ **Results**
+
+ The files will be written to a newly created file ``../stimuli/dependency_trees.csv`` and ``../stimuli/constituency_trees.csv``
 
 ## Merge reading measures
 

@@ -16,7 +16,7 @@ The study follows a 2x2x2 fully-crossed factorial design:
 
 Both factors are quasi-experimental and manipulated between subjects.
 The readers' text comprehension as well as their background 
-knowledge in the topics presented in the texts were assessed by multiple-choice questions. 
+knowledge on the topics presented in the texts were assessed by multiple-choice questions. 
 
 More information is found in the following README'S:
 * [preprocessing](./preprocessing_scripts/PREPROCESSING_SCRIPTS.md)
@@ -25,6 +25,32 @@ More information is found in the following README'S:
 * [eye-tracking data](./eyetracking_data/EYETRACKING_DATA.md)
 * [additional processing](./additional_scripts/ADDITIONAL_SCRIPTS.md)
 
+## Download the data
+The data files are stored in an [OSF repository](https://osf.io/dn5hp/?view_only=). If the repository has been cloned, 
+they can be downloaded and extracted automatically using the following script:
+
+```bash
+# or python3
+python download_data_files.py
+
+# OR to extract the files directly
+python download_data_files.py --extract
+```
+
+Alternatively, they can be downloaded manually from the OSF repository and extracted into the respective folders.
+
+## `pymovements` integration
+PoTeC is integrated into the [pymovements](https://pymovements.readthedocs.io/en/stable/index.html) package. The package allows
+to easily download the raw data and further process it. The following code snippet shows how to download the data:
+
+```python
+# pip install pymovements
+import pymovements as pm
+
+dataset = pm.Dataset('PoTeC', path='data/PoTeC')
+
+dataset.download()
+```
 
 ## Data Overview
 The data that was used to create the corpus and that was obtained during the experiments is made available in various stages. 

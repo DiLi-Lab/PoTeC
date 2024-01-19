@@ -2,9 +2,11 @@ from pathlib import Path
 
 import pandas as pd
 import spacy
+import spacy_transformers
+import benepar
 
 
-def add_dependency_trees():
+def create_syntax_trees():
     nlp = spacy.load('de_core_news_sm')
     nlp.add_pipe("benepar", config={"model": "benepar_de2"})
 
@@ -32,6 +34,8 @@ def add_dependency_trees():
         doc = nlp(text)
         sentences = list(doc.sents)
         for sent_index, sent in enumerate(sentences):
+            _create_dependency_tress(sent)
+
             tree = sent._.parse_string
             new_columns['sent_index_in_text'].append(sent_index + 1)
             new_columns['sentence'].append(sent)
@@ -41,15 +45,23 @@ def add_dependency_trees():
         new_df['text_id_numeric'] = text_id_numeric
         new_df['text_id'] = text_id
         dep_tree_dfs.append(new_df)
-        print(f'text {text_id} has {sent_index + 1} sentences.')
 
     dep_tree_df = pd.concat(dep_tree_dfs)
     dep_tree_df.to_csv('stimuli/dependency_trees.tsv', sep='\t', index=False)
 
 
+def _create_dependency_tress(sentence) -> None:
+    for token in sentence:
+        print(token.text, token.lemma_, token.pos_, token.tag_, token.dep_,)
+
+
+def _create_constituency_trees() -> None:
+    pass
+
+
 def main() -> int:
 
-    add_dependency_trees()
+    create_syntax_trees()
 
     return 0
 

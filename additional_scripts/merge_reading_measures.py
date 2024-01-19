@@ -91,7 +91,7 @@ def main() -> int:
     repo_root = Path(__file__).parent.parent
 
     reading_measure_folder = repo_root / 'eyetracking_data/reading_measures'
-    word_features_folder = repo_root / 'stimuli/word_features_with_surprisal'
+    word_features_folder = repo_root / 'stimuli/word_features'
     participants_file = repo_root / 'participants/participant_data.tsv'
     output_folder = repo_root / 'eyetracking_data/reading_measures_merged'
 
