@@ -1,3 +1,0 @@
-For the fixation files in this file, there were errors when trying to map the roi to a word and character.Those need to be manually fixed. The missing values are written as np.NA in the output file.
-
-fixation_file_name, text_id, roi, word_idx, word, character

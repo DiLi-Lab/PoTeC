@@ -13,7 +13,7 @@ The codebook specifies the data types, possible values, and other information fo
 - [Reading measures](#reading-measures)
 - [Reading measures merged](#merged-fixations-participant-info-reading-measures-and-word-features)
 - [Scanpaths merged](#merged-scanpaths-participant-info-reading-measures-and-word-features)
-- [Roi to word mapping](#roi-to-word-mapping)
+- [aoi to word mapping](#aoi-to-word-mapping)
 - [Participants](#participants)
 
 

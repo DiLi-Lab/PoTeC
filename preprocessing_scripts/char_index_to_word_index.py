@@ -11,18 +11,18 @@ from pathlib import Path
 import pandas as pd
 
 
-def roi2word(roi: int, word_limits: list) -> int:
+def aoi2word(aoi: int, word_limits: list) -> int:
     """
-    Creates mapping between roi and word index in text. Word_limits is a list of two lists, containing the first and
-    the last roi of a word. Checks whether roi is in a word interval and returns the word index in the text.
+    Creates mapping between aoi and word index in text. Word_limits is a list of two lists, containing the first and
+    the last aoi of a word. Checks whether aoi is in a word interval and returns the word index in the text.
     Returns a negative index if it is between two words.
     """
-    for index, (word_start_roi, word_end_roi) in enumerate(zip(word_limits[0], word_limits[1])):
-        if word_start_roi <= roi <= word_end_roi:
+    for index, (word_start_aoi, word_end_aoi) in enumerate(zip(word_limits[0], word_limits[1])):
+        if word_start_aoi <= aoi <= word_end_aoi:
             return index + 1
-        # if the roi is smaller than the start of the word and the end of the word but apparently also not in the word
+        # if the aoi is smaller than the start of the word and the end of the word but apparently also not in the word
         # before that word we know it is not in a word
-        if roi < word_start_roi:
+        if aoi < word_start_aoi:
             return - index - 1
 
 
@@ -34,26 +34,26 @@ def char_index_to_word_index(limits_file: Path, output_file: Path) -> None:
 
     item_ids = []
     word_indices = []
-    rois = []
+    aois = []
 
     for text_id in texts:
         text_limits = limits[text_id]
-        max_roi = (text_limits[1][-1])  # end of the last word, i.e. maximal roi number
-        iter_rois = range(1, max_roi + 1)  # all rois
+        max_aoi = (text_limits[1][-1])  # end of the last word, i.e. maximal aoi number
+        iter_aois = range(1, max_aoi + 1)  # all aois
 
-        # iterate over all rois (i.e. all char ids) in one text
-        for roi in iter_rois:
+        # iterate over all aois (i.e. all char ids) in one text
+        for aoi in iter_aois:
             # word index in text
-            word_index = roi2word(roi, text_limits)
+            word_index = aoi2word(aoi, text_limits)
 
             word_indices.append(word_index)
             item_ids.append(text_id)
-            rois.append(roi)
+            aois.append(aoi)
 
     data_dict = {
         'text_id': item_ids,
         'word_index_in_text': word_indices,
-        'char_index_in_text': rois
+        'char_index_in_text': aois
     }
 
     data_df = pd.DataFrame(data_dict)
@@ -64,7 +64,7 @@ def main() -> int:
     repo_root = Path(__file__).parent.parent
 
     word_limits = repo_root / 'preprocessing_scripts/word_limits.json'
-    output_file = repo_root / 'preprocessing_scripts/roi_to_word.tsv'
+    output_file = repo_root / 'preprocessing_scripts/aoi_to_word.tsv'
 
     char_index_to_word_index(
         word_limits,

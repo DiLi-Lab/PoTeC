@@ -35,7 +35,7 @@ neighbors_levenshtein_higher_freq_count_normalized		dlexDB
 is_in_parentheses	Whether or not the word is part of a phrase in parentheses.	Manually tagged
 acc_bq_2	The accuracy of background question 2. The answer can be either true or false, so the value is either 0 or 1.
 type	The orthographical representation of a word as found in the corpus; this data is case sensitive, i.e. there is a distinction between name and Name.	dlexDB
-roi	The region of interest specified as character index in the text (see char_index_in_text). Defines which character has been fixated.
+aoi	The region of interest specified as character index in the text (see char_index_in_text). Defines which character has been fixated.
 lemma_frequency_normalized		dlexDB
 neighbors_levenshtein_all_cum_freq_normalized		dlexDB
 sentence_frequency_normalized		dlexDB

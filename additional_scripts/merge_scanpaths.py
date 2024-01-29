@@ -44,6 +44,7 @@ def merge_scanpaths_reader_information(
         scanpath_csv['trial'] = scanpath_csv['trial'].astype(int)
         rm_csv['trial'] = rm_csv['trial'].astype(int)
 
+        rm_csv.drop(columns=['text_domain_numeric'], inplace=True)
         merged_df = pd.merge(scanpath_csv, rm_csv,
                              how='inner',
                              left_on=['word_index_in_text', 'sent_index_in_text'],

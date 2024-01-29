@@ -1,5 +1,5 @@
 # Input: 
-# roi-files in aoi/<textid>.ias (nur ein file pro Text, unabhaengig von Leser, weil Fragen irrelevant)
+# aoi-files in aoi/<textid>.ias (nur ein file pro Text, unabhaengig von Leser, weil Fragen irrelevant)
 # Fixations (Fixation report created by DataViewer software) in <fixfile> mit mindestens den Spalten ['RECORDING_SESSION_LABEL','itemid','CURRENT_FIX_INDEX', 'CURRENT_FIX_X', 'CURRENT_FIX_Y', 'CURRENT_FIX_DURATION', 'CURRENR_FIX_INTEREST_AREA_INDEX']
 # liste readerIds (hier hart kodiert unten)
 # liste textIds (hier hart kodiert unten)

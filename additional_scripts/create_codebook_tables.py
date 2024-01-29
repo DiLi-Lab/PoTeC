@@ -14,7 +14,7 @@ PATHS_FOLDERS = [
     'eyetracking_data/reading_measures/',
     'eyetracking_data/reading_measures_merged/',
     'eyetracking_data/scanpaths_merged/',
-    'preprocessing_scripts/roi_to_word.tsv',
+    'preprocessing_scripts/aoi_to_word.tsv',
     'participants/',
 ]
 
@@ -164,7 +164,7 @@ ints = [
     'word_index_in_text',
     'original_fixation_index',
     'trial',
-    'roi',
+    'aoi',
     'sent_index_in_text',
     'reader_id',
     'version',

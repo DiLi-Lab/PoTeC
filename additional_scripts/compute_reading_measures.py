@@ -15,22 +15,22 @@ from tqdm import tqdm
 
 FIX_INDEX_COL_NAME = 'fixation_index'
 FIX_DUR_COL_NAME = 'fixation_duration'
-ROI_COL_NAME = 'roi'
+AOI_COL_NAME = 'aoi'
 DELIMITER = '\t'
 
 
-def roi2word(roi: int, word_limits: list) -> int:
+def aoi2word(aoi: int, word_limits: list) -> int:
     """
-    Creates mapping between roi and word index in text. Word_limits is a list of two lists, containing the first and
-    the last roi of a word. Checks whether roi is in a word interval and returns the word index in the text (starting at 1).
+    Creates mapping between aoi and word index in text. Word_limits is a list of two lists, containing the first and
+    the last aoi of a word. Checks whether aoi is in a word interval and returns the word index in the text (starting at 1).
     Returns a negative index if it is between two words.
     """
-    for index, (word_start_roi, word_end_roi) in enumerate(zip(word_limits[0], word_limits[1])):
-        if word_start_roi <= roi <= word_end_roi:
+    for index, (word_start_aoi, word_end_aoi) in enumerate(zip(word_limits[0], word_limits[1])):
+        if word_start_aoi <= aoi <= word_end_aoi:
             return index + 1
-        # if the roi is smaller than the start of the word and the end of the word but apparently also not in the word
+        # if the aoi is smaller than the start of the word and the end of the word but apparently also not in the word
         # before that word we know it is not in a word
-        if roi < word_start_roi:
+        if aoi < word_start_aoi:
             return - index - 1
     return -1
 
@@ -104,8 +104,8 @@ def compute_reading_measures(
         for word_index in range(1, num_words_in_text + 1):
             word_row = {
                 'word_index_in_sent': word_index - sent_limits_text[0][
-                    (roi2word(word_index, sent_limits_text)) - 1] + 1,
-                'sent_index_in_text': roi2word(word_index, sent_limits_text), 'FFD': 0, 'SFD': 0, 'FD': 0, 'FPRT': 0,
+                    (aoi2word(word_index, sent_limits_text)) - 1] + 1,
+                'sent_index_in_text': aoi2word(word_index, sent_limits_text), 'FFD': 0, 'SFD': 0, 'FD': 0, 'FPRT': 0,
                 'FRT': 0, 'TFT': 0, 'RRT': 0, 'RPD_inc': 0, 'RPD_exc': 0, 'RBRT': 0, 'Fix': 0,
                 'FPF': 0, 'RR': 0, 'FPReg': 0, 'TRC_out': 0, 'TRC_in': 0, 'LP': 0, 'SL_in': 0, 'SL_out': 0
             }
@@ -116,16 +116,16 @@ def compute_reading_measures(
 
         for index, fixation in fixation_file_sorted.iterrows():
 
-            roi = fixation[ROI_COL_NAME]
+            aoi = fixation[AOI_COL_NAME]
 
-            # If roi is not a number (i.e., coded as missing value using any string), continue
+            # If aoi is not a number (i.e., coded as missing value using any string), continue
             try:
-                int(roi)
+                int(aoi)
             except ValueError:
                 continue
 
             # if fixation is not on a word, continue
-            word_idx = roi2word(roi, word_limits_text)
+            word_idx = aoi2word(aoi, word_limits_text)
             if word_idx < 0:
                 continue
 
@@ -142,7 +142,7 @@ def compute_reading_measures(
                 next_fix_word_idx = cur_fix_word_idx
 
             if word_dict[next_fix_word_idx]['LP'] == 0:
-                word_dict[next_fix_word_idx]['LP'] = int(roi) - word_limits_text[0][next_fix_word_idx - 1] + 1
+                word_dict[next_fix_word_idx]['LP'] = int(aoi) - word_limits_text[0][next_fix_word_idx - 1] + 1
             if right_most_word < cur_fix_word_idx:
                 right_most_word = cur_fix_word_idx
 

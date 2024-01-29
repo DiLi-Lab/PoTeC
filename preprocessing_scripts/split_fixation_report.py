@@ -30,7 +30,7 @@ def split_fixation_report(
         'NEXT_SAC_DURATION': 'next_saccade_duration',
         'PREVIOUS_SAC_DURATION': 'previous_saccade_duration',
         'RECORDING_SESSION_LABEL': 'reader_id',
-        'CURRENT_FIX_INTEREST_AREA_INDEX': 'roi',
+        'CURRENT_FIX_INTEREST_AREA_INDEX': 'aoi',
         'topic': 'text_domain',
         'CURRENT_FIX_INDEX': 'fixation_index',
         'CURRENT_FIX_X': 'fixation_position_x',

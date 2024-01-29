@@ -17,7 +17,7 @@ from tqdm import tqdm
 
 def create_scanpaths(
         fixation_folder: str | Path,
-        roi2word_file: str | Path,
+        aoi2word_file: str | Path,
         wf_folder: str | Path,
         ias_folder: str | Path,
         output_folder: str | Path,
@@ -31,16 +31,16 @@ def create_scanpaths(
     with open('errors/merge_fixations_word_char_errors.txt', 'w') as f:
         f.write(
             'For the fixation files in this file, there were errors '
-            'when trying to map the roi to a word and character.'
+            'when trying to map the aoi to a word and character.'
             'Those need to be manually fixed. The missing values are written as np.NA in the output file.\n\n'
         )
 
-        f.write('fixation_file_name, text_id, roi, word_idx, word, character')
+        f.write('fixation_file_name, text_id, aoi')
 
     # sort the file names to be sure we have the same order
     fixation_files = sorted(list(Path(fixation_folder).glob('*.tsv')))
 
-    roi2word = pd.read_csv(roi2word_file, sep='\t')
+    aoi2word = pd.read_csv(aoi2word_file, sep='\t')
 
     for fixation_file in tqdm(fixation_files):
         # get only the file name without the path
@@ -70,26 +70,26 @@ def create_scanpaths(
             'character': [],
         }
         for idx in range(len(fix_csv)):
-            roi = fix_csv.iloc[idx]['roi']
+            aoi = fix_csv.iloc[idx]['aoi']
 
             try:
-                # map roi (=char index) to word index
-                word_idx = roi2word[(roi2word['char_index_in_text'] == roi)
-                                    & (roi2word['text_id'] == text_id)]['word_index_in_text'].values[0]
+                # map aoi (=char index) to word index
+                word_idx = aoi2word[(aoi2word['char_index_in_text'] == aoi)
+                                    & (aoi2word['text_id'] == text_id)]['word_index_in_text'].values[0]
 
                 # get the actual character and word
-                character = aoi_csv[aoi_csv['roi'] == roi]['character'].values[0]
+                character = aoi_csv[aoi_csv['aoi'] == aoi]['character'].values[0]
                 word = wf_csv[wf_csv['word_index_in_text'] == word_idx]['word'].values[0]
                 sentence_index = wf_csv[wf_csv['word_index_in_text'] == word_idx]['sent_index_in_text'].values[0]
 
-            # in case the roi does not exist, there will be an index error
+            # in case the aoi does not exist, there will be an index error
             except IndexError:
                 word_idx, word, character, sentence_index = pd.NA, pd.NA, pd.NA, pd.NA
                 with open('errors/merge_fixations_word_char_errors.txt', 'a') as f:
-                    f.write(f'\n{fixation_file_name}, {text_id}, {roi}, {word_idx}, {word}, {character}')
+                    f.write(f'\n{fixation_file_name}, {text_id}, {aoi}')
 
             new_columns['word_index_in_text'].append(word_idx)
-            new_columns['char_index_in_text'].append(roi)
+            new_columns['char_index_in_text'].append(aoi)
             new_columns['word'].append(word)
             new_columns['character'].append(character)
             new_columns['sent_index_in_text'].append(sentence_index)
@@ -99,6 +99,9 @@ def create_scanpaths(
         new_df['text_domain_numeric'] = wf_csv['text_domain_numeric'].iloc[0]
 
         fix_csv = pd.concat([fix_csv, new_df], axis=1)
+
+        if fix_csv['text_domain'].values[0] == 'bio':
+            fix_csv['text_domain'] = 'biology'
 
         scanpath_file = re.sub('fixations', 'scanpath', fixation_file_name)
 
@@ -110,14 +113,14 @@ def main() -> int:
 
     # rewrite args as hardcoded paths using the repo root
     fixation_folder = repo_root / 'eyetracking_data/fixations/'
-    roi2word_file = repo_root / 'preprocessing_scripts/roi_to_word.tsv'
+    aoi2word_file = repo_root / 'preprocessing_scripts/aoi_to_word.tsv'
     wf_folder = repo_root / 'stimuli/word_features/'
     ias_folder = repo_root / 'stimuli/aoi_texts/'
     output_folder = repo_root / 'eyetracking_data/scanpaths/'
 
     create_scanpaths(
         fixation_folder=fixation_folder,
-        roi2word_file=roi2word_file,
+        aoi2word_file=aoi2word_file,
         wf_folder=wf_folder,
         ias_folder=ias_folder,
         output_folder=output_folder,

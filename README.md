@@ -133,8 +133,8 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
     ├── preprocessing_scripts
     │   ├── PREPROCESSING_SCRIPTS.md
     │   ├── char_index_to_word_index.py
-    │   ├── create_word_roi_limits.py
-    │   ├── roi_to_word.tsv
+    │   ├── create_word_aoi_limits.py
+    │   ├── aoi_to_word.tsv
     │   ├── sent_limits.json
     │   └── word_limits.json
     └── stimuli

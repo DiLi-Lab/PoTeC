@@ -13,7 +13,7 @@ from pathlib import Path
 import pandas as pd
 
 
-def create_word_roi_limits(
+def create_word_aoi_limits(
         word_features_folder: str | Path,
         output_file_wl: str | Path,
         output_file_sl: str | Path,
@@ -43,14 +43,14 @@ def create_word_roi_limits(
             if not punctuation_after or pd.isnull(punctuation_after):
                 punctuation_after = ''
 
-            # 'word_limit_char_indices' stores the start and end roi of a word
-            word_start_roi, word_end_roi = word_row['word_limit_char_indices'].split(',')
+            # 'word_limit_char_indices' stores the start and end aoi of a word
+            word_start_aoi, word_end_aoi = word_row['word_limit_char_indices'].split(',')
 
             # if a punctuation mark directly precedes a word, a fixation on it is counted as a fixation on this word
-            word_limits[0].append(int(word_start_roi) - len(punctuation_before) // 2)
+            word_limits[0].append(int(word_start_aoi) - len(punctuation_before) // 2)
 
             # if a punctuation mark directly follows a word, a fixation on it is counted as a fixation on the word
-            word_limits[1].append(int(word_end_roi) + len(punctuation_after) // 2)
+            word_limits[1].append(int(word_end_aoi) + len(punctuation_after) // 2)
 
             # If word is followed by a sentence closing punctuation mark (tagged as $.), start new sentence
             if '$.' in punctuation_after:
@@ -76,7 +76,7 @@ def main() -> int:
     output_wl = base_path / 'preprocessing_scripts/word_limits.json'
     output_sl = base_path / 'preprocessing_scripts/sent_limits.json'
 
-    create_word_roi_limits(
+    create_word_aoi_limits(
         word_features,
         output_wl,
         output_sl

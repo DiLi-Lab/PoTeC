@@ -29,15 +29,15 @@ The corrected fixations files per reader and text are available in the folder ``
 
 ## Scripts
 
-### `create_word_roi_limits.py`
+### `create_word_aoi_limits.py`
 Used to create the files `word_limits.json` and `sent_limits.json`.
-This code creates a list consisting of two lists containing the first and the last roi (i.e., char_index_in_text) of 
-a word. These lists  will be used to create the mapping between characters (rois) and words (word_index_in_text) for all
+This code creates a list consisting of two lists containing the first and the last aoi (i.e., char_index_in_text) of 
+a word. These lists  will be used to create the mapping between characters (aois) and words (word_index_in_text) for all
 items.
 
 ### `char_index_to_word_index.py`
-Used to create the file `roi_to_word.tsv`.
-This code creates a file containing the mapping of the character-based rois to the word-based word_index_in_text.
+Used to create the file `aoi_to_word.tsv`.
+This code creates a file containing the mapping of the character-based aois to the word-based word_index_in_text.
 
 ### `asc_to_tsv.py`
 This script was used to parse the .asc files into .tsv files.
@@ -55,13 +55,13 @@ and move it up or down and update the respective area of interest.
 ## Additional  files
 ### `word_limits.json` & `sent_limits.json`
 
-These files contain a list for each text. Each list contains another two lists containing the first and last roi of each word / sentence of each text. Example: `b0[0][3]` in `word_limits.json` is the roi (=CURRENT_FIX_INTEREST_AREA_INDEX in the Data Viewer fixation report) where the 4th word of text b0 begins and
-`b0[1][3]` is the roi where the 4th words ends (i.e., the position of the last character of this word). These
-limits are computed in the script ``create_word_roi_limits.py``
+These files contain a list for each text. Each list contains another two lists containing the first and last aoi of each word / sentence of each text. Example: `b0[0][3]` in `word_limits.json` is the aoi (=CURRENT_FIX_INTEREST_AREA_INDEX in the Data Viewer fixation report) where the 4th word of text b0 begins and
+`b0[1][3]` is the aoi where the 4th words ends (i.e., the position of the last character of this word). These
+limits are computed in the script ``create_word_aoi_limits.py``
 
 The same is true for the sentence limits, just on sentence level.
 
-### `roi_to_word.tsv`
+### `aoi_to_word.tsv`
 
-This file contains a mapping from the roi (char_index_in_text) to the word index in each text (word_index_in_text). 
+This file contains a mapping from the aoi (char_index_in_text) to the word index in each text (word_index_in_text). 
 This file is created by the script ``char_index_to_word_index.py``.

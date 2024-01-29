@@ -1,4 +1,4 @@
-aoi_type	roi	start_x	start_y	end_x	end_y	character
+aoi_type	aoi	start_x	start_y	end_x	end_y	character
 0 RECTANGLE	1	80	21	94	99	W
 0 RECTANGLE	2	94	21	107	99	u
 0 RECTANGLE	3	107	21	122	99	r
