@@ -15,7 +15,7 @@ from tqdm import tqdm
 
 FIX_INDEX_COL_NAME = 'fixation_index'
 FIX_DUR_COL_NAME = 'fixation_duration'
-AOI_COL_NAME = 'aoi'
+AOI_COL_NAME = 'roi'
 DELIMITER = '\t'
 
 
