@@ -107,7 +107,7 @@ def compute_reading_measures(
                     (aoi2word(word_index, sent_limits_text)) - 1] + 1,
                 'sent_index_in_text': aoi2word(word_index, sent_limits_text), 'FFD': 0, 'SFD': 0, 'FD': 0, 'FPRT': 0,
                 'FRT': 0, 'TFT': 0, 'RRT': 0, 'RPD_inc': 0, 'RPD_exc': 0, 'RBRT': 0, 'Fix': 0,
-                'FPF': 0, 'RR': 0, 'FPReg': 0, 'TRC_out': 0, 'TRC_in': 0, 'LP': 0, 'SL_in': 0, 'SL_out': 0
+                'FPF': 0, 'RR': 0, 'FPReg': 0, 'TRC_out': 0, 'TRC_in': 0, 'LP': 0, 'SL_in': 0, 'SL_out': 0, 'TFC': 0,
             }
 
             word_dict[word_index] = word_row
@@ -150,6 +150,7 @@ def compute_reading_measures(
                 continue
 
             word_dict[cur_fix_word_idx]['TFT'] += int(cur_fix_dur)
+            word_dict[cur_fix_word_idx]['TFC'] += 1
 
             if word_dict[cur_fix_word_idx]['FD'] == 0:
                 word_dict[cur_fix_word_idx]['FD'] += int(cur_fix_dur)

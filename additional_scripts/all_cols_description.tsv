@@ -165,3 +165,4 @@ dependency_tree	The dependency tree of the sentence in the text.	NA	NA
 sentence	The sentence in the text.	NA	NA
 fixation_position_x	The x-coordinate of the fixation.	NA	NA
 fixation_position_y	The y-coordinate of the fixation.	NA	NA
+TFC	The total fixation count on the word.	NA	NA
