@@ -4,11 +4,6 @@ The stimuli texts are 12 German texts from undergraduate-level biology and physi
 ## Stimuli
 For each text, three text comprehension questions and three background questions were created. The text comprehension questions required a thorough understanding of the text, but did not require any additional background knowledge. The background questions, in contrast, tested the general knowledge in the topic presented in the text and hence required background knowledge.
 
-All texts and questions for each text are contained in [stimuli.tsv](./stimuli/stimuli.tsv). 
-
-In addition, the texts and corresponding questions are also provided as separate text files in the [biology texts](./stimuli/bio_texts) and 
-[physics texts](./stimuli/physics_texts) folder. 
-
 > Refer to the [CODEBOOK](../CODEBOOK.md) for more information.
 
 ### Stimuli Sources

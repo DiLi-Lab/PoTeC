@@ -184,10 +184,17 @@ fabric.properties
 # idea folder, uncomment if you don't need it
 .idea
 venv
+
+# specific potec files
 eyetracking_data/*/
 eyetracking_data/*.csv
 eyetracking_data/*.txt
 /to-be-deleted-IN-THE-END
 /codebook_tables
 structure.txt
+count_reader_texts.py
+merge_numeric_text_id.py
+stimuli/stimuli/stimuli.tsv
+stimuli/stimuli/bio_texts/*
+stimuli/stimuli/physics_texts/*
 

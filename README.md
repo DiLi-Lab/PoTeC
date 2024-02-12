@@ -15,8 +15,8 @@ The study follows a 2x2x2 fully-crossed factorial design:
 | **Expert**   | 20      | 27      |
 
 Both factors are quasi-experimental and manipulated between subjects.
-The readers' text comprehension as well as their background 
-knowledge on the topics presented in the texts were assessed by multiple-choice questions. 
+The readers' text comprehension as well as their background
+knowledge on the topics presented in the texts were assessed by multiple-choice questions.
 
 More information is found in the following README'S:
 * [preprocessing](./preprocessing_scripts/PREPROCESSING_SCRIPTS.md)
@@ -50,6 +50,20 @@ import pymovements as pm
 dataset = pm.Dataset('PoTeC', path='data/PoTeC')
 
 dataset.download()
+```
+
+## Note on reading in the data files
+The German text p3 includes the word "null". If e.g. the word features are read in using pandas, the word "null" is 
+interpreted as a NA value. In order to avoid this behavior the command can be used with the following arguments:
+
+```python
+import pandas as pd
+pd.read_csv('word_features_p3.tsv', sep='\t',  
+            keep_default_na=False,
+            na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan',
+                       '1.#IND', '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a',
+                       'nan', '']
+            )
 ```
 
 ## Data Overview

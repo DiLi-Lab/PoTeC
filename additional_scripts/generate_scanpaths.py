@@ -6,7 +6,6 @@ To specify custom file paths see argparse below.
 """
 from __future__ import annotations
 
-import argparse
 import os
 import re
 from pathlib import Path
@@ -24,18 +23,6 @@ def create_scanpaths(
 ) -> None:
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
-
-    if not os.path.exists('errors'):
-        os.makedirs('errors')
-
-    with open('errors/merge_fixations_word_char_errors.txt', 'w') as f:
-        f.write(
-            'For the fixation files in this file, there were errors '
-            'when trying to map the aoi to a word and character.'
-            'Those need to be manually fixed. The missing values are written as np.NA in the output file.\n\n'
-        )
-
-        f.write('fixation_file_name, text_id, aoi')
 
     # sort the file names to be sure we have the same order
     fixation_files = sorted(list(Path(fixation_folder).glob('*.tsv')))
@@ -72,21 +59,14 @@ def create_scanpaths(
         for idx in range(len(fix_csv)):
             aoi = fix_csv.iloc[idx]['aoi']
 
-            try:
-                # map aoi (=char index) to word index
-                word_idx = aoi2word[(aoi2word['char_index_in_text'] == aoi)
-                                    & (aoi2word['text_id'] == text_id)]['word_index_in_text'].values[0]
+            # map aoi (=char index) to word index
+            word_idx = aoi2word[(aoi2word['char_index_in_text'] == aoi)
+                                & (aoi2word['text_id'] == text_id)]['word_index_in_text'].values[0]
 
-                # get the actual character and word
-                character = aoi_csv[aoi_csv['aoi'] == aoi]['character'].values[0]
-                word = wf_csv[wf_csv['word_index_in_text'] == word_idx]['word'].values[0]
-                sentence_index = wf_csv[wf_csv['word_index_in_text'] == word_idx]['sent_index_in_text'].values[0]
-
-            # in case the aoi does not exist, there will be an index error
-            except IndexError:
-                word_idx, word, character, sentence_index = pd.NA, pd.NA, pd.NA, pd.NA
-                with open('errors/merge_fixations_word_char_errors.txt', 'a') as f:
-                    f.write(f'\n{fixation_file_name}, {text_id}, {aoi}')
+            # get the actual character and word
+            character = aoi_csv[aoi_csv['aoi'] == aoi]['character'].values[0]
+            word = wf_csv[wf_csv['word_index_in_text'] == word_idx]['word'].values[0]
+            sentence_index = wf_csv[wf_csv['word_index_in_text'] == word_idx]['sent_index_in_text'].values[0]
 
             new_columns['word_index_in_text'].append(word_idx)
             new_columns['char_index_in_text'].append(aoi)
