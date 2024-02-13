@@ -159,10 +159,25 @@ contains_hyphen	"Whether or not the word contains a hyphen. E.g. 1 for DNA-Fragm
 FD	First duration: duration of the first fixation on a word (identical to FFD if not skipped in the first-pass).
 aoi_type	The shape of the area of interest. In this corpus, all aois are rectangles around the characters.
 is_general_technical_term	"1 if the word is a technical term that is generally understandable. E.g.: ""elektrisch"" "
-surprisal	Surprisal value extracted from a language model (GerPT2).	NA	NA
-text_id_numeric	Numerical value of text_id; 0=b0, 1=b1, 2=b2, 3=b3, 4=b4, 5=b5, 6=p0, 7=p1, 8=p2, 9=p3, 10=p4, 11=p5	NA	NA
-dependency_tree	The dependency tree of the sentence in the text.	NA	NA
-sentence	The sentence in the text.	NA	NA
-fixation_position_x	The x-coordinate of the fixation.	NA	NA
-fixation_position_y	The y-coordinate of the fixation.	NA	NA
-TFC	The total fixation count on the word.	NA	NA
+surprisal	Surprisal value extracted from a language model (GerPT2).	""	""
+text_id_numeric	Numerical value of text_id; 0=b0, 1=b1, 2=b2, 3=b3, 4=b4, 5=b5, 6=p0, 7=p1, 8=p2, 9=p3, 10=p4, 11=p5	""	""
+dependency_tree	The dependency tree of the sentence in the text.	""	""
+sentence	The sentence in the text.	""	""
+fixation_position_x	The x-coordinate of the fixation.	""	""
+fixation_position_y	The y-coordinate of the fixation.	""	""
+TFC	The total fixation count on the word.	""	""
+word_with_punct	The word as it appears in the text, including punctuation.	""	""
+is_clause_end	Whether or not the word is the end of a clause.	""	""
+is_sent_end	Whether or not the word is the end of a sentence.	""	""
+sent_surprisal_gpt2-base	Surprisal value extracted from a language model (GerPT2-base) with the sentence as context.	NA	NA
+sent_surprisal_gpt2-large	Surprisal value extracted from a language model (GerPT2-large) with the sentence as context.	NA	NA
+text_surprisal_gpt2-base	Surprisal value extracted from a language model (GerPT2-base) with the text as context.	NA	NA
+text_surprisal_gpt2-large	Surprisal value extracted from a language model (GerPT2-large) with the text as context.	NA	NA
+sent_surprisal_llama-7b	Surprisal value extracted from a language model (LeoLM-7b) with the sentence as context.	NA	NA
+text_surprisal_llama-7b	Surprisal value extracted from a language model (LeoLM-7b) with the text as context.	NA	NA
+sent_surprisal_llama-13b	Surprisal value extracted from a language model (LeoLM-13b) with the sentence as context.	NA	NA
+text_surprisal_llama-13b	Surprisal value extracted from a language model (LeoLM-13b) with the text as context.	NA	NA
+sent_surprisal_bert-large	Surprisal value extracted from a language model (BERT-large) with the sentence as context.	NA	NA
+text_surprisal_bert-large	Surprisal value extracted from a language model (BERT-large) with the text as context.	NA	NA
+sent_surprisal_bert-base	Surprisal value extracted from a language model (BERT-base) with the sentence as context.	NA	NA
+text_surprisal_bert-base	Surprisal value extracted from a language model (BERT-base) with the text as context.	NA	NA

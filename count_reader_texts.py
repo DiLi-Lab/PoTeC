@@ -1,5 +1,6 @@
 from collections import Counter
 from pathlib import Path
+import pandas as pd
 
 
 def main():
@@ -32,6 +33,33 @@ def main():
         print(len(counter))
         print('\n')
     print(total_texts)
+
+
+def compute_participant_stats():
+
+    participants_file = Path(__file__).parent / 'participants' / 'participant_data.tsv'
+    participants = pd.read_csv(participants_file, sep='\t')
+    print(participants.columns)
+
+    mean_vaules = participants[['domain_expert_status', 'reader_domain', 'expert_status', 'age', 'hours_sleep']].groupby(
+        ['domain_expert_status', 'reader_domain', 'expert_status']).agg(['mean', 'std'])
+
+    counts = participants[['domain_expert_status', 'reader_domain', 'expert_status', 'glasses', 'handedness', 'alcohol', 'gender']].groupby(
+        ['domain_expert_status', 'reader_domain', 'expert_status'])
+
+    l = ['glasses', 'handedness', 'alcohol', 'gender']
+    for name, group in counts:
+        print(name)
+        for i in l:
+            print(group[i].value_counts())
+        print('\n')
+    print(mean_vaules.to_latex())
+
+
+def main():
+    compute_participant_stats()
+
+    return 0
 
 
 if __name__ == '__main__':

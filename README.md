@@ -53,7 +53,7 @@ dataset.download()
 ```
 
 ## Note on reading in the data files
-The German text p3 includes the word "null". If e.g. the word features are read in using pandas, the word "null" is 
+The German text p3 includes the word "null". If e.g. the word features are read using pandas, the word "null" is 
 interpreted as a NA value. In order to avoid this behavior the command can be used with the following arguments:
 
 ```python
