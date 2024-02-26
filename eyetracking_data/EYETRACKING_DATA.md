@@ -8,9 +8,13 @@ One file always contains the data for one reader and one text and is named accor
 
 > **NOTE**: for all the data described below, refer to the CODEBOOK for a full overview of data types, distributions, etc.
 
-## Raw data
+## Raw data (pre-processed and original)
 The raw data in available in ``.tsv`` format. The originally generated ``.edf`` files were converted to ``.asc`` using the
 SR Research `edf2asc` tool and then parsed to `.tsv` files containing one sample per line.
+Both the `.tsv` and the `.asc` files are available. The `.asc`files are in the `asc_files` folder while the `.tsv` files
+are in the `raw_data` folder.
+> **NOTE on .asc files**: Reader 0 and reader 21 are the same person. Texts 1-11 have been read by the person under ID 0 and text 12 has been read by the person under ID 21.
+In all the following data files, the reader ID 21 has been changed to 0. **This note ONLY applies to the .asc files!** 
 
 ## Fixations
 

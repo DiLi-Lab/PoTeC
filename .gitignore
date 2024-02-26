@@ -192,9 +192,9 @@ eyetracking_data/*.txt
 /to-be-deleted-IN-THE-END
 /codebook_tables
 structure.txt
-count_reader_texts.py
-merge_numeric_text_id.py
-stimuli/stimuli/stimuli.tsv
-stimuli/stimuli/bio_texts/*
-stimuli/stimuli/physics_texts/*
+additional_scripts/count_reader_texts.py
+additional_scripts/merge_numeric_text_id.py
+stimuli/stimuli/stimuli_with_texts.tsv
+stimuli/stimuli/bio_texts
+stimuli/stimuli/physics_texts
 

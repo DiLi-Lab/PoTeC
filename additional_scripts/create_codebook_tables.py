@@ -311,8 +311,6 @@ def create_codebook_tables(root_path, description_path, text_path, tables_folder
         info_tsv = pd.read_csv(description_path, sep='\t')
 
         for k, v in cols.items():
-
-            print(k)
             df_lists['Column name'].append(k)
             df_lists['Possible values'].append(v['possible_values'])
             df_lists['Value type'].append(v['value_type'])

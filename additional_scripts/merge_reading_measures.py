@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-TODO: clean again, r is never closed?
 Call: python3 merge_reading_measures.py
 To specify custom file paths see argparse arguments at the bottom of the file.
 """
@@ -42,7 +41,7 @@ def merge_rm_word_features(
             engine='python',
         )
 
-        word_features = word_features.drop(columns=['text_id', 'word_limit_char_indices'])
+        word_features = word_features.drop(columns=['text_id', 'word_limit_char_indices', 'text_domain_numeric'])
 
         # replace missing values with 0s (affects frequency measures: if word does not occur in corpus, frequency = 0)
         word_features = word_features.fillna(0)

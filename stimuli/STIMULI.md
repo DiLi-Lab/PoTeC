@@ -18,9 +18,9 @@ The sources for the stimuli texts are found in the `stimuli.bib` file and below.
 |               | b3         | Townsend, C.R., Begon, M., Harper, J.L. (2003). Ökologie (J. Steidle, F. Thomas, B. Stadler, U. Hoffmeister, & T. Hoffmeister, Trans.). Berlin: Springer. |
 |               | b3, b4, b5 | Boujard, D., Anselme, B., Cullin, C., Raguénès-Nicol, C. (2014). Zell- und Molekularbiologie im Überblick (S. Lechowski, Trans.). Berlin: Springer.       |
 |               |            |                                                                                                                                                           |
-| Physics Texts | p0, p1, p3 | Demtröder, W. (2014). Experimentalphysik 4: Kern-, Teilchen- und Astrophysik (4th ed.). Berlin: Springer.                                                 |
+| Physics Texts | p0, p3     | Demtröder, W. (2014). Experimentalphysik 4: Kern-, Teilchen- und Astrophysik (4th ed.). Berlin: Springer.                                                 |
 |               | p2, p4     | Demtröder, W. (2009). Experimentalphysik 2: Elektrizität und optik (5th ed.). Berlin: Springer.                                                           |
-|               | p5         | Demtröder, W. (2010). Experimentalphysik 3: Atome, Moleküle und Festkörper (4th ed.). Berlin: Springer.                                                   |
+|               | p1, p5     | Demtröder, W. (2010). Experimentalphysik 3: Atome, Moleküle und Festkörper (4th ed.). Berlin: Springer.                                                   |
 
 
 
