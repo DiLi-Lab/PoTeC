@@ -112,6 +112,18 @@ The experiment was run with the following technical set-up:
 The stimuli have been manually annoted with part-of-speech tags and other linguistic information. The annotations are described
 in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
 
+## Citation
+```
+@misc{potec,
+    url={\url{https://github.com/DiLi-Lab/PoTeC}},
+    author={Jakobi, Deborah N. and Kern, Thomas and Reich, David R. and Haller, Patrick and J\"ager, Lena A.},
+    title={{PoTeC}: A {German} Naturalistic Eye-tracking-while-reading Corpus},
+    year={2024},
+    note={under review}
+}
+```
+
+
 ## Repository Structure
 
     PoTeC-data
