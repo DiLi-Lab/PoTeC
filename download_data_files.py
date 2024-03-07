@@ -7,7 +7,7 @@ from tqdm import tqdm
 import zipfile
 
 
-def download_data(extract: bool) -> None:
+def download_data(extract: bool, download_asc: bool, output_folder: str) -> None:
     base_url = 'https://osf.io/download/'
 
     urls = {
@@ -18,30 +18,34 @@ def download_data(extract: bool) -> None:
         'reading_measures_merged': '3ywhz',
         'scanpaths': 'thgv2',
         'scanpaths_merged': '7fkze',
+        'asc_files': 'zgx2u',
     }
 
-    folder = Path(__file__).parent / 'eyetracking_data'
+    folder = Path(__file__).parent / output_folder
     if not os.path.exists(folder):
         os.makedirs(folder)
 
     for data, resource in (pbar := tqdm(urls.items())):
+        if data == 'asc_files' and not download_asc:
+            continue
+
         pbar.set_description(f'Downloading {"and extracting " if extract else ""}{data}')
         # Downloading the file by sending the request to the URL
         url = base_url + resource
 
         req = requests.get(url, stream=True)
 
-        # Split URL to get the file name
+        # create new paths for the downloaded files
         filename = f'{data}.zip'
         path = folder / filename
         extract_path = folder / data
 
         if os.path.exists(path):
-            print(f'\nPath for {data} data already exists. Not downloaded to {path}')
+            print(f'\nPath for {data} already exists. Not downloaded to {path}')
             continue
 
         elif os.path.exists(extract_path):
-            print(f'\nPath for {data} data already exists. Not downloaded to {extract_path}')
+            print(f'\nPath for {data} already exists. Not downloaded to {extract_path}')
             continue
 
         # Writing the file to the local file system
@@ -68,7 +72,23 @@ if __name__ == '__main__':
         default=True,
     )
 
+    parser.add_argument(
+        '--asc',
+        dest='download_asc',
+        action='store_true',
+        help='Whether to download the asc files. Default is False.',
+        default=False,
+    )
+
+    parser.add_argument(
+        '-o', '--output-folder',
+        dest='output_folder',
+        type=str,
+        help='Path to the output folder. Default is eyetracking_data',
+        default='eyetracking_data'
+    )
+
     args = parser.parse_args()
-    download_data(args.extract)
+    download_data(args.extract, args.download_asc, args.output_folder)
 
 

@@ -89,24 +89,27 @@ The scripts were run using Python 3.9 with the dependencies specified in the `re
 ## Technical set-up
 The experiment was run with the following technical set-up:
 
-|                           | **Setting**            | **Value**                                                    |
-|---------------------------|------------------------|--------------------------------------------------------------|
-|                           |                        |                                                              |
-| **Technical set-up**      | Eye-tracking device    | Eyelink 1000, dektop mounted camera system with a 35 mm lens |
-|                           | Sampling rate          | 1000 Hz                                                      |
-|                           | Monitor size           | 47.5x30 cm, 22 inch                                          |
-|                           | Monitor resolution     | 1680x1050 pixels                                             |
-|                           | Eye-to-screen distance | 61 cm                                                        |
-|                           | Eye-to-camera distance | 65 cm                                                        |
-|                           | Experiment software    | Experiment Builder software provided by SR Research          |
-|                           |                        |                                                              |
-| **Stimulus presentation** | Background color       | Black                                                        |
-|                           | Font color             | White                                                        |
-|                           | Font size              | 18                                                           |
-|                           | Font                   | Courier                                                      |
-|                           | Stimulus size          | On average 158 words shown on multiple lines on one page     |
-|                           |                        |                                                              |
-|                           |                        |                                                              |
+|                           | **Setting**                                              | **Value**                                                                             |
+|---------------------------|----------------------------------------------------------|---------------------------------------------------------------------------------------|
+|                           |                                                          |                                                                                       |
+| **Technical set-up**      | Eye-tracking device                                      | Eyelink 1000, dektop mounted camera system with a 35 mm lens                          |
+|                           | Sampling rate                                            | 1000 Hz                                                                               |
+|                           | Monitor size                                             | 47.5x30 cm, 22 inch                                                                   |
+|                           | Monitor resolution                                       | 1680x1050 pixels                                                                      |
+|                           | Eye-to-screen distance                                   | 61 cm                                                                                 |
+|                           | Eye-to-camera distance                                   | 65 cm                                                                                 |
+|                           | Experiment software                                      | Experiment Builder software provided by SR Research                                   |
+|                           |                                                          |                                                                                       |
+| **Stimulus presentation** | Background color                                         | Black                                                                                 |
+|                           | Font color                                               | White                                                                                 |
+|                           | Font size                                                | 18                                                                                    |
+|                           | Font                                                     | Courier                                                                               |
+|                           | Stimulus size                                            | On average 158 words shown on multiple lines on one page                              |
+|                           | Number of characters per visual angle (middle of screen) | 2.8 characters per degree of visual angle                                             | 
+|                           | Spacing                                                  |                                                                                       |
+
+## Stimuli
+Please note that the full stimuli texts are not yet available. Contact `deborahnoemie.jakobi(at)uzh.ch` for more information.
 
 ## Stimuli Annotation
 The stimuli have been manually annoted with part-of-speech tags and other linguistic information. The annotations are described
@@ -133,15 +136,26 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
     ├── additional_scripts
     │   ├── ADDITIONAL_SCRIPTS.md
     │   ├── compute_reading_measures.py
-    │   ├── errors
-    │   │   └── merge_fixations_word_char_errors.txt
     │   ├── generate_scanpaths.py
     │   ├── merge_reading_measures.py
-    │   └── merge_scanpaths.py
+    │   ├── create_codebook_tables.py
+    │   ├── surprisal.py
+    │   ├── get_surprisal.py
+    │   ├── merge_fixations_and_coordinates.py
+    │   ├── merge_scanpaths.py
+    │   ├── analyses.R
+    │   ├── run_bayesian_models.R
+    │   ├── run_freq_models.R
+    │   ├── all_colls_description.csv
+    │   └── all_codebook_texts.csv
     ├── eyetracking_data
     │   ├── EYETRACKING_DATA.md
     │   ├── original_uncorrected_fixation_report.txt
     │   ├── fixations
+    │   │   └── ...
+    │   ├── fixations_uncorrected
+    │   │   └── ...
+    │   ├── asc_files
     │   │   └── ...
     │   ├── raw_data 
     │   │   └── ...
@@ -160,22 +174,21 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
     │   ├── PREPROCESSING_SCRIPTS.md
     │   ├── char_index_to_word_index.py
     │   ├── create_word_aoi_limits.py
+    │   ├── correct_fixations.py
+    │   ├── split_fixation_report.py
+    │   ├── asc_to_csv.py
     │   ├── aoi_to_word.tsv
     │   ├── sent_limits.json
     │   └── word_limits.json
     └── stimuli
         ├── ANNOTATION.md
         ├── STIMULI.md
-        ├── stimuli.bib
         ├── practice_items.txt
-        ├── dependency_trees.tsv
+        ├── dependency_trees_manually_corrected.tsv
         ├── aoi_texts
         │   └── ...
         ├── stimuli
-        │   ├── bio_texts
-        │   │   └── ...
-        │   ├── physics_texts
-        │   │   └── ...
+            ├── stimuli.bib
         │   ├── items.tsv
         │   └── stimuli.tsv
         └── word_features

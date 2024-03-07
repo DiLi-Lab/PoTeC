@@ -252,6 +252,9 @@ def create_codebook_tables(root_path, description_path, text_path, tables_folder
                               na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan', '1.#IND',
                                          '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan', ''])
 
+            if tsv.isna().sum().sum() > 10:
+                print(file, tsv.isna().sum().sum())
+
             all_cols.update(tsv.columns)
 
             for c in tsv.columns:
@@ -316,13 +319,13 @@ def create_codebook_tables(root_path, description_path, text_path, tables_folder
             df_lists['Value type'].append(v['value_type'])
             df_lists['Num missing values'].append(f"{v['missing_values']}")
             df_lists['Missing value description'].append(
-                info_tsv[info_tsv['Column_name'] == k]['Missing value description'].values[0]
+                info_tsv[info_tsv['Column_name'] == k]['Missing value description']
             )
-            df_lists['Description'].append(info_tsv[info_tsv['Column_name'] == k]['Description'].values[0])
-            df_lists['Source'].append(info_tsv[info_tsv['Column_name'] == k]['Source'].values[0])
+            df_lists['Description'].append(info_tsv[info_tsv['Column_name'] == k]['Description'])
+            df_lists['Source'].append(info_tsv[info_tsv['Column_name'] == k]['Source'])
 
         df = pd.DataFrame(df_lists)
-        df.to_csv(tables_folder / f'{Path(folder_full_path).stem}.tsv', sep='\t', index=False)
+        # df.to_csv(tables_folder / f'{Path(folder_full_path).stem}.tsv', sep='\t', index=False)
 
         with open(codebook_path, 'a', encoding='utf8') as md_tables:
             title = codebook_text[codebook_text['section'] == folder]['title'].values[0]

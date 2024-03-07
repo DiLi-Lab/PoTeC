@@ -9,7 +9,7 @@ neighbors_coltheart_higher_freq_cum_freq_normalized		dlexDB
 tq_1_option1	Option 1 for text question 1.
 document_frequency_normalized		dlexDB
 annotated_type_frequency_normalized	The number of occurrences of an annotated type in corpus. An annotated type is a unique combination of a type, its part-of-speech tag and its lemma.	dlexDB
-acc_bq_1	The accuracy of background question 1. The answer can be either true or false, so the value is either 0 or 1.
+acc_bq_1	The accuracy of background question 1. The answer can be either true or false, so the value is either 0 or 1.		For participant 1 (p0), 31 (p0, b1, b5), 32 (p0), 61 (p1), 62 (b0, b1, b3, b5, 04) and 90 (b3) the accuracies for certain trials are missing due to hardware problems (missing measurements).
 text	The stimulus text.
 RR	Re-reading: 1 if the word was fixated after the first-pass reading, otherwise 0 (sign(RRT)).
 bq_3_option3	Option 3 for background question 3.
@@ -33,7 +33,7 @@ version	Specifies the version of the items. In each version, the order of the st
 expert_status_numeric	Numerical value of expert_status; 0=beginner, 1=expert.
 neighbors_levenshtein_higher_freq_count_normalized		dlexDB
 is_in_parentheses	Whether or not the word is part of a phrase in parentheses.	Manually tagged
-acc_bq_2	The accuracy of background question 2. The answer can be either true or false, so the value is either 0 or 1.
+acc_bq_2	The accuracy of background question 2. The answer can be either true or false, so the value is either 0 or 1.		For participant 1 (p0), 31 (p0, b1, b5), 32 (p0), 61 (p1), 62 (b0, b1, b3, b5, 04) and 90 (b3) the accuracies for certain trials are missing due to hardware problems (missing measurements).
 type	The orthographical representation of a word as found in the corpus; this data is case sensitive, i.e. there is a distinction between name and Name.	dlexDB
 aoi	The region of interest specified as character index in the text (see char_index_in_text). Defines which character has been fixated.
 lemma_frequency_normalized		dlexDB
@@ -56,7 +56,7 @@ start_y	The y-coordinate in pixels of the top left corner of the aoi rectangle.
 STTS_PoS_tag	Part-of-speech tags according to the STTS-tagset. See stimuli/ANNOTATION.MD for more information. 	Manually tagged
 word_length	Word length is defined in number of characters including symbols like hyphens but without sentence punctuation at the end (i.e., z.B. = 4 characters; DNA-Kette =9 characters; eats.=4 characters).
 initial_trigram_frequency_normalized		dlexDB
-acc_tq_1	The accuracy of text question 1. The answer can be either true or false, so the value is either 0 or 1.
+acc_tq_1	The accuracy of text question 1. The answer can be either true or false, so the value is either 0 or 1.		For participant 1 (p0), 31 (p0, b1, b5), 32 (p0), 61 (p1), 62 (b0, b1, b3, b5, 04) and 90 (b3) the accuracies for certain trials are missing due to hardware problems (missing measurements).
 bq_2_option1	Option 1 for background question 2.
 cumulative_syllable_corpus_frequency_normalized		dlexDB
 fixation_duration	The duration of the fixation in milliseconds.
@@ -94,7 +94,7 @@ type_frequency_normalized	""	dlexDB
 tq_2	Text question 2.
 STTS_punctuation_before	If a word is preceded by a punctuation mark, the STTS-PoS-tag of the punctuation mark is added here.
 initial_letter_frequency_normalized		dlexDB
-acc_tq_3	The accuracy of text question 3. The answer can be either true or false, so the value is either 0 or 1.
+acc_tq_3	The accuracy of text question 3. The answer can be either true or false, so the value is either 0 or 1.		For participant 1 (p0), 31 (p0, b1, b5), 32 (p0), 61 (p1), 62 (b0, b1, b3, b5, 04) and 90 (b3) the accuracies for certain trials are missing due to hardware problems (missing measurements).
 tq_3_option1	Option 1 for text question 3.
 end_y	The y-coordinate in pixels of the bottom right corner of the aoi rectangle.
 bq_2	Background question 2.
@@ -130,7 +130,7 @@ cumulative_character_lexicon_frequency_normalized		dlexDB
 correct_ans_tq_2	"The index of the correct answer for text question 2. Specified as option number of the questions in that file. For example: 2 means that the answer that is specified in the column ""tq_3_option2"" is the correct answer to this question."
 syllables		dlexDB
 cumulative_character_trigram_corpus_frequency_normalized		dlexDB
-acc_bq_3	The accuracy of background question 3. The answer can be either true or false, so the value is either 0 or 1.
+acc_bq_3	The accuracy of background question 3. The answer can be either true or false, so the value is either 0 or 1.		For participant 1 (p0), 31 (p0, b1, b5), 32 (p0), 61 (p1), 62 (b0, b1, b3, b5, 04) and 90 (b3) the accuracies for certain trials are missing due to hardware problems (missing measurements).
 contains_abbreviation	Whether or not the word contains an abbreviation. 0 for words that are only an abbreviation. See is_abbreviation. E.g. 1 for DNA-Fragment, 0 for DNA.
 tq_3_option4	Option 4 for text question 3.
 is_fixation_adjusted	Whether or not the fixation has been adjusted manually.	Manually tagged.
@@ -146,7 +146,7 @@ LP	Landing position: position of the first saccade on the word expressed by ordi
 TRC_out	Total count of outgoing regressions: total number of regressive saccades initiated from this word.
 tq_2_option3	Option 3 for text question 2.
 fixation_index	The index of the fixation in temporal order.
-acc_tq_2	The accuracy of text question 2. The answer can be either true or false, so the value is either 0 or 1.
+acc_tq_2	The accuracy of text question 2. The answer can be either true or false, so the value is either 0 or 1.		For participant 1 (p0), 31 (p0, b1, b5), 32 (p0), 61 (p1), 62 (b0, b1, b3, b5, 04) and 90 (b3) the accuracies for certain trials are missing due to hardware problems (missing measurements).
 bq_1_option4	Option 4 for background question 1.
 bq_1_option1	Option 1 for background question 1.
 STTS_punctuation_after	If a word is followed by a punctuation mark, the STTS-PoS-tag of the punctuation mark is added here.
