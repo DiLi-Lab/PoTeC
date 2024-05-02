@@ -45,6 +45,9 @@ No other changes were made to these files.
 
 > Refer to the [CODEBOOK](../CODEBOOK.md) for more information.
 
+### Word-level aoi files
+Word level aoi files for all stimulus files can be created via `python generate_word_aois.py`. The generated files can be found in `word_aoi_texts`.
+
 ## Word features
 Please see the ANNOTATION.md file for more information on the word features and how they were created.
 
