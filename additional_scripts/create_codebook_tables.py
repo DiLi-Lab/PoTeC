@@ -93,6 +93,8 @@ cat_vars = [
     'text_domain',
     'text_domain_numeric',
     'text_id',
+    'expert_reading_label',
+    'expert_reading_label_numeric',
 
 ]
 cont_vars = [

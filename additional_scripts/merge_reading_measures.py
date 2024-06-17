@@ -70,7 +70,7 @@ def merge_rm_word_features(
                  "text_domain_numeric",
                  "trial",
                  "text_id", "reader_id", "gender_numeric", "reader_domain_numeric", "age", "expert_status_numeric",
-                 "domain_expert_status_numeric"]
+                 "domain_expert_status_numeric", 'expert_reading_label_numeric']
             ]
 
             # concatenate text features with eye movements

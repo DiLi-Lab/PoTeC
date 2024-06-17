@@ -19,13 +19,6 @@ files <- list.files(
 df_raw <- do.call(rbind, lapply(files, read_tsv, col_types = cols()))
 
 
-############### !!!! DON'T RUN THIS AFTER NEXT PULL !!!! ################
-# switch text domain numeric to biology = 0, physics = 1
-df_raw$text_domain_numeric <- ifelse(
-    df$text_domain_numeric == 0, 1, 0
-)
-############### !!!! DON'T RUN THIS AFTER NEXT PULL !!!! ################)
-
 preprocess <- function(rm_df) {
     #  generate new column with 1 if reader is expert in domain of text
     rm_df$expert_in_domain <- ifelse(

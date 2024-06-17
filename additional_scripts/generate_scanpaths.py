@@ -17,6 +17,7 @@ from tqdm import tqdm
 def create_scanpaths(
         fixation_folder: str | Path,
         aoi2word_file: str | Path,
+        participants_file: str | Path,
         wf_folder: str | Path,
         ias_folder: str | Path,
         output_folder: str | Path,
@@ -27,6 +28,8 @@ def create_scanpaths(
     # sort the file names to be sure we have the same order
     fixation_files = sorted(list(Path(fixation_folder).glob('*.tsv')))
 
+    df_participants = pd.read_csv(participants_file, delimiter="\t")
+
     aoi2word = pd.read_csv(aoi2word_file, sep='\t')
 
     for fixation_file in tqdm(fixation_files):
@@ -35,9 +38,11 @@ def create_scanpaths(
         fix_csv = pd.read_csv(fixation_file, sep='\t')
 
         # extract text id from file name which is r'(bp)\d'
-        text_id = fixation_file_name.split('_')[1]
+        text_id = fix_csv['text_id'].iloc[0]
+        reader_id = fix_csv['reader_id'].iloc[0]
 
         wf_file = Path(wf_folder) / f'word_features_{text_id}.tsv'
+        # specifying the nan values like this is necessary, see README.md
         wf_csv = pd.read_csv(wf_file, sep='\t', keep_default_na=False,
                              na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan', '1.#IND',
                                         '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan', ''])
@@ -49,6 +54,7 @@ def create_scanpaths(
             sep='\t',
         )
 
+        # new columns to be extracted from the aoi file
         new_columns = {
             'word_index_in_text': [],
             'sent_index_in_text': [],
@@ -75,8 +81,27 @@ def create_scanpaths(
             new_columns['sent_index_in_text'].append(sentence_index)
 
         new_df = pd.DataFrame(new_columns)
-        new_df['text_id_numeric'] = wf_csv['text_id_numeric'].iloc[0]
-        new_df['text_domain_numeric'] = wf_csv['text_domain_numeric'].iloc[0]
+        # add some more columns that are the same for each row
+        # text information
+        text_id_num = wf_csv['text_id_numeric'].iloc[0]
+        text_domain_num = wf_csv['text_domain_numeric'].iloc[0]
+        new_df['text_id_numeric'] = text_id_num
+        new_df['text_domain_numeric'] = text_domain_num
+
+        # get reader information
+        reader_row = df_participants.loc[df_participants['reader_id'] == reader_id]
+        reader_domain_numeric = reader_row['reader_domain_numeric'].item()
+        expert_status_numeric = reader_row['expert_status_numeric'].item()
+
+        # if the text has been read by a domain expert, the label is 1=expert_reading, else 0=non-expert_reading
+        expert_reading_label_numeric = 1 if expert_status_numeric == 1 and text_domain_num == reader_domain_numeric \
+            else 0
+        expert_reading_label = 'expert_reading' if expert_reading_label_numeric == 1 else 'non-expert_reading'
+
+        new_df['reader_domain_numeric'] = reader_domain_numeric
+        new_df['expert_status_numeric'] = expert_status_numeric
+        new_df['expert_reading_label_numeric'] = expert_reading_label_numeric
+        new_df['expert_reading_label'] = expert_reading_label
 
         fix_csv = pd.concat([fix_csv, new_df], axis=1)
 
@@ -94,6 +119,7 @@ def main() -> int:
     # rewrite args as hardcoded paths using the repo root
     fixation_folder = repo_root / 'eyetracking_data/fixations/'
     aoi2word_file = repo_root / 'preprocessing_scripts/aoi_to_word.tsv'
+    participants_file = repo_root / 'participants/participant_data.tsv'
     wf_folder = repo_root / 'stimuli/word_features/'
     ias_folder = repo_root / 'stimuli/aoi_texts/'
     output_folder = repo_root / 'eyetracking_data/scanpaths/'
@@ -101,6 +127,7 @@ def main() -> int:
     create_scanpaths(
         fixation_folder=fixation_folder,
         aoi2word_file=aoi2word_file,
+        participants_file=participants_file,
         wf_folder=wf_folder,
         ias_folder=ias_folder,
         output_folder=output_folder,

@@ -286,18 +286,18 @@ for Fixs in readFixs(fixfile, readerIds, textIds):  # generator erzeugen, savebu
             ((collimits[rowindex - 1][0]) // scale, row // scale, (collimits[rowindex - 1][-1]) // scale, row // scale),
             fill='red')
 
-    old_x = 0;
-    old_y = 0;
+    old_x = 0
+    old_y = 0
     fix_index = 0
     focusobj = bg.create_oval(0, 0, 0, 0, tags=('focus'), fill='green', width=1.7)
-    objid = [];
-    roi = [];
-    line = [];
-    index_inline = [];
+    objid = []
+    roi = []
+    line = []
+    index_inline = []
     roiend = []
     for fix in Fixs.itertuples():
-        x = fix.CURRENT_FIX_X;
-        y = fix.CURRENT_FIX_Y;
+        x = fix.CURRENT_FIX_X
+        y = fix.CURRENT_FIX_Y
         r = (fix.CURRENT_FIX_DURATION / 20)
         row = fix2row(y, rowlimits)
         row = max(row, 0)
@@ -305,7 +305,7 @@ for Fixs in readFixs(fixfile, readerIds, textIds):  # generator erzeugen, savebu
         col = fix2row(x, collimits[row])
         col = max(col, 0)
         col = min(col, len(collimits[row]) - 2)
-        rowl = rowlimits;
+        rowl = rowlimits
         coll = collimits[row]
         # print(col,len(coll))
         roix = (coll[col] + coll[col + 1]) / 2.
@@ -328,7 +328,7 @@ for Fixs in readFixs(fixfile, readerIds, textIds):  # generator erzeugen, savebu
         bg.create_line(((roix - 4) // scale, (roiy + 4) // scale, (roix + 4) // scale, (roiy - 4) // scale),
                        tags=('fix', 'line', 'a' + str(fix.Index)), state='hidden', fill='white',
                        disabledfill='slate gray', width=4)
-        old_x = x;
+        old_x = x
         old_y = y
     Fixs['objid'] = objid
     Fixs['line'] = line

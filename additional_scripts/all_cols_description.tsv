@@ -182,3 +182,5 @@ text_surprisal_bert-large	Surprisal value extracted from a language model (BERT-
 sent_surprisal_bert-base	Surprisal value extracted from a language model (BERT-base) with the sentence as context.
 text_surprisal_bert-base	Surprisal value extracted from a language model (BERT-base) with the text as context.	""	""
 source	The source of the stimulus text.	""	""
+expert_reading_label	Whether the reader is an expert in the text domain (i.e. text_domain == reader_domain and reader is expert)	""	""
+expert_reading_label_numeric	Numeric encoding of whether the reader is an expert in the text domain (i.e. text_domain == reader_domain and reader is expert). 1=expert_reading, 0=non-expert_reading	""	""
