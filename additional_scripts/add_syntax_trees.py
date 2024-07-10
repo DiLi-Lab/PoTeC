@@ -5,6 +5,7 @@ import pandas as pd
 import spacy
 import spacy_transformers
 import benepar
+from spacy import displacy
 
 
 def create_syntax_trees():
@@ -37,6 +38,8 @@ def create_syntax_trees():
         }
 
         doc = nlp(text)
+        # visualize the dependency tree
+        displacy.serve(doc, style='dep', auto_select_port=True)
         sentences = list(doc.sents)
         for sent_index, sent in enumerate(sentences):
             dep_df = _create_dependency_trees(sent)
@@ -59,9 +62,9 @@ def create_syntax_trees():
         const_tree_dfs.append(new_df)
 
     const_tree_df = pd.concat(const_tree_dfs)
-    const_tree_df.to_csv('/Users/debor/repos/PoTeC-data/stimuli/constituency_trees.tsv', sep='\t', index=True, index_label='index')
+    const_tree_df.to_csv('/Users/debor/repos/PoTeC-data/stimuli/uncorrected_constituency_trees.tsv', sep='\t', index=True, index_label='index')
 
-    dependency_df.to_csv('/Users/debor/repos/PoTeC-data/stimuli/dependency_trees.tsv', sep='\t', index=False)
+    dependency_df.to_csv('/Users/debor/repos/PoTeC-data/stimuli/uncorrected_dependency_trees.tsv', sep='\t', index=False)
 
 
 def _create_dependency_trees(sentence: spacy.tokens.span.Span) -> pd.DataFrame:
