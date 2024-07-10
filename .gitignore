@@ -198,3 +198,4 @@ stimuli/stimuli/stimuli_with_texts.tsv
 stimuli/stimuli/bio_texts
 stimuli/stimuli/physics_texts
 
+*.tex
