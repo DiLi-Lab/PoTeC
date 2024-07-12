@@ -8,11 +8,11 @@ import benepar
 from spacy import displacy
 
 
-def create_syntax_trees():
+def create_syntax_trees(path=None):
     nlp = spacy.load('de_core_news_sm')
     nlp.add_pipe("benepar", config={"model": "benepar_de2"})
 
-    stimuli_file = Path('/Users/debor/repos/PoTeC-data/stimuli/stimuli/stimuli_with_texts.tsv')
+    stimuli_file = Path(f'{path}/stimuli/stimuli_with_texts.tsv')
 
     stimuli = pd.read_csv(stimuli_file, sep='\t', keep_default_na=False,
                           na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan',
@@ -62,9 +62,9 @@ def create_syntax_trees():
         const_tree_dfs.append(new_df)
 
     const_tree_df = pd.concat(const_tree_dfs)
-    const_tree_df.to_csv('/Users/debor/repos/PoTeC-data/stimuli/uncorrected_constituency_trees.tsv', sep='\t', index=True, index_label='index')
+    const_tree_df.to_csv(f'{path}/uncorrected_constituency_trees.tsv', sep='\t', index=True, index_label='index')
 
-    dependency_df.to_csv('/Users/debor/repos/PoTeC-data/stimuli/uncorrected_dependency_trees.tsv', sep='\t', index=False)
+    dependency_df.to_csv(f'{path}/uncorrected_dependency_trees.tsv', sep='\t', index=False)
 
 
 def _create_dependency_trees(sentence: spacy.tokens.span.Span) -> pd.DataFrame:
@@ -99,8 +99,8 @@ def _create_constituency_trees(sentence: spacy.tokens.span.Span) -> tuple[Any, l
 
 
 def main() -> int:
-
-    create_syntax_trees()
+    path = '/home/popos/PycharmProjects/PoTeC_depencency_trees_correction/stimuli'
+    create_syntax_trees(path=path)
 
     return 0
 
