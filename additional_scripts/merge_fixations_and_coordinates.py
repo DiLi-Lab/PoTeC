@@ -6,7 +6,13 @@ import pandas as pd
 from tqdm import tqdm
 
 
-def merge_fixations_and_coordinates():
+def merge_fixations_and_coordinates() -> None:
+    """
+    Merge the fixations and the coordinates of the original fixations
+    Returns
+    -------
+
+    """
     repo_root = Path(__file__).parent.parent
 
     uncorrected_fixations_folder = repo_root / 'eyetracking_data/fixations_uncorrected/'
@@ -33,8 +39,7 @@ def merge_fixations_and_coordinates():
 
         aoi_df = pd.read_csv(repo_root / f'stimuli/aoi_texts/{text_id}.ias', sep='\t', index_col=False)
 
-        # if the fixation in the corrected fixation df was corrected see column is_fixation_adjusted
-
+        # if the fixation in the corrected fixation df was corrected we take the center of the aoi char box
         for index, row in df.iterrows():
             if row['is_fixation_adjusted']:
                 roi = row['roi']
@@ -46,6 +51,7 @@ def merge_fixations_and_coordinates():
                     end_x = aoi_df.loc[aoi_df['roi'] == roi, 'end_x'].values[0]
                     end_y = aoi_df.loc[aoi_df['roi'] == roi, 'end_y'].values[0]
 
+                    # calculate the center of the roi
                     new_x, new_y = (start_x + end_x) / 2, (start_y + end_y) / 2
 
                     df.at[index, 'fixation_position_x'] = new_x

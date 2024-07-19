@@ -32,7 +32,7 @@ def create_scanpaths(
 
     aoi2word = pd.read_csv(aoi2word_file, sep='\t')
 
-    for fixation_file in tqdm(fixation_files):
+    for fixation_file in tqdm(fixation_files, desc='Creating scanpaths'):
         # get only the file name without the path
         fixation_file_name = os.path.basename(fixation_file)
         fix_csv = pd.read_csv(fixation_file, sep='\t')
@@ -90,16 +90,16 @@ def create_scanpaths(
 
         # get reader information
         reader_row = df_participants.loc[df_participants['reader_id'] == reader_id]
-        reader_domain_numeric = reader_row['reader_domain_numeric'].item()
-        expert_status_numeric = reader_row['expert_status_numeric'].item()
+        reader_discipline_numeric = reader_row['reader_discipline_numeric'].item()
+        level_of_studies_numeric = reader_row['level_of_studies_numeric'].item()
 
         # if the text has been read by a domain expert, the label is 1=expert_reading, else 0=non-expert_reading
-        expert_reading_label_numeric = 1 if expert_status_numeric == 1 and text_domain_num == reader_domain_numeric \
+        expert_reading_label_numeric = 1 if level_of_studies_numeric == 1 and text_domain_num == reader_discipline_numeric \
             else 0
         expert_reading_label = 'expert_reading' if expert_reading_label_numeric == 1 else 'non-expert_reading'
 
-        new_df['reader_domain_numeric'] = reader_domain_numeric
-        new_df['expert_status_numeric'] = expert_status_numeric
+        new_df['reader_discipline_numeric'] = reader_discipline_numeric
+        new_df['level_of_studies_numeric'] = level_of_studies_numeric
         new_df['expert_reading_label_numeric'] = expert_reading_label_numeric
         new_df['expert_reading_label'] = expert_reading_label
 

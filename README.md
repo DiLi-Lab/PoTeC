@@ -25,6 +25,9 @@ More information is found in the following README'S:
 * [eye-tracking data](./eyetracking_data/EYETRACKING_DATA.md)
 * [additional processing](./additional_scripts/ADDITIONAL_SCRIPTS.md)
 
+**For a detailed description of the data types, format and content, please refer to the 
+[CODEBOOK](./CODEBOOK.md).**
+
 ## Download the data
 The data files are stored in an [OSF repository](https://osf.io/dn5hp/?view_only=). If the repository has been cloned, 
 they can be downloaded and extracted automatically using the following script:
@@ -109,7 +112,7 @@ The experiment was run with the following technical set-up:
 |                           | Spacing                                                  |                                                                                       |
 
 ## Stimuli
-Please note that the full stimuli texts are not yet available. Contact `deborahnoemie.jakobi(at)uzh.ch` for more information.
+Please note that the full stimuli texts are not yet available. Contact `jakobi(at)cl.uzh.ch` for more information.
 
 ## Stimuli Annotation
 The stimuli have been manually annoted with part-of-speech tags and other linguistic information. The annotations are described

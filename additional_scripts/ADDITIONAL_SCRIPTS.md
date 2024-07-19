@@ -95,3 +95,17 @@ Scripts that are used to compute surprisal values for each word in the text.
  The script does not create any new files but merges the surprisal values with the `word_features` files contained in
  `stimuli/word_features/`.
 
+## Analyses
+The scripts in this folder are used to conduct the analyses presented in the paper. Most scripts cannot be run as-is as the
+results have been manually adjusted to fit the paper format. However, the scripts can be used to reproduce the results.
+
+* `visualizations.ipynb`: Contains the code to generate the visualizations for the paper. E.g., the plots of the text characteristics
+or the tables for the reading measures. Note that most of the tables have been manually adjusted to fit the paper format.
+* `analyses.R`, `run_bayesian_models.R`, `run_freq_models.R`: statistical analyses for the paper.
+* `get_validation_scores.py`: get the validation and calibration scores for each session and create a table.
+* `count_reader_texts.py`: count number of files in each folder and used to create participants overview table.
+* `analyse_online_sruvey.py`: analyse the online survey data and compare to experiment accuracies.
+
+## Codebook
+All files in this folder have been used to create the codebook overview.
+

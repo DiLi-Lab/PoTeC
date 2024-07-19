@@ -18,7 +18,7 @@ The codebook specifies the data types, possible values, and other information fo
 
 
 ## Word features
-TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
+TODO: insert short text about this section in [this file](additional_scripts/codebook/codebook_texts.tsv)
 
 Please find the files under this link: [Word features](stimuli/word_features)
 
@@ -98,7 +98,7 @@ Please find the files under this link: [Word features](stimuli/word_features)
 
 
 ## Stimuli and comprehension questions
-TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
+TODO: insert short text about this section in [this file](additional_scripts/codebook/codebook_texts.tsv)
 
 Please find the file under this link: [Stimuli including comprehension questions](stimuli/stimuli/stimuli.tsv)
 
@@ -149,7 +149,7 @@ Please find the file under this link: [Stimuli including comprehension questions
 
 
 ## Items
-TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
+TODO: insert short text about this section in [this file](additional_scripts/codebook/codebook_texts.tsv)
 
 Please find the file under this link: [Items](stimuli/stimuli/items.tsv)
 
@@ -168,7 +168,7 @@ Please find the file under this link: [Items](stimuli/stimuli/items.tsv)
 
 
 ## Areas of interest (AOI)
-TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
+TODO: insert short text about this section in [this file](additional_scripts/codebook/codebook_texts.tsv)
 
 Please find the files under this link: [AOI](stimuli/aoi_texts)
 
@@ -184,9 +184,9 @@ Please find the files under this link: [AOI](stimuli/aoi_texts)
 
 
 ## Dependency trees
-TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
+TODO: insert short text about this section in [this file](additional_scripts/codebook/codebook_texts.tsv)
 
-Please find the file under this link: [Dependency trees](stimuli/dependency_trees_manually_corrected.tsv)
+Please find the file under this link: [Dependency trees](stimuli/constituency_trees_manually_corrected.tsv)
 
 | Column name        | Possible values                                | Value type   | Description                                                                                          |   Num missing values |   Missing value description |   Source |
 |:-------------------|:-----------------------------------------------|:-------------|:-----------------------------------------------------------------------------------------------------|---------------------:|----------------------------:|---------:|
@@ -198,7 +198,7 @@ Please find the file under this link: [Dependency trees](stimuli/dependency_tree
 
 
 ## Fixations
-TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
+TODO: insert short text about this section in [this file](additional_scripts/codebook/codebook_texts.tsv)
 
 Please find the files under this link: [Fixations](eyetracking_data/fixations)
 
@@ -227,7 +227,7 @@ Please find the files under this link: [Fixations](eyetracking_data/fixations)
 
 
 ## Scanpaths
-TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
+TODO: insert short text about this section in [this file](additional_scripts/codebook/codebook_texts.tsv)
 
 Please find the files under this link: [Scanpaths](eyetracking_data/scanpaths)
 
@@ -267,7 +267,7 @@ Please find the files under this link: [Scanpaths](eyetracking_data/scanpaths)
 
 
 ## Reading measures
-TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
+TODO: insert short text about this section in [this file](additional_scripts/codebook/codebook_texts.tsv)
 
 Please find the files under this link: [Reading measures](eyetracking_data/reading_measures)
 
@@ -318,7 +318,7 @@ Please find the files under this link: [Reading measures](eyetracking_data/readi
 
 
 ## Merged: fixations, participant info, reading measures and word features
-TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
+TODO: insert short text about this section in [this file](additional_scripts/codebook/codebook_texts.tsv)
 
 Please find the files under this link: [Reading measures merged](eyetracking_data/reading_measures_merged)
 
@@ -433,7 +433,7 @@ Please find the files under this link: [Reading measures merged](eyetracking_dat
 
 
 ## Merged: scanpaths, participant info, reading measures and word features
-TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
+TODO: insert short text about this section in [this file](additional_scripts/codebook/codebook_texts.tsv)
 
 Please find the files under this link: [Scanpaths merged](eyetracking_data/scanpaths_merged)
 
@@ -561,7 +561,7 @@ Please find the files under this link: [Scanpaths merged](eyetracking_data/scanp
 
 
 ## AOI to word mapping
-TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
+TODO: insert short text about this section in [this file](additional_scripts/codebook/codebook_texts.tsv)
 
 Please find the file under this link: [aoi to word mapping](preprocessing_scripts/aoi_to_word.tsv)
 
@@ -573,7 +573,7 @@ Please find the file under this link: [aoi to word mapping](preprocessing_script
 
 
 ## Participants
-TODO: insert short text about this section in [this file](additional_scripts/codebook_texts.tsv)
+TODO: insert short text about this section in [this file](additional_scripts/codebook/codebook_texts.tsv)
 
 Please find the file under this link: [Participant information](participants/participant_data.tsv)
 

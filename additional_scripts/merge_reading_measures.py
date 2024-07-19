@@ -69,8 +69,8 @@ def merge_rm_word_features(
                  "acc_bq_2", "acc_bq_3", "acc_tq_1", "acc_tq_2", "acc_tq_3", "mean_acc_tq", "mean_acc_bq",
                  "text_domain_numeric",
                  "trial",
-                 "text_id", "reader_id", "gender_numeric", "reader_domain_numeric", "age", "expert_status_numeric",
-                 "domain_expert_status_numeric", 'expert_reading_label_numeric']
+                 "text_id", "reader_id", "gender_numeric", "reader_discipline_numeric", "age", "level_of_studies_numeric",
+                 "discipline_level_of_studies_numeric", 'expert_reading_label_numeric']
             ]
 
             # concatenate text features with eye movements

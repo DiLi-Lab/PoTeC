@@ -1,0 +1,2117 @@
+spacy_word	spacy_lemma	spacy_pos	spacy_tag	dependency	dependency_head	dependency_head_pos	dependency_children	text_id_numeric	text_id	sent_index_in_text
+Ein	ein	DET	ART	nk	Zyklotron	NOUN	[]	6	p0	1
+Zyklotron	Zyklotron	NOUN	NN	sb	besteht	VERB	[Ein]	6	p0	1
+besteht	bestehen	VERB	VVFIN	ROOT	besteht	VERB	[Zyklotron, aus, .]	6	p0	1
+aus	aus	ADP	APPR	op	besteht	VERB	[Vakuumkammer]	6	p0	1
+einer	ein	DET	ART	nk	Vakuumkammer	NOUN	[]	6	p0	1
+flachen	flach	ADJ	ADJA	nk	Vakuumkammer	NOUN	[zylindrischen]	6	p0	1
+,	--	PUNCT	$,	punct	zylindrischen	VERB	[]	6	p0	1
+zylindrischen	zylindrischen	VERB	ADJA	cj	flachen	ADJ	[,]	6	p0	1
+Vakuumkammer	Vakuumkammer	NOUN	NN	nk	aus	ADP	[einer, flachen, zwischen]	6	p0	1
+zwischen	zwischen	ADP	APPR	mnr	Vakuumkammer	NOUN	[Polen]	6	p0	1
+den	der	DET	ART	nk	Polen	NOUN	[]	6	p0	1
+Polen	Pole	NOUN	NN	nk	zwischen	ADP	[den, Elektromagneten]	6	p0	1
+eines	ein	DET	ART	nk	Elektromagneten	NOUN	[]	6	p0	1
+Elektromagneten	Elektromagnet	NOUN	NN	ag	Polen	NOUN	[eines, ,, erzeugt]	6	p0	1
+,	--	PUNCT	$,	punct	Elektromagneten	NOUN	[]	6	p0	1
+der	der	PRON	PRELS	sb	erzeugt	VERB	[]	6	p0	1
+ein	ein	DET	ART	nk	Feld	NOUN	[]	6	p0	1
+Feld	Feld	NOUN	NN	oa	erzeugt	VERB	[ein]	6	p0	1
+in	in	ADP	APPR	mo	erzeugt	VERB	[z-Richtung]	6	p0	1
+z-Richtung	z-Richtung	NOUN	NN	nk	in	ADP	[]	6	p0	1
+erzeugt	erzeugen	VERB	VVFIN	rc	Elektromagneten	NOUN	[der, Feld, in]	6	p0	1
+.	--	PUNCT	$.	punct	besteht	VERB	[]	6	p0	1
+Die	der	DET	ART	nk	Kammer	NOUN	[]	6	p0	2
+Kammer	Kammer	NOUN	NN	sb	ist	AUX	[Die]	6	p0	2
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Kammer, aufgeteilt, .]	6	p0	2
+in	in	ADP	APPR	mo	aufgeteilt	VERB	[Hälften]	6	p0	2
+zwei	zwei	NUM	CARD	nk	Hälften	NOUN	[]	6	p0	2
+D-förmige	D-förmige	NUM	ADJA	nk	Hälften	NOUN	[]	6	p0	2
+Hälften	Hälft	NOUN	NN	nk	in	ADP	[zwei, D-förmige, anliegt]	6	p0	2
+aufgeteilt	aufteilen	VERB	VVPP	oc	ist	AUX	[in, ,]	6	p0	2
+,	--	PUNCT	$,	punct	aufgeteilt	VERB	[]	6	p0	2
+zwischen	zwischen	ADP	APPR	mo	anliegt	VERB	[denen]	6	p0	2
+denen	der	PRON	PRELS	nk	zwischen	ADP	[]	6	p0	2
+eine	ein	DET	ART	nk	Hochfrequenzspannung	NOUN	[]	6	p0	2
+Hochfrequenzspannung	Hochfrequenzspannung	NOUN	NN	sb	anliegt	VERB	[eine]	6	p0	2
+anliegt	anliegen	VERB	VVFIN	rc	Hälften	NOUN	[zwischen, Hochfrequenzspannung]	6	p0	2
+.	--	PUNCT	$.	punct	ist	AUX	[]	6	p0	2
+Die	der	DET	ART	nk	Ionen	NOUN	[]	6	p0	3
+von	von	ADP	APPR	sbp	emittierten	ADJ	[Ionenquelle]	6	p0	3
+der	der	DET	ART	nk	Ionenquelle	NOUN	[]	6	p0	3
+Ionenquelle	Ionenquelle	NOUN	NN	nk	von	ADP	[der, im]	6	p0	3
+im	in	ADP	APPRART	mnr	Ionenquelle	NOUN	[Spalt]	6	p0	3
+Spalt	Spalt	NOUN	NN	nk	im	ADP	[zwischen, im]	6	p0	3
+zwischen	zwischen	ADP	APPR	mnr	Spalt	NOUN	[Kammern]	6	p0	3
+den	der	DET	ART	nk	Kammern	NOUN	[]	6	p0	3
+Kammern	Kammer	NOUN	NN	nk	zwischen	ADP	[den]	6	p0	3
+im	in	ADP	APPRART	mnr	Spalt	NOUN	[Zentrum]	6	p0	3
+Zentrum	Zentrum	NOUN	NN	nk	im	ADP	[Anordnung]	6	p0	3
+der	der	DET	ART	nk	Anordnung	NOUN	[]	6	p0	3
+Anordnung	Anordnung	NOUN	NN	ag	Zentrum	NOUN	[der]	6	p0	3
+emittierten	emittiert	ADJ	ADJA	nk	Ionen	NOUN	[von]	6	p0	3
+positiven	positiv	ADJ	ADJA	nk	Ionen	NOUN	[]	6	p0	3
+Ionen	Ione	NOUN	NN	sb	werden	AUX	[Die, emittierten, positiven]	6	p0	3
+werden	werden	AUX	VAFIN	ROOT	werden	AUX	[Ionen, beschleunigt, .]	6	p0	3
+auf	auf	ADP	APPR	mo	beschleunigt	VERB	[Kammerhälfte]	6	p0	3
+die	der	DET	ART	nk	Kammerhälfte	NOUN	[]	6	p0	3
+negative	negativ	ADJ	ADJA	nk	Kammerhälfte	NOUN	[]	6	p0	3
+Kammerhälfte	Kammerhälfte	NOUN	NN	nk	auf	ADP	[die, negative]	6	p0	3
+zu	zu	PART	PTKZU	pm	beschleunigt	VERB	[]	6	p0	3
+beschleunigt	beschleunigen	VERB	VVINF	oc	werden	AUX	[auf, zu]	6	p0	3
+.	--	PUNCT	$.	punct	werden	AUX	[]	6	p0	3
+Da	da	SCONJ	KOUS	cp	existiert	VERB	[]	6	p0	4
+im	in	ADP	APPRART	mo	existiert	VERB	[Inneren]	6	p0	4
+Inneren	innere	NOUN	NN	nk	im	ADP	[Kammerhälften]	6	p0	4
+der	der	DET	ART	nk	Kammerhälften	NOUN	[]	6	p0	4
+Kammerhälften	Kammerhälft	NOUN	NN	ag	Inneren	NOUN	[der]	6	p0	4
+mit	mit	ADP	APPR	mo	existiert	VERB	[Wänden]	6	p0	4
+metallischen	metallisch	ADJ	ADJA	nk	Wänden	NOUN	[]	6	p0	4
+Wänden	Wand	NOUN	NN	nk	mit	ADP	[metallischen]	6	p0	4
+kein	kein	DET	PIAT	nk	Feld	NOUN	[]	6	p0	4
+elektrisches	elektrisch	ADJ	ADJA	nk	Feld	NOUN	[]	6	p0	4
+Feld	Feld	NOUN	NN	sb	existiert	VERB	[kein, elektrisches]	6	p0	4
+existiert	existieren	VERB	VVFIN	mo	beschreiben	VERB	[Da, im, mit, Feld]	6	p0	4
+,	--	PUNCT	$,	punct	beschreiben	VERB	[]	6	p0	4
+beschreiben	beschreiben	VERB	VVFIN	ROOT	beschreiben	VERB	[existiert, ,, Ionen, hier, im, Halbkreis, .]	6	p0	4
+die	der	DET	ART	nk	Ionen	NOUN	[]	6	p0	4
+Ionen	Ione	NOUN	NN	sb	beschreiben	VERB	[die]	6	p0	4
+hier	hier	ADV	ADV	mo	beschreiben	VERB	[]	6	p0	4
+im	in	ADP	APPRART	mo	beschreiben	VERB	[Magnetfeld]	6	p0	4
+Magnetfeld	Magnetfeld	NOUN	NN	nk	im	ADP	[]	6	p0	4
+einen	ein	DET	ART	nk	Halbkreis	NOUN	[]	6	p0	4
+Halbkreis	Halbkreis	NOUN	NN	oa	beschreiben	VERB	[einen, in, und]	6	p0	4
+in	in	ADP	APPR	mnr	Halbkreis	NOUN	[x-y-Ebene]	6	p0	4
+der	der	DET	ART	nk	x-y-Ebene	PROPN	[]	6	p0	4
+x-y-Ebene	x-y-Ebene	PROPN	NN	nk	in	ADP	[der, ,, festgelegt]	6	p0	4
+,	--	PUNCT	$,	punct	x-y-Ebene	PROPN	[]	6	p0	4
+dessen	dessen	DET	PRELAT	ag	Radius	NOUN	[]	6	p0	4
+Radius	Radius	NOUN	NN	sb	festgelegt	VERB	[dessen]	6	p0	4
+durch	durch	ADP	APPR	mo	festgelegt	VERB	[Lorentzkraft]	6	p0	4
+die	der	DET	ART	nk	Lorentzkraft	NOUN	[]	6	p0	4
+als	als	ADP	APPR	mo	wirkende	ADJ	[Zentripetalkraft]	6	p0	4
+Zentripetalkraft	Zentripetalkraft	NOUN	NN	nk	als	ADP	[]	6	p0	4
+wirkende	wirkend	ADJ	ADJA	nk	Lorentzkraft	NOUN	[als]	6	p0	4
+Lorentzkraft	Lorentzkraft	NOUN	NN	nk	durch	ADP	[die, wirkende]	6	p0	4
+festgelegt	festlegen	VERB	VVPP	rc	x-y-Ebene	PROPN	[Radius, durch]	6	p0	4
+und	und	CCONJ	KON	cd	Halbkreis	NOUN	[ist]	6	p0	4
+dessen	der	DET	PRELAT	ag	Umlaufszeit	NOUN	[]	6	p0	4
+Umlaufszeit	Umlaufszeit	NOUN	NN	sb	ist	AUX	[dessen]	6	p0	4
+unabhängig	unabhängig	ADV	ADJD	pd	ist	AUX	[vom]	6	p0	4
+vom	von	ADP	APPRART	mo	unabhängig	ADV	[Radius]	6	p0	4
+Radius	Radius	NOUN	NN	nk	vom	ADP	[]	6	p0	4
+ist	sein	AUX	VAFIN	cj	und	CCONJ	[Umlaufszeit, unabhängig]	6	p0	4
+.	--	PUNCT	$.	punct	beschreiben	VERB	[]	6	p0	4
+Wird	werden	AUX	VAFIN	mo	nimmt	VERB	[Hochfrequenz, gewählt]	6	p0	5
+die	der	DET	ART	nk	Hochfrequenz	NOUN	[]	6	p0	5
+Hochfrequenz	Hochfrequenz	NOUN	NN	sb	Wird	AUX	[die]	6	p0	5
+nun	nun	ADV	ADV	mo	gewählt	VERB	[ankommen]	6	p0	5
+genau	genau	ADV	ADJD	mo	so	ADV	[]	6	p0	5
+so	so	ADV	ADV	mo	gewählt	VERB	[genau]	6	p0	5
+gewählt	wählen	VERB	VVPP	oc	Wird	AUX	[nun, so, ,]	6	p0	5
+,	--	PUNCT	$,	punct	gewählt	VERB	[]	6	p0	5
+dass	dass	SCONJ	KOUS	cp	ankommen	VERB	[]	6	p0	5
+die	der	DET	ART	nk	Ionen	NOUN	[anliegt]	6	p0	5
+Ionen	Ione	NOUN	NN	sb	ankommen	VERB	[die]	6	p0	5
+nach	nach	ADP	APPR	mo	ankommen	VERB	[Durchlaufen]	6	p0	5
+Durchlaufen	durchlaufen	NOUN	NN	nk	nach	ADP	[Halbkreises]	6	p0	5
+des	der	DET	ART	nk	Halbkreises	NOUN	[]	6	p0	5
+Halbkreises	Halbkreis	NOUN	NN	ag	Durchlaufen	NOUN	[des]	6	p0	5
+immer	immer	ADV	ADV	mo	zu	ADP	[]	6	p0	5
+zu	zu	ADP	APPR	mo	ankommen	VERB	[immer, Zeitpunkt]	6	p0	5
+einem	ein	DET	ART	nk	Zeitpunkt	NOUN	[]	6	p0	5
+Zeitpunkt	Zeitpunkt	NOUN	NN	nk	zu	ADP	[einem]	6	p0	5
+wieder	wieder	ADV	ADV	mo	ankommen	VERB	[]	6	p0	5
+am	an	ADP	APPRART	mo	ankommen	VERB	[Spalt]	6	p0	5
+Spalt	Spalt	NOUN	NN	nk	am	ADP	[]	6	p0	5
+ankommen	ankommen	VERB	VVFIN	re	nun	ADV	[dass, Ionen, nach, zu, wieder, am, ,]	6	p0	5
+,	--	PUNCT	$,	punct	ankommen	VERB	[]	6	p0	5
+bei	bei	ADP	APPR	mo	anliegt	VERB	[dem]	6	p0	5
+dem	der	PRON	PRELS	nk	bei	ADP	[]	6	p0	5
+die	der	DET	ART	nk	Polarität	NOUN	[]	6	p0	5
+richtige	richtig	ADJ	ADJA	nk	Polarität	NOUN	[]	6	p0	5
+Polarität	Polarität	NOUN	NN	sb	anliegt	VERB	[die, richtige, Beschleunigungsspannung]	6	p0	5
+der	der	DET	ART	nk	Beschleunigungsspannung	NOUN	[]	6	p0	5
+Beschleunigungsspannung	Beschleunigungsspannung	NOUN	NN	ag	Polarität	NOUN	[der]	6	p0	5
+anliegt	anliegen	VERB	VVFIN	rc	die	DET	[bei, Polarität]	6	p0	5
+,	--	PUNCT	$,	punct	nimmt	VERB	[]	6	p0	5
+nimmt	nehmen	VERB	VVFIN	ROOT	nimmt	VERB	[Wird, ,, Energie, zu, ,, wächst, .]	6	p0	5
+ihre	ihr	DET	PPOSAT	nk	Energie	NOUN	[]	6	p0	5
+kinetische	kinetisch	ADJ	ADJA	nk	Energie	NOUN	[]	6	p0	5
+Energie	Energie	NOUN	NN	oa	nimmt	VERB	[ihre, kinetische, bei]	6	p0	5
+bei	bei	ADP	APPR	mnr	Energie	NOUN	[Durchlaufen]	6	p0	5
+Durchlaufen	durchlaufe	NOUN	NN	nk	bei	ADP	[Spaltes]	6	p0	5
+des	der	DET	ART	nk	Spaltes	NOUN	[]	6	p0	5
+Spaltes	Spalt	NOUN	NN	ag	Durchlaufen	NOUN	[des]	6	p0	5
+zu	zu	ADP	PTKVZ	svp	nimmt	VERB	[]	6	p0	5
+,	--	PUNCT	$,	punct	nimmt	VERB	[]	6	p0	5
+ihre	ihr	DET	PPOSAT	nk	Geschwindigkeit	NOUN	[]	6	p0	5
+Geschwindigkeit	Geschwindigkeit	NOUN	NN	sb	wächst	VERB	[ihre]	6	p0	5
+wächst	wachsen	VERB	VVFIN	cj	nimmt	VERB	[Geschwindigkeit, und]	6	p0	5
+und	und	CCONJ	KON	cd	wächst	VERB	[Radius]	6	p0	5
+daher	daher	ADV	PROAV	mo	Radius	NOUN	[]	6	p0	5
+auch	auch	ADV	ADV	mo	Radius	NOUN	[]	6	p0	5
+der	der	DET	ART	nk	Radius	NOUN	[]	6	p0	5
+Radius	Radius	NOUN	NN	cj	und	CCONJ	[daher, auch, der, Halbkreises]	6	p0	5
+des	der	DET	ART	nk	Halbkreises	NOUN	[]	6	p0	5
+nächsten	nächster	ADJ	ADJA	nk	Halbkreises	NOUN	[]	6	p0	5
+Halbkreises	Halbkreis	NOUN	NN	ag	Radius	NOUN	[des, nächsten]	6	p0	5
+.	--	PUNCT	$.	punct	nimmt	VERB	[]	6	p0	5
+Die	der	DET	ART	nk	Ionen	NOUN	[]	6	p0	6
+Ionen	Ione	NOUN	NN	sb	durchlaufen	VERB	[Die]	6	p0	6
+durchlaufen	durchlaufen	VERB	VVFIN	ROOT	durchlaufen	VERB	[Ionen, deshalb, Bahn, .]	6	p0	6
+deshalb	deshalb	ADV	PROAV	mo	durchlaufen	VERB	[]	6	p0	6
+eine	ein	DET	ART	nk	Bahn	NOUN	[]	6	p0	6
+spiralartige	spiralartig	ADJ	ADJA	nk	Bahn	NOUN	[]	6	p0	6
+Bahn	Bahn	NOUN	NN	oa	durchlaufen	VERB	[eine, spiralartige, ,, besteht]	6	p0	6
+,	--	PUNCT	$,	punct	Bahn	NOUN	[]	6	p0	6
+die	der	PRON	PRELS	sb	besteht	VERB	[]	6	p0	6
+aus	aus	ADP	APPR	mo	besteht	VERB	[Halbkreisen]	6	p0	6
+lauter	lauter	DET	PIAT	nk	Halbkreisen	NOUN	[]	6	p0	6
+Halbkreisen	Halbkreis	NOUN	NN	nk	aus	ADP	[lauter]	6	p0	6
+mit	mit	ADP	APPR	mo	besteht	VERB	[Radien]	6	p0	6
+wachsenden	wachsend	ADJ	ADJA	nk	Radien	NOUN	[]	6	p0	6
+Radien	Radi	NOUN	NN	nk	mit	ADP	[wachsenden]	6	p0	6
+besteht	bestehen	VERB	VVFIN	rc	Bahn	NOUN	[die, aus, mit, ,, haben]	6	p0	6
+,	--	PUNCT	$,	punct	besteht	VERB	[]	6	p0	6
+bis	bis	SCONJ	KOUS	cp	haben	AUX	[]	6	p0	6
+sie	sie	PRON	PPER	sb	haben	AUX	[]	6	p0	6
+den	der	DET	ART	nk	Rand	NOUN	[]	6	p0	6
+Rand	Rand	NOUN	NN	oa	erreicht	VERB	[den, Magnetfeldes]	6	p0	6
+des	der	DET	ART	nk	Magnetfeldes	NOUN	[]	6	p0	6
+Magnetfeldes	Magnetfeld	NOUN	NN	ag	Rand	NOUN	[des]	6	p0	6
+erreicht	erreichen	VERB	VVPP	oc	haben	AUX	[Rand]	6	p0	6
+haben	haben	AUX	VAFIN	mo	besteht	VERB	[bis, sie, erreicht, und]	6	p0	6
+und	und	CCONJ	KON	cd	haben	AUX	[können]	6	p0	6
+dort	dort	ADV	ADV	mo	extrahiert	VERB	[]	6	p0	6
+durch	durch	ADP	APPR	mo	extrahiert	VERB	[Ablenkfeld]	6	p0	6
+ein	ein	DET	ART	nk	Ablenkfeld	NOUN	[]	6	p0	6
+elektrisches	elektrisch	ADJ	ADJA	nk	Ablenkfeld	NOUN	[]	6	p0	6
+Ablenkfeld	Ablenkfeld	NOUN	NN	nk	durch	ADP	[ein, elektrisches]	6	p0	6
+extrahiert	extrahiern	VERB	VVPP	oc	werden	AUX	[dort, durch]	6	p0	6
+werden	werden	AUX	VAINF	oc	können	AUX	[extrahiert]	6	p0	6
+können	können	AUX	VMFIN	cj	und	CCONJ	[werden]	6	p0	6
+.	--	PUNCT	$.	punct	durchlaufen	VERB	[]	6	p0	6
+Um	um	SCONJ	KOUI	cp	können	AUX	[]	0	b0	1
+das	der	DET	ART	nk	Vorhandensein	NOUN	[]	0	b0	1
+Vorhandensein	Vorhandensein	NOUN	NN	oa	feststellen	VERB	[das, Polymerasekettenreaktion-Produkte]	0	b0	1
+der	der	DET	ART	nk	Polymerasekettenreaktion-Produkte	NOUN	[]	0	b0	1
+Polymerasekettenreaktion-Produkte	Polymerasekettenreaktion-Produkt	NOUN	NN	ag	Vorhandensein	NOUN	[der]	0	b0	1
+feststellen	feststellen	VERB	VVINF	oc	können	AUX	[Vorhandensein]	0	b0	1
+zu	zu	PART	PTKZU	pm	können	AUX	[]	0	b0	1
+können	können	AUX	VMINF	mo	verwendet	VERB	[Um, feststellen, zu]	0	b0	1
+,	--	PUNCT	$,	punct	verwendet	VERB	[]	0	b0	1
+verwendet	verwenden	VERB	VVFIN	ROOT	verwendet	VERB	[können, ,, man, Gelelektrophorese, mit, .]	0	b0	1
+man	man	PRON	PIS	sb	verwendet	VERB	[]	0	b0	1
+die	der	DET	ART	nk	Gelelektrophorese	NOUN	[]	0	b0	1
+Gelelektrophorese	Gelelektrophorese	NOUN	NN	oa	verwendet	VERB	[die]	0	b0	1
+mit	mit	ADP	APPR	mo	verwendet	VERB	[Behandlung]	0	b0	1
+einer	ein	DET	ART	nk	Behandlung	NOUN	[]	0	b0	1
+anschließenden	anschließend	ADJ	ADJA	nk	Behandlung	NOUN	[]	0	b0	1
+Behandlung	Behandlung	NOUN	NN	nk	mit	ADP	[einer, anschließenden, Gels]	0	b0	1
+des	der	DET	ART	nk	Gels	NOUN	[]	0	b0	1
+Gels	Gel	NOUN	NN	ag	Behandlung	NOUN	[des, durch]	0	b0	1
+durch	durch	ADP	APPR	mnr	Gels	NOUN	[Ethidiumbromid]	0	b0	1
+Ethidiumbromid	Ethidiumbromid	PROPN	NN	nk	durch	ADP	[]	0	b0	1
+.	--	PUNCT	$.	punct	verwendet	VERB	[]	0	b0	1
+Bei	bei	ADP	APPR	mo	genutzt	VERB	[Methode]	0	b0	2
+dieser	dieser	DET	PDAT	nk	Methode	NOUN	[]	0	b0	2
+Methode	Methode	NOUN	NN	nk	Bei	ADP	[dieser]	0	b0	2
+wird	werden	AUX	VAFIN	ROOT	wird	AUX	[Ladung, genutzt, .]	0	b0	2
+die	der	DET	ART	nk	Ladung	NOUN	[]	0	b0	2
+negative	negativ	ADJ	ADJA	nk	Ladung	NOUN	[]	0	b0	2
+Ladung	Ladung	NOUN	NN	sb	wird	AUX	[die, negative, DNA-Fragmente]	0	b0	2
+der	der	DET	ART	nk	DNA-Fragmente	NOUN	[]	0	b0	2
+DNA-Fragmente	DNA-Fragmente	NOUN	NN	ag	Ladung	NOUN	[der]	0	b0	2
+genutzt	nutzen	VERB	VVPP	oc	wird	AUX	[Bei]	0	b0	2
+.	--	PUNCT	$.	punct	wird	AUX	[]	0	b0	2
+Die	der	DET	ART	nk	DNA-Fragmente	NOUN	[]	0	b0	3
+DNA-Fragmente	DNA-Fragmente	NOUN	NN	sb	sind	AUX	[Die]	0	b0	3
+sind	sein	AUX	VAFIN	ROOT	sind	AUX	[DNA-Fragmente, geladen, .]	0	b0	3
+auf	auf	ADP	APPR	mo	geladen	VERB	[Grund]	0	b0	3
+Grund	Grund	NOUN	NN	nk	auf	ADP	[Phosphatreste]	0	b0	3
+der	der	DET	ART	nk	Phosphatreste	NOUN	[]	0	b0	3
+darin	darin	ADV	PROAV	mo	enthaltenen	ADJ	[]	0	b0	3
+enthaltenen	enthalten	ADJ	ADJA	nk	Phosphatreste	NOUN	[darin]	0	b0	3
+Phosphatreste	Phosphatreste	NOUN	NN	ag	Grund	NOUN	[der, enthaltenen]	0	b0	3
+negativ	negativ	ADV	ADJD	mo	geladen	VERB	[]	0	b0	3
+geladen	laden	VERB	VVPP	oc	sind	AUX	[auf, negativ]	0	b0	3
+.	--	PUNCT	$.	punct	sind	AUX	[]	0	b0	3
+Anlegen	anlegen	NOUN	NN	sb	lässt	VERB	[Feldes]	0	b0	4
+eines	ein	DET	ART	nk	Feldes	NOUN	[]	0	b0	4
+elektrischen	elektrisch	ADJ	ADJA	nk	Feldes	NOUN	[]	0	b0	4
+Feldes	Feld	NOUN	NN	ag	Anlegen	NOUN	[eines, elektrischen]	0	b0	4
+lässt	lässen	VERB	VVFIN	ROOT	lässt	VERB	[Anlegen, Polymerasekettenreaktion-Produkte, durch, wandern, .]	0	b0	4
+die	der	DET	ART	nk	Polymerasekettenreaktion-Produkte	NOUN	[]	0	b0	4
+Polymerasekettenreaktion-Produkte	Polymerasekettenreaktion-Produkt	NOUN	NN	oa	lässt	VERB	[die]	0	b0	4
+durch	durch	ADP	APPR	mo	lässt	VERB	[Medium]	0	b0	4
+ein	ein	DET	ART	nk	Medium	NOUN	[]	0	b0	4
+gelartiges	gelartig	ADJ	ADJA	nk	Medium	NOUN	[]	0	b0	4
+Medium	Medium	NOUN	NN	nk	durch	ADP	[ein, gelartiges, ,, Agarose]	0	b0	4
+,	--	PUNCT	$,	punct	Medium	NOUN	[]	0	b0	4
+zumeist	zumeist	ADV	ADV	mo	Agarose	NOUN	[]	0	b0	4
+Agarose	agarose	NOUN	NN	par	Medium	NOUN	[zumeist]	0	b0	4
+,	--	PUNCT	$,	punct	wandern	VERB	[]	0	b0	4
+wandern	wandern	VERB	VVINF	oc	lässt	VERB	[,]	0	b0	4
+.	--	PUNCT	$.	punct	lässt	VERB	[]	0	b0	4
+Die	der	DET	ART	nk	DNA-Fragmente	NOUN	[]	0	b0	5
+DNA-Fragmente	DNA-Fragmente	NOUN	NN	sb	wandern	VERB	[Die]	0	b0	5
+wandern	wandern	VERB	VVFIN	ROOT	wandern	VERB	[DNA-Fragmente, durch, .]	0	b0	5
+durch	durch	ADP	APPR	mo	wandern	VERB	[Agarose-Sieb]	0	b0	5
+das	der	DET	ART	nk	Agarose-Sieb	NOUN	[]	0	b0	5
+""""	--	PUNCT	$LRB	punct	Agarose-Sieb	NOUN	[]	0	b0	5
+Agarose-Sieb	Agarose-Sieb	NOUN	NN	nk	durch	ADP	"[das, "", "", vom]"	0	b0	5
+""""	--	PUNCT	$LRB	punct	Agarose-Sieb	NOUN	[]	0	b0	5
+vom	von	ADP	APPRART	mnr	Agarose-Sieb	NOUN	[Minuspol]	0	b0	5
+Minuspol	Minuspol	NOUN	NN	nk	vom	ADP	[zum]	0	b0	5
+zum	zu	ADP	APPRART	mnr	Minuspol	NOUN	[Pluspol]	0	b0	5
+Pluspol	Pluspol	NOUN	NN	nk	zum	ADP	[]	0	b0	5
+.	--	PUNCT	$.	punct	wandern	VERB	[]	0	b0	5
+Kleinere	Kleinere	ADJ	ADJA	nk	Fragmente	NOUN	[]	0	b0	6
+Fragmente	Fragment	NOUN	NN	sb	wandern	VERB	[Kleinere]	0	b0	6
+wandern	wandern	VERB	VVFIN	ROOT	wandern	VERB	[Fragmente, schneller, durch, ,, befinden, .]	0	b0	6
+schneller	schnell	ADV	ADJD	mo	wandern	VERB	[]	0	b0	6
+durch	durch	ADP	APPR	mo	wandern	VERB	[Agarose-Sieb]	0	b0	6
+das	der	DET	ART	nk	Agarose-Sieb	NOUN	[]	0	b0	6
+""""	--	PUNCT	$LRB	punct	Agarose-Sieb	NOUN	[]	0	b0	6
+Agarose-Sieb	Agarose-Sieb	NOUN	NN	nk	durch	ADP	"[das, "", ""]"	0	b0	6
+""""	--	PUNCT	$LRB	punct	Agarose-Sieb	NOUN	[]	0	b0	6
+,	--	PUNCT	$,	punct	wandern	VERB	[]	0	b0	6
+daher	daher	ADV	PROAV	mo	befinden	VERB	[]	0	b0	6
+befinden	befinden	VERB	VVFIN	cj	wandern	VERB	[daher, sie, sich, in]	0	b0	6
+sie	sie	PRON	PPER	sb	befinden	VERB	[]	0	b0	6
+sich	sich	PRON	PRF	oa	befinden	VERB	[]	0	b0	6
+in	in	ADP	APPR	mo	befinden	VERB	[Nähe]	0	b0	6
+der	der	DET	ART	nk	Nähe	NOUN	[]	0	b0	6
+Nähe	Nähe	NOUN	NN	nk	in	ADP	[der, zum]	0	b0	6
+zum	zu	ADP	APPRART	mnr	Nähe	NOUN	[Pluspol]	0	b0	6
+Pluspol	Pluspol	NOUN	NN	nk	zum	ADP	[Gels]	0	b0	6
+des	der	DET	ART	nk	Gels	NOUN	[]	0	b0	6
+Gels	Gel	NOUN	NN	ag	Pluspol	NOUN	[des]	0	b0	6
+.	--	PUNCT	$.	punct	wandern	VERB	[]	0	b0	6
+Die	der	DET	ART	nk	Fragmente	NOUN	[]	0	b0	7
+größeren	groß	ADJ	ADJA	nk	Fragmente	NOUN	[]	0	b0	7
+Fragmente	Fragment	NOUN	NN	sb	wandern	VERB	[Die, größeren]	0	b0	7
+wandern	wandern	VERB	VVFIN	ROOT	wandern	VERB	[Fragmente, langsamer, und, .]	0	b0	7
+langsamer	langsam	ADV	ADJD	mo	wandern	VERB	[]	0	b0	7
+und	und	CCONJ	KON	cd	wandern	VERB	[bleiben]	0	b0	7
+bleiben	bleiben	VERB	VVFIN	cj	und	CCONJ	[in]	0	b0	7
+in	in	ADP	APPR	mo	bleiben	VERB	[Nähe]	0	b0	7
+der	der	DET	ART	nk	Nähe	NOUN	[]	0	b0	7
+Nähe	Nähe	NOUN	NN	nk	in	ADP	[der, zum]	0	b0	7
+zum	zu	ADP	APPRART	mnr	Nähe	NOUN	[Minuspol]	0	b0	7
+Minuspol	Minuspol	NOUN	NN	nk	zum	ADP	[]	0	b0	7
+.	--	PUNCT	$.	punct	wandern	VERB	[]	0	b0	7
+Um	um	SCONJ	KOUI	cp	machen	VERB	[]	0	b0	8
+DNA-Fragmente	DNA-Fragmente	NOUN	NN	oa	machen	VERB	[]	0	b0	8
+sichtbar	sichtbar	ADV	ADJD	mo	machen	VERB	[]	0	b0	8
+zu	zu	PART	PTKZU	pm	machen	VERB	[]	0	b0	8
+machen	machen	VERB	VVINF	mo	behandelt	VERB	[Um, DNA-Fragmente, sichtbar, zu]	0	b0	8
+,	--	PUNCT	$,	punct	behandelt	VERB	[]	0	b0	8
+behandelt	behandeln	VERB	VVFIN	ROOT	behandelt	VERB	[machen, ,, man, Gel, mit, .]	0	b0	8
+man	man	PRON	PIS	sb	behandelt	VERB	[]	0	b0	8
+das	der	DET	ART	nk	Gel	NOUN	[]	0	b0	8
+Gel	Gel	NOUN	NN	oa	behandelt	VERB	[das]	0	b0	8
+mit	mit	ADP	APPR	mo	behandelt	VERB	[Lösung]	0	b0	8
+einer	ein	DET	ART	nk	Lösung	NOUN	[]	0	b0	8
+wässrigen	wässrig	ADJ	ADJA	nk	Lösung	NOUN	[]	0	b0	8
+Lösung	Lösung	NOUN	NN	nk	mit	ADP	[einer, wässrigen, von]	0	b0	8
+von	von	ADP	APPR	pg	Lösung	NOUN	[Ethidiumbromid]	0	b0	8
+Ethidiumbromid	Ethidiumbromid	PROPN	NN	nk	von	ADP	[]	0	b0	8
+.	--	PUNCT	$.	punct	behandelt	VERB	[]	0	b0	8
+Das	der	DET	ART	nk	Molekül	NOUN	[]	0	b0	9
+Molekül	Molekül	NOUN	NN	sb	ist	AUX	[Das, Ethidiumbromids]	0	b0	9
+des	der	DET	ART	nk	Ethidiumbromids	NOUN	[]	0	b0	9
+Ethidiumbromids	Ethidiumbromid	NOUN	NN	ag	Molekül	NOUN	[des]	0	b0	9
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Molekül, planar, und, .]	0	b0	9
+planar	Planar	PROPN	ADJD	pd	ist	AUX	[]	0	b0	9
+und	und	CCONJ	KON	cd	ist	AUX	[kann]	0	b0	9
+kann	können	AUX	VMFIN	cj	und	CCONJ	[einlagern]	0	b0	9
+sich	sich	PRON	PRF	oa	einlagern	VERB	[]	0	b0	9
+zwischen	zwischen	ADP	APPR	mo	einlagern	VERB	[Basen]	0	b0	9
+den	der	DET	ART	nk	Basen	NOUN	[]	0	b0	9
+Basen	Base	NOUN	NN	nk	zwischen	ADP	[den, DNA-Fragmente]	0	b0	9
+der	der	DET	ART	nk	DNA-Fragmente	NOUN	[]	0	b0	9
+DNA-Fragmente	DNA-Fragmente	NOUN	NN	ag	Basen	NOUN	[der]	0	b0	9
+einlagern	einlagern	VERB	VVINF	oc	kann	AUX	[sich, zwischen]	0	b0	9
+.	--	PUNCT	$.	punct	ist	AUX	[]	0	b0	9
+Nur	nur	ADV	ADV	mo	nach	ADP	[]	0	b0	10
+nach	nach	ADP	APPR	mo	kann	AUX	[Nur, Entstehen, und]	0	b0	10
+dem	der	DET	ART	nk	Entstehen	NOUN	[]	0	b0	10
+Entstehen	Entstehen	NOUN	NN	nk	nach	ADP	[dem, Komplexes]	0	b0	10
+eines	ein	DET	ART	nk	Komplexes	NOUN	[]	0	b0	10
+solchen	solcher	DET	PIAT	nk	Komplexes	NOUN	[]	0	b0	10
+Komplexes	Komplex	NOUN	NN	ag	Entstehen	NOUN	[eines, solchen]	0	b0	10
+und	und	CCONJ	KON	cd	nach	ADP	[durch]	0	b0	10
+durch	durch	ADP	APPR	cj	und	CCONJ	[Beleuchten]	0	b0	10
+das	der	DET	ART	nk	Beleuchten	NOUN	[]	0	b0	10
+Beleuchten	Beleuchten	NOUN	NN	nk	durch	ADP	[das, mit]	0	b0	10
+mit	mit	ADP	APPR	mnr	Beleuchten	NOUN	[UV-Licht]	0	b0	10
+UV-Licht	UV-Licht	NOUN	NN	nk	mit	ADP	[]	0	b0	10
+kann	können	AUX	VMFIN	ROOT	kann	AUX	[nach, man, sehen, .]	0	b0	10
+man	man	PRON	PIS	sb	kann	AUX	[]	0	b0	10
+die	der	DET	ART	nk	Polymerasekettenreaktion-Produkte	NOUN	[]	0	b0	10
+Polymerasekettenreaktion-Produkte	Polymerasekettenreaktion-Produkt	NOUN	NN	oa	sehen	VERB	[die]	0	b0	10
+in	in	ADP	APPR	mo	sehen	VERB	[Form]	0	b0	10
+Form	Form	NOUN	NN	nk	in	ADP	[von]	0	b0	10
+von	von	ADP	APPR	pg	Form	NOUN	[Banden]	0	b0	10
+Banden	Bande	NOUN	NN	nk	von	ADP	[]	0	b0	10
+sehen	sehen	VERB	VVINF	oc	kann	AUX	[Polymerasekettenreaktion-Produkte, in, und]	0	b0	10
+und	und	CCONJ	KON	cd	sehen	VERB	[fotografieren]	0	b0	10
+fotografieren	fotografieren	VERB	VVINF	cj	und	CCONJ	[]	0	b0	10
+.	--	PUNCT	$.	punct	kann	AUX	[]	0	b0	10
+Der	der	DET	ART	nk	Durchbruch	NOUN	[]	9	p3	1
+entscheidende	entscheidend	ADJ	ADJA	nk	Durchbruch	NOUN	[]	9	p3	1
+Durchbruch	Durchbruch	NOUN	NN	sb	gelang	VERB	[Der, entscheidende, zur]	9	p3	1
+zur	zu	ADP	APPRART	mnr	Durchbruch	NOUN	[Aufstellung]	9	p3	1
+Aufstellung	Aufstellung	NOUN	NN	nk	zur	ADP	[Ordnungsschemas]	9	p3	1
+eines	ein	DET	ART	nk	Ordnungsschemas	NOUN	[]	9	p3	1
+Ordnungsschemas	Ordnungsschema	NOUN	NN	ag	Aufstellung	NOUN	[eines]	9	p3	1
+gelang	gelingen	VERB	VVFIN	ROOT	gelang	VERB	[Durchbruch, Quarkmodell, .]	9	p3	1
+dem	der	DET	ART	nk	Quarkmodell	NOUN	[]	9	p3	1
+Quarkmodell	Quarkmodell	NOUN	NN	da	gelang	VERB	[dem, ,, ansieht]	9	p3	1
+,	--	PUNCT	$,	punct	Quarkmodell	NOUN	[]	9	p3	1
+das	der	PRON	PRELS	sb	ansieht	VERB	[]	9	p3	1
+die	der	DET	ART	nk	Vielzahl	NOUN	[]	9	p3	1
+Vielzahl	Vielzahl	NOUN	NN	oa	ansieht	VERB	[die, Teilchen, sind]	9	p3	1
+der	der	DET	ART	nk	Teilchen	NOUN	[]	9	p3	1
+bisher	bisher	ADV	ADV	mo	gefundenen	ADJ	[]	9	p3	1
+gefundenen	gefunden	ADJ	ADJA	nk	Teilchen	NOUN	[bisher]	9	p3	1
+als	als	ADP	APPR	mo	angenommenen	ADJ	[Elementarteilchen]	9	p3	1
+""""	--	PUNCT	$LRB	punct	Elementarteilchen	NOUN	[]	9	p3	1
+Elementarteilchen	Elementarteilch	NOUN	NN	nk	als	ADP	"["", ""]"	9	p3	1
+""""	--	PUNCT	$LRB	punct	Elementarteilchen	NOUN	[]	9	p3	1
+angenommenen	angenommen	ADJ	ADJA	nk	Teilchen	NOUN	[als]	9	p3	1
+Teilchen	Teilche	NOUN	NN	ag	Vielzahl	NOUN	[der, gefundenen, angenommenen]	9	p3	1
+als	als	ADP	APPR	mo	ansieht	VERB	[Systeme]	9	p3	1
+Systeme	System	NOUN	NN	nk	als	ADP	[mit]	9	p3	1
+mit	mit	ADP	APPR	mnr	Systeme	NOUN	[Struktur]	9	p3	1
+innerer	inner	ADJ	ADJA	nk	Struktur	NOUN	[]	9	p3	1
+Struktur	Struktur	NOUN	NN	nk	mit	ADP	[innerer]	9	p3	1
+ansieht	ansehen	VERB	VVFIN	rc	Quarkmodell	NOUN	[das, Vielzahl, als, ,]	9	p3	1
+,	--	PUNCT	$,	punct	ansieht	VERB	[]	9	p3	1
+die	der	PRON	PRELS	sb	sind	AUX	[]	9	p3	1
+aus	aus	ADP	APPR	mo	zusammengesetzt	VERB	[Teilchen]	9	p3	1
+wenigen	weniger	DET	PIAT	nk	Teilchen	NOUN	[]	9	p3	1
+""""	--	PUNCT	$LRB	punct	elementareren	VERB	[]	9	p3	1
+noch	noch	ADV	ADV	mo	elementareren	VERB	[]	9	p3	1
+elementareren	elementareren	VERB	ADJA	nk	Teilchen	NOUN	"["", noch, ""]"	9	p3	1
+""""	--	PUNCT	$LRB	punct	elementareren	VERB	[]	9	p3	1
+Teilchen	Teilche	NOUN	NN	nk	aus	ADP	[wenigen, elementareren]	9	p3	1
+zusammengesetzt	zusammensetzen	VERB	VVPP	oc	sind	AUX	[aus]	9	p3	1
+sind	sein	AUX	VAFIN	rc	Vielzahl	NOUN	[die, zusammengesetzt]	9	p3	1
+.	--	PUNCT	$.	punct	gelang	VERB	[]	9	p3	1
+Trägt	Tragen	VERB	VVFIN	re	so	ADV	[man, Hadronen, in, ein, ,]	9	p3	2
+man	man	PRON	PIS	sb	Trägt	VERB	[]	9	p3	2
+die	der	DET	ART	nk	Hadronen	NOUN	[wird]	9	p3	2
+bisher	bisher	ADV	ADV	mo	bekannten	ADJ	[]	9	p3	2
+bekannten	bekannt	ADJ	ADJA	nk	Hadronen	NOUN	[bisher]	9	p3	2
+Hadronen	Hadrone	NOUN	NN	oa	Trägt	VERB	[die, bekannten]	9	p3	2
+in	in	ADP	APPR	mo	Trägt	VERB	[Diagramm]	9	p3	2
+einem	ein	DET	ART	nk	Diagramm	NOUN	[]	9	p3	2
+Diagramm	Diagramm	NOUN	NN	nk	in	ADP	[einem]	9	p3	2
+ein	ein	ADV	PTKVZ	svp	Trägt	VERB	[]	9	p3	2
+,	--	PUNCT	$,	punct	Trägt	VERB	[]	9	p3	2
+in	in	ADP	APPR	mo	gewählt	VERB	[dem]	9	p3	2
+dem	der	PRON	PRELS	nk	in	ADP	[]	9	p3	2
+ihre	ihr	DET	PPOSAT	nk	Masse	NOUN	[]	9	p3	2
+Masse	Masse	NOUN	NN	sb	wird	AUX	[ihre]	9	p3	2
+als	als	ADP	APPR	mo	gewählt	VERB	[Ordinate]	9	p3	2
+Ordinate	Ordinate	NOUN	NN	nk	als	ADP	[und]	9	p3	2
+und	und	CCONJ	KON	cd	Ordinate	NOUN	[Spin]	9	p3	2
+ihr	ihr	DET	PPOSAT	nk	Spin	NOUN	[]	9	p3	2
+Spin	Spin	NOUN	NN	cj	und	CCONJ	[ihr]	9	p3	2
+als	als	ADP	APPR	mo	gewählt	VERB	[Abszisse]	9	p3	2
+Abszisse	Absziß	NOUN	NN	nk	als	ADP	[]	9	p3	2
+gewählt	wählen	VERB	VVPP	oc	wird	AUX	[in, als, als]	9	p3	2
+wird	werden	AUX	VAFIN	rc	die	DET	[Masse, gewählt]	9	p3	2
+,	--	PUNCT	$,	punct	so	ADV	[]	9	p3	2
+so	so	ADV	ADV	mo	fällt	VERB	[Trägt, ,, gibt]	9	p3	2
+fällt	fallen	VERB	VVFIN	ROOT	fällt	VERB	[so, auf, ,, .]	9	p3	2
+auf	auf	ADP	PTKVZ	svp	fällt	VERB	[]	9	p3	2
+,	--	PUNCT	$,	punct	fällt	VERB	[]	9	p3	2
+dass	dass	SCONJ	KOUS	cp	gibt	VERB	[]	9	p3	2
+es	es	PRON	PPER	ep	gibt	VERB	[]	9	p3	2
+bestimmte	bestimmt	ADJ	ADJA	nk	Gruppen	NOUN	[]	9	p3	2
+Gruppen	Gruppe	NOUN	NN	oa	gibt	VERB	[bestimmte, sind]	9	p3	2
+gibt	geben	VERB	VVFIN	re	so	ADV	[dass, es, Gruppen, ,, haben]	9	p3	2
+,	--	PUNCT	$,	punct	gibt	VERB	[]	9	p3	2
+in	in	ADP	APPR	mo	sind	AUX	[denen]	9	p3	2
+denen	der	PRON	PRELS	nk	in	ADP	[]	9	p3	2
+die	der	DET	ART	nk	Teilchen	NOUN	[]	9	p3	2
+Teilchen	Teilche	NOUN	NN	sb	sind	AUX	[die]	9	p3	2
+in	in	ADP	APPR	mo	benachbart	VERB	[Diagramm]	9	p3	2
+diesem	dieser	DET	PDAT	nk	Diagramm	NOUN	[]	9	p3	2
+Diagramm	Diagramm	NOUN	NN	nk	in	ADP	[diesem]	9	p3	2
+eng	eng	ADV	ADJD	mo	benachbart	VERB	[]	9	p3	2
+benachbart	benachbaren	VERB	VVPP	pd	sind	AUX	[in, eng]	9	p3	2
+sind	sein	AUX	VAFIN	rc	Gruppen	NOUN	[in, Teilchen, benachbart, ,]	9	p3	2
+,	--	PUNCT	$,	punct	sind	AUX	[]	9	p3	2
+d.h.	d.h.-	PUNCT	VVFIN	punct	Spin	NOUN	[]	9	p3	2
+gleichen	gleich	ADJ	ADJA	nk	Spin	NOUN	[]	9	p3	2
+Spin	Spin	NOUN	NN	sb	haben	VERB	[d.h., gleichen, ,, Parität]	9	p3	2
+,	--	PUNCT	$,	punct	Spin	NOUN	[]	9	p3	2
+gleiche	gleich	ADJ	ADJA	nk	Parität	NOUN	[]	9	p3	2
+Parität	Parität	NOUN	NN	cj	Spin	NOUN	[gleiche, und]	9	p3	2
+und	und	CCONJ	KON	cd	Parität	NOUN	[Masse]	9	p3	2
+fast	fast	ADV	ADV	mo	gleiche	ADJ	[]	9	p3	2
+gleiche	gleich	ADJ	ADJA	nk	Masse	NOUN	[fast]	9	p3	2
+Masse	Masse	NOUN	NN	cj	und	CCONJ	[gleiche]	9	p3	2
+haben	haben	VERB	VAFIN	cj	gibt	VERB	[Spin]	9	p3	2
+.	--	PUNCT	$.	punct	fällt	VERB	[]	9	p3	2
+Dies	dieser	PRON	PDS	oa	brachte	VERB	[]	9	p3	3
+brachte	bringen	VERB	VVFIN	ROOT	brachte	VERB	[Dies, Gell-Mann, unabhängig, auf, .]	9	p3	3
+Murray	Murray	PROPN	NE	pnc	Gell-Mann	PROPN	[]	9	p3	3
+Gell-Mann	Gell-Mann	PROPN	NE	sb	brachte	VERB	[Murray, und]	9	p3	3
+und	und	CCONJ	KON	cd	Gell-Mann	PROPN	[Zweig]	9	p3	3
+George	George	PROPN	NE	pnc	Zweig	PROPN	[]	9	p3	3
+Zweig	Zweig	PROPN	NE	cj	und	CCONJ	[George]	9	p3	3
+unabhängig	unabhängig	ADV	ADJD	mo	brachte	VERB	[voneinander]	9	p3	3
+voneinander	voneinander	ADV	ADV	mo	unabhängig	ADV	[]	9	p3	3
+auf	auf	ADP	APPR	mo	brachte	VERB	[Idee]	9	p3	3
+die	der	DET	ART	nk	Idee	NOUN	[]	9	p3	3
+Idee	Idee	NOUN	NN	nk	auf	ADP	[die, ,, sollten]	9	p3	3
+,	--	PUNCT	$,	punct	Idee	NOUN	[]	9	p3	3
+dass	dass	SCONJ	KOUS	cp	sollten	AUX	[]	9	p3	3
+Hadronen	Hadrone	NOUN	NN	sb	sollten	AUX	[]	9	p3	3
+aus	aus	ADP	APPR	mo	zusammengesetzt	ADV	[Teilchen]	9	p3	3
+wenigen	weniger	DET	PIAT	nk	Teilchen	NOUN	[]	9	p3	3
+""""	--	PUNCT	$LRB	punct	elementareren	ADJ	[]	9	p3	3
+elementareren	elementarer	ADJ	ADJA	nk	Teilchen	NOUN	"["", ""]"	9	p3	3
+""""	--	PUNCT	$LRB	punct	elementareren	ADJ	[]	9	p3	3
+Teilchen	Teilche	NOUN	NN	nk	aus	ADP	[wenigen, elementareren]	9	p3	3
+zusammengesetzt	zusammensetzen	ADV	VVPP	oc	sein	AUX	[aus]	9	p3	3
+sein	sein	AUX	VAINF	oc	sollten	AUX	[zusammengesetzt]	9	p3	3
+sollten	sollen	AUX	VMFIN	oc	Idee	NOUN	[dass, Hadronen, sein]	9	p3	3
+.	--	PUNCT	$.	punct	brachte	VERB	[]	9	p3	3
+Diese	dieser	DET	PDAT	nk	Idee	NOUN	[]	9	p3	4
+Idee	Idee	NOUN	NN	sb	wurde	AUX	[Diese]	9	p3	4
+wurde	werden	AUX	VAFIN	ROOT	wurde	AUX	[Idee, unterstützt, .]	9	p3	4
+unterstützt	unterstützen	VERB	VVPP	oc	wurde	AUX	[durch]	9	p3	4
+durch	durch	ADP	APPR	mo	unterstützt	VERB	[Moment]	9	p3	4
+das	der	DET	ART	nk	Moment	NOUN	[]	9	p3	4
+anomale	anomal	ADJ	ADJA	nk	Moment	NOUN	[]	9	p3	4
+magnetische	magnetisch	ADJ	ADJA	nk	Moment	NOUN	[]	9	p3	4
+Moment	Moment	NOUN	NN	nk	durch	ADP	[das, anomale, magnetische, Neutrons, ,, sollte]	9	p3	4
+des	der	DET	ART	nk	Neutrons	NOUN	[]	9	p3	4
+Neutrons	Neutron	NOUN	NN	ag	Moment	NOUN	[des]	9	p3	4
+,	--	PUNCT	$,	punct	Moment	NOUN	[]	9	p3	4
+das	der	PRON	PRELS	sb	sollte	AUX	[]	9	p3	4
+als	als	ADP	APPR	mo	sollte	AUX	[Teilchen]	9	p3	4
+neutrales	neutral	ADJ	ADJA	nk	Teilchen	NOUN	[]	9	p3	4
+Teilchen	Teilchen	NOUN	NN	nk	als	ADP	[neutrales]	9	p3	4
+eigentlich	eigentlich	ADV	ADV	mo	sollte	AUX	[]	9	p3	4
+kein	kein	DET	PIAT	nk	Moment	NOUN	[]	9	p3	4
+magnetisches	magnetisch	ADJ	ADJA	nk	Moment	NOUN	[]	9	p3	4
+Moment	Moment	NOUN	NN	oa	haben	AUX	[kein, magnetisches]	9	p3	4
+haben	haben	AUX	VAINF	oc	sollte	AUX	[Moment, ist]	9	p3	4
+sollte	sollen	AUX	VMFIN	rc	Moment	NOUN	[das, als, eigentlich, haben, ,]	9	p3	4
+,	--	PUNCT	$,	punct	sollte	AUX	[]	9	p3	4
+außer	außer	ADP	APPR	ac	ist	AUX	[]	9	p3	4
+wenn	wenn	SCONJ	KOUS	cp	ist	AUX	[]	9	p3	4
+es	es	PRON	PPER	sb	ist	AUX	[]	9	p3	4
+aus	aus	ADP	APPR	mo	zusammengesetzt	VERB	[Teilchen]	9	p3	4
+geladenen	geladen	ADJ	ADJA	nk	Teilchen	NOUN	[]	9	p3	4
+Teilchen	Teilche	NOUN	NN	nk	aus	ADP	[geladenen, kompensieren]	9	p3	4
+zusammengesetzt	zusammensetzen	VERB	VVPP	pd	ist	AUX	[aus]	9	p3	4
+ist	sein	AUX	VAFIN	mo	haben	AUX	[außer, wenn, es, zusammengesetzt, ,]	9	p3	4
+,	--	PUNCT	$,	punct	ist	AUX	[]	9	p3	4
+deren	der	DET	PRELAT	ag	Ladungen	NOUN	[]	9	p3	4
+Ladungen	Ladung	NOUN	NN	sb	kompensieren	VERB	[deren]	9	p3	4
+sich	sich	PRON	PRF	oa	kompensieren	VERB	[]	9	p3	4
+zu	zu	ADP	APPR	mo	kompensieren	VERB	[null]	9	p3	4
+null	null	NUM	CARD	nk	zu	ADP	[]	9	p3	4
+kompensieren	kompensieren	VERB	VVFIN	rc	Teilchen	NOUN	[Ladungen, sich, zu]	9	p3	4
+.	--	PUNCT	$.	punct	wurde	AUX	[]	9	p3	4
+Außerdem	außerdem	ADV	PROAV	mo	gefunden	VERB	[]	9	p3	5
+wurde	werden	AUX	VAFIN	ROOT	wurde	AUX	[gefunden, haben, .]	9	p3	5
+bei	bei	ADP	APPR	mo	gefunden	VERB	[Streuung]	9	p3	5
+der	der	DET	ART	nk	Streuung	NOUN	[]	9	p3	5
+Streuung	Streuung	NOUN	NN	nk	bei	ADP	[der, von, an]	9	p3	5
+von	von	ADP	APPR	pg	Streuung	NOUN	[Elektronen]	9	p3	5
+hochenergetischen	hochenergetisch	ADJ	ADJA	nk	Elektronen	NOUN	[]	9	p3	5
+Elektronen	Elektron	NOUN	NN	nk	von	ADP	[hochenergetischen, und]	9	p3	5
+und	und	CCONJ	KON	cd	Elektronen	NOUN	[Protonen]	9	p3	5
+Protonen	Proton	NOUN	NN	cj	und	CCONJ	[]	9	p3	5
+an	an	ADP	APPR	mnr	Streuung	NOUN	[Protonen]	9	p3	5
+Protonen	Proton	NOUN	NN	nk	an	ADP	[und]	9	p3	5
+und	und	CCONJ	KON	cd	Protonen	NOUN	[Neutronen]	9	p3	5
+Neutronen	Neutron	NOUN	NN	cj	und	CCONJ	[]	9	p3	5
+gefunden	finden	VERB	VVPP	oc	wurde	AUX	[Außerdem, bei, ,]	9	p3	5
+,	--	PUNCT	$,	punct	gefunden	VERB	[]	9	p3	5
+dass	dass	SCONJ	KOUS	cp	haben	VERB	[]	9	p3	5
+beide	beide	DET	PIAT	nk	Nukleonen	NOUN	[]	9	p3	5
+Nukleonen	Nukleon	NOUN	NN	sb	haben	VERB	[beide]	9	p3	5
+viele	vieler	DET	PIAT	nk	Anregungszustände	NOUN	[]	9	p3	5
+Anregungszustände	Anregungszustand	NOUN	NN	oa	haben	VERB	[viele]	9	p3	5
+haben	haben	VERB	VAFIN	sb	wurde	AUX	[dass, Nukleonen, Anregungszustände]	9	p3	5
+.	--	PUNCT	$.	punct	wurde	AUX	[]	9	p3	5
+Sie	sie	PRON	PPER	sb	können	AUX	[]	9	p3	6
+können	können	AUX	VMFIN	ROOT	können	AUX	[Sie, deshalb, sein, ,, sondern]	9	p3	6
+deshalb	deshalb	ADV	PROAV	mo	können	AUX	[]	9	p3	6
+keine	kein	DET	PIAT	nk	Teilchen	NOUN	[]	9	p3	6
+""""	--	PUNCT	$LRB	punct	elementaren	ADJ	[]	9	p3	6
+elementaren	elementar	ADJ	ADJA	nk	Teilchen	NOUN	"["", ""]"	9	p3	6
+""""	--	PUNCT	$LRB	punct	elementaren	ADJ	[]	9	p3	6
+Teilchen	Teilche	NOUN	NN	pd	sein	AUX	[keine, elementaren]	9	p3	6
+sein	sein	AUX	VAINF	oc	können	AUX	[Teilchen]	9	p3	6
+,	--	PUNCT	$,	punct	können	AUX	[]	9	p3	6
+sondern	sondern	CCONJ	KON	cd	können	AUX	[müssen]	9	p3	6
+müssen	müssen	AUX	VMFIN	cj	sondern	CCONJ	[elementaren]	9	p3	6
+aus	aus	ADP	APPR	mo	elementaren	VERB	[]	9	p3	6
+""""	--	PUNCT	$LRB	punct	elementaren	VERB	[]	9	p3	6
+wirklich	wirklich	ADV	ADJD	mo	elementaren	VERB	[]	9	p3	6
+elementaren	elementar	VERB	ADJA	oc	müssen	AUX	"[aus, "", wirklich, ""]"	9	p3	6
+""""	--	PUNCT	$LRB	punct	elementaren	VERB	[]	9	p3	6
+Teilchen	Teilche	NOUN	NN	sb	bestehen	VERB	[]	9	p3	7
+bestehen	bestehen	VERB	VVFIN	ROOT	bestehen	VERB	[Teilchen, .]	9	p3	7
+.	--	PUNCT	$.	punct	bestehen	VERB	[]	9	p3	7
+Wurzeln	Wurzel	NOUN	NN	sb	entziehen	VERB	[]	2	b2	1
+entziehen	entziehen	VERB	VVFIN	ROOT	entziehen	VERB	[Wurzeln, Boden, ,, aber, .]	2	b2	1
+dem	der	DET	ART	nk	Boden	NOUN	[]	2	b2	1
+Boden	Boden	NOUN	NN	da	entziehen	VERB	[dem, Wasser]	2	b2	1
+Wasser	Wasser	NOUN	NN	nk	Boden	NOUN	[]	2	b2	1
+,	--	PUNCT	$,	punct	entziehen	VERB	[]	2	b2	1
+aber	aber	CCONJ	KON	cd	entziehen	VERB	[nehmen]	2	b2	1
+sie	sie	PRON	PPER	sb	nehmen	VERB	[]	2	b2	1
+nehmen	nehmen	VERB	VVFIN	cj	aber	CCONJ	[sie, Mineralstoffe, auf]	2	b2	1
+auch	auch	ADV	ADV	mo	Mineralstoffe	NOUN	[]	2	b2	1
+essenzielle	essenziell	ADJ	ADJA	nk	Mineralstoffe	NOUN	[]	2	b2	1
+Mineralstoffe	Mineralstoff	NOUN	NN	oa	nehmen	VERB	[auch, essenzielle]	2	b2	1
+auf	auf	ADP	PTKVZ	svp	nehmen	VERB	[]	2	b2	1
+.	--	PUNCT	$.	punct	entziehen	VERB	[]	2	b2	1
+Böden	Böden	NOUN	NN	sb	sind	AUX	[]	2	b2	2
+sind	sein	AUX	VAFIN	ROOT	sind	AUX	[Böden, Unterschiede, auf, .]	2	b2	2
+heterogen	heterogen	ADJ	ADJD	nk	Unterschiede	NOUN	[und]	2	b2	2
+und	und	CCONJ	KON	cd	heterogen	ADJ	[weisen]	2	b2	2
+weisen	weis	ADJ	VVFIN	cj	und	CCONJ	[]	2	b2	2
+Unterschiede	Unterschied	NOUN	NN	sb	sind	AUX	[heterogen, auf]	2	b2	2
+auf	auf	ADP	APPR	mnr	Unterschiede	NOUN	[Raum]	2	b2	2
+kleinem	klein	ADJ	ADJA	nk	Raum	NOUN	[]	2	b2	2
+Raum	Raum	NOUN	NN	nk	auf	ADP	[kleinem]	2	b2	2
+auf	auf	ADP	PTKVZ	svp	sind	AUX	[]	2	b2	2
+.	--	PUNCT	$.	punct	sind	AUX	[]	2	b2	2
+Wurzeln	Wurzel	NOUN	NN	sb	können	AUX	[,, wachsen]	2	b2	3
+,	--	PUNCT	$,	punct	Wurzeln	NOUN	[]	2	b2	3
+die	der	PRON	PRELS	sb	wachsen	VERB	[]	2	b2	3
+durch	durch	ADP	APPR	mo	wachsen	VERB	[Boden]	2	b2	3
+den	der	DET	ART	nk	Boden	NOUN	[]	2	b2	3
+Boden	Boden	NOUN	NN	nk	durch	ADP	[den]	2	b2	3
+wachsen	wachsen	VERB	VVFIN	rc	Wurzeln	NOUN	[die, durch]	2	b2	3
+,	--	PUNCT	$,	punct	können	AUX	[]	2	b2	3
+können	können	AUX	VMFIN	ROOT	können	AUX	[Wurzeln, ,, treffen, .]	2	b2	3
+auf	auf	ADP	APPR	op	treffen	VERB	[Regionen]	2	b2	3
+Regionen	Region	NOUN	NN	nk	auf	ADP	[unterscheiden]	2	b2	3
+treffen	treffen	VERB	VVINF	oc	können	AUX	[auf, ,]	2	b2	3
+,	--	PUNCT	$,	punct	treffen	VERB	[]	2	b2	3
+die	der	PRON	PRELS	sb	unterscheiden	VERB	[]	2	b2	3
+sich	sich	PRON	PRF	oa	unterscheiden	VERB	[]	2	b2	3
+im	in	ADP	APPRART	mo	unterscheiden	VERB	[Mineralstoffgehalt]	2	b2	3
+Wasser-	Wasser	X	TRUNC	cj	und	CCONJ	[]	2	b2	3
+und	und	CCONJ	KON	cd	Mineralstoffgehalt	NOUN	[Wasser-]	2	b2	3
+Mineralstoffgehalt	Mineralstoffgehalt	NOUN	NN	nk	im	ADP	[und]	2	b2	3
+unterscheiden	unterscheiden	VERB	VVFIN	rc	Regionen	NOUN	[die, sich, im]	2	b2	3
+.	--	PUNCT	$.	punct	können	AUX	[]	2	b2	3
+In	in	ADP	APPR	mo	sind	AUX	[Regionen]	2	b2	4
+den	der	DET	ART	nk	Regionen	NOUN	[]	2	b2	4
+besser	gut	ADV	ADJD	mo	versorgten	ADJ	[]	2	b2	4
+versorgten	versorgt	ADJ	ADJA	nk	Regionen	NOUN	[besser]	2	b2	4
+Regionen	Region	NOUN	NN	nk	In	ADP	[den, versorgten]	2	b2	4
+sind	sein	AUX	VAFIN	ROOT	sind	AUX	[In, Wurzeln, verzweigt, .]	2	b2	4
+Wurzeln	Wurzel	NOUN	NN	sb	sind	AUX	[]	2	b2	4
+oft	oft	ADV	ADV	mo	verzweigt	VERB	[]	2	b2	4
+stark	stark	ADV	ADJD	mo	verzweigt	VERB	[]	2	b2	4
+verzweigt	verzweigen	VERB	VVPP	pd	sind	AUX	[oft, stark]	2	b2	4
+.	--	PUNCT	$.	punct	sind	AUX	[]	2	b2	4
+Für	für	ADP	APPR	mo	ist	AUX	[Aufnahme]	2	b2	5
+die	der	DET	ART	nk	Aufnahme	NOUN	[]	2	b2	5
+Aufnahme	Aufnahme	NOUN	NN	nk	Für	ADP	[die, Nährstoffe]	2	b2	5
+mineralischer	mineralisch	ADJ	ADJA	nk	Nährstoffe	NOUN	[]	2	b2	5
+Nährstoffe	Nährstoff	NOUN	NN	ag	Aufnahme	NOUN	[mineralischer]	2	b2	5
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Für, Wurzelarchitektur, ,, verhalten, .]	2	b2	5
+die	der	DET	ART	nk	Wurzelarchitektur	NOUN	[]	2	b2	5
+Wurzelarchitektur	Wurzelarchitektur	NOUN	NN	sb	ist	AUX	[die, von]	2	b2	5
+von	von	ADP	APPR	pg	Wurzelarchitektur	NOUN	[Bedeutung]	2	b2	5
+ganz	ganz	ADV	ADV	mo	besonderer	ADJ	[]	2	b2	5
+besonderer	besonderer	ADJ	ADJA	nk	Bedeutung	NOUN	[ganz]	2	b2	5
+Bedeutung	Bedeutung	NOUN	NN	nk	von	ADP	[besonderer]	2	b2	5
+,	--	PUNCT	$,	punct	ist	AUX	[]	2	b2	5
+weil	weil	SCONJ	KOUS	cp	verhalten	VERB	[]	2	b2	5
+sich	sich	PRON	PRF	oa	verhalten	VERB	[]	2	b2	5
+unterschiedliche	unterschiedlich	ADJ	ADJA	nk	Mineralstoffe	NOUN	[]	2	b2	5
+Mineralstoffe	Mineralstoff	NOUN	NN	sb	verhalten	VERB	[unterschiedliche]	2	b2	5
+ganz	ganz	ADV	ADV	mo	verschieden	ADV	[]	2	b2	5
+verschieden	verschieden	ADV	ADJD	mo	verhalten	VERB	[ganz]	2	b2	5
+verhalten	verhalten	VERB	VVFIN	mo	ist	AUX	[weil, sich, Mineralstoffe, verschieden, und]	2	b2	5
+und	und	CCONJ	KON	cd	verhalten	VERB	[werden]	2	b2	5
+durch	durch	ADP	APPR	mo	gehalten	VERB	[Kräfte]	2	b2	5
+verschiedenartige	verschiedenartig	ADJ	ADJA	nk	Kräfte	NOUN	[]	2	b2	5
+Kräfte	Kraft	NOUN	NN	nk	durch	ADP	[verschiedenartige, im]	2	b2	5
+im	in	ADP	APPRART	mnr	Kräfte	NOUN	[Boden]	2	b2	5
+Boden	Boden	NOUN	NN	nk	im	ADP	[]	2	b2	5
+gehalten	halten	VERB	VVPP	oc	werden	AUX	[durch]	2	b2	5
+werden	werden	AUX	VAFIN	cj	und	CCONJ	[gehalten]	2	b2	5
+.	--	PUNCT	$.	punct	ist	AUX	[]	2	b2	5
+Nitrationen	Nitration	NOUN	NN	sb	diffundieren	VERB	[]	2	b2	6
+diffundieren	diffundieren	VERB	VVFIN	ROOT	diffundieren	VERB	[Nitrationen, schnell, im, .]	2	b2	6
+schnell	schnell	ADV	ADJD	mo	diffundieren	VERB	[]	2	b2	6
+im	in	ADP	APPRART	mo	diffundieren	VERB	[Bodenwasser]	2	b2	6
+Bodenwasser	Bodenwasser	NOUN	NN	nk	im	ADP	[]	2	b2	6
+.	--	PUNCT	$.	punct	diffundieren	VERB	[]	2	b2	6
+Stark	stark	ADV	ADJD	mo	transpirierende	ADJ	[]	2	b2	7
+transpirierende	transpirierend	ADJ	ADJA	nk	Pflanzen	NOUN	[Stark]	2	b2	7
+Pflanzen	Pflanze	NOUN	NN	sb	können	AUX	[transpirierende]	2	b2	7
+können	können	AUX	VMFIN	ROOT	können	AUX	[Pflanzen, transportieren, .]	2	b2	7
+Nitrat	Nitrat	NOUN	NN	oa	transportieren	VERB	[]	2	b2	7
+schneller	schnell	ADV	ADJD	mo	transportieren	VERB	[]	2	b2	7
+zur	zu	ADP	APPRART	mo	transportieren	VERB	[Wurzeloberfläche]	2	b2	7
+Wurzeloberfläche	Wurzeloberfläche	NOUN	NN	nk	zur	ADP	[]	2	b2	7
+transportieren	transportieren	VERB	VVINF	oc	können	AUX	[Nitrat, schneller, zur, ,, können]	2	b2	7
+,	--	PUNCT	$,	punct	transportieren	VERB	[]	2	b2	7
+als	als	SCONJ	KOKOM	cp	können	AUX	[]	2	b2	7
+sie	sie	PRON	PPER	sb	können	AUX	[]	2	b2	7
+es	es	PRON	PPER	oa	anreichern	VERB	[]	2	b2	7
+im	in	ADP	APPRART	mo	anreichern	VERB	[Pflanzenkörper]	2	b2	7
+Pflanzenkörper	Pflanzenkörper	NOUN	NN	nk	im	ADP	[]	2	b2	7
+anreichern	anreichern	VERB	VVINF	oc	können	AUX	[es, im]	2	b2	7
+können	können	AUX	VMFIN	mo	transportieren	VERB	[als, sie, anreichern]	2	b2	7
+.	--	PUNCT	$.	punct	können	AUX	[]	2	b2	7
+Andere	anderer	ADJ	ADJA	nk	Mineralstoffe	NOUN	[]	2	b2	8
+essenzielle	essenziell	ADJ	ADJA	nk	Mineralstoffe	NOUN	[]	2	b2	8
+Mineralstoffe	Mineralstoff	NOUN	NN	sb	sind	AUX	[Andere, essenzielle, wie]	2	b2	8
+wie	wie	ADP	KOKOM	cd	Mineralstoffe	NOUN	[Phosphat]	2	b2	8
+Phosphat	Phosphat	NOUN	NN	cj	wie	ADP	[]	2	b2	8
+sind	sein	AUX	VAFIN	ROOT	sind	AUX	[Mineralstoffe, gebunden, ,, haben, .]	2	b2	8
+jedoch	jedoch	ADV	ADV	mo	gebunden	VERB	[]	2	b2	8
+fest	fest	ADV	ADJD	mo	gebunden	VERB	[]	2	b2	8
+im	in	ADP	APPRART	mo	gebunden	VERB	[Boden]	2	b2	8
+Boden	Boden	NOUN	NN	nk	im	ADP	[]	2	b2	8
+gebunden	binden	VERB	VVPP	oc	sind	AUX	[jedoch, fest, im]	2	b2	8
+,	--	PUNCT	$,	punct	sind	AUX	[]	2	b2	8
+sie	sie	PRON	PPER	sb	haben	VERB	[]	2	b2	8
+haben	haben	VERB	VAFIN	cj	sind	AUX	[sie, Diffusionskoeffizienten]	2	b2	8
+niedrige	niedrig	ADJ	ADJA	nk	Diffusionskoeffizienten	NOUN	[]	2	b2	8
+Diffusionskoeffizienten	Diffusionskoeffizient	NOUN	NN	oa	haben	VERB	[niedrige]	2	b2	8
+.	--	PUNCT	$.	punct	sind	AUX	[]	2	b2	8
+Die	der	DET	ART	nk	Phosphatverarmungszonen	NOUN	[]	2	b2	9
+Phosphatverarmungszonen	Phosphatverarmungszon	NOUN	NN	sb	überlappen	VERB	[Die, von]	2	b2	9
+von	von	ADP	APPR	pg	Phosphatverarmungszonen	NOUN	[Wurzeln]	2	b2	9
+zwei	zwei	NUM	CARD	nk	Wurzeln	NOUN	[]	2	b2	9
+Wurzeln	Wurzel	NOUN	NN	nk	von	ADP	[zwei, ,, sind]	2	b2	9
+,	--	PUNCT	$,	punct	Wurzeln	NOUN	[]	2	b2	9
+die	der	PRON	PRELS	sb	sind	AUX	[]	2	b2	9
+sehr	sehr	ADV	ADV	mo	nah	ADV	[]	2	b2	9
+nah	nah	ADV	ADJD	mo	beieinander	ADV	[sehr]	2	b2	9
+beieinander	beieinand	ADV	ADV	pd	sind	AUX	[nah]	2	b2	9
+sind	sein	AUX	VAFIN	rc	Wurzeln	NOUN	[die, beieinander]	2	b2	9
+,	--	PUNCT	$,	punct	überlappen	VERB	[]	2	b2	9
+überlappen	überlappen	VERB	VVFIN	ROOT	überlappen	VERB	[Phosphatverarmungszonen, ,, sich, kaum, erhöht, .]	2	b2	9
+sich	sich	PRON	PRF	oa	überlappen	VERB	[]	2	b2	9
+kaum	kaum	ADV	ADV	mo	überlappen	VERB	[und]	2	b2	9
+und	und	CCONJ	KON	cd	kaum	ADV	[Wurzelsystem]	2	b2	9
+ein	ein	DET	ART	nk	Wurzelsystem	NOUN	[]	2	b2	9
+reich	reich	ADV	ADJD	mo	verzweigtes	ADJ	[]	2	b2	9
+verzweigtes	verzweigt	ADJ	ADJA	nk	Wurzelsystem	NOUN	[reich]	2	b2	9
+Wurzelsystem	Wurzelsystem	NOUN	NN	cj	und	CCONJ	[ein, verzweigtes]	2	b2	9
+erhöht	erhöhen	VERB	VVFIN	mo	überlappen	VERB	[Phosphataufnahme, bei, daher, enorm]	2	b2	9
+die	der	DET	ART	nk	Phosphataufnahme	NOUN	[]	2	b2	9
+Phosphataufnahme	Phosphataufnahme	NOUN	NN	oa	erhöht	VERB	[die]	2	b2	9
+bei	bei	ADP	APPR	mo	erhöht	VERB	[Phosphatversorgung]	2	b2	9
+knapper	knapp	ADJ	ADJA	nk	Phosphatversorgung	NOUN	[]	2	b2	9
+Phosphatversorgung	Phosphatversorgung	NOUN	NN	nk	bei	ADP	[knapper]	2	b2	9
+daher	daher	ADV	PROAV	mo	erhöht	VERB	[]	2	b2	9
+enorm	enorm	ADV	ADJD	mo	erhöht	VERB	[]	2	b2	9
+.	--	PUNCT	$.	punct	überlappen	VERB	[]	2	b2	9
+Ein	ein	DET	ART	nk	Wurzelsystem	NOUN	[]	2	b2	10
+extensiv	extensiv	ADV	ADJD	mo	ausgebildetes	ADJ	[]	2	b2	10
+ausgebildetes	ausgebildet	ADJ	ADJA	nk	Wurzelsystem	NOUN	[extensiv]	2	b2	10
+Wurzelsystem	Wurzelsystem	NOUN	NN	sb	kann	AUX	[Ein, ausgebildetes, mit]	2	b2	10
+mit	mit	ADP	APPR	mnr	Wurzelsystem	NOUN	[Zwischenräumen]	2	b2	10
+größeren	groß	ADJ	ADJA	nk	Zwischenräumen	NOUN	[]	2	b2	10
+Zwischenräumen	Zwischenräume	NOUN	NN	nk	mit	ADP	[größeren, dagegen]	2	b2	10
+dagegen	dagegen	ADV	PROAV	mnr	Zwischenräumen	NOUN	[]	2	b2	10
+kann	können	AUX	VMFIN	ROOT	kann	AUX	[Wurzelsystem, Nitrataufnahme, maximieren, .]	2	b2	10
+die	der	DET	ART	nk	Nitrataufnahme	NOUN	[]	2	b2	10
+Nitrataufnahme	Nitrataufnahme	NOUN	NN	sb	kann	AUX	[die]	2	b2	10
+maximieren	maximieren	VERB	VVINF	oc	kann	AUX	[]	2	b2	10
+.	--	PUNCT	$.	punct	kann	AUX	[]	2	b2	10
+In	in	ADP	APPR	mo	veranlasst	VERB	[Rekombinationsreparatur]	1	b1	1
+der	der	DET	ART	nk	Rekombinationsreparatur	NOUN	[]	1	b1	1
+homologen	homolog	ADJ	ADJA	nk	Rekombinationsreparatur	NOUN	[]	1	b1	1
+Rekombinationsreparatur	Rekombinationsreparatur	NOUN	NN	nk	In	ADP	[der, homologen]	1	b1	1
+veranlasst	veranlassen	VERB	VVFIN	ROOT	veranlasst	VERB	[In, RecA, in, Auflösung, :]	1	b1	1
+RecA	RecA	NOUN	NE	sb	veranlasst	VERB	[]	1	b1	1
+in	in	ADP	APPR	mo	veranlasst	VERB	[Verbindung]	1	b1	1
+Verbindung	Verbindung	NOUN	NN	nk	in	ADP	[mit]	1	b1	1
+mit	mit	ADP	APPR	op	Verbindung	NOUN	[Reihe]	1	b1	1
+einer	ein	DET	ART	nk	Reihe	NOUN	[]	1	b1	1
+Reihe	Reihe	NOUN	NN	nk	mit	ADP	[einer, Proteine]	1	b1	1
+weiterer	weit	ADJ	ADJA	nk	Proteine	NOUN	[]	1	b1	1
+Proteine	Protein	NOUN	NN	ag	Reihe	NOUN	[weiterer]	1	b1	1
+die	der	DET	ART	nk	Auflösung	NOUN	[]	1	b1	1
+Auflösung	Auflösung	NOUN	NN	oa	veranlasst	VERB	[die, Replikationsgabel]	1	b1	1
+der	der	DET	ART	nk	Replikationsgabel	NOUN	[]	1	b1	1
+angehaltenen	angehalten	ADJ	ADJA	nk	Replikationsgabel	NOUN	[]	1	b1	1
+Replikationsgabel	Replikationsgabel	NOUN	NN	ag	Auflösung	NOUN	[der, angehaltenen]	1	b1	1
+:	--	PUNCT	$.	punct	veranlasst	VERB	[]	1	b1	1
+Kommt	kommen	VERB	VVFIN	mo	löst	VERB	[Replikationskomplex, an]	1	b1	2
+der	der	DET	ART	nk	Replikationskomplex	NOUN	[]	1	b1	2
+Replikationskomplex	Replikationskomplex	NOUN	NN	sb	Kommt	VERB	[der]	1	b1	2
+an	an	ADP	APPR	mo	Kommt	VERB	[DNA-Stelle]	1	b1	2
+eine	ein	DET	ART	nk	DNA-Stelle	NOUN	[]	1	b1	2
+schadhafte	schadhaft	ADJ	ADJA	nk	DNA-Stelle	NOUN	[]	1	b1	2
+DNA-Stelle	DNA-Stelle	NOUN	NN	nk	an	ADP	[eine, schadhafte]	1	b1	2
+,	--	PUNCT	$,	punct	löst	VERB	[]	1	b1	2
+löst	lösen	VERB	VVFIN	ROOT	löst	VERB	[Kommt, ,, er, sich, und, .]	1	b1	2
+er	er	PRON	PPER	sb	löst	VERB	[]	1	b1	2
+sich	sich	PRON	PRF	oa	löst	VERB	[]	1	b1	2
+und	und	CCONJ	KON	cd	löst	VERB	[überspringt]	1	b1	2
+überspringt	überspringen	VERB	VVFIN	cj	und	CCONJ	[Schaden, ,, fortzufahren]	1	b1	2
+den	der	DET	ART	nk	Schaden	NOUN	[]	1	b1	2
+Schaden	Schaden	NOUN	NN	oa	überspringt	VERB	[den]	1	b1	2
+,	--	PUNCT	$,	punct	überspringt	VERB	[]	1	b1	2
+um	um	SCONJ	KOUI	cp	fortzufahren	VERB	[]	1	b1	2
+an	an	ADP	APPR	mo	fortzufahren	VERB	[Stelle]	1	b1	2
+anderer	anderer	ADJ	ADJA	nk	Stelle	NOUN	[]	1	b1	2
+Stelle	Stelle	NOUN	NN	nk	an	ADP	[anderer]	1	b1	2
+fortzufahren	fortfahren	VERB	VVIZU	mo	überspringt	VERB	[um, an]	1	b1	2
+.	--	PUNCT	$.	punct	löst	VERB	[]	1	b1	2
+Es	es	PRON	PPER	ph	entsteht	VERB	[]	1	b1	3
+entsteht	entstehen	VERB	VVFIN	ROOT	entsteht	VERB	[Es, Replikationslücke, .]	1	b1	3
+eine	ein	DET	ART	nk	Replikationslücke	NOUN	[]	1	b1	3
+Replikationslücke	Replikationslücke	NOUN	NN	sb	entsteht	VERB	[eine, im]	1	b1	3
+im	in	ADP	APPRART	mnr	Replikationslücke	NOUN	[Tochterstrang]	1	b1	3
+Tochterstrang	Tochterstrang	NOUN	NN	nk	im	ADP	[,, kann]	1	b1	3
+,	--	PUNCT	$,	punct	Tochterstrang	NOUN	[]	1	b1	3
+die	der	PRON	PRELS	sb	kann	AUX	[]	1	b1	3
+über	über	ADP	ADV	mo	800	NUM	[]	1	b1	3
+800	800	NUM	CARD	nk	Basen	NOUN	[über]	1	b1	3
+Basen	Base	NOUN	NN	oa	umfassen	VERB	[800]	1	b1	3
+umfassen	umfassen	VERB	VVINF	oc	kann	AUX	[Basen]	1	b1	3
+kann	können	AUX	VMFIN	rc	Tochterstrang	NOUN	[die, umfassen]	1	b1	3
+.	--	PUNCT	$.	punct	entsteht	VERB	[]	1	b1	3
+Bei	bei	ADP	APPR	mo	bindet	VERB	[Reparatur]	1	b1	4
+der	der	DET	ART	nk	Reparatur	NOUN	[]	1	b1	4
+""""	--	PUNCT	$LRB	punct	Reparatur	NOUN	[]	1	b1	4
+rekombinatorischen	rekombinatorisch	ADJ	ADJA	nk	Reparatur	NOUN	[]	1	b1	4
+Reparatur	Reparatur	NOUN	NN	nk	Bei	ADP	"[der, "", rekombinatorischen, ""]"	1	b1	4
+""""	--	PUNCT	$LRB	punct	Reparatur	NOUN	[]	1	b1	4
+bindet	binden	VERB	VVFIN	ROOT	bindet	VERB	[Bei, RecA-Protein, an, links, und, .]	1	b1	4
+das	der	DET	ART	nk	RecA-Protein	NOUN	[]	1	b1	4
+RecA-Protein	RecA-Protein	NOUN	NN	sb	bindet	VERB	[das]	1	b1	4
+an	an	ADP	APPR	mo	bindet	VERB	[Einzelstrang-DNA-Enden]	1	b1	4
+die	der	DET	ART	nk	Einzelstrang-DNA-Enden	NOUN	[]	1	b1	4
+Einzelstrang-DNA-Enden	Einzelstrang-DNA-Ende	NOUN	NN	nk	an	ADP	[die]	1	b1	4
+links	links	ADV	ADV	mo	bindet	VERB	[und]	1	b1	4
+und	und	CCONJ	KON	cd	links	ADV	[rechts, Replikationslücke]	1	b1	4
+rechts	rechts	ADV	ADV	cj	und	CCONJ	[]	1	b1	4
+der	der	DET	ART	nk	Replikationslücke	NOUN	[]	1	b1	4
+Replikationslücke	Replikationslücke	NOUN	NN	cj	und	CCONJ	[der]	1	b1	4
+und	und	CCONJ	KON	cd	bindet	VERB	[sucht]	1	b1	4
+sucht	suchen	VERB	VVFIN	cj	und	CCONJ	[Schwesterchromatide, nach, ab]	1	b1	4
+die	der	DET	ART	nk	Schwesterchromatide	NOUN	[]	1	b1	4
+Schwesterchromatide	Schwesterchromatide	NOUN	NN	oa	sucht	VERB	[die, oder]	1	b1	4
+oder	oder	CCONJ	KON	cd	Schwesterchromatide	NOUN	[Chromosom]	1	b1	4
+das	der	DET	ART	nk	Chromosom	NOUN	[]	1	b1	4
+homologe	homolog	ADJ	ADJA	nk	Chromosom	NOUN	[]	1	b1	4
+Chromosom	Chromosom	NOUN	NN	cj	oder	CCONJ	[das, homologe]	1	b1	4
+nach	nach	ADP	APPR	mo	sucht	VERB	[Sequenzen]	1	b1	4
+homologen	homolog	ADJ	ADJA	nk	Sequenzen	NOUN	[]	1	b1	4
+Sequenzen	Sequenz	NOUN	NN	nk	nach	ADP	[homologen]	1	b1	4
+ab	ab	ADP	PTKVZ	svp	sucht	VERB	[]	1	b1	4
+.	--	PUNCT	$.	punct	bindet	VERB	[]	1	b1	4
+Ist	sein	AUX	VAFIN	mo	dringt	VERB	[Stelle, gefunden]	1	b1	5
+eine	ein	DET	ART	nk	Stelle	NOUN	[]	1	b1	5
+solche	solcher	DET	PIAT	nk	Stelle	NOUN	[]	1	b1	5
+Stelle	Stelle	NOUN	NN	sb	Ist	AUX	[eine, solche]	1	b1	5
+gefunden	finden	VERB	VVPP	oc	Ist	AUX	[]	1	b1	5
+,	--	PUNCT	$,	punct	dringt	VERB	[]	1	b1	5
+dringt	dringen	VERB	VVFIN	ROOT	dringt	VERB	[Ist, ,, Komplex, in, ein, ,, verdrängt, .]	1	b1	5
+der	der	DET	ART	nk	Komplex	NOUN	[]	1	b1	5
+Komplex	Komplex	NOUN	NN	sb	dringt	VERB	[der]	1	b1	5
+in	in	ADP	APPR	mo	dringt	VERB	[Doppelhelix]	1	b1	5
+die	der	DET	ART	nk	Doppelhelix	PROPN	[]	1	b1	5
+Doppelhelix	Doppelhelix	PROPN	NN	nk	in	ADP	[die]	1	b1	5
+ein	ein	ADV	PTKVZ	svp	dringt	VERB	[]	1	b1	5
+,	--	PUNCT	$,	punct	dringt	VERB	[]	1	b1	5
+verdrängt	verdrängen	VERB	VVFIN	cj	dringt	VERB	[homologen, und]	1	b1	5
+den	der	DET	ART	nk	homologen	NOUN	[]	1	b1	5
+homologen	Homolog	NOUN	ADJA	da	verdrängt	VERB	[den]	1	b1	5
+und	und	CCONJ	KON	cd	verdrängt	VERB	[bindet]	1	b1	5
+bindet	binden	VERB	VVFIN	cj	und	CCONJ	[Strang]	1	b1	5
+den	der	DET	ART	nk	Strang	NOUN	[]	1	b1	5
+komplementären	komplementär	ADJ	ADJA	nk	Strang	NOUN	[]	1	b1	5
+Strang	Strang	NOUN	NN	oa	bindet	VERB	[den, komplementären]	1	b1	5
+.	--	PUNCT	$.	punct	dringt	VERB	[]	1	b1	5
+Dieser	dieser	PRON	PDS	sb	dient	VERB	[]	1	b1	6
+dient	dienen	VERB	VVFIN	ROOT	dient	VERB	[Dieser, dann, als, zum, .]	1	b1	6
+dann	dann	ADV	ADV	mo	dient	VERB	[]	1	b1	6
+als	als	ADP	APPR	mo	dient	VERB	[Matrize]	1	b1	6
+Matrize	Matriz	NOUN	NN	nk	als	ADP	[]	1	b1	6
+zum	zu	ADP	APPRART	mo	dient	VERB	[Auffüllen]	1	b1	6
+Auffüllen	auffüllen	NOUN	NN	nk	zum	ADP	[Replikationslücke]	1	b1	6
+der	der	DET	ART	nk	Replikationslücke	NOUN	[]	1	b1	6
+Replikationslücke	Replikationslück	NOUN	NN	ag	Auffüllen	NOUN	[der]	1	b1	6
+.	--	PUNCT	$.	punct	dient	VERB	[]	1	b1	6
+Der	der	DET	ART	nk	Strang	NOUN	[]	1	b1	7
+verdrängte	verdrängen	ADJ	ADJA	nk	Strang	NOUN	[]	1	b1	7
+Strang	Strang	NOUN	NN	sb	paart	ADV	[Der, verdrängte]	1	b1	7
+paart	paaren	ADV	VVFIN	ROOT	paart	ADV	[Strang, sich, mit, .]	1	b1	7
+sich	sich	PRON	PRF	oa	paart	ADV	[]	1	b1	7
+mit	mit	ADP	APPR	mo	paart	ADV	[Strang]	1	b1	7
+dem	der	DET	ART	nk	Strang	NOUN	[]	1	b1	7
+Strang	Strang	NOUN	NN	nk	mit	ADP	[dem, ,, aufweist]	1	b1	7
+,	--	PUNCT	$,	punct	Strang	NOUN	[]	1	b1	7
+der	der	PRON	PRELS	sb	aufweist	VERB	[]	1	b1	7
+den	der	DET	ART	nk	DNA-Schaden	NOUN	[]	1	b1	7
+DNA-Schaden	DNA-Schad	NOUN	NN	da	aufweist	VERB	[den]	1	b1	7
+aufweist	aufweist	VERB	VVFIN	rc	Strang	NOUN	[der, DNA-Schaden]	1	b1	7
+.	--	PUNCT	$.	punct	paart	ADV	[]	1	b1	7
+Durch	durch	ADP	APPR	mo	bilden	VERB	[Endonuklease-Schnitte]	1	b1	8
+Endonuklease-Schnitte	Endonuklease-Schnitte	NOUN	NN	nk	Durch	ADP	[und]	1	b1	8
+und	und	CCONJ	KON	cd	Endonuklease-Schnitte	NOUN	[Ligation]	1	b1	8
+anschließende	anschließend	ADJ	ADJA	nk	Ligation	NOUN	[]	1	b1	8
+Ligation	Ligation	NOUN	NN	cj	und	CCONJ	[anschließende]	1	b1	8
+bilden	bilden	VERB	VVFIN	ROOT	bilden	VERB	[Durch, sich, letztendlich, wieder, Doppelhelices, aus, .]	1	b1	8
+sich	sich	PRON	PRF	oa	bilden	VERB	[]	1	b1	8
+letztendlich	letztendlich	ADV	ADV	mo	bilden	VERB	[]	1	b1	8
+wieder	wieder	ADV	ADV	mo	bilden	VERB	[]	1	b1	8
+zwei	zwei	NUM	CARD	nk	Doppelhelices	NOUN	[]	1	b1	8
+komplette	komplett	ADJ	ADJA	nk	Doppelhelices	NOUN	[]	1	b1	8
+Doppelhelices	Doppelhelices	NOUN	NN	sb	bilden	VERB	[zwei, komplette]	1	b1	8
+aus	aus	ADP	PTKVZ	svp	bilden	VERB	[]	1	b1	8
+.	--	PUNCT	$.	punct	bilden	VERB	[]	1	b1	8
+Zu	zu	PART	PTKZU	pm	beachten	VERB	[]	1	b1	9
+beachten	beachten	VERB	VVINF	oc	ist	AUX	[Zu]	1	b1	9
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[beachten, ,, wird, .]	1	b1	9
+,	--	PUNCT	$,	punct	ist	AUX	[]	1	b1	9
+dass	dass	SCONJ	KOUS	cp	wird	AUX	[]	1	b1	9
+der	der	DET	ART	nk	DNA-Schaden	NOUN	[]	1	b1	9
+ursprüngliche	ursprünglich	ADJ	ADJA	nk	DNA-Schaden	NOUN	[]	1	b1	9
+DNA-Schaden	DNA-Schad	NOUN	NN	sb	wird	AUX	[der, ursprüngliche]	1	b1	9
+bei	bei	ADP	APPR	mo	behoben	VERB	[Reparatur]	1	b1	9
+dieser	dieser	DET	PDAT	nk	Reparatur	NOUN	[]	1	b1	9
+Reparatur	Reparatur	NOUN	NN	nk	bei	ADP	[dieser]	1	b1	9
+nicht	nicht	PART	PTKNEG	ng	behoben	VERB	[]	1	b1	9
+behoben	beheben	VERB	VVPP	oc	wird	AUX	[bei, nicht]	1	b1	9
+wird	werden	AUX	VAFIN	sb	ist	AUX	[dass, DNA-Schaden, behoben, ,, sondern]	1	b1	9
+,	--	PUNCT	$,	punct	wird	AUX	[]	1	b1	9
+sondern	sondern	CCONJ	KON	cd	wird	AUX	[Lücke]	1	b1	9
+nur	nur	ADV	ADV	mo	Lücke	NOUN	[]	1	b1	9
+die	der	DET	ART	nk	Lücke	NOUN	[]	1	b1	9
+Lücke	Lücke	NOUN	NN	cj	sondern	CCONJ	[nur, die, im]	1	b1	9
+im	in	ADP	APPRART	mnr	Lücke	NOUN	[Tochterstrang]	1	b1	9
+Tochterstrang	Tochterstrang	NOUN	NN	nk	im	ADP	[]	1	b1	9
+.	--	PUNCT	$.	punct	ist	AUX	[]	1	b1	9
+In	in	ADP	APPR	mo	ist	AUX	[Hefen]	1	b1	10
+Hefen	Hefen	NOUN	NN	nk	In	ADP	[und]	1	b1	10
+und	und	CCONJ	KON	cd	Hefen	NOUN	[Eukaryoten]	1	b1	10
+höheren	hoch	ADJ	ADJA	nk	Eukaryoten	NOUN	[]	1	b1	10
+Eukaryoten	Eukaryot	NOUN	NN	cj	und	CCONJ	[höheren]	1	b1	10
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[In, System, in, ebenfalls, vorhanden, .]	1	b1	10
+dieses	dieser	DET	PDAT	nk	System	NOUN	[]	1	b1	10
+System	System	NOUN	NN	sb	ist	AUX	[dieses]	1	b1	10
+in	in	ADP	APPR	mo	ist	AUX	[Form]	1	b1	10
+ähnlicher	ähnlich	ADJ	ADJA	nk	Form	NOUN	[]	1	b1	10
+Form	Form	NOUN	NN	nk	in	ADP	[ähnlicher]	1	b1	10
+ebenfalls	ebenfalls	ADV	ADV	mo	ist	AUX	[]	1	b1	10
+vorhanden	vorhanden	ADV	ADJD	pd	ist	AUX	[]	1	b1	10
+.	--	PUNCT	$.	punct	ist	AUX	[]	1	b1	10
+Photonische	Photonische	ADJ	ADJA	nk	Kristalle	NOUN	[]	8	p2	1
+Kristalle	Kristalle	NOUN	NN	sb	sind	AUX	[Photonische]	8	p2	1
+sind	sein	AUX	VAFIN	ROOT	sind	AUX	[Kristalle, räumlich, Anordnungen, .]	8	p2	1
+räumlich	räumlich	ADV	ADJD	mo	sind	AUX	[]	8	p2	1
+periodische	periodisch	ADJ	ADJA	nk	Anordnungen	NOUN	[]	8	p2	1
+Anordnungen	Anordnung	NOUN	NN	pd	sind	AUX	[periodische, von, mit]	8	p2	1
+von	von	ADP	APPR	pg	Anordnungen	NOUN	[Medien]	8	p2	1
+dielektrischen	dielektrisch	ADJ	ADJA	nk	Medien	NOUN	[]	8	p2	1
+Medien	Medium	NOUN	NN	nk	von	ADP	[dielektrischen]	8	p2	1
+mit	mit	ADP	APPR	mnr	Anordnungen	NOUN	[Dielektrizitätskonstante]	8	p2	1
+unterschiedlicher	unterschiedlich	ADJ	ADJA	nk	Dielektrizitätskonstante	NOUN	[]	8	p2	1
+Dielektrizitätskonstante	Dielektrizitätskonstante	NOUN	NN	nk	mit	ADP	[unterschiedlicher, und]	8	p2	1
+und	und	CCONJ	KON	cd	Dielektrizitätskonstante	NOUN	[Brechzahlen]	8	p2	1
+damit	damit	ADV	PROAV	mo	unterschiedlichen	ADJ	[]	8	p2	1
+unterschiedlichen	unterschiedlich	ADJ	ADJA	nk	Brechzahlen	NOUN	[damit]	8	p2	1
+Brechzahlen	Brechzahle	NOUN	NN	cj	und	CCONJ	[unterschiedlichen]	8	p2	1
+.	--	PUNCT	$.	punct	sind	AUX	[]	8	p2	1
+Man	man	PRON	PIS	sb	kann	AUX	[]	8	p2	2
+kann	können	AUX	VMFIN	ROOT	kann	AUX	[Man, realisieren, sind, .]	8	p2	2
+sie	sie	PRON	PPER	oa	realisieren	VERB	[]	8	p2	2
+realisieren	realisieren	VERB	VVINF	oc	kann	AUX	[sie, durch]	8	p2	2
+durch	durch	ADP	APPR	mo	realisieren	VERB	[Materialien]	8	p2	2
+transparente	transparent	ADJ	ADJA	nk	Materialien	NOUN	[]	8	p2	2
+Materialien	Material	NOUN	NN	nk	durch	ADP	[transparente, ,]	8	p2	2
+,	--	PUNCT	$,	punct	Materialien	NOUN	[]	8	p2	2
+in	in	ADP	APPR	mo	eingebaut	VERB	[Strukturen]	8	p2	2
+die	der	DET	PRELS	nk	Strukturen	NOUN	[]	8	p2	2
+periodische	periodisch	ADJ	ADJA	nk	Strukturen	NOUN	[]	8	p2	2
+Strukturen	Struktur	NOUN	NN	nk	in	ADP	[die, periodische, z.B., liegen]	8	p2	2
+(	--	PUNCT	$LRB	punct	z.B.	NOUN	[]	8	p2	2
+z.B.	z.B.	NOUN	NN	par	Strukturen	NOUN	[(, Mikrozylinder, )]	8	p2	2
+dielektrische	dielektrisch	ADJ	ADJA	nk	Mikrozylinder	NOUN	[]	8	p2	2
+Mikrozylinder	Mikrozylind	NOUN	NN	nk	z.B.	NOUN	[dielektrische, oder]	8	p2	2
+oder	oder	CCONJ	KON	cd	Mikrozylinder	NOUN	[Kügelchen]	8	p2	2
+Kügelchen	Kügelche	NOUN	NN	cj	oder	CCONJ	[]	8	p2	2
+)	--	PUNCT	$LRB	punct	z.B.	NOUN	[]	8	p2	2
+eingebaut	einbauen	VERB	VVPP	pd	sind	AUX	[in]	8	p2	2
+sind	sein	AUX	VAFIN	oc	kann	AUX	[eingebaut, ,]	8	p2	2
+,	--	PUNCT	$,	punct	sind	AUX	[]	8	p2	2
+deren	der	DET	PRELAT	ag	Abstände	NOUN	[]	8	p2	2
+Abstände	Abständ	NOUN	NN	sb	liegen	VERB	[deren]	8	p2	2
+in	in	ADP	APPR	mo	liegen	VERB	[Größenordnung]	8	p2	2
+der	der	DET	ART	nk	Größenordnung	NOUN	[]	8	p2	2
+Größenordnung	Größenordnung	NOUN	NN	nk	in	ADP	[der, Wellenlänge]	8	p2	2
+der	der	DET	ART	nk	Wellenlänge	NOUN	[]	8	p2	2
+optischen	optisch	ADJ	ADJA	nk	Wellenlänge	NOUN	[]	8	p2	2
+Wellenlänge	Wellenlang	NOUN	NN	ag	Größenordnung	NOUN	[der, optischen]	8	p2	2
+liegen	liegen	VERB	VVFIN	rc	Strukturen	NOUN	[Abstände, in]	8	p2	2
+.	--	PUNCT	$.	punct	kann	AUX	[]	8	p2	2
+Sie	sie	PRON	PPER	sb	beeinflussen	VERB	[]	8	p2	3
+beeinflussen	beeinflussen	VERB	VVFIN	ROOT	beeinflussen	VERB	[Sie, deshalb, Ausbreitung, .]	8	p2	3
+deshalb	deshalb	ADV	PROAV	mo	beeinflussen	VERB	[]	8	p2	3
+die	der	DET	ART	nk	Ausbreitung	NOUN	[]	8	p2	3
+Ausbreitung	Ausbreitung	NOUN	NN	oa	beeinflussen	VERB	[die, von]	8	p2	3
+von	von	ADP	APPR	pg	Ausbreitung	NOUN	[Licht]	8	p2	3
+Licht	Licht	NOUN	NN	nk	von	ADP	[in]	8	p2	3
+in	in	ADP	APPR	mnr	Licht	NOUN	[Materialien]	8	p2	3
+diesen	dieser	DET	PDAT	nk	Materialien	NOUN	[]	8	p2	3
+Materialien	Material	NOUN	NN	nk	in	ADP	[diesen]	8	p2	3
+.	--	PUNCT	$.	punct	beeinflussen	VERB	[]	8	p2	3
+Fällt	fallen	VERB	VVFIN	re	so	ADV	[Lichtwelle, auf]	8	p2	4
+eine	ein	DET	ART	nk	Lichtwelle	NOUN	[]	8	p2	4
+Lichtwelle	Lichtwelle	NOUN	NN	sb	Fällt	VERB	[eine]	8	p2	4
+auf	auf	ADP	APPR	mo	Fällt	VERB	[Struktur]	8	p2	4
+diese	dieser	DET	PDAT	nk	Struktur	NOUN	[]	8	p2	4
+Struktur	Struktur	NOUN	NN	nk	auf	ADP	[diese]	8	p2	4
+,	--	PUNCT	$,	punct	so	ADV	[]	8	p2	4
+so	so	ADV	ADV	mo	reflektiert	VERB	[Fällt, ,]	8	p2	4
+wird	werden	AUX	VAFIN	ROOT	wird	AUX	[Teil, reflektiert, .]	8	p2	4
+ein	ein	DET	ART	nk	Teil	NOUN	[]	8	p2	4
+Teil	Teil	NOUN	NN	sb	wird	AUX	[ein, Wellenamplitude]	8	p2	4
+der	der	DET	ART	nk	Wellenamplitude	NOUN	[]	8	p2	4
+Wellenamplitude	Wellenamplitude	NOUN	NN	ag	Teil	NOUN	[der, an]	8	p2	4
+an	an	ADP	APPR	mnr	Wellenamplitude	NOUN	[Grenzflächen]	8	p2	4
+den	der	DET	ART	nk	Grenzflächen	NOUN	[]	8	p2	4
+Grenzflächen	Grenzfläch	NOUN	NN	nk	an	ADP	[den, Struktur]	8	p2	4
+der	der	DET	ART	nk	Struktur	NOUN	[]	8	p2	4
+periodischen	periodisch	ADJ	ADJA	nk	Struktur	NOUN	[]	8	p2	4
+Struktur	Struktur	NOUN	NN	ag	Grenzflächen	NOUN	[der, periodischen]	8	p2	4
+reflektiert	reflektieren	VERB	VVPP	oc	wird	AUX	[so]	8	p2	4
+.	--	PUNCT	$.	punct	wird	AUX	[]	8	p2	4
+Ist	sein	AUX	VAFIN	mo	überlagern	VERB	[Periode, π-vielfaches]	8	p2	5
+die	der	DET	ART	nk	Periode	NOUN	[]	8	p2	5
+Periode	Periode	NOUN	NN	sb	Ist	AUX	[die, Struktur]	8	p2	5
+der	der	DET	ART	nk	Struktur	NOUN	[]	8	p2	5
+Struktur	Struktur	NOUN	NN	ag	Periode	NOUN	[der]	8	p2	5
+ein	ein	DET	ART	nk	π-vielfaches	NOUN	[]	8	p2	5
+π-vielfaches	π-vielfaches	NOUN	PIS	pd	Ist	AUX	[ein, Wellenlänge]	8	p2	5
+der	der	DET	ART	nk	Wellenlänge	NOUN	[]	8	p2	5
+Wellenlänge	Wellenlang	NOUN	NN	ag	π-vielfaches	NOUN	[der]	8	p2	5
+,	--	PUNCT	$,	punct	überlagern	VERB	[]	8	p2	5
+überlagern	überlagern	VERB	VVFIN	ROOT	überlagern	VERB	[Ist, ,, sich, Anteile, phasenrichtig, und, .]	8	p2	5
+sich	sich	PRON	PRF	oa	überlagern	VERB	[]	8	p2	5
+die	der	DET	ART	nk	Anteile	NOUN	[]	8	p2	5
+reflektierten	reflektiert	ADJ	ADJA	nk	Anteile	NOUN	[]	8	p2	5
+Anteile	Anteil	NOUN	NN	sb	überlagern	VERB	[die, reflektierten]	8	p2	5
+phasenrichtig	phasenrichtig	ADV	ADJD	mo	überlagern	VERB	[]	8	p2	5
+und	und	CCONJ	KON	cd	überlagern	VERB	[addieren]	8	p2	5
+addieren	addieren	VERB	VVFIN	cj	und	CCONJ	[sich, deshalb]	8	p2	5
+sich	sich	PRON	PRF	oa	addieren	VERB	[]	8	p2	5
+deshalb	deshalb	ADV	PROAV	mo	addieren	VERB	[]	8	p2	5
+.	--	PUNCT	$.	punct	überlagern	VERB	[]	8	p2	5
+Das	der	DET	ART	nk	Reflexionsvermögen	NOUN	[]	8	p2	6
+Reflexionsvermögen	Reflexionsvermögen	NOUN	NN	sb	wird	AUX	[Das, Kristalls]	8	p2	6
+des	der	DET	ART	nk	Kristalls	NOUN	[]	8	p2	6
+Kristalls	Kristall	NOUN	NN	ag	Reflexionsvermögen	NOUN	[des]	8	p2	6
+wird	werden	AUX	VAFIN	ROOT	wird	AUX	[Reflexionsvermögen, erhöht, .]	8	p2	6
+erhöht	erhöhen	VERB	VVPP	oc	wird	AUX	[]	8	p2	6
+.	--	PUNCT	$.	punct	wird	AUX	[]	8	p2	6
+Ist	sein	AUX	VAFIN	mo	sind	AUX	[Periode, π-vielfaches]	8	p2	7
+die	der	DET	ART	nk	Periode	NOUN	[]	8	p2	7
+Periode	Periode	NOUN	NN	sb	Ist	AUX	[die, Struktur]	8	p2	7
+der	der	DET	ART	nk	Struktur	NOUN	[]	8	p2	7
+Struktur	Struktur	NOUN	NN	ag	Periode	NOUN	[der]	8	p2	7
+ein	ein	DET	ART	nk	π-vielfaches	NOUN	[]	8	p2	7
+ungeradzahlig	ungeradzahlig	ADV	ADJD	mo	π-vielfaches	NOUN	[]	8	p2	7
+π-vielfaches	π-vielfaches	NOUN	NN	pd	Ist	AUX	[ein, ungeradzahlig, Wellenlänge]	8	p2	7
+der	der	DET	ART	nk	Wellenlänge	NOUN	[]	8	p2	7
+halben	halb	ADJ	ADJA	nk	Wellenlänge	NOUN	[]	8	p2	7
+Wellenlänge	Wellenlang	NOUN	NN	ag	π-vielfaches	NOUN	[der, halben]	8	p2	7
+,	--	PUNCT	$,	punct	sind	AUX	[]	8	p2	7
+sind	sein	AUX	VAFIN	ROOT	sind	AUX	[Ist, ,, Phasen, verschoben, und, .]	8	p2	7
+die	der	DET	ART	nk	Phasen	NOUN	[]	8	p2	7
+Phasen	Phase	NOUN	NN	sb	sind	AUX	[die, Wellen]	8	p2	7
+der	der	DET	ART	nk	Wellen	NOUN	[]	8	p2	7
+reflektierten	reflektiert	ADJ	ADJA	nk	Wellen	NOUN	[]	8	p2	7
+Wellen	Welle	NOUN	NN	ag	Phasen	NOUN	[der, reflektierten]	8	p2	7
+gegeneinander	gegeneinander	ADV	ADV	mo	verschoben	VERB	[]	8	p2	7
+verschoben	verschieben	VERB	VVPP	pd	sind	AUX	[gegeneinander]	8	p2	7
+und	und	CCONJ	KON	cd	sind	AUX	[löschen]	8	p2	7
+die	der	DET	ART	nk	Anteile	NOUN	[]	8	p2	7
+reflektierten	reflektiert	ADJ	ADJA	nk	Anteile	NOUN	[]	8	p2	7
+Anteile	Anteil	NOUN	NN	sb	löschen	VERB	[die, reflektierten]	8	p2	7
+löschen	löschen	VERB	VVFIN	cj	und	CCONJ	[Anteile, sich, teilweise, aus]	8	p2	7
+sich	sich	PRON	PRF	oa	löschen	VERB	[]	8	p2	7
+teilweise	teilweise	ADV	ADV	mo	löschen	VERB	[oder]	8	p2	7
+oder	oder	CCONJ	KON	cd	teilweise	ADV	[ganz]	8	p2	7
+ganz	ganz	ADV	ADV	cj	oder	CCONJ	[]	8	p2	7
+aus	aus	ADP	PTKVZ	svp	löschen	VERB	[]	8	p2	7
+.	--	PUNCT	$.	punct	sind	AUX	[]	8	p2	7
+Eine	ein	DET	ART	nk	Parenchymzelle	NOUN	[]	4	b4	1
+chlorophyllhaltige	chlorophyllhaltig	ADJ	ADJA	nk	Parenchymzelle	NOUN	[]	4	b4	1
+Parenchymzelle	Parenchymzelle	NOUN	NN	sb	exportiert	VERB	[Eine, chlorophyllhaltige, in]	4	b4	1
+in	in	ADP	APPR	mnr	Parenchymzelle	NOUN	[Angiospermenblatt]	4	b4	1
+einem	ein	DET	ART	nk	Angiospermenblatt	NOUN	[]	4	b4	1
+Angiospermenblatt	Angiospermenblatt	NOUN	NN	nk	in	ADP	[einem]	4	b4	1
+exportiert	exportieren	VERB	VVFIN	ROOT	exportiert	VERB	[Parenchymzelle, Material, und, .]	4	b4	1
+organisches	organisch	ADJ	ADJA	nk	Material	NOUN	[]	4	b4	1
+Material	Material	NOUN	NN	sb	exportiert	VERB	[organisches, in]	4	b4	1
+in	in	ADP	APPR	mnr	Material	NOUN	[Form]	4	b4	1
+Form	Form	NOUN	NN	nk	in	ADP	[von]	4	b4	1
+von	von	ADP	APPR	pg	Form	NOUN	[Saccharose]	4	b4	1
+Saccharose	Saccharose	NOUN	NN	nk	von	ADP	[aus]	4	b4	1
+aus	aus	ADP	APPR	mnr	Saccharose	NOUN	[Zelle]	4	b4	1
+der	der	DET	ART	nk	Zelle	NOUN	[]	4	b4	1
+Zelle	Zelle	NOUN	NN	nk	aus	ADP	[der]	4	b4	1
+und	und	CCONJ	KON	cd	exportiert	VERB	[versorgt]	4	b4	1
+versorgt	versorgen	VERB	VVFIN	cj	und	CCONJ	[damit, in, Zellen]	4	b4	1
+damit	damit	ADV	PROAV	mo	versorgt	VERB	[]	4	b4	1
+selbst	selbst	ADV	ADV	mo	in	ADP	[]	4	b4	1
+in	in	ADP	APPR	mo	versorgt	VERB	[selbst, Nacht]	4	b4	1
+der	der	DET	ART	nk	Nacht	NOUN	[]	4	b4	1
+Nacht	Nacht	NOUN	NN	nk	in	ADP	[der]	4	b4	1
+alle	aller	DET	PIAT	nk	Zellen	NOUN	[]	4	b4	1
+chlorophyllfreien	chlorophyllfrei	ADJ	ADJA	nk	Zellen	NOUN	[]	4	b4	1
+Zellen	Zelle	NOUN	NN	oa	versorgt	VERB	[alle, chlorophyllfreien, Pflanze]	4	b4	1
+der	der	DET	ART	nk	Pflanze	NOUN	[]	4	b4	1
+Pflanze	Pflanze	NOUN	NN	ag	Zellen	NOUN	[der]	4	b4	1
+.	--	PUNCT	$.	punct	exportiert	VERB	[]	4	b4	1
+Das	der	DET	ART	nk	Prinzip	NOUN	[]	4	b4	2
+Prinzip	Prinzip	NOUN	NN	sb	ist	AUX	[Das]	4	b4	2
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Prinzip, einfach, :]	4	b4	2
+einfach	einfach	ADV	ADJD	pd	ist	AUX	[]	4	b4	2
+:	--	PUNCT	$.	punct	ist	AUX	[]	4	b4	2
+Am	an	ADP	APPRART	mo	speichert	VERB	[Tag]	4	b4	3
+Tag	Tag	NOUN	NN	nk	Am	ADP	[]	4	b4	3
+speichert	speichern	VERB	VVFIN	ROOT	speichert	VERB	[Am, Chloroplast, Glucose, als, ;]	4	b4	3
+der	der	DET	ART	nk	Chloroplast	NOUN	[]	4	b4	3
+Chloroplast	Chloroplast	NOUN	NN	sb	speichert	VERB	[der]	4	b4	3
+die	der	DET	ART	nk	Glucose	NOUN	[]	4	b4	3
+gebildete	gebildet	ADJ	ADJA	nk	Glucose	NOUN	[und]	4	b4	3
+und	und	CCONJ	KON	cd	gebildete	ADJ	[überschüssige]	4	b4	3
+überschüssige	überschüssig	ADJ	ADJA	cj	und	CCONJ	[]	4	b4	3
+Glucose	Glucos	NOUN	NN	oa	speichert	VERB	[die, gebildete, aus]	4	b4	3
+aus	aus	ADP	APPR	mnr	Glucose	NOUN	[Photosynthese]	4	b4	3
+der	der	DET	ART	nk	Photosynthese	NOUN	[]	4	b4	3
+Photosynthese	Photosynthese	NOUN	NN	nk	aus	ADP	[der]	4	b4	3
+als	als	ADP	APPR	mo	speichert	VERB	[Stärke]	4	b4	3
+Stärke	Stärke	NOUN	NN	nk	als	ADP	[]	4	b4	3
+;	--	PUNCT	$.	punct	speichert	VERB	[]	4	b4	3
+in	in	ADP	APPR	mo	kommt	VERB	[Nacht]	4	b4	4
+der	der	DET	ART	nk	Nacht	NOUN	[]	4	b4	4
+Nacht	Nacht	NOUN	NN	nk	in	ADP	[der]	4	b4	4
+kommt	kommen	VERB	VVFIN	ROOT	kommt	VERB	[in, es, zu, .]	4	b4	4
+es	es	PRON	PPER	ep	kommt	VERB	[]	4	b4	4
+zu	zu	ADP	APPR	mo	kommt	VERB	[Stoffentnahme]	4	b4	4
+einer	ein	DET	ART	nk	Stoffentnahme	NOUN	[]	4	b4	4
+Stoffentnahme	Stoffentnahme	NOUN	NN	nk	zu	ADP	[einer, aus]	4	b4	4
+aus	aus	ADP	APPR	mnr	Stoffentnahme	NOUN	[Speicher]	4	b4	4
+diesem	dieser	DET	PDAT	nk	Speicher	NOUN	[]	4	b4	4
+Speicher	Speicher	NOUN	NN	nk	aus	ADP	[diesem]	4	b4	4
+.	--	PUNCT	$.	punct	kommt	VERB	[]	4	b4	4
+Die	der	DET	ART	nk	Zelle	NOUN	[]	4	b4	5
+Zelle	Zelle	NOUN	NN	sb	kann	AUX	[Die]	4	b4	5
+kann	können	AUX	VMFIN	ROOT	kann	AUX	[Zelle, gewährleisten, .]	4	b4	5
+auf	auf	ADP	APPR	mo	gewährleisten	VERB	[Weise, Tag]	4	b4	5
+diese	dieser	DET	PDAT	nk	Weise	NOUN	[]	4	b4	5
+Weise	Weise	NOUN	NN	nk	auf	ADP	[diese]	4	b4	5
+Tag	Tag	NOUN	NN	nk	auf	ADP	[und]	4	b4	5
+und	und	CCONJ	KON	cd	Tag	NOUN	[Nacht]	4	b4	5
+Nacht	Nacht	NOUN	NN	cj	und	CCONJ	[]	4	b4	5
+einen	ein	DET	ART	nk	Export	NOUN	[]	4	b4	5
+Export	Export	NOUN	NN	oa	gewährleisten	VERB	[einen]	4	b4	5
+gewährleisten	gewährleisten	VERB	VVINF	oc	kann	AUX	[auf, Export]	4	b4	5
+.	--	PUNCT	$.	punct	kann	AUX	[]	4	b4	5
+Saccharose	Saccharose	NOUN	NN	pd	ist	AUX	[]	4	b4	6
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Saccharose, Dimer, und, .]	4	b4	6
+ein	ein	DET	ART	nk	Dimer	NOUN	[]	4	b4	6
+Dimer	Dimer	NOUN	NN	pd	ist	AUX	[ein]	4	b4	6
+und	und	CCONJ	KON	cd	ist	AUX	[wirkt]	4	b4	6
+wirkt	wirken	VERB	VVFIN	cj	und	CCONJ	[nicht, reduzierend, ,, wird]	4	b4	6
+nicht	nicht	PART	PTKNEG	ng	wirkt	VERB	[]	4	b4	6
+reduzierend	reduzierend	ADV	ADJD	mo	wirkt	VERB	[]	4	b4	6
+,	--	PUNCT	$,	punct	wirkt	VERB	[]	4	b4	6
+sie	sie	PRON	PPER	sb	wird	AUX	[]	4	b4	6
+wird	werden	AUX	VAFIN	oc	wirkt	VERB	[sie, verwendet]	4	b4	6
+in	in	ADP	APPR	mo	verwendet	VERB	[Pflanze]	4	b4	6
+der	der	DET	ART	nk	Pflanze	NOUN	[]	4	b4	6
+Pflanze	Pflanze	NOUN	NN	nk	in	ADP	[der]	4	b4	6
+vor	vor	ADP	APPR	mo	als	ADP	[allem]	4	b4	6
+allem	alle	PRON	PIS	nk	vor	ADP	[]	4	b4	6
+als	als	ADP	APPR	mo	verwendet	VERB	[vor, Speicherstoff]	4	b4	6
+leicht	leicht	ADV	ADJD	mo	verfügbarer	ADJ	[]	4	b4	6
+verfügbarer	verfügbar	ADJ	ADJA	nk	Speicherstoff	NOUN	[leicht]	4	b4	6
+Speicherstoff	Speicherstoff	NOUN	NN	nk	als	ADP	[verfügbarer]	4	b4	6
+verwendet	verwenden	VERB	VVPP	oc	wird	AUX	[in, als]	4	b4	6
+.	--	PUNCT	$.	punct	ist	AUX	[]	4	b4	6
+Stärke	Stärke	NOUN	NN	sb	ist	AUX	[]	4	b4	7
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Stärke, Polymer, wirkt, .]	4	b4	7
+ein	ein	DET	ART	nk	Polymer	NOUN	[]	4	b4	7
+großes	groß	ADJ	ADJA	nk	Polymer	NOUN	[]	4	b4	7
+Polymer	Polymer	NOUN	NN	pd	ist	AUX	[ein, großes, aus]	4	b4	7
+aus	aus	ADP	APPR	mnr	Polymer	NOUN	[Glucose]	4	b4	7
+Glucose	Glucose	NOUN	NN	nk	aus	ADP	[]	4	b4	7
+,	--	PUNCT	$,	punct	wirkt	VERB	[]	4	b4	7
+wirkt	wirken	VERB	VVFIN	cj	ist	AUX	[,, ebenfalls, nicht, reduzierend, und]	4	b4	7
+ebenfalls	ebenfalls	ADV	ADV	mo	wirkt	VERB	[]	4	b4	7
+nicht	nicht	PART	PTKNEG	ng	wirkt	VERB	[]	4	b4	7
+reduzierend	reduzierend	ADV	ADJD	mo	wirkt	VERB	[]	4	b4	7
+und	und	CCONJ	KON	cd	wirkt	VERB	[ist]	4	b4	7
+ist	sein	AUX	VAFIN	cj	und	CCONJ	[finden]	4	b4	7
+hauptsächlich	hauptsächlich	ADV	ADJD	mo	finden	VERB	[]	4	b4	7
+in	in	ADP	APPR	mo	finden	VERB	[Speicherorganen]	4	b4	7
+Speicherorganen	Speicherorga	NOUN	NN	nk	in	ADP	[]	4	b4	7
+zu	zu	PART	PTKZU	pm	finden	VERB	[]	4	b4	7
+finden	finden	VERB	VVINF	oc	ist	AUX	[hauptsächlich, in, zu]	4	b4	7
+.	--	PUNCT	$.	punct	ist	AUX	[]	4	b4	7
+Das	der	DET	ART	nk	Kohlenhydrat	NOUN	[]	4	b4	8
+am	am	PART	PTKA	pm	häufigsten	ADV	[]	4	b4	8
+häufigsten	häufig	ADV	ADJD	mo	vorkommende	ADJ	[am]	4	b4	8
+in	in	ADP	APPR	mo	vorkommende	ADJ	[Biosphäre]	4	b4	8
+der	der	DET	ART	nk	Biosphäre	NOUN	[]	4	b4	8
+Biosphäre	Biosphäre	NOUN	NN	nk	in	ADP	[der]	4	b4	8
+vorkommende	vorkommend	ADJ	ADJA	nk	Kohlenhydrat	NOUN	[häufigsten, in]	4	b4	8
+Kohlenhydrat	Kohlenhydrat	NOUN	NN	sb	ist	AUX	[Das, vorkommende]	4	b4	8
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Kohlenhydrat, unbestritten, Cellulose, .]	4	b4	8
+unbestritten	unbestritten	ADV	ADJD	mo	ist	AUX	[]	4	b4	8
+die	der	DET	ART	nk	Cellulose	NOUN	[]	4	b4	8
+Cellulose	Cellulose	NOUN	NN	pd	ist	AUX	[die]	4	b4	8
+.	--	PUNCT	$.	punct	ist	AUX	[]	4	b4	8
+Sie	sie	PRON	PPER	sb	ist	AUX	[]	4	b4	9
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Sie, Polymer, und, .]	4	b4	9
+ein	ein	DET	ART	nk	Polymer	NOUN	[]	4	b4	9
+lineares	linear	ADJ	ADJA	nk	Polymer	NOUN	[]	4	b4	9
+Polymer	Polymer	NOUN	NN	pd	ist	AUX	[ein, lineares, aus]	4	b4	9
+aus	aus	ADP	APPR	mnr	Polymer	NOUN	[β-D-Glucose]	4	b4	9
+β-D-Glucose	β-D-Glucose	PROPN	NN	nk	aus	ADP	[]	4	b4	9
+und	und	CCONJ	KON	cd	ist	AUX	[liegt]	4	b4	9
+liegt	liegen	VERB	VVFIN	cj	und	CCONJ	[extrazellulär, vor]	4	b4	9
+hauptsächlich	hauptsächlich	ADV	ADJD	mo	extrazellulär	ADV	[]	4	b4	9
+extrazellulär	extrazellulär	ADV	ADJD	mo	liegt	VERB	[hauptsächlich]	4	b4	9
+vor	vor	ADP	PTKVZ	svp	liegt	VERB	[]	4	b4	9
+.	--	PUNCT	$.	punct	ist	AUX	[]	4	b4	9
+Dieses	dieser	DET	PDAT	nk	Molekül	NOUN	[]	4	b4	10
+Molekül	Molekül	NOUN	NN	sb	wird	AUX	[Dieses]	4	b4	10
+wird	werden	AUX	VAFIN	ROOT	wird	AUX	[Molekül, synthetisiert, .]	4	b4	10
+durch	durch	ADP	APPR	mo	synthetisiert	VERB	[Cellulose-Synthasekomplexe]	4	b4	10
+membranständige	membranständig	ADJ	ADJA	nk	Cellulose-Synthasekomplexe	NOUN	[]	4	b4	10
+Cellulose-Synthasekomplexe	Cellulose-Synthasekomplexe	NOUN	NN	nk	durch	ADP	[membranständige, zirkulieren]	4	b4	10
+synthetisiert	synthetisiern	VERB	VVPP	oc	wird	AUX	[durch, ,]	4	b4	10
+,	--	PUNCT	$,	punct	synthetisiert	VERB	[]	4	b4	10
+die	der	PRON	PRELS	sb	zirkulieren	VERB	[]	4	b4	10
+in	in	ADP	APPR	mo	zirkulieren	VERB	[Membran]	4	b4	10
+der	der	DET	ART	nk	Membran	PROPN	[]	4	b4	10
+Membran	Membran	PROPN	NN	nk	in	ADP	[der]	4	b4	10
+zirkulieren	zirkulieren	VERB	VVFIN	rc	Cellulose-Synthasekomplexe	NOUN	[die, in, und]	4	b4	10
+und	und	CCONJ	KON	cd	zirkulieren	VERB	[weben]	4	b4	10
+in	in	ADP	APPR	mo	weben	VERB	[Weise]	4	b4	10
+gewisser	gewiß	ADJ	ADJA	nk	Weise	NOUN	[]	4	b4	10
+Weise	Weise	NOUN	NN	nk	in	ADP	[gewisser, ausmachen]	4	b4	10
+die	der	DET	ART	nk	Cellulose-Mikrofibrillen	NOUN	[]	4	b4	10
+Cellulose-Mikrofibrillen	Cellulose-Mikrofibrille	NOUN	NN	oa	weben	VERB	[die]	4	b4	10
+""""	--	PUNCT	$LRB	punct	weben	VERB	[]	4	b4	10
+weben	weben	VERB	VVFIN	cj	und	CCONJ	"[in, Cellulose-Mikrofibrillen, "", "", ,]"	4	b4	10
+""""	--	PUNCT	$LRB	punct	weben	VERB	[]	4	b4	10
+,	--	PUNCT	$,	punct	weben	VERB	[]	4	b4	10
+die	der	PRON	PRELS	sb	ausmachen	VERB	[]	4	b4	10
+die	der	DET	ART	nk	Matrix	NOUN	[]	4	b4	10
+extrazelluläre	extrazellulär	ADJ	ADJA	nk	Matrix	NOUN	[]	4	b4	10
+Matrix	Matrix	NOUN	NN	oa	ausmachen	VERB	[die, extrazelluläre, Pflanzenzellen]	4	b4	10
+der	der	DET	ART	nk	Pflanzenzellen	NOUN	[]	4	b4	10
+Pflanzenzellen	Pflanzenzell	NOUN	NN	ag	Matrix	NOUN	[der]	4	b4	10
+ausmachen	ausmachen	VERB	VVFIN	rc	Weise	NOUN	[die, Matrix]	4	b4	10
+.	--	PUNCT	$.	punct	wird	AUX	[]	4	b4	10
+Motormoleküle	Motormoleküle	ADV	NN	pd	sind	AUX	[]	3	b3	1
+sind	sein	AUX	VAFIN	ROOT	sind	AUX	[Motormoleküle, Enzyme, .]	3	b3	1
+Enzyme	Enzyme	NOUN	NN	sb	sind	AUX	[,, umwandeln]	3	b3	1
+,	--	PUNCT	$,	punct	Enzyme	NOUN	[]	3	b3	1
+welche	welcher	PRON	PRELS	sb	umwandeln	VERB	[]	3	b3	1
+die	der	DET	ART	nk	Energie	NOUN	[]	3	b3	1
+Energie	Energie	NOUN	NN	oa	umwandeln	VERB	[die]	3	b3	1
+aus	aus	ADP	APPR	mo	umwandeln	VERB	[Hydrolyse]	3	b3	1
+der	der	DET	ART	nk	Hydrolyse	NOUN	[]	3	b3	1
+Hydrolyse	Hydrolyse	NOUN	NN	nk	aus	ADP	[der, von, in]	3	b3	1
+von	von	ADP	APPR	pg	Hydrolyse	NOUN	[ATP]	3	b3	1
+ATP	ATP	PROPN	NN	nk	von	ADP	[]	3	b3	1
+in	in	ADP	APPR	mnr	Hydrolyse	NOUN	[Energie]	3	b3	1
+mechanische	mechanisch	ADJ	ADJA	nk	Energie	NOUN	[]	3	b3	1
+Energie	Energie	NOUN	NN	nk	in	ADP	[mechanische]	3	b3	1
+umwandeln	umwandeln	VERB	VVFIN	rc	Enzyme	NOUN	[welche, Energie, aus]	3	b3	1
+.	--	PUNCT	$.	punct	sind	AUX	[]	3	b3	1
+Dabei	dabei	ADV	PROAV	mo	induzieren	VERB	[]	3	b3	2
+induzieren	induzieren	VERB	VVFIN	ROOT	induzieren	VERB	[Dabei, sie, Konformationsänderung, .]	3	b3	2
+sie	sie	PRON	PPER	sb	induzieren	VERB	[]	3	b3	2
+eine	ein	DET	ART	nk	Konformationsänderung	NOUN	[]	3	b3	2
+Konformationsänderung	Konformationsänderung	NOUN	NN	oa	induzieren	VERB	[eine, ,, ermöglicht]	3	b3	2
+,	--	PUNCT	$,	punct	Konformationsänderung	NOUN	[]	3	b3	2
+die	der	PRON	PRELS	sb	ermöglicht	VERB	[]	3	b3	2
+einen	ein	DET	ART	nk	Transport	NOUN	[]	3	b3	2
+Transport	Transport	NOUN	NN	oa	ermöglicht	VERB	[einen, auf]	3	b3	2
+auf	auf	ADP	APPR	mnr	Transport	NOUN	[Gleisen]	3	b3	2
+den	der	DET	ART	nk	Gleisen	NOUN	[]	3	b3	2
+""""	--	PUNCT	$LRB	punct	Gleisen	NOUN	[]	3	b3	2
+Gleisen	Gleis	NOUN	NN	nk	auf	ADP	"[den, "", ""]"	3	b3	2
+""""	--	PUNCT	$LRB	punct	Gleisen	NOUN	[]	3	b3	2
+ermöglicht	ermöglichen	VERB	VVFIN	rc	Konformationsänderung	NOUN	[die, Transport]	3	b3	2
+.	--	PUNCT	$.	punct	induzieren	VERB	[]	3	b3	2
+Die	der	DET	ART	nk	Gleise	NOUN	[]	3	b3	3
+""""	--	PUNCT	$LRB	punct	Gleise	NOUN	[]	3	b3	3
+Gleise	Gleis	NOUN	NN	mo	können	AUX	"[Die, "", ""]"	3	b3	3
+""""	--	PUNCT	$LRB	punct	Gleise	NOUN	[]	3	b3	3
+können	können	AUX	VMFIN	ROOT	können	AUX	[Gleise, Mikrotubuli, sein, .]	3	b3	3
+Mikrotubuli	Mikrotubuli	PROPN	NN	sb	können	AUX	[oder]	3	b3	3
+oder	oder	CCONJ	KON	cd	Mikrotubuli	PROPN	[Aktinfilamente]	3	b3	3
+Aktinfilamente	Aktinfilament	NOUN	NN	cj	oder	CCONJ	[]	3	b3	3
+sein	sein	AUX	VAINF	oc	können	AUX	[]	3	b3	3
+.	--	PUNCT	$.	punct	können	AUX	[]	3	b3	3
+Aktinbindende	aktinbindend	ADJ	ADJA	nk	Motorproteine	NOUN	[]	3	b3	4
+Motorproteine	Motorprotein	NOUN	NN	sb	sind	AUX	[Aktinbindende]	3	b3	4
+sind	sein	AUX	VAFIN	ROOT	sind	AUX	[Motorproteine, Myosine, .]	3	b3	4
+die	der	DET	ART	nk	Myosine	NOUN	[]	3	b3	4
+Myosine	Myosin	NOUN	NN	pd	sind	AUX	[die, ,, vorkommen]	3	b3	4
+,	--	PUNCT	$,	punct	Myosine	NOUN	[]	3	b3	4
+von	von	ADP	APPR	mo	vorkommen	VERB	[denen]	3	b3	4
+denen	der	PRON	PRELS	nk	von	ADP	[]	3	b3	4
+in	in	ADP	APPR	mo	vorkommen	VERB	[Eukaryoten]	3	b3	4
+Eukaryoten	Eukaryot	NOUN	NE	nk	in	ADP	[]	3	b3	4
+siebzehn	siebzehn	NUM	CARD	nk	Familien	NOUN	[]	3	b3	4
+Familien	Familie	NOUN	NN	oa	vorkommen	VERB	[siebzehn]	3	b3	4
+vorkommen	vorkommen	VERB	VVFIN	rc	Myosine	NOUN	[von, in, Familien]	3	b3	4
+.	--	PUNCT	$.	punct	sind	AUX	[]	3	b3	4
+Eine	ein	DET	ART	nk	Kette	NOUN	[]	3	b3	5
+schwere	schwer	ADJ	ADJA	nk	Kette	NOUN	[]	3	b3	5
+Kette	Kette	NOUN	NN	sb	ist	AUX	[Eine, schwere]	3	b3	5
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Kette, beteiligt, .]	3	b3	5
+an	an	ADP	APPR	op	beteiligt	VERB	[Ausbildung]	3	b3	5
+der	der	DET	ART	nk	Ausbildung	NOUN	[]	3	b3	5
+Ausbildung	Ausbildung	NOUN	NN	nk	an	ADP	[der, Kopfregion, bildet]	3	b3	5
+einer	ein	DET	ART	nk	Kopfregion	NOUN	[]	3	b3	5
+Schwanz-	Schwanz	X	TRUNC	cj	und	CCONJ	[]	3	b3	5
+und	und	CCONJ	KON	cd	Kopfregion	NOUN	[Schwanz-]	3	b3	5
+einer	ein	DET	ART	nk	Kopfregion	NOUN	[]	3	b3	5
+Kopfregion	Kopfregion	NOUN	NN	ag	Ausbildung	NOUN	[einer, und, einer]	3	b3	5
+beteiligt	beteiligen	VERB	VVPP	pd	ist	AUX	[an, ,]	3	b3	5
+,	--	PUNCT	$,	punct	beteiligt	VERB	[]	3	b3	5
+welche	welcher	PRON	PRELS	oa	bildet	VERB	[]	3	b3	5
+die	der	DET	ART	nk	Motordomäne	NOUN	[]	3	b3	5
+Motordomäne	Motordoman	NOUN	NN	sb	bildet	VERB	[die]	3	b3	5
+bildet	bilden	VERB	VVFIN	rc	Ausbildung	NOUN	[welche, Motordomäne]	3	b3	5
+.	--	PUNCT	$.	punct	ist	AUX	[]	3	b3	5
+Der	der	DET	ART	nk	Kopf	NOUN	[]	3	b3	6
+Kopf	Kopf	NOUN	NN	sb	besitzt	VERB	[Der]	3	b3	6
+besitzt	besitzen	VERB	VVFIN	ROOT	besitzt	VERB	[Kopf, ATP-Bindungsstelle, .]	3	b3	6
+eine	ein	DET	ART	nk	ATP-Bindungsstelle	NOUN	[]	3	b3	6
+Aktin-	Aktin	X	TRUNC	cj	und	CCONJ	[]	3	b3	6
+und	und	CCONJ	KON	cd	ATP-Bindungsstelle	NOUN	[Aktin-]	3	b3	6
+eine	ein	DET	ART	nk	ATP-Bindungsstelle	NOUN	[]	3	b3	6
+ATP-Bindungsstelle	ATP-Bindungsstelle	NOUN	NN	oa	besitzt	VERB	[eine, und, eine]	3	b3	6
+.	--	PUNCT	$.	punct	besitzt	VERB	[]	3	b3	6
+Im	in	ADP	APPRART	mo	können	AUX	[Übergangsbereich]	3	b3	7
+Übergangsbereich	Übergangsbereich	NOUN	NN	nk	Im	ADP	[von, zu]	3	b3	7
+von	von	ADP	APPR	mnr	Übergangsbereich	NOUN	[Kopf]	3	b3	7
+Kopf	Kopf	NOUN	NN	nk	von	ADP	[]	3	b3	7
+zu	zu	ADP	APPR	mnr	Übergangsbereich	NOUN	[Schwanz]	3	b3	7
+Schwanz	Schwanz	NOUN	NN	nk	zu	ADP	[]	3	b3	7
+können	können	AUX	VMFIN	ROOT	können	AUX	[Im, binden, .]	3	b3	7
+unterschiedliche	unterschiedlich	ADJ	ADJA	nk	Ketten	NOUN	[]	3	b3	7
+leichte	leicht	ADJ	ADJA	nk	Ketten	NOUN	[]	3	b3	7
+Ketten	Kette	NOUN	NN	oa	binden	VERB	[unterschiedliche, leichte]	3	b3	7
+binden	binden	VERB	VVINF	oc	können	AUX	[Ketten, und]	3	b3	7
+und	und	CCONJ	KON	cd	binden	VERB	[mitwirken]	3	b3	7
+auf	auf	ADP	APPR	mo	mitwirken	VERB	[Weise]	3	b3	7
+diese	dieser	DET	PDAT	nk	Weise	NOUN	[]	3	b3	7
+Weise	Weise	NOUN	NN	nk	auf	ADP	[diese]	3	b3	7
+an	an	ADP	APPR	op	mitwirken	VERB	[Regulation]	3	b3	7
+der	der	DET	ART	nk	Regulation	NOUN	[]	3	b3	7
+Regulation	Regulation	NOUN	NN	nk	an	ADP	[der, von]	3	b3	7
+von	von	ADP	APPR	pg	Regulation	NOUN	[Myosin]	3	b3	7
+Myosin	Myosin	NOUN	NN	nk	von	ADP	[]	3	b3	7
+mitwirken	mitwirken	VERB	VVINF	cj	und	CCONJ	[auf, an]	3	b3	7
+.	--	PUNCT	$.	punct	können	AUX	[]	3	b3	7
+In	in	ADP	APPR	mo	registriert	VERB	[Zellen, beispielsweise]	3	b3	8
+den	der	DET	ART	nk	Zellen	NOUN	[]	3	b3	8
+nicht	nicht	PART	PTKNEG	ng	muskulären	ADJ	[]	3	b3	8
+muskulären	muskuläer	ADJ	ADJA	nk	Zellen	NOUN	[nicht]	3	b3	8
+Zellen	Zelle	NOUN	NN	nk	In	ADP	[den, muskulären]	3	b3	8
+beispielsweise	beispielsweise	ADV	ADV	mo	In	ADP	[]	3	b3	8
+registriert	registrieren	VERB	VVFIN	ROOT	registriert	VERB	[In, Calmodulinkette, Anwesenheit, und, .]	3	b3	8
+eine	ein	DET	ART	nk	Calmodulinkette	NOUN	[]	3	b3	8
+Calmodulinkette	Calmodulinkette	NOUN	NN	sb	registriert	VERB	[eine]	3	b3	8
+die	der	DET	ART	nk	Anwesenheit	NOUN	[]	3	b3	8
+Anwesenheit	Anwesenheit	NOUN	NN	oa	registriert	VERB	[die, von]	3	b3	8
+von	von	ADP	APPR	pg	Anwesenheit	NOUN	[Calciumionen]	3	b3	8
+Calciumionen	Calciumion	NOUN	NN	nk	von	ADP	[]	3	b3	8
+und	und	CCONJ	KON	cd	registriert	VERB	[ermöglicht]	3	b3	8
+ermöglicht	ermöglichen	VERB	VVFIN	cj	und	CCONJ	[Bindung, an]	3	b3	8
+die	der	DET	ART	nk	Bindung	NOUN	[]	3	b3	8
+Bindung	Bindung	NOUN	NN	oa	ermöglicht	VERB	[die, von]	3	b3	8
+von	von	ADP	APPR	pg	Bindung	NOUN	[Myosin]	3	b3	8
+Myosin	Myosin	NOUN	NN	nk	von	ADP	[]	3	b3	8
+an	an	ADP	APPR	mo	ermöglicht	VERB	[Aktin]	3	b3	8
+Aktin	Aktin	NOUN	NN	nk	an	ADP	[]	3	b3	8
+.	--	PUNCT	$.	punct	registriert	VERB	[]	3	b3	8
+Je	je	ADV	ADV	mo	nach	ADP	[]	3	b3	9
+nach	nach	ADP	APPR	mo	kann	AUX	[Je, Klasse]	3	b3	9
+Klasse	Klasse	NOUN	NN	nk	nach	ADP	[]	3	b3	9
+kann	können	AUX	VMFIN	ROOT	kann	AUX	[nach, Schwanz, anlagern, .]	3	b3	9
+der	der	DET	ART	nk	Schwanz	NOUN	[]	3	b3	9
+Schwanz	Schwanz	NOUN	NN	sb	kann	AUX	[der]	3	b3	9
+an	an	ADP	APPR	mo	anlagern	VERB	[Vesikel]	3	b3	9
+Vesikel	Vesikel	NOUN	NN	nk	an	ADP	[]	3	b3	9
+anlagern	anlagern	VERB	VVINF	oc	kann	AUX	[an, ,, ziehen]	3	b3	9
+,	--	PUNCT	$,	punct	anlagern	VERB	[]	3	b3	9
+um	um	SCONJ	KOUI	cp	ziehen	VERB	[]	3	b3	9
+sie	sie	PRON	PPER	oa	ziehen	VERB	[]	3	b3	9
+entlang	entlang	ADP	APPR	mo	ziehen	VERB	[Aktinfilaments]	3	b3	9
+des	der	DET	ART	nk	Aktinfilaments	NOUN	[]	3	b3	9
+Aktinfilaments	Aktinfilament	NOUN	NN	nk	entlang	ADP	[des]	3	b3	9
+zu	zu	PART	PTKZU	pm	ziehen	VERB	[]	3	b3	9
+ziehen	ziehen	VERB	VVINF	mo	anlagern	VERB	[um, sie, entlang, zu]	3	b3	9
+.	--	PUNCT	$.	punct	kann	AUX	[]	3	b3	9
+Alle	aller	DET	PIAT	nk	Myosine	NOUN	[]	3	b3	10
+Myosine	Myosin	NOUN	NN	sb	bewegen	VERB	[Alle, auf]	3	b3	10
+bis	bis	ADP	APPR	ac	auf	ADP	[]	3	b3	10
+auf	auf	ADP	APPR	mnr	Myosine	NOUN	[bis, Myosin]	3	b3	10
+Myosin	Myosin	NOUN	NN	nk	auf	ADP	[VI]	3	b3	10
+VI	VI	NOUN	CARD	nk	Myosin	NOUN	[]	3	b3	10
+bewegen	bewegen	VERB	VVFIN	ROOT	bewegen	VERB	[Myosine, sich, zum, .]	3	b3	10
+sich	sich	PRON	PRF	oa	bewegen	VERB	[]	3	b3	10
+zum	zu	ADP	APPRART	mo	bewegen	VERB	[+, Aktinfilaments]	3	b3	10
++	+	CCONJ	$LRB	cd	zum	ADP	[Ende]	3	b3	10
+Ende	Ende	NOUN	NN	cj	+	CCONJ	[]	3	b3	10
+des	der	DET	ART	nk	Aktinfilaments	NOUN	[]	3	b3	10
+Aktinfilaments	Aktinfilament	NOUN	NN	ag	zum	ADP	[des]	3	b3	10
+.	--	PUNCT	$.	punct	bewegen	VERB	[]	3	b3	10
+Myosin	Myosin	NOUN	NE	sb	ist	AUX	[II]	3	b3	11
+II	II	NUM	CARD	nk	Myosin	NOUN	[]	3	b3	11
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Myosin, Dimer, ,, hat, .]	3	b3	11
+ein	ein	DET	ART	nk	Dimer	NOUN	[]	3	b3	11
+Dimer	Dimer	NOUN	NN	pd	ist	AUX	[ein]	3	b3	11
+,	--	PUNCT	$,	punct	ist	AUX	[]	3	b3	11
+es	es	PRON	PPER	ep	hat	VERB	[]	3	b3	11
+hat	haben	VERB	VAFIN	cj	ist	AUX	[es, Köpfe, und]	3	b3	11
+zwei	zwei	NUM	CARD	nk	Köpfe	NOUN	[]	3	b3	11
+Köpfe	Kopf	NOUN	NN	oa	hat	VERB	[zwei]	3	b3	11
+und	und	CCONJ	KON	cd	hat	VERB	[kann]	3	b3	11
+kann	können	AUX	VMFIN	cj	und	CCONJ	[binden]	3	b3	11
+mit	mit	ADP	APPR	mo	binden	VERB	[Schwanz]	3	b3	11
+seinem	sein	DET	PPOSAT	nk	Schwanz	NOUN	[]	3	b3	11
+Schwanz	Schwanz	NOUN	NN	nk	mit	ADP	[seinem]	3	b3	11
+an	an	ADP	APPR	mo	binden	VERB	[Filament]	3	b3	11
+ein	ein	DET	ART	nk	Filament	NOUN	[]	3	b3	11
+bipolares	bipolar	ADJ	ADJA	nk	Filament	NOUN	[]	3	b3	11
+Filament	Filament	NOUN	NN	nk	an	ADP	[ein, bipolares]	3	b3	11
+binden	binden	VERB	VVINF	oc	kann	AUX	[mit, an]	3	b3	11
+.	--	PUNCT	$.	punct	ist	AUX	[]	3	b3	11
+Es	es	PRON	PPER	sb	ist	AUX	[]	3	b3	12
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Es, finden, ,, aber, .]	3	b3	12
+im	in	ADP	APPRART	mo	finden	VERB	[Apparat]	3	b3	12
+kontraktilen	kontraktil	ADJ	ADJA	nk	Apparat	NOUN	[]	3	b3	12
+Apparat	Apparat	NOUN	NN	nk	im	ADP	[kontraktilen, Muskelzellen]	3	b3	12
+der	der	DET	ART	nk	Muskelzellen	NOUN	[]	3	b3	12
+Muskelzellen	Muskelzell	NOUN	NN	ag	Apparat	NOUN	[der]	3	b3	12
+zu	zu	PART	PTKZU	pm	finden	VERB	[]	3	b3	12
+finden	finden	VERB	VVINF	oc	ist	AUX	[im, zu]	3	b3	12
+,	--	PUNCT	$,	punct	ist	AUX	[]	3	b3	12
+aber	aber	CCONJ	KON	cd	ist	AUX	[in]	3	b3	12
+auch	auch	ADV	ADV	mo	in	ADP	[]	3	b3	12
+in	in	ADP	APPR	cj	aber	CCONJ	[auch, Zellen]	3	b3	12
+anderen	anderer	ADJ	ADJA	nk	Zellen	NOUN	[]	3	b3	12
+Zellen	Zelle	NOUN	NN	nk	in	ADP	[anderen, ,, ist]	3	b3	12
+,	--	PUNCT	$,	punct	Zellen	NOUN	[]	3	b3	12
+wo	wo	SCONJ	PWAV	mo	ist	AUX	[]	3	b3	12
+es	es	PRON	PPER	sb	ist	AUX	[]	3	b3	12
+am	an	ADP	APPRART	mo	beteiligt	VERB	[Kontraktionsmechanismus]	3	b3	12
+Kontraktionsmechanismus	Kontraktionsmechanismus	NOUN	NN	nk	am	ADP	[]	3	b3	12
+beteiligt	beteiligen	VERB	VVPP	pd	ist	AUX	[am]	3	b3	12
+ist	sein	AUX	VAFIN	rc	Zellen	NOUN	[wo, es, beteiligt]	3	b3	12
+.	--	PUNCT	$.	punct	ist	AUX	[]	3	b3	12
+Wenn	wenn	SCONJ	KOUS	cp	absorbiert	VERB	[]	7	p1	1
+ein	ein	DET	ART	nk	Atom	NOUN	[]	7	p1	1
+ruhendes	ruhend	ADJ	ADJA	nk	Atom	NOUN	[]	7	p1	1
+Atom	atom	NOUN	NN	sb	absorbiert	VERB	[ein, ruhendes]	7	p1	1
+ein	ein	DET	ART	nk	Photon	NOUN	[]	7	p1	1
+Photon	Photon	NOUN	NN	oa	absorbiert	VERB	[ein]	7	p1	1
+absorbiert	absorbieren	VERB	VVFIN	re	so	ADV	[Wenn, Atom, Photon]	7	p1	1
+,	--	PUNCT	$,	punct	so	ADV	[]	7	p1	1
+so	so	ADV	ADV	mo	nimmt	VERB	[absorbiert, ,]	7	p1	1
+nimmt	nehmen	VERB	VVFIN	ROOT	nimmt	VERB	[so, es, bei, Photonenimpuls, auf, und, .]	7	p1	1
+es	es	PRON	PPER	ep	nimmt	VERB	[]	7	p1	1
+bei	bei	ADP	APPR	mo	nimmt	VERB	[Absorption]	7	p1	1
+der	der	DET	ART	nk	Absorption	NOUN	[]	7	p1	1
+Absorption	Absorption	NOUN	NN	nk	bei	ADP	[der]	7	p1	1
+den	der	DET	ART	nk	Photonenimpuls	NOUN	[]	7	p1	1
+Photonenimpuls	Photonenimpuls	NOUN	NN	da	nimmt	VERB	[den]	7	p1	1
+auf	auf	ADP	PTKVZ	svp	nimmt	VERB	[]	7	p1	1
+und	und	CCONJ	KON	cd	nimmt	VERB	[erfährt]	7	p1	1
+erfährt	erfahren	VERB	VVFIN	cj	und	CCONJ	[deshalb, Rückstoßimpuls]	7	p1	1
+deshalb	deshalb	ADV	PROAV	mo	erfährt	VERB	[]	7	p1	1
+einen	ein	DET	ART	nk	Rückstoßimpuls	NOUN	[]	7	p1	1
+Rückstoßimpuls	Rückstoßimpuls	NOUN	NN	oa	erfährt	VERB	[einen, ,, führt]	7	p1	1
+,	--	PUNCT	$,	punct	Rückstoßimpuls	NOUN	[]	7	p1	1
+der	der	PRON	PRELS	sb	führt	VERB	[]	7	p1	1
+zu	zu	ADP	APPR	mo	führt	VERB	[Rückstoßenergie]	7	p1	1
+einer	ein	DET	ART	nk	Rückstoßenergie	NOUN	[]	7	p1	1
+kinetischen	kinetisch	ADJ	ADJA	nk	Rückstoßenergie	NOUN	[]	7	p1	1
+Rückstoßenergie	Rückstoßenergie	NOUN	NN	nk	zu	ADP	[einer, kinetischen]	7	p1	1
+führt	führen	VERB	VVFIN	rc	Rückstoßimpuls	NOUN	[der, zu]	7	p1	1
+.	--	PUNCT	$.	punct	nimmt	VERB	[]	7	p1	1
+Die	der	DET	ART	nk	Photonenenergie	NOUN	[]	7	p1	2
+Photonenenergie	Photonenenergie	NOUN	NN	sb	wird	AUX	[Die]	7	p1	2
+wird	werden	AUX	VAFIN	ROOT	wird	AUX	[Photonenenergie, übertragen, .]	7	p1	2
+dabei	dabei	ADV	PROAV	mo	übertragen	VERB	[]	7	p1	2
+zum	zu	ADP	APPRART	op	übertragen	VERB	[einen, als]	7	p1	2
+einen	einer	PRON	PIS	nk	zum	ADP	[]	7	p1	2
+als	als	ADP	APPR	mo	zum	ADP	[Rückstoßenergie, und]	7	p1	2
+Rückstoßenergie	Rückstoßenergie	NOUN	NN	nk	als	ADP	[]	7	p1	2
+und	und	CCONJ	KON	cd	als	ADP	[als]	7	p1	2
+zum	zu	ADP	APPRART	mo	als	ADP	[anderen]	7	p1	2
+anderen	anderer	ADJ	PIS	nk	zum	ADP	[]	7	p1	2
+als	als	ADP	APPR	cj	und	CCONJ	[zum, Anregungsenergie]	7	p1	2
+Anregungsenergie	Anregungsenergie	NOUN	NN	nk	als	ADP	[]	7	p1	2
+auf	auf	ADP	APPR	op	übertragen	VERB	[Atom]	7	p1	2
+das	der	DET	ART	nk	Atom	NOUN	[]	7	p1	2
+Atom	Atom	NOUN	NN	nk	auf	ADP	[das]	7	p1	2
+übertragen	übertragen	VERB	VVPP	oc	wird	AUX	[dabei, zum, auf]	7	p1	2
+.	--	PUNCT	$.	punct	wird	AUX	[]	7	p1	2
+Die	der	DET	ART	nk	Frequenz	NOUN	[]	7	p1	3
+Frequenz	Frequenz	NOUN	NN	sb	unterscheidet	VERB	[Die, Anregung]	7	p1	3
+der	der	DET	ART	nk	Anregung	NOUN	[]	7	p1	3
+Anregung	Anregung	NOUN	NN	ag	Frequenz	NOUN	[der]	7	p1	3
+unterscheidet	unterscheiden	VERB	VVFIN	ROOT	unterscheidet	VERB	[Frequenz, sich, also, von, um, .]	7	p1	3
+sich	sich	PRON	PRF	oa	unterscheidet	VERB	[]	7	p1	3
+also	also	ADV	ADV	mo	unterscheidet	VERB	[]	7	p1	3
+von	von	ADP	APPR	mo	unterscheidet	VERB	[der]	7	p1	3
+der	der	PRON	PDS	nk	von	ADP	[Photons]	7	p1	3
+des	der	DET	ART	nk	Photons	NOUN	[]	7	p1	3
+Photons	Photon	NOUN	NN	ag	der	PRON	[des]	7	p1	3
+um	um	ADP	APPR	op	unterscheidet	VERB	[Betrag]	7	p1	3
+einen	ein	DET	ART	nk	Betrag	NOUN	[]	7	p1	3
+gewissen	gewiß	ADJ	ADJA	nk	Betrag	NOUN	[]	7	p1	3
+Betrag	Betrag	NOUN	NN	nk	um	ADP	[einen, gewissen]	7	p1	3
+.	--	PUNCT	$.	punct	unterscheidet	VERB	[]	7	p1	3
+Auch	auch	ADV	ADV	mo	bei	ADP	[]	7	p1	4
+bei	bei	ADP	APPR	mo	erfährt	VERB	[Auch, Emission]	7	p1	4
+der	der	DET	ART	nk	Emission	NOUN	[]	7	p1	4
+Emission	Emission	NOUN	NN	nk	bei	ADP	[der, Photons]	7	p1	4
+eines	ein	DET	ART	nk	Photons	NOUN	[]	7	p1	4
+Photons	Photon	NOUN	NN	ag	Emission	NOUN	[eines]	7	p1	4
+erfährt	erfahren	VERB	VVFIN	ROOT	erfährt	VERB	[bei, Atom, Rückstoß, .]	7	p1	4
+das	der	DET	ART	nk	Atom	NOUN	[]	7	p1	4
+Atom	Atom	NOUN	NN	sb	erfährt	VERB	[das]	7	p1	4
+einen	ein	DET	ART	nk	Rückstoß	NOUN	[]	7	p1	4
+Rückstoß	Rückstoß	NOUN	NN	oa	erfährt	VERB	[einen]	7	p1	4
+.	--	PUNCT	$.	punct	erfährt	VERB	[]	7	p1	4
+Die	der	DET	ART	nk	Rückstoßenergie	NOUN	[]	7	p1	5
+dabei	dabei	ADV	PROAV	mo	erzeugte	ADJ	[]	7	p1	5
+erzeugte	erzeugt	ADJ	ADJA	nk	Rückstoßenergie	NOUN	[dabei]	7	p1	5
+Rückstoßenergie	Rückstoßenergie	NOUN	NN	sb	fehlt	VERB	[Die, erzeugte]	7	p1	5
+fehlt	fehlen	VERB	VVFIN	ROOT	fehlt	VERB	[Rückstoßenergie, Photon, ,, ist, .]	7	p1	5
+dem	der	DET	ART	nk	Photon	NOUN	[]	7	p1	5
+emittierten	emittiert	ADJ	ADJA	nk	Photon	NOUN	[]	7	p1	5
+Photon	Photon	NOUN	NN	da	fehlt	VERB	[dem, emittierten]	7	p1	5
+,	--	PUNCT	$,	punct	fehlt	VERB	[]	7	p1	5
+so	so	ADV	ADV	mo	ist	AUX	[]	7	p1	5
+dass	dass	SCONJ	KOUS	cp	ist	AUX	[]	7	p1	5
+dessen	der	PRON	PDS	ag	Wellenlänge	NOUN	[]	7	p1	5
+Wellenlänge	Wellenlang	NOUN	NN	sb	ist	AUX	[dessen]	7	p1	5
+ebenfalls	ebenfalls	ADV	ADV	mo	verschieden	ADV	[]	7	p1	5
+von	von	ADP	APPR	mo	verschieden	ADV	[jener]	7	p1	5
+jener	jener	PRON	PDS	nk	von	ADP	[]	7	p1	5
+der	der	DET	ART	nk	Anregung	NOUN	[]	7	p1	5
+Anregung	Anregung	NOUN	NN	da	verschieden	ADV	[der]	7	p1	5
+verschieden	verschieden	ADV	ADJD	pd	ist	AUX	[ebenfalls, von, Anregung]	7	p1	5
+ist	sein	AUX	VAFIN	mo	fehlt	VERB	[so, dass, Wellenlänge, verschieden]	7	p1	5
+.	--	PUNCT	$.	punct	fehlt	VERB	[]	7	p1	5
+Atome	Atome	PROPN	NN	sb	können	AUX	[,, unterscheiden]	7	p1	6
+,	--	PUNCT	$,	punct	Atome	PROPN	[]	7	p1	6
+die	der	PRON	PRELS	sb	unterscheiden	VERB	[]	7	p1	6
+sich	sich	PRON	PRF	oa	unterscheiden	VERB	[]	7	p1	6
+nur	nur	ADV	ADV	mo	in	ADP	[]	7	p1	6
+in	in	ADP	APPR	mo	unterscheiden	VERB	[nur, Impuls]	7	p1	6
+ihrem	ihr	DET	PPOSAT	nk	Impuls	NOUN	[]	7	p1	6
+Impuls	Impuls	NOUN	NN	nk	in	ADP	[ihrem]	7	p1	6
+unterscheiden	unterscheiden	VERB	VVFIN	rc	Atome	PROPN	[die, sich, in]	7	p1	6
+,	--	PUNCT	$,	punct	können	AUX	[]	7	p1	6
+können	können	AUX	VMFIN	ROOT	können	AUX	[Atome, ,, also, absorbieren, .]	7	p1	6
+also	also	ADV	ADV	mo	können	AUX	[]	7	p1	6
+Photonen	Photon	NOUN	NN	oa	absorbieren	VERB	[]	7	p1	6
+mit	mit	ADP	APPR	mo	absorbieren	VERB	[Frequenz]	7	p1	6
+unterschiedlicher	unterschiedlich	ADJ	ADJA	nk	Frequenz	NOUN	[]	7	p1	6
+Frequenz	Frequenz	NOUN	NN	nk	mit	ADP	[unterschiedlicher]	7	p1	6
+absorbieren	absorbieren	VERB	VVINF	oc	können	AUX	[Photonen, mit, bzw.]	7	p1	6
+bzw.	bzw.	CCONJ	KON	cd	absorbieren	VERB	[emittieren]	7	p1	6
+emittieren	emittieren	VERB	VVINF	cj	bzw.	CCONJ	[]	7	p1	6
+.	--	PUNCT	$.	punct	können	AUX	[]	7	p1	6
+Befindet	Befindet	VERB	VVFIN	mo	überträgt	VERB	[sich, Atom]	7	p1	7
+sich	sich	PRON	PRF	oa	Befindet	VERB	[]	7	p1	7
+ein	ein	DET	ART	nk	Atom	NOUN	[]	7	p1	7
+Atom	Atom	NOUN	NN	sb	Befindet	VERB	[ein, in]	7	p1	7
+in	in	ADP	APPR	mnr	Atom	NOUN	[Kristallgitter]	7	p1	7
+einem	ein	DET	ART	nk	Kristallgitter	NOUN	[]	7	p1	7
+Kristallgitter	Kristallgitter	NOUN	NN	nk	in	ADP	[einem]	7	p1	7
+,	--	PUNCT	$,	punct	überträgt	VERB	[]	7	p1	7
+überträgt	übertragen	VERB	VVFIN	ROOT	überträgt	VERB	[Befindet, ,, sich, Rückstoß, entsprechen, .]	7	p1	7
+sich	sich	PRON	PRF	oa	überträgt	VERB	[]	7	p1	7
+der	der	DET	ART	nk	Rückstoß	NOUN	[]	7	p1	7
+Rückstoß	Rückstoß	NOUN	NN	sb	überträgt	VERB	[der, auf]	7	p1	7
+auf	auf	ADP	APPR	mnr	Rückstoß	NOUN	[dieses]	7	p1	7
+dieses	dieser	DET	PDS	nk	auf	ADP	[und]	7	p1	7
+und	und	CCONJ	KON	cd	dieses	DET	[Energie]	7	p1	7
+die	der	DET	ART	nk	Energie	NOUN	[]	7	p1	7
+Energie	Energie	NOUN	NN	cj	und	CCONJ	[die, von]	7	p1	7
+von	von	ADP	APPR	pg	Energie	NOUN	[Photon]	7	p1	7
+absorbiertem	absorbiert	ADJ	ADJA	nk	Photon	NOUN	[und]	7	p1	7
+und	und	CCONJ	KON	cd	absorbiertem	ADJ	[emittiertem]	7	p1	7
+emittiertem	emittiert	ADJ	ADJA	cj	und	CCONJ	[]	7	p1	7
+Photon	Photon	NOUN	NN	nk	von	ADP	[absorbiertem]	7	p1	7
+entsprechen	entsprechen	VERB	VVINF	mo	überträgt	VERB	[in]	7	p1	7
+in	in	ADP	APPR	mo	entsprechen	VERB	[Anregungsenergie]	7	p1	7
+etwa	etwa	ADV	ADV	mo	Anregungsenergie	NOUN	[]	7	p1	7
+der	der	DET	ART	nk	Anregungsenergie	NOUN	[]	7	p1	7
+Anregungsenergie	Anregungsenergie	NOUN	NN	nk	in	ADP	[etwa, der]	7	p1	7
+.	--	PUNCT	$.	punct	überträgt	VERB	[]	7	p1	7
+Dies	dieser	PRON	PDS	sb	wird	AUX	[]	7	p1	8
+wird	werden	AUX	VAFIN	ROOT	wird	AUX	[Dies, benutzt, .]	7	p1	8
+in	in	ADP	APPR	mo	benutzt	VERB	[Mößbauerspektroskopie]	7	p1	8
+der	der	DET	ART	nk	Mößbauerspektroskopie	NOUN	[]	7	p1	8
+Mößbauerspektroskopie	Mößbauerspektroskopie	NOUN	NN	nk	in	ADP	[der]	7	p1	8
+benutzt	benutzen	VERB	VVPP	oc	wird	AUX	[in, ,, analysieren]	7	p1	8
+,	--	PUNCT	$,	punct	benutzt	VERB	[]	7	p1	8
+um	um	SCONJ	KOUI	cp	analysieren	VERB	[]	7	p1	8
+mit	mit	ADP	APPR	mo	analysieren	VERB	[Hilfe]	7	p1	8
+Hilfe	Hilfe	NOUN	NN	nk	mit	ADP	[Dopplerverschiebung]	7	p1	8
+der	der	DET	ART	nk	Dopplerverschiebung	NOUN	[]	7	p1	8
+Dopplerverschiebung	Dopplerverschiebung	NOUN	NN	ag	Hilfe	NOUN	[der, Emissionslinien]	7	p1	8
+der	der	DET	ART	nk	Emissionslinien	NOUN	[]	7	p1	8
+Emissionslinien	Emissionslini	NOUN	NN	ag	Dopplerverschiebung	NOUN	[der]	7	p1	8
+etwa	etwa	ADV	ADV	mo	Hyperfeinstrukturenaufspaltungen	NOUN	[]	7	p1	8
+Hyperfeinstrukturenaufspaltungen	Hyperfeinstrukturenaufspaltung	NOUN	NN	oa	analysieren	VERB	[etwa, in]	7	p1	8
+in	in	ADP	APPR	mnr	Hyperfeinstrukturenaufspaltungen	NOUN	[Probe]	7	p1	8
+einer	ein	DET	ART	nk	Probe	NOUN	[]	7	p1	8
+Probe	Probe	NOUN	NN	nk	in	ADP	[einer]	7	p1	8
+zu	zu	PART	PTKZU	pm	analysieren	VERB	[]	7	p1	8
+analysieren	analysieren	VERB	VVINF	mo	benutzt	VERB	[um, mit, Hyperfeinstrukturenaufspaltungen, zu]	7	p1	8
+.	--	PUNCT	$.	punct	wird	AUX	[]	7	p1	8
+Ein	ein	DET	ART	nk	Prion	NOUN	[]	5	b5	1
+Prion	Prion	NOUN	NN	sb	ist	AUX	[Ein]	5	b5	1
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Prion, Protein, .]	5	b5	1
+ein	ein	DET	ART	nk	Protein	NOUN	[]	5	b5	1
+infektiöses	infektiös	ADJ	ADJA	nk	Protein	NOUN	[]	5	b5	1
+Protein	Protein	NOUN	NN	pd	ist	AUX	[ein, infektiöses, ,, abstammt]	5	b5	1
+,	--	PUNCT	$,	punct	Protein	NOUN	[]	5	b5	1
+das	der	PRON	PRELS	sb	abstammt	VERB	[]	5	b5	1
+von	von	ADP	APPR	op	abstammt	VERB	[Protein]	5	b5	1
+einem	ein	DET	ART	nk	Protein	NOUN	[]	5	b5	1
+endogenen	endogen	ADJ	ADJA	nk	Protein	NOUN	[,, zellulären]	5	b5	1
+,	--	PUNCT	$,	punct	endogenen	ADJ	[]	5	b5	1
+zellulären	zellulärer	DET	ADJA	cj	endogenen	ADJ	[]	5	b5	1
+Protein	Protein	NOUN	NN	nk	von	ADP	[einem, endogenen]	5	b5	1
+abstammt	abstammt	VERB	VVFIN	rc	Protein	NOUN	[das, von, und]	5	b5	1
+und	und	CCONJ	KON	cd	abstammt	VERB	[besitzt]	5	b5	1
+dessen	der	PRON	PRELAT	ag	Primärstruktur	NOUN	[]	5	b5	1
+Primärstruktur	Primärstruktur	NOUN	NN	oa	besitzt	VERB	[dessen]	5	b5	1
+besitzt	besitzen	VERB	VVFIN	cj	und	CCONJ	[Primärstruktur, ,, unterscheidet]	5	b5	1
+,	--	PUNCT	$,	punct	besitzt	VERB	[]	5	b5	1
+sich	sich	PRON	PRF	oa	unterscheidet	VERB	[]	5	b5	1
+aber	aber	ADV	ADV	mo	unterscheidet	VERB	[]	5	b5	1
+in	in	ADP	APPR	mo	unterscheidet	VERB	[Quartärstrukturen]	5	b5	1
+Sekundär-	Sekundär	X	TRUNC	cj	Tertiär-	X	[]	5	b5	1
+,	--	PUNCT	$,	punct	Quartärstrukturen	NOUN	[]	5	b5	1
+Tertiär-	Tertiär	X	TRUNC	cj	und	CCONJ	[Sekundär-]	5	b5	1
+und	und	CCONJ	KON	cd	Quartärstrukturen	NOUN	[Tertiär-]	5	b5	1
+Quartärstrukturen	Quartärstruktur	NOUN	NN	nk	in	ADP	[,, und, von]	5	b5	1
+von	von	ADP	APPR	mnr	Quartärstrukturen	NOUN	[diesem]	5	b5	1
+diesem	dieser	PRON	PDS	nk	von	ADP	[]	5	b5	1
+unterscheidet	unterscheiden	VERB	VVFIN	cj	besitzt	VERB	[sich, aber, in]	5	b5	1
+.	--	PUNCT	$.	punct	ist	AUX	[]	5	b5	1
+Seine	sein	DET	PPOSAT	nk	Eigenschaften	NOUN	[]	5	b5	2
+strukturellen	strukturell	ADJ	ADJA	nk	Eigenschaften	NOUN	[]	5	b5	2
+Eigenschaften	Eigenschaft	NOUN	NN	sb	verleihen	VERB	[Seine, strukturellen]	5	b5	2
+verleihen	verleihen	VERB	VVFIN	ROOT	verleihen	VERB	[Eigenschaften, Prion, Fähigkeit, .]	5	b5	2
+dem	der	DET	ART	nk	Prion	NOUN	[]	5	b5	2
+Prion	Prion	NOUN	NN	da	verleihen	VERB	[dem]	5	b5	2
+die	der	DET	ART	nk	Fähigkeit	NOUN	[]	5	b5	2
+Fähigkeit	Fähigkeit	NOUN	NN	oa	verleihen	VERB	[die, ,, umzuwandeln]	5	b5	2
+,	--	PUNCT	$,	punct	Fähigkeit	NOUN	[]	5	b5	2
+sich	sich	PRON	PRF	oa	umzuwandeln	VERB	[]	5	b5	2
+durch	durch	ADP	APPR	mo	umzuwandeln	VERB	[Autokatalyse]	5	b5	2
+Autokatalyse	Autokatalyse	NOUN	NN	nk	durch	ADP	[]	5	b5	2
+von	von	ADP	APPR	mo	umzuwandeln	VERB	[Wildtypprotein]	5	b5	2
+einem	ein	DET	ART	nk	Wildtypprotein	NOUN	[]	5	b5	2
+Wildtypprotein	Wildtypprotein	NOUN	NN	nk	von	ADP	[einem]	5	b5	2
+zum	zu	ADP	APPRART	mo	umzuwandeln	VERB	[Prionenprotein]	5	b5	2
+Prionenprotein	Prionenprotein	NOUN	NN	nk	zum	ADP	[]	5	b5	2
+umzuwandeln	umwandeln	VERB	VVIZU	oc	Fähigkeit	NOUN	[sich, durch, von, zum]	5	b5	2
+.	--	PUNCT	$.	punct	verleihen	VERB	[]	5	b5	2
+Dieses	dieser	DET	PDAT	nk	Ereignis	NOUN	[]	5	b5	3
+Ereignis	Ereignis	NOUN	NN	sb	kann	AUX	[Dieses]	5	b5	3
+kann	können	AUX	VMFIN	ROOT	kann	AUX	[Ereignis, erfolgen, .]	5	b5	3
+spontan	spontan	ADV	ADJD	mo	erfolgen	VERB	[oder]	5	b5	3
+oder	oder	CCONJ	KON	cd	spontan	ADV	[durch]	5	b5	3
+durch	durch	ADP	APPR	cj	oder	CCONJ	[Aufnahme]	5	b5	3
+die	der	DET	ART	nk	Aufnahme	NOUN	[]	5	b5	3
+Aufnahme	Aufnahme	NOUN	NN	nk	durch	ADP	[die, Prions]	5	b5	3
+eines	ein	DET	ART	nk	Prions	NOUN	[]	5	b5	3
+anderen	anderer	ADJ	ADJA	nk	Prions	NOUN	[]	5	b5	3
+Prions	Prion	NOUN	NN	ag	Aufnahme	NOUN	[eines, anderen]	5	b5	3
+erfolgen	erfolgen	VERB	VVINF	oc	kann	AUX	[spontan]	5	b5	3
+.	--	PUNCT	$.	punct	kann	AUX	[]	5	b5	3
+Die	der	DET	ART	nk	Ausbildung	NOUN	[]	5	b5	4
+Ausbildung	Ausbildung	NOUN	NN	sb	sind	AUX	[Die, Fasern, und]	5	b5	4
+amyloider	amyloid	ADJ	ADJA	nk	Fasern	NOUN	[]	5	b5	4
+Fasern	Faser	NOUN	NN	ag	Ausbildung	NOUN	[amyloider]	5	b5	4
+und	und	CCONJ	KON	cd	Ausbildung	NOUN	[]	5	b5	4
+der	der	DET	ART	nk	Charakter	NOUN	[]	5	b5	4
+infektiöse	infektiös	ADJ	ADJA	nk	Charakter	NOUN	[]	5	b5	4
+Charakter	Charakter	NOUN	NN	sb	sind	AUX	[der, infektiöse]	5	b5	4
+sind	sein	AUX	VAFIN	ROOT	sind	AUX	[Ausbildung, Charakter, verknüpft, .]	5	b5	4
+eng	eng	ADV	ADJD	mo	verknüpft	VERB	[]	5	b5	4
+miteinander	miteinander	ADV	ADV	mo	verknüpft	VERB	[]	5	b5	4
+verknüpft	verknüpfen	VERB	VVPP	pd	sind	AUX	[eng, miteinander]	5	b5	4
+.	--	PUNCT	$.	punct	sind	AUX	[]	5	b5	4
+Der	der	DET	ART	nk	Begriff	NOUN	[]	5	b5	5
+Begriff	Begriff	NOUN	NN	sb	ist	AUX	[Der, Amyloid, Fadenform]	5	b5	5
+Amyloid	Amyloid	PROPN	NN	nk	Begriff	NOUN	[]	5	b5	5
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Begriff, gehalten, :, .]	5	b5	5
+allgemein	allgemein	ADV	ADJD	mo	gehalten	VERB	[]	5	b5	5
+gehalten	halten	VERB	VVPP	oc	ist	AUX	[allgemein, und]	5	b5	5
+und	und	CCONJ	KON	cd	gehalten	VERB	[umfasst]	5	b5	5
+umfasst	umfasst	VERB	VVFIN	cj	und	CCONJ	[Proteinaggregate]	5	b5	5
+Proteinaggregate	Proteinaggregat	PROPN	NN	oa	umfasst	VERB	[,, sind]	5	b5	5
+,	--	PUNCT	$,	punct	Proteinaggregate	PROPN	[]	5	b5	5
+die	der	PRON	PRELS	sb	sind	AUX	[]	5	b5	5
+auf	auf	ADP	APPR	mo	angeordnet	VERB	[Weise]	5	b5	5
+eine	ein	DET	ART	nk	Weise	NOUN	[]	5	b5	5
+besondere	besonderer	ADJ	ADJA	nk	Weise	NOUN	[]	5	b5	5
+physikalisch-chemische	physikalisch-chemisch	ADJ	ADJA	nk	Weise	NOUN	[]	5	b5	5
+Weise	Weise	NOUN	NN	nk	auf	ADP	[eine, besondere, physikalisch-chemische]	5	b5	5
+angeordnet	anordnen	VERB	VVPP	oc	sind	AUX	[auf]	5	b5	5
+sind	sein	AUX	VAFIN	rc	Proteinaggregate	PROPN	[die, angeordnet]	5	b5	5
+:	--	PUNCT	$.	punct	ist	AUX	[]	5	b5	5
+eine	ein	DET	ART	nk	Fadenform	NOUN	[]	5	b5	5
+Fadenform	Fadenform	NOUN	NN	app	Begriff	NOUN	[eine, ,, sind]	5	b5	5
+,	--	PUNCT	$,	punct	Fadenform	NOUN	[]	5	b5	5
+in	in	ADP	APPR	mo	finden	VERB	[der]	5	b5	5
+der	der	PRON	PRELS	nk	in	ADP	[]	5	b5	5
+zum	zu	ADP	APPRART	mo	β-Faltblattstrukturen	VERB	[Großteil]	5	b5	5
+Großteil	Großteil	NOUN	NN	nk	zum	ADP	[]	5	b5	5
+β-Faltblattstrukturen	β-Faltblattstrukturen	VERB	NN	oc	finden	VERB	[zum]	5	b5	5
+zu	zu	PART	PTKZU	pm	finden	VERB	[]	5	b5	5
+finden	finden	VERB	VVINF	oc	sind	AUX	[in, β-Faltblattstrukturen, zu]	5	b5	5
+sind	sein	AUX	VAFIN	rc	Fadenform	NOUN	[finden, und]	5	b5	5
+und	und	CCONJ	KON	cd	sind	AUX	[auftritt]	5	b5	5
+in	in	ADP	APPR	mo	auftritt	VERB	[der]	5	b5	5
+der	der	DET	PRELS	nk	in	ADP	[]	5	b5	5
+eine	ein	DET	ART	nk	Doppelbrechung	NOUN	[]	5	b5	5
+Doppelbrechung	Doppelbrechung	NOUN	NN	oa	auftritt	VERB	[eine, von, nach]	5	b5	5
+von	von	ADP	APPR	pg	Doppelbrechung	NOUN	[Licht]	5	b5	5
+polarisiertem	polarisiert	ADJ	ADJA	nk	Licht	NOUN	[]	5	b5	5
+Licht	Licht	NOUN	NN	nk	von	ADP	[polarisiertem]	5	b5	5
+nach	nach	ADP	APPR	mnr	Doppelbrechung	NOUN	[Färbung]	5	b5	5
+Färbung	Färbung	NOUN	NN	nk	nach	ADP	[mit]	5	b5	5
+mit	mit	ADP	APPR	mnr	Färbung	NOUN	[Kongorot]	5	b5	5
+Kongorot	Kongorot	NOUN	NN	nk	mit	ADP	[]	5	b5	5
+auftritt	auftreten	VERB	VVFIN	cj	und	CCONJ	[in, Doppelbrechung]	5	b5	5
+.	--	PUNCT	$.	punct	ist	AUX	[]	5	b5	5
+Das	der	DET	ART	nk	Prion	NOUN	[]	5	b5	6
+Prion	Prion	NOUN	NN	sb	bringt	VERB	[Das]	5	b5	6
+bringt	bringen	VERB	VVFIN	ROOT	bringt	VERB	[Prion, Veränderung, mit, ,, denn, .]	5	b5	6
+keine	kein	DET	PIAT	nk	Veränderung	NOUN	[]	5	b5	6
+genetische	genetisch	ADJ	ADJA	nk	Veränderung	NOUN	[]	5	b5	6
+Veränderung	Veränderung	NOUN	NN	oa	bringt	VERB	[keine, genetische]	5	b5	6
+mit	mit	ADP	APPR	mo	bringt	VERB	[sich]	5	b5	6
+sich	sich	PRON	PRF	nk	mit	ADP	[]	5	b5	6
+,	--	PUNCT	$,	punct	bringt	VERB	[]	5	b5	6
+denn	denn	CCONJ	KON	cd	bringt	VERB	[führt]	5	b5	6
+das	der	DET	ART	nk	Gen	NOUN	[]	5	b5	6
+verantwortliche	verantwortlich	ADJ	ADJA	nk	Gen	NOUN	[]	5	b5	6
+Gen	Gen	NOUN	NN	sb	führt	VERB	[das, verantwortliche]	5	b5	6
+führt	führen	VERB	VVFIN	cj	denn	CCONJ	[Gen, weiterhin, zur]	5	b5	6
+weiterhin	weiterhin	ADV	ADV	mo	führt	VERB	[]	5	b5	6
+zur	zu	ADP	APPRART	mo	führt	VERB	[Expression]	5	b5	6
+Expression	Expression	NOUN	NN	nk	zur	ADP	[von]	5	b5	6
+von	von	ADP	APPR	pg	Expression	NOUN	[Proteinen]	5	b5	6
+Proteinen	Protein	NOUN	NN	nk	von	ADP	[mit]	5	b5	6
+mit	mit	ADP	APPR	mnr	Proteinen	NOUN	[Primärstruktur]	5	b5	6
+normaler	normal	ADJ	ADJA	nk	Primärstruktur	NOUN	[]	5	b5	6
+Primärstruktur	Primärstruktur	NOUN	NN	nk	mit	ADP	[normaler]	5	b5	6
+.	--	PUNCT	$.	punct	bringt	VERB	[]	5	b5	6
+Die	der	DET	ART	nk	Prionenform	NOUN	[]	5	b5	7
+Prionenform	Prionenform	NOUN	NN	sb	vermehrt	VERB	[Die]	5	b5	7
+vermehrt	vermehren	VERB	VVFIN	ROOT	vermehrt	VERB	[Prionenform, sich, somit, über, .]	5	b5	7
+sich	sich	PRON	PRF	oa	vermehrt	VERB	[]	5	b5	7
+somit	somit	ADV	ADV	mo	vermehrt	VERB	[]	5	b5	7
+über	über	ADP	APPR	op	vermehrt	VERB	[Umwandlung]	5	b5	7
+die	der	DET	ART	nk	Umwandlung	NOUN	[]	5	b5	7
+Umwandlung	Umwandlung	NOUN	NN	nk	über	ADP	[die, vom, zum]	5	b5	7
+vom	von	ADP	APPRART	op	Umwandlung	NOUN	[Wildtypprotein]	5	b5	7
+Wildtypprotein	Wildtypprotein	NOUN	NN	nk	vom	ADP	[]	5	b5	7
+zum	zu	ADP	APPRART	mnr	Umwandlung	NOUN	[Typ]	5	b5	7
+amyloiden	amyloid	ADJ	ADJA	nk	Typ	NOUN	[]	5	b5	7
+Typ	Typ	NOUN	NN	nk	zum	ADP	[amyloiden]	5	b5	7
+.	--	PUNCT	$.	punct	vermehrt	VERB	[]	5	b5	7
+Eine	ein	DET	ART	nk	Deletion	NOUN	[]	5	b5	8
+Deletion	Deletion	NOUN	NN	sb	würde	AUX	[Eine, Gens]	5	b5	8
+des	der	DET	ART	nk	Gens	NOUN	[]	5	b5	8
+codierenden	codierend	ADJ	ADJA	nk	Gens	NOUN	[]	5	b5	8
+Gens	Gen	NOUN	NN	ag	Deletion	NOUN	[des, codierenden, Proteins]	5	b5	8
+des	der	DET	ART	nk	Proteins	NOUN	[]	5	b5	8
+zellulären	zellulärer	ADJ	ADJA	nk	Proteins	NOUN	[]	5	b5	8
+Proteins	Protein	NOUN	NN	ag	Gens	NOUN	[des, zellulären]	5	b5	8
+würde	werden	AUX	VAFIN	ROOT	würde	AUX	[Deletion, somit, verhindern, .]	5	b5	8
+somit	somit	ADV	ADV	mo	würde	AUX	[]	5	b5	8
+eine	ein	DET	ART	nk	Prioneninfektion	NOUN	[]	5	b5	8
+Prioneninfektion	Prioneninfektion	NOUN	NN	oa	verhindern	VERB	[eine]	5	b5	8
+verhindern	verhindern	VERB	VVINF	oc	würde	AUX	[Prioneninfektion]	5	b5	8
+.	--	PUNCT	$.	punct	würde	AUX	[]	5	b5	8
+Das	der	DET	ART	nk	Ziel	NOUN	[]	10	p4	1
+Ziel	Ziel	NOUN	NN	pd	ist	AUX	[Das, Interferometrie]	10	p4	1
+der	der	DET	ART	nk	Interferometrie	NOUN	[]	10	p4	1
+holografischen	holografisch	ADJ	ADJA	nk	Interferometrie	NOUN	[]	10	p4	1
+Interferometrie	Interferometrie	NOUN	NN	ag	Ziel	NOUN	[der, holografischen]	10	p4	1
+ist	sein	AUX	VAFIN	ROOT	ist	AUX	[Ziel, es, ,, .]	10	p4	1
+es	es	PRON	PPER	sb	ist	AUX	[erfassen]	10	p4	1
+,	--	PUNCT	$,	punct	ist	AUX	[]	10	p4	1
+Veränderungen	Veränderung	NOUN	NN	oa	erfassen	VERB	[an, usw.]	10	p4	1
+an	an	ADP	APPR	mnr	Veränderungen	NOUN	[Objekten]	10	p4	1
+Objekten	Objekt	NOUN	NN	nk	an	ADP	[durch]	10	p4	1
+durch	durch	ADP	APPR	mnr	Objekten	NOUN	[Belastungen]	10	p4	1
+Belastungen	Belastung	NOUN	NN	nk	durch	ADP	[,, Ausdehnung, ,, Schwingungen]	10	p4	1
+,	--	PUNCT	$,	punct	Belastungen	NOUN	[]	10	p4	1
+thermische	thermisch	ADJ	ADJA	nk	Ausdehnung	NOUN	[]	10	p4	1
+Ausdehnung	Ausdehnung	NOUN	NN	cj	Belastungen	NOUN	[thermische]	10	p4	1
+,	--	PUNCT	$,	punct	Belastungen	NOUN	[]	10	p4	1
+Schwingungen	Schwingung	NOUN	NN	cj	Belastungen	NOUN	[]	10	p4	1
+usw.	usw.	ADV	ADV	mo	Veränderungen	NOUN	[]	10	p4	1
+qualitativ	qualitativ	ADV	ADJD	mo	erfassen	VERB	[und]	10	p4	1
+und	und	CCONJ	KON	cd	qualitativ	ADV	[quantitativ]	10	p4	1
+quantitativ	quantitativ	ADV	ADJD	cj	und	CCONJ	[]	10	p4	1
+zu	zu	PART	PTKZU	pm	erfassen	VERB	[]	10	p4	1
+erfassen	erfassen	VERB	VVINF	re	es	PRON	[Veränderungen, qualitativ, zu]	10	p4	1
+.	--	PUNCT	$.	punct	ist	AUX	[]	10	p4	1
+Beim	bei	ADP	APPRART	mo	aufgenommen	VERB	[Echtzeitverfahren]	10	p4	2
+Echtzeitverfahren	Echtzeitverfahr	NOUN	NN	nk	Beim	ADP	[Interferometrie]	10	p4	2
+der	der	DET	ART	nk	Interferometrie	NOUN	[]	10	p4	2
+holografischen	holografisch	ADJ	ADJA	nk	Interferometrie	NOUN	[]	10	p4	2
+Interferometrie	Interferometrie	NOUN	NN	ag	Echtzeitverfahren	NOUN	[der, holografischen]	10	p4	2
+wird	werden	AUX	VAFIN	ROOT	wird	AUX	[aufgenommen, .]	10	p4	2
+von	von	ADP	APPR	sbp	aufgenommen	VERB	[Objekt]	10	p4	2
+einem	ein	DET	ART	nk	Objekt	NOUN	[]	10	p4	2
+Objekt	Objekt	NOUN	NN	nk	von	ADP	[einem]	10	p4	2
+in	in	ADP	APPR	mo	aufgenommen	VERB	[Ruhe]	10	p4	2
+Ruhe	Ruhe	NOUN	NN	nk	in	ADP	[]	10	p4	2
+ein	ein	DET	ART	nk	Hologramm	NOUN	[]	10	p4	2
+Hologramm	Hologramm	NOUN	NN	oa	aufgenommen	VERB	[ein]	10	p4	2
+aufgenommen	aufnehmen	VERB	VVPP	oc	wird	AUX	[Beim, von, in, Hologramm]	10	p4	2
+.	--	PUNCT	$.	punct	wird	AUX	[]	10	p4	2
+Die	der	DET	ART	nk	Hologrammplatte	NOUN	[]	10	p4	3
+Hologrammplatte	Hologrammplatte	NOUN	NN	sb	wird	AUX	[Die]	10	p4	3
+wird	werden	AUX	VAFIN	ROOT	wird	AUX	[Hologrammplatte, entwickelt, wird, .]	10	p4	3
+dann	dann	ADV	ADV	mo	entwickelt	VERB	[,, bewegen]	10	p4	3
+,	--	PUNCT	$,	punct	dann	ADV	[]	10	p4	3
+ohne	ohne	SCONJ	KOUI	cp	bewegen	VERB	[]	10	p4	3
+sie	sie	PRON	PPER	oa	bewegen	VERB	[]	10	p4	3
+zu	zu	PART	PTKZU	pm	bewegen	VERB	[]	10	p4	3
+bewegen	bewegen	VERB	VVINF	re	dann	ADV	[ohne, sie, zu]	10	p4	3
+,	--	PUNCT	$,	punct	entwickelt	VERB	[]	10	p4	3
+am	an	ADP	APPRART	mo	entwickelt	VERB	[Ort]	10	p4	3
+festen	fest	ADJ	ADJA	nk	Ort	NOUN	[]	10	p4	3
+Ort	Ort	NOUN	NN	nk	am	ADP	[festen, Aufnahme]	10	p4	3
+der	der	DET	ART	nk	Aufnahme	NOUN	[]	10	p4	3
+Aufnahme	Aufnahme	NOUN	NN	ag	Ort	NOUN	[der]	10	p4	3
+entwickelt	entwickeln	VERB	VVPP	oc	wird	AUX	[dann, ,, am, und]	10	p4	3
+und	und	CCONJ	KON	cd	entwickelt	VERB	[beleuchtet]	10	p4	3
+mit	mit	ADP	APPR	op	beleuchtet	VERB	[Referenzwelle]	10	p4	3
+der	der	DET	ART	nk	Referenzwelle	NOUN	[]	10	p4	3
+Referenzwelle	Referenzwelle	NOUN	NN	nk	mit	ADP	[der]	10	p4	3
+beleuchtet	beleuchten	VERB	VVPP	cj	und	CCONJ	[mit]	10	p4	3
+,	--	PUNCT	$,	punct	sodass	VERB	[]	10	p4	3
+sodass	sodass	VERB	KOUS	mo	erzeugt	VERB	[,, Hologrammbild]	10	p4	3
+ein	ein	DET	ART	nk	Hologrammbild	NOUN	[]	10	p4	3
+Hologrammbild	Hologrammbild	NOUN	NN	sb	sodass	VERB	[ein]	10	p4	3
+erzeugt	erzeugen	VERB	VVPP	oc	wird	AUX	[sodass]	10	p4	3
+wird	werden	AUX	VAFIN	oc	wird	AUX	[erzeugt]	10	p4	3
+.	--	PUNCT	$.	punct	wird	AUX	[]	10	p4	3
+Nimmt	nehmen	VERB	VVFIN	re	so	ADV	[man, am, Änderungen, vor, und]	10	p4	4
+man	man	PRON	PIS	sb	Nimmt	VERB	[]	10	p4	4
+am	an	ADP	APPRART	mo	Nimmt	VERB	[Objekt]	10	p4	4
+Objekt	Objekt	NOUN	NN	nk	am	ADP	[]	10	p4	4
+nur	nur	ADV	ADV	mo	kleine	ADJ	[]	10	p4	4
+sehr	sehr	ADV	ADV	mo	kleine	ADJ	[]	10	p4	4
+kleine	klein	ADJ	ADJA	nk	Änderungen	NOUN	[nur, sehr]	10	p4	4
+Änderungen	Änderung	NOUN	NN	oa	Nimmt	VERB	[kleine]	10	p4	4
+vor	vor	ADP	PTKVZ	svp	Nimmt	VERB	[]	10	p4	4
+und	und	CCONJ	KON	cd	Nimmt	VERB	[beleuchtet]	10	p4	4
+beleuchtet	beleuchten	VERB	VVFIN	cj	und	CCONJ	[es, am, wieder, genau]	10	p4	4
+es	es	PRON	PPER	oa	beleuchtet	VERB	[]	10	p4	4
+am	an	ADP	APPRART	mo	beleuchtet	VERB	[Ort]	10	p4	4
+gleichen	gleich	ADJ	ADJA	nk	Ort	NOUN	[]	10	p4	4
+Ort	Ort	NOUN	NN	nk	am	ADP	[gleichen]	10	p4	4
+wieder	wieder	ADV	ADV	mo	beleuchtet	VERB	[]	10	p4	4
+genau	genau	ADV	ADJD	mo	beleuchtet	VERB	[bei]	10	p4	4
+wie	wie	ADP	KOKOM	cm	bei	ADP	[]	10	p4	4
+bei	bei	ADP	APPR	cc	genau	ADV	[wie, Aufnahme]	10	p4	4
+der	der	DET	ART	nk	Aufnahme	NOUN	[]	10	p4	4
+ersten	erster	ADJ	ADJA	nk	Aufnahme	NOUN	[]	10	p4	4
+Aufnahme	Aufnahme	NOUN	NN	nk	bei	ADP	[der, ersten]	10	p4	4
+,	--	PUNCT	$,	punct	so	ADV	[]	10	p4	4
+so	so	ADV	ADV	mo	äußern	VERB	[Nimmt, ,]	10	p4	4
+werden	werden	AUX	VAFIN	ROOT	werden	AUX	[Änderungen, äußern, .]	10	p4	4
+sich	sich	PRON	PRF	oa	äußern	VERB	[]	10	p4	4
+diese	dieser	DET	PDAT	nk	Änderungen	NOUN	[]	10	p4	4
+Änderungen	Änderung	NOUN	NN	sb	werden	AUX	[diese]	10	p4	4
+in	in	ADP	APPR	mo	äußern	VERB	[Phasenverschiebungen]	10	p4	4
+Phasenverschiebungen	Phasenverschiebunge	NOUN	NN	nk	in	ADP	[Signalwelle]	10	p4	4
+der	der	DET	ART	nk	Signalwelle	NOUN	[]	10	p4	4
+Signalwelle	Signalwell	NOUN	NN	ag	Phasenverschiebungen	NOUN	[der]	10	p4	4
+äußern	äußern	VERB	VVINF	oc	werden	AUX	[so, sich, in]	10	p4	4
+.	--	PUNCT	$.	punct	werden	AUX	[]	10	p4	4
+Die	der	DET	ART	nk	Überlagerung	NOUN	[]	10	p4	5
+Überlagerung	Überlagerung	NOUN	NN	sb	führt	VERB	[Die, Signalwelle, vom, vom]	10	p4	5
+dieser	dieser	DET	PDAT	nk	Signalwelle	NOUN	[]	10	p4	5
+Signalwelle	Signalwelle	NOUN	NN	ag	Überlagerung	NOUN	[dieser]	10	p4	5
+vom	von	ADP	APPRART	mnr	Überlagerung	NOUN	[Objekt]	10	p4	5
+veränderten	verändert	ADJ	ADJA	nk	Objekt	NOUN	[]	10	p4	5
+Objekt	Objekt	NOUN	NN	nk	vom	ADP	[veränderten, mit]	10	p4	5
+mit	mit	ADP	APPR	mnr	Objekt	NOUN	[Rekonstruktionswelle]	10	p4	5
+der	der	DET	ART	nk	Rekonstruktionswelle	NOUN	[]	10	p4	5
+Rekonstruktionswelle	Rekonstruktionswelle	NOUN	NN	nk	mit	ADP	[der]	10	p4	5
+vom	von	ADP	APPRART	mnr	Überlagerung	NOUN	[Hologramm]	10	p4	5
+Hologramm	Hologramm	NOUN	NN	nk	vom	ADP	[Objektes]	10	p4	5
+des	der	DET	ART	nk	Objektes	NOUN	[]	10	p4	5
+unveränderten	unverändert	ADJ	ADJA	nk	Objektes	NOUN	[]	10	p4	5
+Objektes	Objekt	NOUN	NN	ag	Hologramm	NOUN	[des, unveränderten]	10	p4	5
+führt	führen	VERB	VVFIN	ROOT	führt	VERB	[Überlagerung, zu, .]	10	p4	5
+zu	zu	ADP	APPR	mo	führt	VERB	[Interferenzstrukturen]	10	p4	5
+Interferenzstrukturen	Interferenzstruktur	NOUN	NN	nk	zu	ADP	[im]	10	p4	5
+im	in	ADP	APPRART	mnr	Interferenzstrukturen	NOUN	[Bild]	10	p4	5
+holografischen	holografisch	ADJ	ADJA	nk	Bild	NOUN	[]	10	p4	5
+Bild	Bild	NOUN	NN	nk	im	ADP	[holografischen, ,, auftreten]	10	p4	5
+,	--	PUNCT	$,	punct	Bild	NOUN	[]	10	p4	5
+die	der	PRON	PRELS	sb	auftreten	VERB	[]	10	p4	5
+nur	nur	ADV	ADV	mo	für	ADP	[]	10	p4	5
+für	für	ADP	APPR	mo	auftreten	VERB	[nur, Teile]	10	p4	5
+diejenigen	derjenige	DET	PDAT	nk	Teile	NOUN	[]	10	p4	5
+Teile	Teil	NOUN	NN	nk	für	ADP	[diejenigen, Objektes, haben]	10	p4	5
+des	der	DET	ART	nk	Objektes	NOUN	[]	10	p4	5
+Objektes	Objekt	NOUN	NN	ag	Teile	NOUN	[des]	10	p4	5
+auftreten	auftreten	VERB	VVFIN	rc	Bild	NOUN	[die, für, ,]	10	p4	5
+,	--	PUNCT	$,	punct	auftreten	VERB	[]	10	p4	5
+die	der	PRON	PRELS	sb	haben	AUX	[]	10	p4	5
+sich	sich	PRON	PRF	oa	verändert	VERB	[]	10	p4	5
+verändert	verändern	VERB	VVPP	oc	haben	AUX	[sich]	10	p4	5
+haben	haben	AUX	VAFIN	rc	Teile	NOUN	[die, verändert]	10	p4	5
+.	--	PUNCT	$.	punct	führt	VERB	[]	10	p4	5
+Auf	auf	ADP	APPR	mo	kann	AUX	[Weise]	10	p4	6
+diese	dieser	DET	PDAT	nk	Weise	NOUN	[]	10	p4	6
+Weise	Weise	NOUN	NN	nk	Auf	ADP	[diese]	10	p4	6
+kann	können	AUX	VMFIN	ROOT	kann	AUX	[Auf, man, feststellen, .]	10	p4	6
+man	man	PRON	PIS	sb	kann	AUX	[]	10	p4	6
+Gestaltsänderungen	Gestaltsänderung	NOUN	NN	oa	feststellen	VERB	[sind]	10	p4	6
+feststellen	feststellen	VERB	VVINF	oc	kann	AUX	[Gestaltsänderungen, ,]	10	p4	6
+,	--	PUNCT	$,	punct	feststellen	VERB	[]	10	p4	6
+die	der	PRON	PRELS	sb	sind	AUX	[]	10	p4	6
+wesentlich	wesentlich	ADV	ADJD	mo	kleiner	ADV	[]	10	p4	6
+kleiner	klein	ADV	ADJD	pd	sind	AUX	[wesentlich, Wellenlänge]	10	p4	6
+als	als	ADP	KOKOM	cm	Wellenlänge	NOUN	[]	10	p4	6
+eine	ein	DET	ART	nk	Wellenlänge	NOUN	[]	10	p4	6
+Wellenlänge	Wellenlang	NOUN	NN	cc	kleiner	ADV	[als, eine, Lichtes]	10	p4	6
+des	der	DET	ART	nk	Lichtes	NOUN	[]	10	p4	6
+beleuchtenden	beleuchtend	ADJ	ADJA	nk	Lichtes	NOUN	[]	10	p4	6
+Lichtes	Licht	NOUN	NN	ag	Wellenlänge	NOUN	[des, beleuchtenden]	10	p4	6
+sind	sein	AUX	VAFIN	rc	Gestaltsänderungen	NOUN	[die, kleiner]	10	p4	6
+.	--	PUNCT	$.	punct	kann	AUX	[]	10	p4	6
+Durch	durch	ADP	APPR	mo	können	AUX	[Einführen]	11	p5	1
+Einführen	Einführen	NOUN	NN	nk	Durch	ADP	[Masse]	11	p5	1
+der	der	DET	ART	nk	Masse	NOUN	[]	11	p5	1
+effektiven	effektiv	ADJ	ADJA	nk	Masse	NOUN	[]	11	p5	1
+Masse	Masse	NOUN	NN	ag	Einführen	NOUN	[der, effektiven]	11	p5	1
+können	können	AUX	VMFIN	ROOT	können	AUX	[Durch, Elektronen, werden, und, .]	11	p5	1
+Elektronen	Elektron	NOUN	NN	sb	können	AUX	[im, im]	11	p5	1
+im	in	ADP	APPRART	mnr	Elektronen	NOUN	[Leitungsband]	11	p5	1
+Leitungsband	Leitungsband	NOUN	NN	nk	im	ADP	[und]	11	p5	1
+und	und	CCONJ	KON	cd	Leitungsband	NOUN	[Löcher]	11	p5	1
+Löcher	Loch	NOUN	NN	cj	und	CCONJ	[]	11	p5	1
+im	in	ADP	APPRART	mnr	Elektronen	NOUN	[Valenzband]	11	p5	1
+Valenzband	Valenzband	NOUN	NN	nk	im	ADP	[Kristalles]	11	p5	1
+eines	ein	DET	ART	nk	Kristalles	NOUN	[]	11	p5	1
+Kristalles	Kristall	NOUN	NN	ag	Valenzband	NOUN	[eines, Teilchen]	11	p5	1
+wie	wie	ADP	KOKOM	cm	Teilchen	NOUN	[]	11	p5	1
+freie	frei	ADJ	ADJA	nk	Teilchen	NOUN	[]	11	p5	1
+Teilchen	Teilche	NOUN	NN	cc	Kristalles	NOUN	[wie, freie]	11	p5	1
+aufgefasst	auffassen	VERB	VVPP	oc	werden	AUX	[]	11	p5	1
+werden	werden	AUX	VAINF	oc	können	AUX	[aufgefasst]	11	p5	1
+und	und	CCONJ	KON	cd	können	AUX	[bewegen]	11	p5	1
+bewegen	bewegen	VERB	VVFIN	cj	und	CCONJ	[sich, am]	11	p5	1
+sich	sich	PRON	PRF	oa	bewegen	VERB	[]	11	p5	1
+am	an	ADP	APPRART	mo	bewegen	VERB	[Energieminimum]	11	p5	1
+Energieminimum	Energieminimum	NOUN	NN	nk	am	ADP	[im]	11	p5	1
+im	in	ADP	APPRART	mnr	Energieminimum	NOUN	[Leitungsband, und]	11	p5	1
+Leitungsband	Leitungsband	PROPN	NN	nk	im	ADP	[]	11	p5	1
+und	und	CCONJ	KON	cd	im	ADP	[am]	11	p5	1
+am	an	ADP	APPRART	cj	und	CCONJ	[Energiemaximum]	11	p5	1
+Energiemaximum	Energiemaximum	NOUN	NN	nk	am	ADP	[im]	11	p5	1
+im	in	ADP	APPRART	mnr	Energiemaximum	NOUN	[Valenzband]	11	p5	1
+Valenzband	Valenzband	NOUN	NN	nk	im	ADP	[auf]	11	p5	1
+auf	auf	ADP	APPR	mnr	Valenzband	NOUN	[Parabeln]	11	p5	1
+Parabeln	Parabel	NOUN	NN	nk	auf	ADP	[]	11	p5	1
+.	--	PUNCT	$.	punct	können	AUX	[]	11	p5	1
+Da	da	SCONJ	KOUS	cp	ist	AUX	[]	11	p5	2
+die	der	DET	ART	nk	Masse	NOUN	[]	11	p5	2
+effektive	effektiv	ADJ	ADJA	nk	Masse	NOUN	[]	11	p5	2
+Masse	Masse	NOUN	NN	sb	ist	AUX	[die, effektive]	11	p5	2
+im	in	ADP	APPRART	mo	ist	AUX	[Teil]	11	p5	2
+oberen	oberer	ADJ	ADJA	nk	Teil	NOUN	[]	11	p5	2
+Teil	Teil	NOUN	NN	nk	im	ADP	[oberen, Valenzbandes]	11	p5	2
+des	der	DET	ART	nk	Valenzbandes	NOUN	[]	11	p5	2
+Valenzbandes	Valenzband	NOUN	NN	ag	Teil	NOUN	[des]	11	p5	2
+negativ	negativ	ADV	ADJD	pd	ist	AUX	[]	11	p5	2
+ist	sein	AUX	VAFIN	mo	gekrümmt	VERB	[Da, Masse, im, negativ]	11	p5	2
+,	--	PUNCT	$,	punct	wird	AUX	[]	11	p5	2
+wird	werden	AUX	VAFIN	ROOT	wird	AUX	[,, Energieparabel, gekrümmt, .]	11	p5	2
+die	der	DET	ART	nk	Energieparabel	NOUN	[]	11	p5	2
+Energieparabel	Energieparabel	NOUN	NN	sb	wird	AUX	[die, Löcher]	11	p5	2
+der	der	DET	ART	nk	Löcher	NOUN	[]	11	p5	2
+Löcher	Loch	NOUN	NN	ag	Energieparabel	NOUN	[der]	11	p5	2
+nach	nach	ADP	APPR	mo	gekrümmt	VERB	[unten]	11	p5	2
+unten	unten	ADV	ADV	nk	nach	ADP	[]	11	p5	2
+gekrümmt	gekrümmen	VERB	VVPP	oc	wird	AUX	[ist, nach]	11	p5	2
+.	--	PUNCT	$.	punct	wird	AUX	[]	11	p5	2
+Daraus	daraus	ADV	PROAV	mo	ergeben	VERB	[]	11	p5	3
+ergeben	ergeben	VERB	VVFIN	ROOT	ergeben	VERB	[Daraus, sich, zwischen, Standardbänder, .]	11	p5	3
+sich	sich	PRON	PRF	oa	ergeben	VERB	[]	11	p5	3
+zwischen	zwischen	ADP	APPR	mo	ergeben	VERB	[Parabeln]	11	p5	3
+den	der	DET	ART	nk	Parabeln	NOUN	[]	11	p5	3
+Parabeln	Parabel	NOUN	NN	nk	zwischen	ADP	[den]	11	p5	3
+die	der	DET	ART	nk	Standardbänder	NOUN	[]	11	p5	3
+so	so	ADV	ADV	mo	genannten	ADJ	[]	11	p5	3
+genannten	genannt	ADJ	ADJA	nk	Standardbänder	NOUN	[so]	11	p5	3
+Standardbänder	Standardbänder	NOUN	NN	sb	ergeben	VERB	[die, genannten]	11	p5	3
+.	--	PUNCT	$.	punct	ergeben	VERB	[]	11	p5	3
+Bei	bei	ADP	APPR	mo	kann	AUX	[Absorption]	11	p5	4
+der	der	DET	ART	nk	Absorption	NOUN	[]	11	p5	4
+Absorption	Absorption	NOUN	NN	nk	Bei	ADP	[der, Photons]	11	p5	4
+eines	ein	DET	ART	nk	Photons	NOUN	[]	11	p5	4
+Photons	Photon	NOUN	NN	ag	Absorption	NOUN	[eines]	11	p5	4
+kann	können	AUX	VMFIN	ROOT	kann	AUX	[Bei, Elektron, werden, .]	11	p5	4
+ein	ein	DET	ART	nk	Elektron	NOUN	[]	11	p5	4
+Elektron	Elektron	NOUN	NN	sb	kann	AUX	[ein, aus]	11	p5	4
+aus	aus	ADP	APPR	mnr	Elektron	NOUN	[Valenzband]	11	p5	4
+dem	der	DET	ART	nk	Valenzband	NOUN	[]	11	p5	4
+Valenzband	Valenzband	NOUN	NN	nk	aus	ADP	[dem, in]	11	p5	4
+in	in	ADP	APPR	mnr	Valenzband	NOUN	[Leitungsband]	11	p5	4
+das	der	DET	ART	nk	Leitungsband	NOUN	[]	11	p5	4
+Leitungsband	Leitungsband	NOUN	NN	nk	in	ADP	[das]	11	p5	4
+angeregt	anregen	VERB	VVPP	oc	werden	AUX	[]	11	p5	4
+werden	werden	AUX	VAINF	oc	kann	AUX	[angeregt]	11	p5	4
+.	--	PUNCT	$.	punct	kann	AUX	[]	11	p5	4
+Weil	weil	SCONJ	KOUS	cp	ist	AUX	[]	11	p5	5
+der	der	DET	ART	nk	Wellenvektor	NOUN	[]	11	p5	5
+Wellenvektor	Wellenvektor	NOUN	NN	sb	ist	AUX	[der, Photons]	11	p5	5
+des	der	DET	ART	nk	Photons	NOUN	[]	11	p5	5
+Photons	Photon	NOUN	NN	ag	Wellenvektor	NOUN	[des]	11	p5	5
+sehr	sehr	ADV	ADV	mo	klein	ADV	[]	11	p5	5
+klein	klein	ADV	ADJD	pd	ist	AUX	[sehr]	11	p5	5
+ist	sein	AUX	VAFIN	mo	erhalten	VERB	[Weil, Wellenvektor, klein]	11	p5	5
+,	--	PUNCT	$,	punct	wird	AUX	[]	11	p5	5
+wird	werden	AUX	VAFIN	ROOT	wird	AUX	[,, Wahrscheinlichkeit, größer, ,, bleibt, .]	11	p5	5
+die	der	DET	ART	nk	Wahrscheinlichkeit	NOUN	[]	11	p5	5
+Wahrscheinlichkeit	Wahrscheinlichkeit	NOUN	NN	sb	wird	AUX	[die, für]	11	p5	5
+für	für	ADP	APPR	mnr	Wahrscheinlichkeit	NOUN	[Übergang]	11	p5	5
+einen	ein	DET	ART	nk	Übergang	NOUN	[]	11	p5	5
+solchen	solcher	DET	PIAT	nk	Übergang	NOUN	[]	11	p5	5
+Übergang	Übergang	NOUN	NN	nk	für	ADP	[einen, solchen]	11	p5	5
+viel	viel	ADV	ADV	mo	größer	ADV	[]	11	p5	5
+größer	groß	ADV	ADJD	pd	wird	AUX	[viel]	11	p5	5
+,	--	PUNCT	$,	punct	wird	AUX	[]	11	p5	5
+wenn	wenn	SCONJ	KOUS	cp	bleibt	VERB	[]	11	p5	5
+der	der	DET	ART	nk	Wellenvektor	NOUN	[werden]	11	p5	5
+Wellenvektor	Wellenvektor	NOUN	NN	sb	bleibt	VERB	[der, Elektrons]	11	p5	5
+des	der	DET	ART	nk	Elektrons	NOUN	[]	11	p5	5
+Elektrons	Elektron	NOUN	NN	ag	Wellenvektor	NOUN	[des]	11	p5	5
+dabei	dabei	ADV	PROAV	mo	erhalten	VERB	[]	11	p5	5
+erhalten	erhalten	VERB	VVPP	oc	bleibt	VERB	[ist, dabei]	11	p5	5
+bleibt	bleiben	VERB	VVFIN	mo	wird	AUX	[wenn, Wellenvektor, erhalten, ,]	11	p5	5
+,	--	PUNCT	$,	punct	bleibt	VERB	[]	11	p5	5
+als	als	SCONJ	KOKOM	cm	werden	AUX	[]	11	p5	5
+wenn	wenn	SCONJ	KOUS	cp	werden	AUX	[]	11	p5	5
+wegen	wegen	ADP	APPR	mo	angeregt	VERB	[Impulserhaltung]	11	p5	5
+der	der	DET	ART	nk	Impulserhaltung	NOUN	[]	11	p5	5
+Impulserhaltung	Impulserhaltung	NOUN	NN	nk	wegen	ADP	[der, beim]	11	p5	5
+beim	bei	ADP	APPRART	mnr	Impulserhaltung	NOUN	[Übergang]	11	p5	5
+Übergang	Übergang	NOUN	NN	nk	beim	ADP	[]	11	p5	5
+zusätzlich	zusätzlich	ADV	ADJD	mo	angeregt	VERB	[]	11	p5	5
+ein	ein	DET	ART	nk	Phonon	NOUN	[]	11	p5	5
+Phonon	Phonon	NOUN	NN	oa	angeregt	VERB	[ein]	11	p5	5
+angeregt	anregen	VERB	VVPP	oc	werden	AUX	[wegen, zusätzlich, Phonon, muss]	11	p5	5
+werden	werden	AUX	VAINF	cc	der	DET	[als, wenn, angeregt]	11	p5	5
+muss	muss	ADV	VMFIN	mo	angeregt	VERB	[]	11	p5	5
+.	--	PUNCT	$.	punct	wird	AUX	[]	11	p5	5
+Liegt	Liegt	VERB	VVFIN	re	so	ADV	[Minimum, senkrecht]	11	p5	6
+das	der	DET	ART	nk	Minimum	NOUN	[]	11	p5	6
+Minimum	Minimum	NOUN	NN	sb	Liegt	VERB	[das, Elektronenparabel]	11	p5	6
+der	der	DET	ART	nk	Elektronenparabel	NOUN	[]	11	p5	6
+Elektronenparabel	Elektronenparabel	NOUN	NN	ag	Minimum	NOUN	[der, im]	11	p5	6
+im	in	ADP	APPRART	mnr	Elektronenparabel	NOUN	[Valenzband]	11	p5	6
+Valenzband	Valenzband	NOUN	NN	nk	im	ADP	[]	11	p5	6
+senkrecht	senkrechen	ADV	ADJD	mo	Liegt	VERB	[über]	11	p5	6
+über	über	ADP	APPR	op	senkrecht	ADV	[Maximum]	11	p5	6
+dem	der	DET	ART	nk	Maximum	NOUN	[]	11	p5	6
+Maximum	Maximum	NOUN	NN	nk	über	ADP	[dem, Löcherparabel]	11	p5	6
+der	der	DET	ART	nk	Löcherparabel	NOUN	[]	11	p5	6
+Löcherparabel	Löcherparabel	NOUN	NN	ag	Maximum	NOUN	[der]	11	p5	6
+,	--	PUNCT	$,	punct	so	ADV	[]	11	p5	6
+so	so	ADV	ADV	mo	sind	AUX	[Liegt, ,]	11	p5	6
+sind	sein	AUX	VAFIN	ROOT	sind	AUX	[so, Übergänge, bereits, ab, möglich, .]	11	p5	6
+senkrechte	senkrechter	ADJ	ADJA	nk	Übergänge	NOUN	[]	11	p5	6
+Übergänge	Übergänge	NOUN	NN	sb	sind	AUX	[senkrechte]	11	p5	6
+bereits	bereits	ADV	ADV	mo	sind	AUX	[]	11	p5	6
+ab	ab	ADP	APPR	mo	sind	AUX	[Photonenenergien]	11	p5	6
+Photonenenergien	Photonenenergi	NOUN	NN	nk	ab	ADP	[in]	11	p5	6
+in	in	ADP	APPR	mnr	Photonenenergien	NOUN	[Größe]	11	p5	6
+der	der	DET	ART	nk	Größe	NOUN	[]	11	p5	6
+Größe	Größe	NOUN	NN	nk	in	ADP	[der, Bandlücke]	11	p5	6
+der	der	DET	ART	nk	Bandlücke	NOUN	[]	11	p5	6
+Bandlücke	Bandlücke	NOUN	NN	ag	Größe	NOUN	[der]	11	p5	6
+möglich	möglich	ADV	ADJD	pd	sind	AUX	[]	11	p5	6
+.	--	PUNCT	$.	punct	sind	AUX	[]	11	p5	6
+Sind	sein	AUX	VAFIN	re	so	ADV	[Extrema, verschoben]	11	p5	7
+die	der	DET	ART	nk	Extrema	NOUN	[]	11	p5	7
+Extrema	Extrema	NOUN	NN	sb	Sind	AUX	[die]	11	p5	7
+gegeneinander	gegeneinander	ADV	ADV	mo	verschoben	VERB	[]	11	p5	7
+verschoben	verschieben	VERB	VVPP	oc	Sind	AUX	[gegeneinander]	11	p5	7
+,	--	PUNCT	$,	punct	so	ADV	[]	11	p5	7
+so	so	ADV	ADV	mo	sind	AUX	[Sind, ,]	11	p5	7
+sind	sein	AUX	VAFIN	ROOT	sind	AUX	[so, Übergänge, bei, sind, .]	11	p5	7
+direkte	direkt	ADJ	ADJA	nk	Übergänge	NOUN	[]	11	p5	7
+Übergänge	Übergänge	NOUN	NN	sb	sind	AUX	[direkte]	11	p5	7
+nur	nur	ADV	ADV	mo	bei	ADP	[]	11	p5	7
+bei	bei	ADP	APPR	mo	sind	AUX	[nur, Photonenenergien]	11	p5	7
+höheren	hoch	ADJ	ADJA	nk	Photonenenergien	NOUN	[]	11	p5	7
+Photonenenergien	Photonenenergi	NOUN	NN	nk	bei	ADP	[höheren]	11	p5	7
+möglich	möglich	ADV	ADJD	pd	sind	AUX	[und]	11	p5	7
+und	und	CCONJ	KON	cd	möglich	ADV	[Übergänge]	11	p5	7
+indirekte	indirekt	ADJ	ADJA	nk	Übergänge	NOUN	[]	11	p5	7
+Übergänge	Übergang	NOUN	NN	cj	und	CCONJ	[indirekte, mit]	11	p5	7
+mit	mit	ADP	APPR	mnr	Übergänge	NOUN	[Absorptionswahrscheinlichkeit]	11	p5	7
+wesentlich	wesentlich	ADV	ADJD	mo	kleinerer	ADJ	[]	11	p5	7
+kleinerer	klein	ADJ	ADJA	nk	Absorptionswahrscheinlichkeit	NOUN	[wesentlich]	11	p5	7
+Absorptionswahrscheinlichkeit	Absorptionswahrscheinlichkeit	NOUN	NN	nk	mit	ADP	[kleinerer]	11	p5	7
+sind	sein	AUX	VAFIN	oc	sind	AUX	[möglich, Möglichkeit]	11	p5	7
+die	der	DET	ART	nk	Möglichkeit	NOUN	[]	11	p5	7
+einzige	einzig	ADJ	ADJA	nk	Möglichkeit	NOUN	[]	11	p5	7
+Möglichkeit	Möglichkeit	NOUN	NN	sb	sind	AUX	[die, einzige, für]	11	p5	7
+für	für	ADP	APPR	mnr	Möglichkeit	NOUN	[Photonenabsorption]	11	p5	7
+Photonenabsorption	Photonenabsorption	NOUN	NN	nk	für	ADP	[]	11	p5	7
+.	--	PUNCT	$.	punct	sind	AUX	[]	11	p5	7

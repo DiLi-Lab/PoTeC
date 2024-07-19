@@ -3,14 +3,14 @@
 **75 students** of the University of Potsdam all of whom were native speakers of German with normal or 
 corrected-to-normal vision participated in the experiment. Participants with soft lenses were excluded 
 from participation as soft lenses often pose serious challenges for the calibration of the eye-tracker.
-They were **either students of biology or of physics** in either their **first semester of the BSc program (beginner) or graduate students currently attending a MSc or PhD program (expert)**. Participants were 
+They were **either students of biology or of physics** in either their **first semester of the BSc program (undergraduate) or graduate students currently attending a MSc or PhD program (graduate)**. Participants were 
 requested to not  have consumed any alcohol the day of the experiment and  to not be suffering from sleep deprivation.
 Participants received a minium compensation of 10 EUR and up to 20 EUR if they answered a specific number of comprehension 
 questions correctly.
 
 |              | Physics | Biology |
 |--------------|---------|---------|
-| **Beginner** | 12      | 16      |
+| **undergraduate** | 12      | 16      |
 | **Advanced** | 20      | 27      |
 
 ## Demographic data
@@ -24,12 +24,12 @@ made available in the `participant_data.tsv` file. Please see the `CODEBOOK.md` 
 |      column  | description | value | range/choices | 
 |--------------|---------|---------|---|
 | **reader_id** | unique reader identifier     | int     | 0-105     |
-| **reader_domain** | reader's field of study     | categorical     |{pyhsics,biology}     |
-| **reader_domain_numeric** | numeric value of reader domain     | int   |  biology==0 physics==1    |
-| **expert_status** | reader's expert status    | categorical |{beginner, expert}|
-| **expert_status_numeric** | numerical value of expert_status     | int     |beginner==0 expert==1     |
-| **domain_expert_status** | reader's domain expertise     | categorical |biology-beginner biology-expert physics-beginner physics-expert|
-| **domain_expert_status_numeric** | numerical value of expert_status     | int     |biology-beginner==0 biology-expert==1 physics-beginner==2 physics-expert==3     |
+| **reader_discipline** | reader's field of study     | categorical     |{pyhsics,biology}     |
+| **reader_discipline_numeric** | numeric value of reader domain     | int   |  biology==0 physics==1    |
+| **level_of_studies** | reader's level of studies    | categorical |{undergraduate, graduate}|
+| **level_of_studies_numeric** | numerical value of level_of_studies     | int     |undergraduate==0 graduate==1     |
+| **discipline_level_of_studies** | reader's domain expertise     | categorical |biology-undergraduate biology-graduate physics-undergraduate physics-graduate|
+| **discipline_level_of_studies_numeric** | numerical value of level_of_studies     | int     |biology-undergraduate==0 biology-graduate==1 physics-undergraduate==2 physics-graduate==3     |
 | **glasses** | whether reader had glasses     | categorical     |{yes,no,nan}     |
 | **age** | reader's age     | float     | 18-41, nan     |
 | **handedness** | reader's handedness     | categorical     | {right,left}     |

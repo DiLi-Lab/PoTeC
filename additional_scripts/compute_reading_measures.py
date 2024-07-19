@@ -74,10 +74,10 @@ def compute_reading_measures(
         reader_row = df_participants.loc[df_participants['reader_id'] == reader_id]
 
         # get participant information
-        reader_domain_numeric = reader_row['reader_domain_numeric'].item()
+        reader_discipline_numeric = reader_row['reader_discipline_numeric'].item()
         gender_numeric = reader_row['gender_numeric'].item()
-        expert_status_numeric = reader_row['expert_status_numeric'].item()
-        domain_expert_status_numeric = reader_row['domain_expert_status_numeric'].item()
+        level_of_studies_numeric = reader_row['level_of_studies_numeric'].item()
+        discipline_level_of_studies_numeric = reader_row['discipline_level_of_studies_numeric'].item()
         age = reader_row['age'].item()
 
         fixation_file = pd.read_csv(fixation_file_path, delimiter=DELIMITER, keep_default_na=False,
@@ -190,7 +190,7 @@ def compute_reading_measures(
             # if no accuracy information is available, code with -1
             acc_tq1 = acc_tq2 = acc_tq3 = acc_bq1 = acc_bq2 = acc_bq3 = mean_acc_tq = mean_acc_bq = pd.NA
 
-        # Coding of topic: bio=0, phy=1
+        # Coding of topic: biology=0, phy=1
         if (fixation_file_sorted.loc[1, 'text_domain'] == 'bio' or
                 fixation_file_sorted.loc[1, 'text_domain'] == 'biology'):
             text_domain_numeric = 0
@@ -204,21 +204,21 @@ def compute_reading_measures(
         text_id = fixation_file_sorted.loc[1, 'text_id']
 
         # if the text has been read by a domain expert, the label is 1=expert_reading, else 0=non-expert_reading
-        expert_reading_label_numeric = 1 if expert_status_numeric == 1 and text_domain_numeric == reader_domain_numeric \
+        expert_reading_label_numeric = 1 if level_of_studies_numeric == 1 and text_domain_numeric == reader_discipline_numeric \
             else 0
         expert_reading_label = 'expert_reading' if expert_reading_label_numeric == 1 else 'non-expert_reading'
 
         trial_information_header = [
             'text_domain_numeric',
-            'trial', 'text_id', 'text_id_numeric', 'reader_id', 'gender_numeric', 'reader_domain_numeric',
-            'expert_status_numeric', 'domain_expert_status_numeric', 'expert_reading_label_numeric',
+            'trial', 'text_id', 'text_id_numeric', 'reader_id', 'gender_numeric', 'reader_discipline_numeric',
+            'level_of_studies_numeric', 'discipline_level_of_studies_numeric', 'expert_reading_label_numeric',
             'expert_reading_label', 'age', 'mean_acc_bq', 'mean_acc_tq', 'acc_bq_1', 'acc_bq_2', 'acc_bq_3',
             'acc_tq_1', 'acc_tq_2', 'acc_tq_3',
         ]
 
         trial_information = [
-            text_domain_numeric, trial, text_id, text_id_numeric, reader_id, gender_numeric, reader_domain_numeric,
-            expert_status_numeric, domain_expert_status_numeric, expert_reading_label_numeric, expert_reading_label,
+            text_domain_numeric, trial, text_id, text_id_numeric, reader_id, gender_numeric, reader_discipline_numeric,
+            level_of_studies_numeric, discipline_level_of_studies_numeric, expert_reading_label_numeric, expert_reading_label,
             age, mean_acc_bq, mean_acc_tq,
             acc_bq1, acc_bq2, acc_bq3, acc_tq1, acc_tq2, acc_tq3,
         ]
