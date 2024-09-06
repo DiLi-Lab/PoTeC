@@ -8,7 +8,7 @@ PATHS_FOLDERS = [
     'stimuli/stimuli/stimuli.tsv',
     'stimuli/stimuli/items.tsv',
     'stimuli/aoi_texts/',
-    'stimuli/dependency_trees.tsv',
+    'stimuli/dependency_trees_manually_corrected.tsv',
     'eyetracking_data/fixations/',
     'eyetracking_data/scanpaths/',
     'eyetracking_data/reading_measures/',

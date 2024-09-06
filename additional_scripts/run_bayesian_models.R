@@ -204,6 +204,7 @@ if (downsample == TRUE) {
     # remove youngest readers from df_raw
     df_raw <- df_raw[!df_raw$reader_id %in% youngest_ids, ]
 }
+
 df <- preprocess(df_raw)
 
 # CONSTANTS
@@ -216,7 +217,6 @@ rm_df <- data.frame(
 )
 
 # nolint start
-
 preds <- "word_length + surprisal + log_freq + age + expert_in_domain + reader_domain_numeric + expert_in_domain:reader_domain_numeric + word_length:expert_in_domain + surprisal:expert_in_domain + log_freq:expert_in_domain + is_expert_technical_term"
 # nolint end
 

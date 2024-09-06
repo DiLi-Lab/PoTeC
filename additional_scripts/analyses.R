@@ -6,6 +6,7 @@ library(dplyr)
 library(stringr)
 library(MASS)
 library(ggplot2)
+library(lemon)
 
 # detect all files
 files <- list.files(
@@ -223,3 +224,81 @@ textfeat_summary <- df_word_features %>%
     summarize(
         across(word_features[3:5], .fns = list(mean = mean, sd = sd), na.rm = TRUE)
     )
+
+
+### model analyses
+result_files <- list.files(
+    pattern = ".*csv",
+    path = "analyses/",
+    full.names = TRUE
+)
+
+#  load all files into one data frame and add file name as column
+df_results <- do.call(rbind, lapply(result_files, read_csv, col_types = cols()))
+
+results_df <- result_files %>% 
+    lapply(read_csv) %>% # read all the files at once
+    bind_rows(.id = "id")
+
+results_df$predictor <- as.factor(results_df$predictor)
+levels(results_df$predictor) <- c(
+    "Expert reading", "Expert reading * Reader discipline", "Intercept", "Expert technical term",
+    "Log-freq", "Log-freq * Expert reading", "Reader discipline", "Surprisal", "Surprisal * Expert reading",
+    "Word length", "Word length * Expert reading"
+)
+
+# reorder levels
+results_df$predictor <- factor(
+    results_df$predictor,
+    levels = c(
+        "Intercept", "Expert reading", "Reader discipline", "Expert reading * Reader discipline", "Expert technical term", 
+        "Log-freq", "Log-freq * Expert reading",  "Surprisal", "Surprisal * Expert reading",
+        "Word length", "Word length * Expert reading"
+    )
+)
+
+# create new var: "binary" if reading_measure is FPreg, else "continuous"
+results_df$reading_measure_binary <- ifelse(
+    results_df$reading_measure == "FPReg", "binary", "continuous"
+)
+results_df$reading_measure_binary <- as.factor(results_df$reading_measure_binary)
+
+for (i in 1:4) {
+    # remove intercept
+    plt_data <- results_df %>% filter(predictor != "Intercept")
+    plt_data <- plt_data %>% filter(id == i)
+
+    p <- ggplot(
+        plt_data,
+        aes(
+            x = predictor, y = estimate,
+            colour = reading_measure, position = "dodge"
+        )
+    ) +
+        scale_x_discrete(guide = guide_axis(angle = 25)) +
+        # scale_color_manual(values=colors) +
+        geom_point(
+            position = position_dodge(width = .5), size = 1.2, shape = 20
+        ) +
+        geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper),
+            width = .25, position = position_dodge(width = .5), linewidth = 0.4
+        ) +
+        # facet_wrap(reading_measure ~ .) +
+        facet_wrap(reading_measure_binary ~ .,  scales = "free_y", strip.position = "left",
+             labeller = as_labeller(c(binary = "Posterior effect estimate (log-odds)", continuous = "Posterior effect estimate (log-ms)") ) )  +
+        ylab(NULL) +
+        theme(strip.background = element_blank(),
+           strip.placement = "outside") +
+        geom_hline(yintercept = 0, linetype = "dashed", color = "grey51") +
+        xlab("Predictor") +
+        # ylab("Posterior effect estimate") +
+        theme_light() +
+        # decrease font size of x axis ticks
+        # theme(axis.text.x = element_text(size = 6)) +
+        # change color of fill
+        theme(legend.position = "top", legend.box = "horizontal") +
+        guides(colour = guide_legend(label.position = "bottom")) +
+        guides(colour = guide_legend(title = "Reading measure"))
+    ggsave(paste0("plots/lmm_", i, ".jpeg"), width = 10, height = 5, dpi = 200)
+}
+ 
