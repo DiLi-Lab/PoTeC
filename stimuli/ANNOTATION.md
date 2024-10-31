@@ -112,7 +112,7 @@ for the lack of a better solution:
 ![img_1.png](img_1.png)
 
 The correct Constituency tree would look like: 
-![constituency_tree.png](..%2FJanas%20Corrections%2Fconstituency_tree.png)
+![constituency_tree.png](constituency_tree.png)
 
 Examples for sentences, which are not possible to annotate with parathesis are: 
 p5 ID 7, p4 ID 6, p3 ID 3, p0 ID 2 & 4 % 5 ,  b4 ID 10, b3 ID 12 & 5, b2 Id 3. 
