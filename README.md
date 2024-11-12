@@ -26,7 +26,7 @@ More information is found in the following README'S:
 * [additional processing](./additional_scripts/ADDITIONAL_SCRIPTS.md)
 
 ## Download the data
-The data files are stored in an [OSF repository](https://osf.io/dn5hp/?view_only=). If the repository has been cloned, 
+The data files are stored in an [OSF repository](https://osf.io/dn5hp/?view_only=). If this GitHub repository has been cloned, 
 they can be downloaded and extracted automatically using the following script:
 
 ```bash
@@ -52,7 +52,7 @@ dataset = pm.Dataset('PoTeC', path='data/PoTeC')
 dataset.download()
 ```
 
-## Note on reading in the data files
+## Note on reading the data files using `pandas`
 The German text p3 includes the word "null". If e.g. the word features are read using pandas, the word "null" is 
 interpreted as a NA value. In order to avoid this behavior the command can be used with the following arguments:
 
@@ -109,7 +109,7 @@ The experiment was run with the following technical set-up:
 |                           | Spacing                                                  |                                                                                       |
 
 ## Stimuli
-Please note that the full stimuli texts are not yet available. Contact `deborahnoemie.jakobi(at)uzh.ch` for more information.
+The stimuli texts are made available via this [website](https://www.cl.uzh.ch/en/research-groups/digital-linguistics/resources/potec.html).
 
 ## Stimuli Annotation
 The stimuli have been manually annoted with part-of-speech tags and other linguistic information. The annotations are described
