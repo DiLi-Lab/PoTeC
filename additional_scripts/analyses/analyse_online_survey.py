@@ -74,8 +74,8 @@ def calculate_accuracy(data_file: str, answer_coding_file: str, output_file: str
             reader_disciplines.extend(['physics' for _ in range(num_trials)])
             level_of_studies.extend(['graduate' for _ in range(num_trials)])
         else:
-            reader_disciplines.extend(['unknown' for _ in range(num_trials)])
-            level_of_studies.extend(['unknown' for _ in range(num_trials)])
+            reader_disciplines.extend(['other' for _ in range(num_trials)])
+            level_of_studies.extend(['other' for _ in range(num_trials)])
 
         all_texts = ['B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'P0', 'P1', 'P2', 'P3', 'P4', 'P5']
 
@@ -119,10 +119,14 @@ def calculate_accuracy(data_file: str, answer_coding_file: str, output_file: str
 
     accuracy_df.to_csv(output_file, index=False)
 
-    overview = accuracy_df.groupby(['reader_discipline', 'level_of_studies', 'text_domain']).agg(
+    overview = accuracy_df.groupby(['participant_id', 'text_domain', 'reader_discipline', 'level_of_studies']).agg(
         mean_accuracy=('mean_acc_tq', 'mean'),
-        std=('mean_acc_tq', 'std'),
-        n_participants=('participant_id', 'nunique'),
+    )
+
+    overview = overview.groupby(['text_domain', 'reader_discipline', 'level_of_studies']).agg(
+        mean_accuracy=('mean_accuracy', 'mean'),
+        std_accuracy=('mean_accuracy', 'std'),
+        count=('mean_accuracy', 'count'),
     ).round(2)
 
     # print all pd df cols
@@ -134,27 +138,42 @@ def compare_online_survey(online_data: str, accuracy_data_exp: str):
     online_accuracies = pd.read_csv(online_data, delimiter=",", encoding='utf-8')
     exp_accuracies = pd.read_csv(accuracy_data_exp, delimiter="\t", encoding='utf-8')
 
-
     for domain in ['biology', 'physics']:
-        for discipline in ['biology', 'physics']:
-            exp_subset = exp_accuracies[
-                (exp_accuracies['reader_discipline'] == discipline) &
-                (exp_accuracies['level_of_studies'] == 'graduate') &
-                (exp_accuracies['text_domain'] == domain)]
-            online_subset = online_accuracies[
-                (online_accuracies['reader_discipline'] == discipline) &
-                (online_accuracies['level_of_studies'] == 'graduate') &
-                (online_accuracies['text_domain'] == domain)]
+        for discipline in ['biology', 'physics', 'other']:
+            if discipline == 'other':
+                exp_subset = exp_accuracies[
+                    (exp_accuracies['level_of_studies'] == 'undergraduate') &
+                    (exp_accuracies['text_domain'] == domain)]
+                online_subset = online_accuracies[
+                    (online_accuracies['reader_discipline'] == discipline) &
+                    (online_accuracies['level_of_studies'] == 'other') &
+                    (online_accuracies['text_domain'] == domain)]
+
+            else:
+                exp_subset = exp_accuracies[
+                    (exp_accuracies['reader_discipline'] == discipline) &
+                    (exp_accuracies['level_of_studies'] == 'graduate') &
+                    (exp_accuracies['text_domain'] == domain)]
+                online_subset = online_accuracies[
+                    (online_accuracies['reader_discipline'] == discipline) &
+                    (online_accuracies['level_of_studies'] == 'graduate') &
+                    (online_accuracies['text_domain'] == domain)]
 
             # get mean accuracies for the tq questions for both subsets
-            exp_mean_acc = exp_subset['mean_acc_tq'].dropna()
-            online_mean_acc = online_subset['mean_acc_tq'].dropna()
+            exp_subset = exp_subset.groupby(['reader_id', 'text_domain', 'reader_discipline', 'level_of_studies']).agg(
+                    mean_acc_tq=('mean_acc_tq', 'mean')
+                )
+
+            online_subset = online_subset.groupby(['participant_id', 'text_domain', 'reader_discipline', 'level_of_studies']).agg(
+                    mean_acc_tq=('mean_acc_tq', 'mean')
+                )
 
             # perform t-test
-            t_stat, p_val = ttest_ind(exp_mean_acc, online_mean_acc, equal_var=False)
-            p_text = 'significant' if p_val <= 0.001 else 'not significant'
-            if p_val <= 0.001:
-                p_val_text = f'p <= 0.001'
+            p = 0.001
+            t_stat, p_val = ttest_ind(exp_subset, online_subset, equal_var=False, alternative='greater', nan_policy='omit')
+            p_text = 'significant' if p_val <= p else 'not significant'
+            if p_val <= p:
+                p_val_text = f'p <= {p}'
             else:
                 p_val_text = f'{round(p_val, 2)}'
             print(f'T-test for {domain} texts and {discipline} readers: {p_val_text}. It is {p_text}.\n')
