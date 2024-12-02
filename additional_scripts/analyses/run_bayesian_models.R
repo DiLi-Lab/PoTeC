@@ -1,49 +1,32 @@
 #!/usr/bin/env Rscript
-library(boot)
-library(readr)
-library(tidyr)
-library(dplyr)
-library(stringr)
-library(MASS)
-library(brms)
-library(optparse)
+suppressPackageStartupMessages({
+    library(boot)
+    library(readr)
+    library(tidyr)
+    library(dplyr)
+    library(stringr)
+    library(MASS)
+    library(brms)
+    library(optparse)
+    library(cmdstanr)
+})
 
 option_list = list(
-    make_option(c("-e", "--experiment"), type = "integer", default = NULL,
-                help = "type of experiment"),
-    make_option(c("-i", "--iterations"), type = "integer", default = 3000,
-                help = "number of iterations")
+    make_option(c("-i", "--iterations"), type = "integer", default = 4000,
+                help = "number of iterations"),
+    make_option(c("-r", "--respvar"), type = "integer", default = 1,
+                help = "response variable"),
+    make_option(c("-d", "--downsample"), type = "logical", default = FALSE,
+                help = "downsample oldest and youngest readers")
 )
 
 opt_parser <- OptionParser(option_list = option_list)
 opt <- parse_args(opt_parser)
 options(mc.cores = parallel::detectCores())
 ITERATIONS <- opt$iterations
-EXP <- opt$experiment
 
-if (!dir.exists("models")) {
-    dir.create("models")
-}
-
-z_score <- function(x) {
-    return((x - mean(x)) / sd(x))
-}
-
-remove_outlier <- function(df, measure) {
-    # make copy of df
-    df_proc <- df
-    measure_array <- as.numeric(df_proc[[measure]])
-    #  log transform all reading times that are not 0
-    measure_array[measure_array != 0] <- log(measure_array[measure_array != 0])
-    z_score <- z_score(measure_array)
-    abs_z_score <- abs(z_score)
-    df_proc$outlier <- abs_z_score > 3
-    #  print number of outliers / total number of reading times
-    print(paste(sum(df_proc$outlier), "/", length(df_proc$outlier)))
-    #  remove outliers
-    df_proc <- df_proc[df_proc$outlier == FALSE, ]
-    return(df_proc)
-}
+resp_var <- opt$respvar
+downsample <- opt$downsample
 
 preprocess <- function(df) {
     rm_df <- df
@@ -54,21 +37,24 @@ preprocess <- function(df) {
             rm_df$level_of_studies_numeric == 1, 1, 0
     )
 
-    # remove outliers for word features
-    rm_df <- remove_outlier(rm_df, "surprisal")
-    rm_df <- remove_outlier(rm_df, "annotated_type_frequency_normalized")
-    rm_df <- remove_outlier(rm_df, "word_length")
+    # min type freq that is not 0
+    min_freq <- min(rm_df$lemma_frequency_normalized[rm_df$lemma_frequency_normalized > 0])
+    # set 0 values to min_freq
+    rm_df$lemma_frequency_normalized <- ifelse(
+        rm_df$lemma_frequency_normalized == 0, min_freq,
+        rm_df$lemma_frequency_normalized
+    )
+    rm_df$log_freq <- log(rm_df$lemma_frequency_normalized)
 
-    # get rid of 0s in annotated type frequency
-    rm_df <- rm_df[rm_df$annotated_type_frequency_normalized != 0, ]
-    rm_df$log_freq <- log(rm_df$annotated_type_frequency_normalized)
-
+    # make age numeric
+    rm_df$age <- as.numeric(rm_df$age)
     # standardize predictors: surprisal, log_freq, word_length
     rm_df <- rm_df %>%
         mutate(
             surprisal = scale(surprisal),
             log_freq = scale(log_freq),
-            word_length = scale(word_length)
+            word_length = scale(word_length),
+            age = scale(age)
         )
 
     rm_df$reader_id <- as.factor(rm_df$reader_id)
@@ -78,57 +64,29 @@ preprocess <- function(df) {
     return(rm_df)
 }
 
-fit_linear_model <- function(
-        data, target, predictors,
-        log_transform = FALSE, remove_zeros = FALSE, remove_outliers = FALSE) {
+
+fit_linear_model <- function(data, target, predictors) {
     data_proc <- data
     formula <- paste0(target, "~ (1|reader_id) +", predictors)
-    if (remove_zeros) {
-        data_proc <- data[data[[target]] != 0, ]
-    }
-    if (remove_outliers) {
-        data_proc <- remove_outlier(data_proc, target)
-    }
-    # log transform target variable if not 0
-    if (log_transform) {
-        data_proc[[target]] <- ifelse(
-            data_proc[[target]] == 0, 0, log(data_proc[[target]]))
-        model <- brm(
-            formula = formula,
-            data = data_proc,
-            family = lognormal(link = "identity"),
-            warmup = ITERATIONS / 4,
-            iter = ITERATIONS,
-            chains = 4,
-            cores = 4,
-            seed = 123
-        )
-    } else {
-        model <- brm(
-            formula = formula,
-            data = data_proc,
-            family = gaussian(link = "identity"),
-            warmup = ITERATIONS / 4,
-            iter = ITERATIONS,
-            chains = 4,
-            cores = 4,
-            seed = 123
-        )
-    }
-    return(model)
-}
-
-fit_count_model <- function(data, target, predictors) {
-    formula <- paste0(target, "~ (1|reader_id) +", predictors)
+    data_proc <- data[data[[target]] != 0, ]
     model <- brm(
         formula = formula,
-        data = data,
-        family = poisson(link = "log"),
+        data = data_proc,
+        family = lognormal(),
+        prior = c(
+            prior(normal(6, 1.5), class = Intercept),
+            prior(normal(0, 1), class = sigma),
+            prior(normal(0, 1), class = b, coef = surprisal),
+            prior(normal(0, 1), class = b, coef = log_freq),
+            prior(normal(0, 1), class = b, coef = word_length),
+            prior(normal(0, 1), class = b, coef = age)
+        ),
         warmup = ITERATIONS / 4,
         iter = ITERATIONS,
         chains = 4,
         cores = 4,
-        seed = 123
+        seed = 123,
+        backend = "cmdstanr"
     )
     return(model)
 }
@@ -139,34 +97,37 @@ fit_binomial_model <- function(data, target, predictors) {
         formula = formula,
         data = data,
         family = bernoulli(link = "logit"),
+        prior = c(
+            prior(normal(0, 4), class = Intercept),
+            prior(normal(0, 1), class = b, coef = surprisal),
+            prior(normal(0, 1), class = b, coef = log_freq),
+            prior(normal(0, 1), class = b, coef = word_length),
+            prior(normal(0, 1), class = b, coef = age)
+        ),
         warmup = ITERATIONS / 4,
         iter = ITERATIONS,
         chains = 4,
         cores = 4,
-        seed = 123
+        seed = 123,
+        backend = "cmdstanr"
     )
     return(model)
 }
 
-fit_model <- function(data, data_type, target, predictors,
-                      log_transform = FALSE, remove_zeros = FALSE, 
-                      remove_outliers = FALSE) {
+fit_model <- function(data, data_type, target, predictors) {
     if (data_type == "logreg") {
         model <- fit_binomial_model(data, target, predictors)
     } else if (data_type == "count") {
         model <- fit_count_model(data, target, predictors)
     } else if (data_type == "linear") {
         model <- fit_linear_model(
-            data, target, predictors,
-            log_transform, remove_zeros, remove_outliers
+            data, target, predictors
         )
         return(model)
     }
 }
 
-fit_models <- function(df, reading_measure_df, predictors,
-                       log_transform = FALSE, remove_zeros = FALSE,
-                       remove_outliers = FALSE) {
+fit_models <- function(df, reading_measure_df, predictors) {
     results <- data.frame(
         reading_measure = character(),
         estimate = numeric(),
@@ -183,11 +144,10 @@ fit_models <- function(df, reading_measure_df, predictors,
         test_type <- reading_measure_df$test_type[i]
         #  fit model
         model <- fit_model(
-            df, test_type, rm, predictors,
-            log_transform, remove_zeros, remove_outliers
+            df, test_type, rm, predictors
         )
         #  save model
-        saveRDS(model, paste0("models/", rm, "_", EXP, ".rds"))
+        saveRDS(model, paste0("models/", rm, "_ds.rds"))
         fixed_effects <- fixef(model)
         # split predictor str at "+" into vector
         for (pred in rownames(fixed_effects)) {
@@ -221,35 +181,46 @@ files <- list.files(
 #  load all files into one data frame
 df_raw <- do.call(rbind, lapply(files, read_tsv, col_types = cols()))
 
-############### !!!! DON'T RUN THIS AFTER NEXT PULL !!!! ################
-# switch text domain numeric to biology = 0, physics = 1x
-df_raw$text_domain_numeric <- ifelse(
-    df_raw$text_domain_numeric == 0, 1, 0
-)
-##########
+if (downsample == TRUE) {
+    df_raw <- df_raw[!is.na(df_raw$age), ]
+    oldest <- df_raw %>%
+        dplyr::select(age, reader_id) %>%
+        distinct() %>%
+        arrange(desc(age))
+
+    # get ids of 16 oldest
+    oldest_ids <- oldest$reader_id[1:16]
+    # remove oldest readers from df_raw
+    df_raw <- df_raw[!df_raw$reader_id %in% oldest_ids, ]
+
+    # remove 4 youngest
+    youngest <- df_raw %>%
+        dplyr::select(age, reader_id) %>%
+        distinct() %>%
+        arrange(age)
+
+    # get ids of 4 youngest
+    youngest_ids <- youngest$reader_id[1:4]
+    # remove youngest readers from df_raw
+    df_raw <- df_raw[!df_raw$reader_id %in% youngest_ids, ]
+}
 
 df <- preprocess(df_raw)
 
 # CONSTANTS
 rm_of_interest <- c("RRT", "FPRT", "TFT", "FPReg")
 rm_of_interest_test_type <- c(rep("linear", 3), rep("logreg", 1))
+rm_of_interest <- rm_of_interest[resp_var]
+rm_of_interest_test_type <- rm_of_interest_test_type[resp_var]
 rm_df <- data.frame(
     reading_measure = rm_of_interest, test_type = rm_of_interest_test_type
 )
 
 # nolint start
-experiments <- c(
-    "word_length + surprisal + log_freq + expert_in_domain + is_expert_technical_term + reader_discipline_numeric",
-    "word_length + surprisal + log_freq + expert_in_domain*reader_discipline_numeric + is_expert_technical_term",
-    "word_length + surprisal + log_freq + expert_in_domain + reader_discipline_numeric + word_length:expert_in_domain + surprisal:expert_in_domain + log_freq:expert_in_domain + is_expert_technical_term",
-    "word_length + surprisal + log_freq + expert_in_domain + reader_discipline_numeric + expert_in_domain:reader_discipline_numeric + word_length:expert_in_domain + surprisal:expert_in_domain + log_freq:expert_in_domain + is_expert_technical_term"
-)
-
-
-preds <- experiments[EXP]
-results_wordfeat <- fit_models(
-    df, rm_df, preds,
-    log_transform = TRUE, remove_zeros = TRUE, remove_outliers = TRUE
-)
-write.csv(results_wordfeat, paste0("results_predictor_set", EXP, ".csv"), row.names = FALSE)
+preds <- "word_length + surprisal + log_freq + age + expert_in_domain + reader_discipline_numeric + expert_in_domain:reader_discipline_numeric + word_length:expert_in_domain + surprisal:expert_in_domain + log_freq:expert_in_domain + is_expert_technical_term"
 # nolint end
+
+results_wordfeat <- fit_models(
+    df, rm_df, preds
+)
+write.csv(results_wordfeat, paste0("coefficients/results_predictor_coefficients", resp_var, ".csv"), row.names = FALSE)
