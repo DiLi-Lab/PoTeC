@@ -1,0 +1,481 @@
+﻿VAR,RESPONSE,MEANING,CORRECT_ANSWER
+AA01,1,7,FALSE
+AA01,2,9,TRUE
+AA01,3,20,FALSE
+AA01,4,0,FALSE
+AA01,-9,Not answered,
+AA02,1,Rom,TRUE
+AA02,2,Neapel,FALSE
+AA02,3,Bologna,FALSE
+AA02,4,Como,FALSE
+AA02,-9,Not answered,
+AA03,1,nie,TRUE
+AA03,2,das,FALSE
+AA03,3,ich,FALSE
+AA03,4,einen,FALSE
+AA03,-9,Not answered,
+AA04,1,klein,TRUE
+AA04,2,alt,FALSE
+AA04,3,interessant,FALSE
+AA04,4,laut,FALSE
+AA04,-9,Not answered,
+AA05,1,Apfel,TRUE
+AA05,2,Fisch,FALSE
+AA05,3,Gurke,FALSE
+AA05,4,Weizen,FALSE
+AA05,-9,Not answered,
+AA06,1,Schlange,FALSE
+AA06,2,Hund,TRUE
+AA06,3,Blauwal,FALSE
+AA06,4,Regenwurm,FALSE
+AA06,-9,Not answered,
+B001,3,Nach Länge.,FALSE
+B001,4,Nach Ladung.,FALSE
+B001,5,Nach Basensequenz.,TRUE
+B001,6,Nach Ethidiumbromideinlagerung.,FALSE
+B001,-9,Not answered,
+B002,1,Durch die Phosphatreste im Rückgrat.,TRUE
+B002,2,Durch die negative Ladung der Base Adenin.,FALSE
+B002,3,Durch das Methylierungsmuster der DNA.,FALSE
+B002,4,Durch die Phosphoratome.,FALSE
+B002,-9,Not answered,
+B003,1,Ihre dreidimensionale Netzstruktur.,TRUE
+B003,2,Ihre Zähflüssigkeit.,FALSE
+B003,3,Ihre negative Ladung.,FALSE
+B003,4,Ihre positive Ladung.,FALSE
+B003,-9,Not answered,
+B101,1,Ein Protein.,TRUE
+B101,2,Eine Nukleinsäure.,FALSE
+B101,3,Ein Zuckermolekül.,FALSE
+B101,4,Ein Cofaktor.,FALSE
+B101,-9,Not answered,
+B102,1,Die Lücke im DNA-Rückgrat wird geschlossen.,FALSE
+B102,2,Sie sucht nach homologen Sequenzen.,FALSE
+B102,3,Sie behebt den Schaden in der DNA.,FALSE
+B102,4,Sie stoppt die Replikationsgabel.,TRUE
+B102,-9,Not answered,
+B103,1,Von einer homologen Sequenz.,FALSE
+B103,2,Von einem Tochterstrang.,TRUE
+B103,3,Von einem Parentalstrang.,FALSE
+B103,4,Durch Endonuklease-Schnitte.,FALSE
+B103,-9,Not answered,
+B201,1,Glucose.,TRUE
+B201,2,Nitrat.,FALSE
+B201,3,Phosphat.,FALSE
+B201,4,Wasser.,FALSE
+B201,-9,Not answered,
+B202,1,"Phosphat, weil es einen niedrigen Diffusionskoeffizienten hat.",FALSE
+B202,2,"Phosphat, weil es einen hohen Diffusionskoeffizienten hat.",FALSE
+B202,3,"Nitrat, weil es einen niedrigen Diffusionskoeffizienten hat.",FALSE
+B202,4,"Nitrat, weil es einen hohen Diffusionskoeffizienten hat.",TRUE
+B202,-9,Not answered,
+B203,1,Es erhöht die Phosphataufnahme.,FALSE
+B203,2,Es erhöht die Nitrataufnahme.,FALSE
+B203,3,Es hindert die Glucoseaufnahme.,TRUE
+B203,4,Es vergrößert die Phosphatverarmungszonen der Wurzeln.,FALSE
+B203,-9,Not answered,
+B301,1,An der schweren Kette.,FALSE
+B301,2,An einer der leichten Kette.,FALSE
+B301,3,An einer Calmodulinkette.,FALSE
+B301,4,An einer +Kette.,TRUE
+B301,-9,Not answered,
+B302,1,Myosin VI.,TRUE
+B302,2,Myosin IV.,FALSE
+B302,3,Myosin VIII.,FALSE
+B302,4,Myosin II.,FALSE
+B302,-9,Not answered,
+B303,1,Für den vesikulären Transport.,TRUE
+B303,2,Für die Proteinbiosynthese.,FALSE
+B303,3,Für die DNA-Rekombination.,FALSE
+B303,4,Für die Glykosilierung.,FALSE
+B303,-9,Not answered,
+B401,1,Glucose.,FALSE
+B401,2,Saccharose.,FALSE
+B401,3,Stärke.,FALSE
+B401,4,Chloroplast.,TRUE
+B401,-9,Not answered,
+B402,1,Im Chloroplasten.,FALSE
+B402,2,In Speicherorganen der Pflanze.,TRUE
+B402,3,Im Extrazellularraum.,FALSE
+B402,4,Im Zellkern.,FALSE
+B402,-9,Not answered,
+B403,1,Cellulose.,FALSE
+B403,2,Glucose.,TRUE
+B403,3,Saccharose.,FALSE
+B403,4,Stärke.,FALSE
+B403,-9,Not answered,
+B501,1,Beta-Faltblatt.,FALSE
+B501,2,Alpha-Helix.,FALSE
+B501,3,Beta-Fass.,FALSE
+B501,4,Alpha-Faden.,TRUE
+B501,-9,Not answered,
+B502,1,Durch Umwandlung aus dem nativen Protein.,TRUE
+B502,2,Durch Genmutation im nativen Protein.,FALSE
+B502,3,Durch Virenbefall der Zelle.,FALSE
+B502,4,Durch Vitaminmangel.,FALSE
+B502,-9,Not answered,
+B503,1,Das codierende Gen.,FALSE
+B503,2,Die räumliche Struktur.,FALSE
+B503,3,Die Fadenform.,FALSE
+B503,4,Doppelbrechung von polarisiertem Licht.,TRUE
+B503,-9,Not answered,
+I104,1,"Ja, ich würde gerne einen 10€ Amazon Gutschein erhalten.",
+I104,-9,Not answered,
+P001,1,Damit die Ionen immer genau zum Feldwechsel am Spalt ankommen.,FALSE
+P001,2,Damit die Ionen sich nicht gegenseitig einholen.,FALSE
+P001,3,Damit die Ionen das Zyklotron nicht in z-Richtung verlassen,FALSE
+P001,4,Damit sich der Radius der Ionenbahn erhöht.,TRUE
+P001,-9,Not answered,
+P002,1,Um den Ionen kinetische Energie zu geben.,FALSE
+P002,2,Um die Ionen auf der Kreisbahn zu halten.,FALSE
+P002,3,Um die Ionen in der x-y-Ebene zu halten.,TRUE
+P002,4,Um die Ionen in z-Richtung zu beschleunigen.,FALSE
+P002,-9,Not answered,
+P003,1,Um die Ionen auf der Kreisbahn zu halten.,FALSE
+P003,2,Um den Ionen kinetische Energie zu geben.,TRUE
+P003,3,Um die Ionen in der x-y-Ebene zu halten.,FALSE
+P003,4,Um die Ionen in z-Richtung zu beschleunigen.,FALSE
+P003,-9,Not answered,
+P101,1,Der doppelten Rückstoßgeschwindigkeit.,FALSE
+P101,2,Der Rückstoßgeschwindigkeit.,FALSE
+P101,3,Dem Produkt aus der Wellenlänge und dem Frequenzunterschied von Photon und Anregung.,FALSE
+P101,4,Dem Produkt aus der doppelten Wellenlänge und dem Frequenzunterschied von Photon und Anregung.,TRUE
+P101,-9,Not answered,
+P102,1,Anregungsenergie = Photonenenergie - Rückstoßenergie,FALSE
+P102,2,Photonenenergie = Anregungsenergie - Rückstoßenergie,TRUE
+P102,3,Anregungsenergie = Photonenenergie + Rückstoßenergie,FALSE
+P102,4,Rückstoßenergie = Anregungsenergie + Rückstoßenergie,FALSE
+P102,-9,Not answered,
+P103,1,Anregungsenergie = Photonenenergie + Rückstoßenergie,FALSE
+P103,2,Photonenenergie = Anregungsenergie + Rückstoßenergie,FALSE
+P103,3,Photonenenergie = Rückstoßenergie - Anregungsenergie,FALSE
+P103,4,Rückstoßenergie = Photonenenergie - Rückstoßenergie,TRUE
+P103,-9,Not answered,
+P201,1,Sie besitzen eine räumlich periodische Variation der Dielektrizitätskonstante.,TRUE
+P201,2,Sie besitzen periodisch eingebaute Mikrostrukturen.,FALSE
+P201,3,Sie sind durchsichtig.,FALSE
+P201,4,Sie sind kristallin.,FALSE
+P201,-9,Not answered,
+P202,1,das Reflexionsvermögen verringert.,TRUE
+P202,2,das Reflexionsvermögen erhöht.,FALSE
+P202,3,die Wellenlänge bei der Brechung verringert.,FALSE
+P202,4,die Wellenlänge bei der Brechung erhöht.,FALSE
+P202,-9,Not answered,
+P203,1,"Durch transparente Materialien mit periodischen Strukturen, deren Abstände in der Größenordnung der optischen Wellenlänge liegen.",FALSE
+P203,2,"Durch transparente Materialien mit periodischen Strukturen, deren Abstände ein π-vielfaches der optischen Wellenlänge sind.",TRUE
+P203,3,"Durch transparente Materialien mit periodischen Strukturen, deren Abstände ein ungeradzahlig π-vielfaches der halben Wellenlänge sind.",FALSE
+P203,4,"Durch transparente Materialien mit periodischen Strukturen, deren Abstände sehr viel kleiner als die optische Wellenlänge sind.",FALSE
+P203,-9,Not answered,
+P301,1,"Sie besitzen ein magnetisches Moment, aber keine Ladung.",TRUE
+P301,2,Sie besitzen weder ein magnetisches Moment noch eine Ladung.,FALSE
+P301,3,"Sie besitzen kein magnetisches Moment, aber eine Ladung.",FALSE
+P301,4,Sie besitzen sowohl ein magnetisches Moment als auch eine Gesamtladung.,FALSE
+P301,-9,Not answered,
+P302,1,Dass unterschiedliche zuvor als elementar angenommene Teilchen eine innere Struktur haben.,FALSE
+P302,2,"Dass es Elementarteilchen mit gleichem Spin, gleicher Parität und fast gleicher Masse gibt.",FALSE
+P302,3,Dass es viel mehr verschiedene Elementarteilchen gibt als zuvor angenommen.,TRUE
+P302,4,Dass Elementarteilchen keine Ladung haben.,FALSE
+P302,-9,Not answered,
+P303,1,Murray Gell-Mann unabhängig von George Zweig.,FALSE
+P303,2,George Zweig in Kooperation mit Murray Gell-Mann.,FALSE
+P303,3,Murray Gell-Mann auf George Zweigs Modell aufbauend.,FALSE
+P303,4,George Zweig auf Murray Gell-Manns Modell aufbauend.,TRUE
+P303,-9,Not answered,
+P401,1,Um kleinste Gestaltsänderungen an einem Objekt erkennen zu können.,FALSE
+P401,2,Um Interferenzstrukturen in Rekonstruktionswellen zu untersuchen.,TRUE
+P401,3,Um veränderte Objekte mit kleinen Veränderungen zu rekonstruieren.,FALSE
+P401,4,Um veränderte Objekte mit dem Hologramm des Originals zu vergleichen.,FALSE
+P401,-9,Not answered,
+P402,1,"Damit sich die Signalwelle vom Objekt und die Rekonstruktionswelle vom Hologramm so überlagern, dass unveränderte Bereiche im holografischen Bild nicht zu sehen sind.",FALSE
+P402,2,Damit die Signal- und Rekonstruktionswelle nicht interferieren.,FALSE
+P402,3,Damit die Phasenverschiebung von Signal- und Rekonstruktionswelle überall gleich ist.,FALSE
+P402,4,Damit man das Objekt wieder in den ursprünglichen Zustand zurückversetzen kann.,TRUE
+P402,-9,Not answered,
+P403,1,In Phasenverschiebungen der Signalwelle.,FALSE
+P403,2,In Interferenzstrukturen in der Signalwelle.,TRUE
+P403,3,In Interferenzstrukturen im holografischen Bild der Signalwelle.,FALSE
+P403,4,In Stauchung der Signalwelle.,FALSE
+P403,-9,Not answered,
+P501,1,Die Elektronen verhalten sich dann wie freie Teilchen mit dieser effektiven Masse.,FALSE
+P501,2,Die Elektronen bewegen sich dann im Kristall auf Parabeln.,TRUE
+P501,3,Dann hängt die Energie der Elektronen nicht mehr vom Potential ab.,FALSE
+P501,4,Weil die effektive Elektronenmasse ortsunabhängig ist.,FALSE
+P501,-9,Not answered,
+P502,1,Wenn direkte Übergänge möglich sind.,FALSE
+P502,2,Wenn der Wellenvektor des Photons sehr klein ist.,FALSE
+P502,3,Wenn der Wellenvektor des Photons erhalten bleibt.,FALSE
+P502,4,Wenn die Photonenenergie geringer ist.,TRUE
+P502,-9,Not answered,
+P503,1,Weil die effektive Masse im oberen Teil des Valenzband negativ ist.,FALSE
+P503,2,Weil der Abstand des Wellenvektors vom Ort des Energiemaximum im Valenzband komplex ist.,TRUE
+P503,3,Weil die effektive Masse am Energiemaximum richtungsunabhängig ist.,FALSE
+P503,4,Weil die Energie quadratisch von der effektiven Masse abhängt.,FALSE
+P503,-9,Not answered,
+PQ01,1,Ja,
+PQ01,2,Nein,
+PQ01,3,Keine Angabe,
+PQ01,-9,Not answered,
+PQ03,1,Ja,
+PQ03,2,Nein,
+PQ03,3,Keine Angabe,
+PQ03,-9,Not answered,
+PQ04,1,Ja,
+PQ04,2,Nein,
+PQ04,3,Keine Angabe,
+PQ04,-9,Not answered,
+RA01x01,1,B001,
+RA01x01,2,B002,
+RA01x01,3,B003,
+RA01x02,1,B001,
+RA01x02,2,B002,
+RA01x02,3,B003,
+RA01x03,1,B001,
+RA01x03,2,B002,
+RA01x03,3,B003,
+RA03x01,1,B101,
+RA03x01,2,B102,
+RA03x01,3,B103,
+RA03x02,1,B101,
+RA03x02,2,B102,
+RA03x02,3,B103,
+RA03x03,1,B101,
+RA03x03,2,B102,
+RA03x03,3,B103,
+RA04x01,1,B201,
+RA04x01,2,B202,
+RA04x01,3,B203,
+RA04x02,1,B201,
+RA04x02,2,B202,
+RA04x02,3,B203,
+RA04x03,1,B201,
+RA04x03,2,B202,
+RA04x03,3,B203,
+RA05x01,1,B301,
+RA05x01,2,B302,
+RA05x01,3,B303,
+RA05x02,1,B301,
+RA05x02,2,B302,
+RA05x02,3,B303,
+RA05x03,1,B301,
+RA05x03,2,B302,
+RA05x03,3,B303,
+RA06x01,1,B401,
+RA06x01,2,B402,
+RA06x01,3,B403,
+RA06x02,1,B401,
+RA06x02,2,B402,
+RA06x02,3,B403,
+RA06x03,1,B401,
+RA06x03,2,B402,
+RA06x03,3,B403,
+RA07x01,1,B501,
+RA07x01,2,B502,
+RA07x01,3,B503,
+RA07x02,1,B501,
+RA07x02,2,B502,
+RA07x02,3,B503,
+RA07x03,1,B501,
+RA07x03,2,B502,
+RA07x03,3,B503,
+RA08x01,1,P001,
+RA08x01,2,P002,
+RA08x01,3,P003,
+RA08x02,1,P001,
+RA08x02,2,P002,
+RA08x02,3,P003,
+RA08x03,1,P001,
+RA08x03,2,P002,
+RA08x03,3,P003,
+RA09x01,1,P101,
+RA09x01,2,P102,
+RA09x01,3,P103,
+RA09x02,1,P101,
+RA09x02,2,P102,
+RA09x02,3,P103,
+RA09x03,1,P101,
+RA09x03,2,P102,
+RA09x03,3,P103,
+RA10x01,1,P201,
+RA10x01,2,P202,
+RA10x01,3,P203,
+RA10x02,1,P201,
+RA10x02,2,P202,
+RA10x02,3,P203,
+RA10x03,1,P201,
+RA10x03,2,P202,
+RA10x03,3,P203,
+RA11x01,1,P301,
+RA11x01,2,P302,
+RA11x01,3,P303,
+RA11x02,1,P301,
+RA11x02,2,P302,
+RA11x02,3,P303,
+RA11x03,1,P301,
+RA11x03,2,P302,
+RA11x03,3,P303,
+RA12x01,1,P401,
+RA12x01,2,P402,
+RA12x01,3,P403,
+RA12x02,1,P401,
+RA12x02,2,P402,
+RA12x02,3,P403,
+RA12x03,1,P401,
+RA12x03,2,P402,
+RA12x03,3,P403,
+RA14x01,1,P501,
+RA14x01,2,P502,
+RA14x01,3,P503,
+RA14x02,1,P501,
+RA14x02,2,P502,
+RA14x02,3,P503,
+RA14x03,1,P501,
+RA14x03,2,P502,
+RA14x03,3,P503,
+RA13x01,1,B0,
+RA13x01,2,B1,
+RA13x01,3,B2,
+RA13x01,4,B3,
+RA13x01,5,B4,
+RA13x01,6,B5,
+RA13x01,7,P0,
+RA13x01,8,P1,
+RA13x01,9,P2,
+RA13x01,10,P3,
+RA13x01,11,P4,
+RA13x01,12,P5,
+RA13x02,1,B0,
+RA13x02,2,B1,
+RA13x02,3,B2,
+RA13x02,4,B3,
+RA13x02,5,B4,
+RA13x02,6,B5,
+RA13x02,7,P0,
+RA13x02,8,P1,
+RA13x02,9,P2,
+RA13x02,10,P3,
+RA13x02,11,P4,
+RA13x02,12,P5,
+RA13x03,1,B0,
+RA13x03,2,B1,
+RA13x03,3,B2,
+RA13x03,4,B3,
+RA13x03,5,B4,
+RA13x03,6,B5,
+RA13x03,7,P0,
+RA13x03,8,P1,
+RA13x03,9,P2,
+RA13x03,10,P3,
+RA13x03,11,P4,
+RA13x03,12,P5,
+RA13x04,1,B0,
+RA13x04,2,B1,
+RA13x04,3,B2,
+RA13x04,4,B3,
+RA13x04,5,B4,
+RA13x04,6,B5,
+RA13x04,7,P0,
+RA13x04,8,P1,
+RA13x04,9,P2,
+RA13x04,10,P3,
+RA13x04,11,P4,
+RA13x04,12,P5,
+RA13x05,1,B0,
+RA13x05,2,B1,
+RA13x05,3,B2,
+RA13x05,4,B3,
+RA13x05,5,B4,
+RA13x05,6,B5,
+RA13x05,7,P0,
+RA13x05,8,P1,
+RA13x05,9,P2,
+RA13x05,10,P3,
+RA13x05,11,P4,
+RA13x05,12,P5,
+RA13x06,1,B0,
+RA13x06,2,B1,
+RA13x06,3,B2,
+RA13x06,4,B3,
+RA13x06,5,B4,
+RA13x06,6,B5,
+RA13x06,7,P0,
+RA13x06,8,P1,
+RA13x06,9,P2,
+RA13x06,10,P3,
+RA13x06,11,P4,
+RA13x06,12,P5,
+RA13x07,1,B0,
+RA13x07,2,B1,
+RA13x07,3,B2,
+RA13x07,4,B3,
+RA13x07,5,B4,
+RA13x07,6,B5,
+RA13x07,7,P0,
+RA13x07,8,P1,
+RA13x07,9,P2,
+RA13x07,10,P3,
+RA13x07,11,P4,
+RA13x07,12,P5,
+RA13x08,1,B0,
+RA13x08,2,B1,
+RA13x08,3,B2,
+RA13x08,4,B3,
+RA13x08,5,B4,
+RA13x08,6,B5,
+RA13x08,7,P0,
+RA13x08,8,P1,
+RA13x08,9,P2,
+RA13x08,10,P3,
+RA13x08,11,P4,
+RA13x08,12,P5,
+RA13x09,1,B0,
+RA13x09,2,B1,
+RA13x09,3,B2,
+RA13x09,4,B3,
+RA13x09,5,B4,
+RA13x09,6,B5,
+RA13x09,7,P0,
+RA13x09,8,P1,
+RA13x09,9,P2,
+RA13x09,10,P3,
+RA13x09,11,P4,
+RA13x09,12,P5,
+RA13x10,1,B0,
+RA13x10,2,B1,
+RA13x10,3,B2,
+RA13x10,4,B3,
+RA13x10,5,B4,
+RA13x10,6,B5,
+RA13x10,7,P0,
+RA13x10,8,P1,
+RA13x10,9,P2,
+RA13x10,10,P3,
+RA13x10,11,P4,
+RA13x10,12,P5,
+RA13x11,1,B0,
+RA13x11,2,B1,
+RA13x11,3,B2,
+RA13x11,4,B3,
+RA13x11,5,B4,
+RA13x11,6,B5,
+RA13x11,7,P0,
+RA13x11,8,P1,
+RA13x11,9,P2,
+RA13x11,10,P3,
+RA13x11,11,P4,
+RA13x11,12,P5,
+RA13x12,1,B0,
+RA13x12,2,B1,
+RA13x12,3,B2,
+RA13x12,4,B3,
+RA13x12,5,B4,
+RA13x12,6,B5,
+RA13x12,7,P0,
+RA13x12,8,P1,
+RA13x12,9,P2,
+RA13x12,10,P3,
+RA13x12,11,P4,
+RA13x12,12,P5,
+FINISHED,0,Canceled,
+FINISHED,1,Finished,
+Q_VIEWER,0,Respondent,
+Q_VIEWER,1,Spectator,
