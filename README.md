@@ -134,46 +134,61 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
 
 ## Repository Structure
 
-    PoTeC-data
+    PoTeC data
     ├── CODEBOOK.md
     ├── README.md
+    ├── download_data_files.py
     ├── requirements.txt
     ├── additional_scripts
     │   ├── ADDITIONAL_SCRIPTS.md
+    │   ├── analyses
+    │	│   ├── analyses.R
+    │	│   ├── run_bayesian_models.R
+    │	│   ├── run_freq_models.R
+    │	│   ├── count_reader_texts.py
+    │	│   ├── get_validation_scores.py
+    │	│   ├── analyse_online_survey.py
+    │	│   └── visualizations.ipynb
+    │   ├── codebook
+    │	│   ├── create_codebook_tables.py
+    │	│   ├── all_cols_description.csv
+    │	│   └── all_codebook_texts.csv
+    │	├── add_syntax_trees.py
+    │	├── annotate_constituency_trees_manually.py
     │   ├── compute_reading_measures.py
     │   ├── generate_scanpaths.py
     │   ├── merge_reading_measures.py
-    │   ├── create_codebook_tables.py
     │   ├── surprisal.py
     │   ├── get_surprisal.py
     │   ├── merge_fixations_and_coordinates.py
     │   ├── merge_scanpaths.py
-    │   ├── analyses.R
-    │   ├── run_bayesian_models.R
-    │   ├── run_freq_models.R
-    │   ├── all_colls_description.csv
-    │   └── all_codebook_texts.csv
+    │   └── psycholing_analysis_plots.r
     ├── eyetracking_data
     │   ├── EYETRACKING_DATA.md
     │   ├── original_uncorrected_fixation_report.txt
-    │   ├── fixations
-    │   │   └── ...
-    │   ├── fixations_uncorrected
-    │   │   └── ...
     │   ├── asc_files
-    │   │   └── ...
-    │   ├── raw_data 
-    │   │   └── ...
-    │   ├── reader_merged
-    │   │   └── ...
+    │   │    └── ...
+    │   ├── fixations
+    │   │    └── ...
+    │   ├── fixations_uncorrected
+    │   │    └── ...
+    │   ├── raw_data
+    │   │    └── ...
     │   ├── reading_measures
-    │   │   └── ...
+    │   │    └── ...
+    │   ├── reading_measures_merged
+    │   │    └── ...
     │   ├── scanpaths
-    │   │   └── ...
+    │   │    └── ...
     │   └── scanpaths_merged
-    │       └── ...
+    │        └── ...
     ├── participants
-    │   ├── PARTICIPANTS.md
+    │   ├── README.md
+    │   ├── ParticipantBriefing.pdf
+    |   ├── answer_coding_online_survey.csv
+    │   ├── response_accuracy_online_survey.csv
+    │   ├── response_data_online_survey.csv
+    │   ├── participant_response_accuracy.tsv
     │   └── participant_data.tsv
     ├── preprocessing_scripts
     │   ├── PREPROCESSING_SCRIPTS.md
@@ -189,13 +204,22 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
         ├── ANNOTATION.md
         ├── STIMULI.md
         ├── practice_items.txt
-        ├── dependency_trees_manually_corrected.tsv
+        ├── generate_word_aois.py
+        ├── manually_corrected_dependency_trees.tsv
+        ├── manually_corrected_constituency_trees.tsv
+        ├── uncorrected_dependency_trees.tsv
+        ├── uncorrected_constituency_trees.tsv
+        ├── images
+        │   └── ...
         ├── aoi_texts
         │   └── ...
+        ├── word_aoi_texts
+        │   └── ...
         ├── stimuli
-            ├── stimuli.bib
+        │   ├── stimuli.bib
         │   ├── items.tsv
         │   └── stimuli.tsv
         └── word_features
             └── ...
+
 

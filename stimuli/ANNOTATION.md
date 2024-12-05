@@ -102,17 +102,17 @@ Some of the sentences could not be parsed exactly according to the tiger schema 
 as it is not possible to annotate crossing dependencies with simple parenthesis notation. 
 Crossing dependencies are for example present in extrapositioned relative clauses, as show in the following image: 
 
-![img.png](img.png)
+![img.png](images/img.png)
 (S. Albert et al. (2003), [TIGER](https://www.linguistics.ruhr-uni-bochum.de/~dipper/pub/tiger_annot.pdf), pp. 31),
 
 In the provided file, the exprapositoned relative clause is indicated by the doubled labled phrase (VP, PP), where the PP 
 describes the relative clause " zwischen denen eine Hochfrewuenzspannung anliegt" which should be subbortdinated to its head "Hälfte"
 for the lack of a better solution: 
 
-![img_1.png](img_1.png)
+![img_1.png](images/img_1.png)
 
 The correct Constituency tree would look like: 
-![constituency_tree.png](constituency_tree.png)
+![constituency_tree.png](images/constituency_tree.png)
 
 Examples for sentences, which are not possible to annotate with parathesis are: 
 p5 ID 7, p4 ID 6, p3 ID 3, p0 ID 2 & 4 % 5 ,  b4 ID 10, b3 ID 12 & 5, b2 Id 3. 

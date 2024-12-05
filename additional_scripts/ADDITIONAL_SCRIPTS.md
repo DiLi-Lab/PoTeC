@@ -41,7 +41,7 @@ This script generates the constituency and dependency trees for each sentence in
 **How to run:**
  ```bash
  # python or python3
- python [path_to_additional_scripts]/generate_scanpaths.py
+ python [path_to_additional_scripts]/generate_syntax_trees.py
  ```
 
  **Results**
