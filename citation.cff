@@ -1,0 +1,19 @@
+ff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+preferred-citation:
+  authors:
+  - family-names: "Jakobi"
+    given-names: "Deborah N."
+  - family-names: "Kern"
+    given-names: "Thomas"
+  - family-names: "Reich"
+    given-names: "David R."
+  - family-names: "Haller"
+    given-names: "Patrick"
+  - family-names: "Jäger"
+    given-names: "Lena A."
+  title: "PoTeC: A German Naturalistic Eye-tracking-while-reading Corpus"
+  type: generic
+  year: 2025
+  journal: "Behavior Research Methods"
+  note: "in press"
