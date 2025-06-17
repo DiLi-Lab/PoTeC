@@ -41,6 +41,8 @@ def compute_reading_measures(
         participants_file: Path,
         word_limits_json: Path,
         sent_limits_json: Path,
+        aoi_files: Path,
+        word_features: Path,
         stimulus_overview: Path,
 ) -> None:
     if not os.path.exists(output_folder):
@@ -89,7 +91,7 @@ def compute_reading_measures(
         fixation_file_sorted = fixation_file.sort_values(by=[FIX_INDEX_COL_NAME])
 
         # append one extra dummy fixation to have a next fixation for the actual last fixation
-        pd.concat(
+        fixation_file_sorted = pd.concat(
             [fixation_file_sorted,
              pd.DataFrame(
                  [[0 for _ in range(len(fixation_file_sorted.columns))]], columns=fixation_file_sorted.columns
@@ -105,7 +107,7 @@ def compute_reading_measures(
             word_row = {
                 'word_index_in_sent': word_index - sent_limits_text[0][
                     (aoi2word(word_index, sent_limits_text)) - 1] + 1,
-                'sent_index_in_text': aoi2word(word_index, sent_limits_text), 'FFD': 0, 'SFD': 0, 'FD': 0, 'FPRT': 0,
+                'sent_index_in_text': aoi2word(word_index, sent_limits_text), 'line': -1, 'FFD': 0, 'SFD': 0, 'FD': 0, 'FPRT': 0,
                 'FRT': 0, 'TFT': 0, 'RRT': 0, 'RPD_inc': 0, 'RPD_exc': 0, 'RBRT': 0, 'Fix': 0,
                 'FPF': 0, 'RR': 0, 'FPReg': 0, 'TRC_out': 0, 'TRC_in': 0, 'LP': 0, 'SL_in': 0, 'SL_out': 0, 'TFC': 0,
             }
@@ -197,7 +199,7 @@ def compute_reading_measures(
         elif fixation_file_sorted.loc[1, 'text_domain'] == 'physics':
             text_domain_numeric = 1
         else:
-            text_domain_numeric = pd.NA
+            raise ValueError(f"Unknown text domain: {fixation_file_sorted.loc[1, 'text_domain']}")
 
         # get some more information on text and reader
         trial = fixation_file_sorted.loc[1, 'trial']
@@ -245,7 +247,27 @@ def compute_reading_measures(
 
         rm_reader_text_pair_df = rm_reader_text_pair_df.join(pd.DataFrame(trial_info_dict))
 
+        # iterate over the rows, get the line of the aoi (=word index in text) from the aoi file and add it as a column line
+        rm_reader_text_pair_df.reset_index(inplace=True)
+        for _, row in rm_reader_text_pair_df.iterrows():
+            # get the line of the aoi (=word index in text) from the aoi file
+            text_id_words = row['text_id']
+            aoi_file_path = os.path.join(aoi_files, f'{text_id_words}.ias')
+            word_feat_path = os.path.join(word_features, f'word_features_{text_id_words}.tsv')
+
+            aoi_df = pd.read_csv(aoi_file_path, delimiter='\t')
+            word_feat_df = pd.read_csv(word_feat_path, delimiter='\t')
+
+            char_indices = word_feat_df.loc[((word_feat_df['word_index_in_sent'] == row['word_index_in_sent']) &
+                                            (word_feat_df['sent_index_in_text'] == row['sent_index_in_text'])), 'word_limit_char_indices'].values[0].split(',')
+
+            line_index = aoi_df.loc[aoi_df['aoi'] == int(char_indices[1]), 'line'].values[0]
+
+            # add the line index to the word row
+            rm_reader_text_pair_df.at[row.name, 'line'] = line_index
+
         rm_reader_text_pair_df.fillna('NA', inplace=True)
+        rm_reader_text_pair_df.drop(columns=['index'], inplace=True)
         rm_reader_text_pair_df.to_csv(output_file_name, index=False, sep='\t')
 
 
@@ -257,6 +279,8 @@ def main() -> int:
     participants = repo_root / 'participants/participant_data.tsv'
     fixation_folder = repo_root / 'eyetracking_data/fixations'
     stimulus_overview = repo_root / 'stimuli/stimuli/stimuli.tsv'
+    aoi_files = repo_root / 'stimuli/aoi_texts'
+    word_features = repo_root / 'stimuli/word_features'
     output_folder = repo_root / 'eyetracking_data/reading_measures'
 
     compute_reading_measures(
@@ -265,6 +289,8 @@ def main() -> int:
         participants_file=participants,
         sent_limits_json=sent_limits,
         word_limits_json=word_limits,
+        aoi_files=aoi_files,
+        word_features=word_features,
         stimulus_overview=stimulus_overview,
     )
 

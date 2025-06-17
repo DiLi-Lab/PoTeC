@@ -7,7 +7,9 @@ from tqdm import tqdm
 import zipfile
 
 
-def download_data(extract: bool, download_asc: bool, output_folder: str) -> None:
+def download_data(extract: bool, output_folder: str, download_asc: bool, download_fixations: bool,
+                  download_fixations_uncorrected, download_raw_data, download_reading_measures,
+                  download_reading_measures_merged, download_scanpaths, download_scanpaths_merged) -> None:
     base_url = 'https://osf.io/download/'
 
     urls = {
@@ -28,6 +30,21 @@ def download_data(extract: bool, download_asc: bool, output_folder: str) -> None
     for data, resource in (pbar := tqdm(urls.items())):
         if data == 'asc_files' and not download_asc:
             continue
+        if data == 'fixations' and not download_fixations:
+            continue
+        if data == 'fixations_uncorrected' and not download_fixations_uncorrected:
+            continue
+        if data == 'raw_data' and not download_raw_data:
+            continue
+        if data == 'reading_measures' and not download_reading_measures:
+            continue
+        if data == 'reading_measures_merged' and not download_reading_measures_merged:
+            continue
+        if data == 'scanpaths' and not download_scanpaths:
+            continue
+        if data == 'scanpaths_merged' and not download_scanpaths_merged:
+            continue
+
 
         pbar.set_description(f'Downloading {"and extracting " if extract else ""}{data}')
         # Downloading the file by sending the request to the URL
@@ -73,6 +90,62 @@ if __name__ == '__main__':
     )
 
     parser.add_argument(
+        '--fixations',
+        dest='download_fixations',
+        action='store_true',
+        help='Whether to download the fixations files. Default is True.',
+        default=True,
+    )
+
+    parser.add_argument(
+        '--fixations_uncorrected',
+        dest='download_fixations_uncorrected',
+        action='store_true',
+        help='Whether to download the fixations_uncorrected files. Default is False.',
+        default=False,
+    )
+
+    parser.add_argument(
+        '--raw_data',
+        dest='download_raw_data',
+        action='store_true',
+        help='Whether to download the raw_data files. Default is True.',
+        default=True,
+    )
+
+    parser.add_argument(
+        '--reading_measures',
+        dest='download_reading_measures',
+        action='store_true',
+        help='Whether to download the reading_measures files. Default is False.',
+        default=False,
+    )
+
+    parser.add_argument(
+        '--reading_measures_merged',
+        dest='download_reading_measures_merged',
+        action='store_true',
+        help='Whether to download the reading_measures_merged files. Default is True.',
+        default=True,
+    )
+
+    parser.add_argument(
+        '--scanpaths',
+        dest='download_scanpaths',
+        action='store_true',
+        help='Whether to download the scanpaths files. Default is False.',
+        default=False,
+    )
+
+    parser.add_argument(
+        '--scanpaths_merged',
+        dest='download_scanpaths_merged',
+        action='store_true',
+        help='Whether to download the scanpaths_merged files. Default is True.',
+        default=True,
+    )
+
+    parser.add_argument(
         '--asc',
         dest='download_asc',
         action='store_true',
@@ -89,6 +162,8 @@ if __name__ == '__main__':
     )
 
     args = parser.parse_args()
-    download_data(args.extract, args.download_asc, args.output_folder)
+    download_data(args.extract, args.output_folder, args.download_asc, args.download_fixations,
+                  args.download_fixations_uncorrected, args.download_raw_data, args.download_reading_measures,
+                  args.download_reading_measures_merged, args.download_scanpaths, args.download_scanpaths_merged)
 
 

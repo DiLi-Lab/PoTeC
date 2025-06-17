@@ -63,7 +63,7 @@ def merge_rm_word_features(
 
             # sort columns. Necessary because different col ordering in different input files
             reading_measure_csv = reading_measure_csv[
-                ["word_index_in_sent", "sent_index_in_text", "FFD", "SFD", "FD", "FPRT", "FRT", "TFT", 'TFC',
+                ["word_index_in_sent", "sent_index_in_text", "line", "FFD", "SFD", "FD", "FPRT", "FRT", "TFT", 'TFC',
                  "RRT", "RPD_inc", "RPD_exc",
                  "RBRT", "Fix", "FPF", "RR", "FPReg", "TRC_out", "TRC_in", "LP", "SL_in", "SL_out", "acc_bq_1",
                  "acc_bq_2", "acc_bq_3", "acc_tq_1", "acc_tq_2", "acc_tq_3", "mean_acc_tq", "mean_acc_bq",

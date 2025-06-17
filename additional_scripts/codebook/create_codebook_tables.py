@@ -8,7 +8,9 @@ PATHS_FOLDERS = [
     'stimuli/stimuli/stimuli.tsv',
     'stimuli/stimuli/items.tsv',
     'stimuli/aoi_texts/',
-    'stimuli/constituency_trees_manually_corrected.tsv',
+    'stimuli/manually_corrected_constituency_trees.tsv',
+    'stimuli/manually_corrected_dependency_trees.tsv',
+    'eyetracking_data/raw_data/',
     'eyetracking_data/fixations/',
     'eyetracking_data/scanpaths/',
     'eyetracking_data/reading_measures/',
@@ -17,6 +19,9 @@ PATHS_FOLDERS = [
     'preprocessing_scripts/aoi_to_word.tsv',
     'participants/participant_data.tsv',
     'participants/participant_response_accuracy.tsv',
+    'participants/answer_coding_online_survey.csv',
+    'participants/response_accuracy_online_survey.csv',
+    'participants/response_data_online_survey.csv',
 ]
 
 text_vars = [
@@ -59,6 +64,13 @@ text_vars = [
     'type',
     'sentence',
     'dependency_tree',
+    'word_with_punct',
+    'semester',
+    'state',
+    'grade',
+    'subject_detailed'
+    'MEANING',
+    'VAR',
 ]
 cat_vars = [
     'alcohol',
@@ -96,6 +108,12 @@ cat_vars = [
     'text_id',
     'expert_reading_label',
     'expert_reading_label_numeric',
+    'is_clause_end',
+    'is_sent_end',
+    'manually_corrected',
+    'bilingual',
+    'CORRECT_ANSWER',
+    'RESPONSE',
 
 ]
 cont_vars = [
@@ -148,13 +166,25 @@ cont_vars = [
     'mean_acc_bq',
     'mean_acc_tq',
     'surprisal',
-]
-ints = [
+    'sent_surprisal_gpt2-base',
+    'text_surprisal_gpt2-base',
+    'sent_surprisal_gpt2-large',
+    'text_surprisal_gpt2-large',
+    'sent_surprisal_llama-7b',
+    'text_surprisal_llama-7b',
+    'sent_surprisal_llama-13b',
+    'text_surprisal_llama-13b',
+    'sent_surprisal_bert-base',
+    'text_surprisal_bert-base',
     'SL_in',
     'SL_out',
     'LP',
     'TRC_in',
     'TRC_out',
+    'TFC',
+
+]
+ints = [
     'word_length',
     'lemma_length_chars',
     'type_length_chars',
@@ -195,6 +225,15 @@ no_stats = [
     'order_tq_2_ans',
     'order_tq_3_ans',
     'word_limit_char_indices',
+    'source',
+    'spacy_constituency_tree',
+    'str_constituents',
+    'spacy_pos',
+    'constituents',
+    'dependency',
+    'dependency_head',
+    'dependency_head_pos',
+    'dependency_children',
 ]
 
 
@@ -237,95 +276,118 @@ def create_codebook_tables(root_path, description_path, text_path, tables_folder
         md_tables.write(codebook_header)
 
     for folder in tqdm(PATHS_FOLDERS, desc='Creating codebook tables'):
-        # iterate over all tsv files in all folders
 
-        cols = {}
+        # if the folder is raw data, just add a hardcoded entry (the files are too big)
+        if folder == 'eyetracking_data/raw_data/':
+            names = ['time', 'x', 'y', 'pupil_diameter']
+            desc = []
+            source = []
 
-        folder_full_path = root_path / folder
+            for name in names:
+                info = pd.read_csv(description_path, sep='\t')
+                desc.append(info[info['Column_name'] == name]['Description'].values[0])
+                source.append(info[info['Column_name'] == name]['Source'].values[0])
 
-        if folder_full_path.suffix == '.tsv':
-            files = [folder_full_path]
+            df_lists = {'Column name': names,
+                        'Value type': ['Float', 'Float', 'Float', 'Float'],
+                        'Description': desc, 'Source': source}
+
+            df = pd.DataFrame(df_lists)
+
         else:
-            suffix = '.ias' if folder_full_path == root_path / 'stimuli/aoi_texts/' else '.tsv'
-            files = Path(folder_full_path).glob(f'*{suffix}')
+            cols = {}
 
-        for file in files:
+            folder_full_path = root_path / folder
 
-            tsv = pd.read_csv(file, sep='\t', keep_default_na=False,
-                              na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan', '1.#IND',
-                                         '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan', ''])
-
-            all_cols.update(tsv.columns)
-
-            for c in tsv.columns:
-                try:
-                    cols[c]['values'] = pd.concat([cols[c]['values'], tsv[c]], ignore_index=True)
-                    cols[c]['dtypes'] += [tsv[c].dtype]
-                except KeyError:
-                    cols[c] = {'values': tsv[c]}
-                    cols[c]['dtypes'] = [tsv[c].dtype]
-
-        for col_name, col_dict in cols.items():
-            col_dict['missing_values'] = col_dict['values'].isnull().sum().sum()
-
-            if col_name in no_stats:
-                col_dict['possible_values'] = 'no stats?'
-                col_dict['value_type'] = pd.NA
-
-            elif col_name in ['text_id']:
-                col_dict['possible_values'] = ', '.join(sorted(list(set(col_dict['values']))))
-                col_dict['value_type'] = ''
-
-            elif col_name in cont_vars:
-                col_dict['value_type'] = 'Float'
-                col_dict[
-                    'possible_values'] = f"min: {col_dict['values'].min()}, max: {col_dict['values'].max()}, mean: {round(col_dict['values'].mean(), 4)}, std: {round(col_dict['values'].std(), 4)}"
-
-            elif col_name in cat_vars:
-                # sort categorical values from 0- 10, a-z, etc.
-                counts = col_dict['values'].value_counts(dropna=False)
-                col_dict['value_type'] = 'Categorical'
-
-                count_str = ''
-                try:
-                    for k in sorted(counts.keys()):
-                        count_str += f"{k}: {counts[k]}, "
-                except TypeError:
-                    for k, v in counts.to_dict().items():
-                        count_str += f"{k}: {v}, "
-
-                col_dict['possible_values'] = count_str[:-2]
-
-            elif col_name in ints:
-                col_dict['possible_values'] = f"{min(col_dict['values'])}-{max(col_dict['values'])}"
-                col_dict['value_type'] = 'Integer'
-
-            elif col_name in text_vars:
-                col_dict['possible_values'] = ''
-                col_dict['value_type'] = 'string'
-
+            # if it is not a folder but a file (tsv or csv)
+            if folder_full_path.suffix == '.tsv' or folder_full_path.suffix == '.csv':
+                files = [folder_full_path]
             else:
-                col_dict['possible_values'] = ''
-                col_dict['value_type'] = pd.NA
+                suffix = '.ias' if folder_full_path == root_path / 'stimuli/aoi_texts/' else '.tsv'
+                files = Path(folder_full_path).glob(f'*{suffix}')
 
-        df_lists = {'Column name': [], 'Possible values': [], 'Value type': [], 'Description': [],
-                    'Num missing values': [], 'Missing value description': [], 'Source': []}
+            for file in files:
+                suff = file.suffix
+                sep = ',' if suff == '.csv' else '\t'
 
-        info_tsv = pd.read_csv(description_path, sep='\t')
+                tsv = pd.read_csv(file, sep=sep, keep_default_na=False,
+                                  na_values=['#N/A', '#N/A N/A', '#NA', '-1.#IND', '-1.#QNAN', '-NaN', '-nan', '1.#IND',
+                                             '1.#QNAN', '<NA>', 'N/A', 'NA', 'NaN', 'None', 'n/a', 'nan', ''])
 
-        for k, v in cols.items():
-            df_lists['Column name'].append(k)
-            df_lists['Possible values'].append(v['possible_values'])
-            df_lists['Value type'].append(v['value_type'])
-            df_lists['Num missing values'].append(f"{v['missing_values']}")
-            df_lists['Missing value description'].append(
-                info_tsv[info_tsv['Column_name'] == k]['Missing value description'].values[0]
-            )
-            df_lists['Description'].append(info_tsv[info_tsv['Column_name'] == k]['Description'].values[0])
-            df_lists['Source'].append(info_tsv[info_tsv['Column_name'] == k]['Source'].values[0])
+                all_cols.update(tsv.columns)
 
-        df = pd.DataFrame(df_lists)
-        # df.to_csv(tables_folder / f'{Path(folder_full_path).stem}.tsv', sep='\t', index=False)
+                for c in tsv.columns:
+                    try:
+                        cols[c]['values'] = pd.concat([cols[c]['values'], tsv[c]], ignore_index=True)
+                        cols[c]['dtypes'] += [tsv[c].dtype]
+                    except KeyError:
+                        cols[c] = {'values': tsv[c]}
+                        cols[c]['dtypes'] = [tsv[c].dtype]
+
+            for col_name, col_dict in cols.items():
+                col_dict['missing_values'] = col_dict['values'].isnull().sum().sum()
+
+                if col_name in no_stats:
+                    col_dict['possible_values'] = 'no stats?'
+                    col_dict['value_type'] = pd.NA
+
+                elif col_name in ['text_id']:
+                    col_dict['possible_values'] = ', '.join(sorted(list(set(col_dict['values']))))
+                    col_dict['value_type'] = ''
+
+                elif col_name in cont_vars:
+                    col_dict['value_type'] = 'Float'
+                    col_dict[
+                        'possible_values'] = f"min: {col_dict['values'].min()}, max: {col_dict['values'].max()}, mean: {round(col_dict['values'].mean(), 4)}, std: {round(col_dict['values'].std(), 4)}"
+
+                elif col_name in cat_vars:
+                    # sort categorical values from 0- 10, a-z, etc.
+                    counts = col_dict['values'].value_counts(dropna=False)
+                    col_dict['value_type'] = 'Categorical'
+
+                    count_str = ''
+                    try:
+                        for k in sorted(counts.keys()):
+                            count_str += f"{k}: {counts[k]}, "
+                    except TypeError:
+                        for k, v in counts.to_dict().items():
+                            count_str += f"{k}: {v}, "
+
+                    col_dict['possible_values'] = count_str[:-2]
+
+                elif col_name in ints:
+                    col_dict['possible_values'] = f"{min(col_dict['values'])}-{max(col_dict['values'])}"
+                    col_dict['value_type'] = 'Integer'
+
+                elif col_name in text_vars:
+                    col_dict['possible_values'] = ''
+                    col_dict['value_type'] = 'string'
+
+                else:
+                    col_dict['possible_values'] = ''
+                    col_dict['value_type'] = pd.NA
+
+            df_lists = {'Column name': [], 'Possible values': [], 'Value type': [], 'Description': [],
+                        'Num missing values': [], 'Missing value description': [], 'Source': []}
+
+            info_tsv = pd.read_csv(description_path, sep='\t')
+
+            for k, v in cols.items():
+                if k not in info_tsv['Column_name'].values:
+                    print(f'Column {k} missing')
+                    continue
+                df_lists['Column name'].append(k)
+                df_lists['Possible values'].append(v['possible_values'])
+                df_lists['Value type'].append(v['value_type'])
+                df_lists['Num missing values'].append(f"{v['missing_values']}")
+                df_lists['Missing value description'].append(
+                    info_tsv[info_tsv['Column_name'] == k]['Missing value description'].values[0]
+                )
+                df_lists['Description'].append(info_tsv[info_tsv['Column_name'] == k]['Description'].values[0])
+                df_lists['Source'].append(info_tsv[info_tsv['Column_name'] == k]['Source'].values[0])
+
+            df = pd.DataFrame(df_lists)
+            # df.to_csv(tables_folder / f'{Path(folder_full_path).stem}.tsv', sep='\t', index=False)
 
         with open(codebook_path, 'a', encoding='utf8') as md_tables:
             title = codebook_text[codebook_text['section'] == folder]['title'].values[0]
@@ -341,10 +403,10 @@ def create_codebook_tables(root_path, description_path, text_path, tables_folder
 
 
 if __name__ == '__main__':
-    repo_root = Path(__file__).parent.parent
+    repo_root = Path(__file__).parent.parent.parent
 
-    col_descriptions_path = repo_root / 'additional_scripts' / 'all_cols_description.tsv'
-    codebook_text_path = repo_root / 'additional_scripts' / 'codebook_texts.tsv'
+    col_descriptions_path = repo_root / 'additional_scripts' / 'codebook' / 'all_cols_description.tsv'
+    codebook_text_path = repo_root / 'additional_scripts' / 'codebook' / 'codebook_texts.tsv'
     codebook_tables_folder = repo_root / 'codebook_tables/'
     final_codebook = repo_root / 'CODEBOOK.md'
 

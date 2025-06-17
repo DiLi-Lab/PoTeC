@@ -16,7 +16,7 @@ bq_3_option3	Option 3 for background question 3.
 FPReg	First-pass regression: 1 if a regression was initiated in the first-pass reading of the word, otherwise 0 (sign(RPD exc)).
 type_length_chars	The length of the type of a word in characters. See the description of word_length for a definition of how characters are counted.
 trial	Each participant reads all 12 texts, the order of which follows their trial number. If text b0 has trial number 2 for participant 5, this participant read text b0 as the second text.
-reader_discipline	The area of expertise of the reader. All readers are students whose major is either physics or biology.
+reader_discipline	The area of expertise of the reader. All readers are students whose major is either physics or biology.	demographic questionnaire
 neighbors_levenshtein_higher_freq_cum_freq_normalized		dlexDB
 bq_2_option3	Option 3 for background question 2.
 TFT	Total-fixation time: sum of all fixations on a word (FPRT+RRT).
@@ -69,14 +69,14 @@ previous_saccade_duration	The duration of a saccade that preceeds a fixation in 
 regularity_normalized		dlexDB
 bq_3_option2	Option 2 for background question 3.
 contains_symbol	Whether or not the word contains a symbol. E.g.: β-D-Glucose
-tq_1	Text question 1.
-level_of_studies	Reader's level of studies. Readers are considered experts if they are either MSc or PhD students. 1st semester BSc students are considered beginners.
+tq_1	Text question 1.	Manually created
+level_of_studies	Reader's level of studies. Readers are considered experts if they are either MSc or PhD students. 1st semester BSc students are considered beginners.	demographic questionnaire
 bq_2_option4	Option 4 for background question 2.
 mean_acc_tq	The mean accuracy of all background questions for one text read by one reader.
 avg_cond_prob_in_bigrams	The conditional probability of the bigram, given the occurrence of its first component. In other words, how likely it is for the second component to follow directly after the first. Here, this measure is computed on the basis of the annotated type information.	dlexDB
 familiarity_normalized		dlexDB
 gender_numeric	Numerical value of gender; 0=male, 1=female.
-bq_3	Background question 3.
+bq_3	Background question 3.	Manually created
 is_abbreviation	Whether or not the entire word is an abbreviation.	Manually tagged
 FPF	First-pass fixation: 1 if the word was fixated in the first-pass, otherwise 0.
 initial_bigram_frequency_normalized		dlexDB
@@ -91,13 +91,13 @@ is_clause_beginning	Whether or not the word is the beginning of a clause. 	Manua
 line	The texts were presented on the screen in multiple lines. Specifies the line of the respective row; indexing starts at 1.
 cumulative_syllable_lexicon_frequency_normalized		dlexDB
 type_frequency_normalized	""	dlexDB
-tq_2	Text question 2.
+tq_2	Text question 2.	Manually created
 STTS_punctuation_before	If a word is preceded by a punctuation mark, the STTS-PoS-tag of the punctuation mark is added here.
 initial_letter_frequency_normalized		dlexDB
 acc_tq_3	The accuracy of text question 3. The answer can be either true or false, so the value is either 0 or 1.		For participant 1 (p0), 31 (p0, b1, b5), 32 (p0), 61 (p1), 62 (b0, b1, b3, b5, 04) and 90 (b3) the accuracies for certain trials are missing due to hardware problems (missing measurements).
 tq_3_option1	Option 1 for text question 3.
 end_y	The y-coordinate in pixels of the bottom right corner of the aoi rectangle.
-bq_2	Background question 2.
+bq_2	Background question 2.	Manually created
 cumulative_character_trigram_lexicon_frequency_normalized		dlexDB
 order_bq_2_ans	See description of order_bq_1_ans
 correct_ans_bq_1	"The index of the correct answer for background question 1. Specified as option number of the questions in that file. For example: 2 means that the answer that is specified in the column ""tq_3_option2"" is the correct answer to this question."
@@ -123,7 +123,7 @@ correct_ans_bq_2	"The index of the correct answer for background question 2. Spe
 discipline_level_of_studies	The combination of the readers' major (reader_discipline) and their expertise (level_of_studies).
 start_x	The x-coordinate in pixels of the top left corner of the aoi rectangle.
 word_index_in_text	The index of the word in the text. Indexing starts at 1.
-bq_1	Background question 1.
+bq_1	Background question 1.	Manually created
 gender	Reader's gender.
 hours_sleep	The hours of sleep of the participant before the experiment.
 cumulative_character_lexicon_frequency_normalized		dlexDB
@@ -154,7 +154,7 @@ SL_out	Outgoing saccade length: length of the first saccade that leaves the word
 handedness	Reader's handedness.
 bq_1_option2	Option 2 for background question 1.
 SFD	Single-fixation duration: duration of the only first-pass fixation on a word, 0 if the word was skipped or more than one fixation occurred in the first-pass (equals FFD in case of a single first-pass fixation).
-tq_3	Text question 3.
+tq_3	Text question 3.	Manually created
 contains_hyphen	"Whether or not the word contains a hyphen. E.g. 1 for DNA-Fragment (*not* words that have tag TRUNC (compositional first element, e.g. in ""Sekundär- und Tertiärstrukturen"", ""Sekundär-"" does not count as having a hyphen.))."
 FD	First duration: duration of the first fixation on a word (identical to FFD if not skipped in the first-pass).
 aoi_type	The shape of the area of interest. In this corpus, all aois are rectangles around the characters.
@@ -180,7 +180,32 @@ text_surprisal_llama-13b	Surprisal value extracted from a language model (LeoLM-
 sent_surprisal_bert-large	Surprisal value extracted from a language model (BERT-large) with the sentence as context.
 text_surprisal_bert-large	Surprisal value extracted from a language model (BERT-large) with the text as context.
 sent_surprisal_bert-base	Surprisal value extracted from a language model (BERT-base) with the sentence as context.
-text_surprisal_bert-base	Surprisal value extracted from a language model (BERT-base) with the text as context.	""	""
-source	The source of the stimulus text.	""	""
-expert_reading_label	Whether the reader is an expert in the text domain (i.e. text_domain == reader_discipline and reader is expert)	""	""
-expert_reading_label_numeric	Numeric encoding of whether the reader is an expert in the text domain (i.e. text_domain == reader_discipline and reader is expert). 1=expert_reading, 0=non-expert_reading	""	""
+text_surprisal_bert-base	Surprisal value extracted from a language model (BERT-base) with the text as context.
+source	The source of the stimulus text.
+expert_reading_label	Whether the reader is an expert in the text domain (i.e. text_domain == reader_discipline and reader is expert)
+expert_reading_label_numeric	Numeric encoding of whether the reader is an expert in the text domain (i.e. text_domain == reader_discipline and reader is expert). 1=expert_reading, 0=non-expert_reading
+spacy_constituency_tree	The constituency tree of the sentence in the text as constructed by spacy.	Spacy
+str_constituents	The constituency tree in string format. This way it can be parsed easily and be displayed.	Spacy
+spacy_pos	The part-of-speech tags of the words in the sentence as tagged by spacy.	Spacy
+constituents	The constituents of the sentence tree as constructed by spacy.	Spacy	""
+manually_corrected	Whether the sentence tree was manually corrected.	Manually tagged	""
+spacy_word	The words in the sentence as tokenized by spacy.	Spacy	""
+spacy_lemma	The lemmas of the words in the sentence as constructed by spacy.	Spacy	""
+spacy_tag	The details part-of-speech tags of the words in the sentence as constructed by spacy (more fine-grained than spacy_pos).	Spacy	""
+dependency	The dependency relations of the words in the sentence as constructed by spacy.	Spacy	""
+dependency_head	The head of the dependency relation of the words in the sentence as constructed by spacy.	Spacy	""
+dependency_head_pos	The part-of-speech tag of the head of the dependency relation of the words in the sentence as constructed by spacy.	Spacy	""
+dependency_children	The children of the dependency relation of the words in the sentence as constructed by spacy.	Spacy	""
+time	The time stamp of the sample.	"edf file created by EyeLink"	""
+x	The x-coordinate of the sample.	"edf file created by EyeLink"	""
+y	The y-coordinate of the sample.	"edf file created by EyeLink"	""
+pupil_diameter	The pupil diameter of the sample.	"edf file created by EyeLink"	""
+semester	The semester the reader is currently enrolled in.	demographic questionnaire	""
+bilingual	Whether the reader is bilingual.	demographic questionnaire	""
+state	The German state the reader is from.	demographic questionnaire	""
+grade	The grade of the reader in their university entrance diploma.	demographic questionnaire	""
+subject_detailed	The detailed subject of the reader's major.	demographic questionnaire	""
+VAR	Variable name of the fields in the participant online survey. These are explanations of the names of the columns in the file: response_data_online_survey.csv	online survey tool	""
+RESPONSE	The response code given by the online survey tool. In the answer file these codes are used.	online survey tool
+MEANING	The literal meaning of the response. What the participant could see in the online survey.	online survey tool
+CORRECT_ANSWER	Whether or not this answer was a correct answer or not.	online survey tool	The value is missing if this is not applicable. If the answer means that the participant did not even answer.
