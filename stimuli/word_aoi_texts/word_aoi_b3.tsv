@@ -1,4 +1,4 @@
-aoi_type	aoi	start_x	start_y	end_x	end_y	character
+aoi_type	aoi	start_x	start_y	end_x	end_y	word
 0 RECTANGLE	1.0	80.0	21.0	269.0	99.0	Motormoleküle
 0 RECTANGLE	2.0	269.0	21.0	339.0	99.0	sind
 0 RECTANGLE	3.0	339.0	21.0	448.0	99.0	Enzyme,

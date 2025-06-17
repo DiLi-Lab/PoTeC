@@ -1,4 +1,4 @@
-aoi_type	aoi	start_x	start_y	end_x	end_y	character
+aoi_type	aoi	start_x	start_y	end_x	end_y	word
 0 RECTANGLE	1.0	80.0	21.0	129.0	99.0	Ein
 0 RECTANGLE	2.0	129.0	21.0	268.0	99.0	Zyklotron
 0 RECTANGLE	3.0	268.0	21.0	381.0	99.0	besteht

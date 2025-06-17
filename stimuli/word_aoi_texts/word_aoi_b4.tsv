@@ -1,4 +1,4 @@
-aoi_type	aoi	start_x	start_y	end_x	end_y	character
+aoi_type	aoi	start_x	start_y	end_x	end_y	word
 0 RECTANGLE	1.0	80.0	21.0	143.0	99.0	Eine
 0 RECTANGLE	2.0	143.0	21.0	409.0	99.0	chlorophyllhaltige
 0 RECTANGLE	3.0	409.0	21.0	618.0	99.0	Parenchymzelle

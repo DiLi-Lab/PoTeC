@@ -1,4 +1,4 @@
-aoi_type	aoi	start_x	start_y	end_x	end_y	character
+aoi_type	aoi	start_x	start_y	end_x	end_y	word
 0 RECTANGLE	1.0	80.0	21.0	128.0	99.0	Das
 0 RECTANGLE	2.0	128.0	21.0	198.0	99.0	Ziel
 0 RECTANGLE	3.0	198.0	21.0	254.0	99.0	der

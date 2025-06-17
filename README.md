@@ -15,6 +15,9 @@ The study follows a 2x2x2 fully-crossed factorial design:
 |--------------|---------|---------|
 | **Beginner** | 12      | 16      |
 | **Expert**   | 20      | 27      |
+|              |         |         |
+| **Total**    | 32      | 43      |
+
 
 Both factors are quasi-experimental and manipulated between subjects.
 The readers' text comprehension as well as their background
@@ -94,27 +97,28 @@ The scripts were run using Python 3.9 with the dependencies specified in the `re
 ## Technical set-up
 The experiment was run with the following technical set-up:
 
-|                           | **Setting**                                              | **Value**                                                                             |
-|---------------------------|----------------------------------------------------------|---------------------------------------------------------------------------------------|
-|                           |                                                          |                                                                                       |
-| **Technical set-up**      | Eye-tracking device                                      | Eyelink 1000, dektop mounted camera system with a 35 mm lens                          |
-|                           | Sampling rate                                            | 1000 Hz                                                                               |
-|                           | Monitor size                                             | 47.5x30 cm, 22 inch                                                                   |
-|                           | Monitor resolution                                       | 1680x1050 pixels                                                                      |
-|                           | Eye-to-screen distance                                   | 61 cm                                                                                 |
-|                           | Eye-to-camera distance                                   | 65 cm                                                                                 |
-|                           | Experiment software                                      | Experiment Builder software provided by SR Research                                   |
-|                           |                                                          |                                                                                       |
-| **Stimulus presentation** | Background color                                         | Black                                                                                 |
-|                           | Font color                                               | White                                                                                 |
-|                           | Font size                                                | 18                                                                                    |
-|                           | Font                                                     | Courier                                                                               |
-|                           | Stimulus size                                            | On average 158 words shown on multiple lines on one page                              |
-|                           | Number of characters per visual angle (middle of screen) | 2.8 characters per degree of visual angle                                             | 
-|                           | Spacing                                                  |                                                                                       |
+|                           | **Setting**                                              | **Value**                                                    |
+|---------------------------|----------------------------------------------------------|--------------------------------------------------------------|
+|                           |                                                          |                                                              |
+| **Technical set-up**      | Eye-tracking device                                      | Eyelink 1000, dektop mounted camera system with a 35 mm lens |
+|                           | Sampling rate                                            | 1000 Hz                                                      |
+|                           | Monitor size                                             | 47.5x30 cm, 22 inch                                          |
+|                           | Monitor resolution                                       | 1680x1050 pixels                                             |
+|                           | Eye-to-screen distance                                   | 61 cm                                                        |
+|                           | Eye-to-camera distance                                   | 65 cm                                                        |
+|                           | Experiment software                                      | Experiment Builder software provided by SR Research          |
+|                           |                                                          |                                                              |
+| **Stimulus presentation** | Background color                                         | Black                                                        |
+|                           | Font color                                               | White                                                        |
+|                           | Font size                                                | 18                                                           |
+|                           | Font                                                     | Courier (monospaced)                                         |
+|                           | Stimulus size                                            | On average 158 words shown on multiple lines on one page     |
+|                           | Number of characters per visual angle (middle of screen) | 2.8 characters per degree of visual angle                    | 
+|                           | Line spacing                                             |                                                              |
 
 ## Stimuli
-The stimuli texts are made available via this [website](https://www.cl.uzh.ch/en/research-groups/digital-linguistics/resources/potec.html).
+The stimuli texts are made available via this [website](https://www.cl.uzh.ch/en/research-groups/digital-linguistics/resources/potec.html). Note that in order to publish the stimuli, 
+we acquired licenses for the texts from the respective publishers. Please, find more information on the website. 
 
 ## Stimuli Annotation
 The stimuli have been manually annoted with part-of-speech tags and other linguistic information. The annotations are described
@@ -122,12 +126,13 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
 
 ## Citation
 ```
-@misc{potec,
+@article{potec,
     url={\url{https://github.com/DiLi-Lab/PoTeC}},
     author={Jakobi, Deborah N. and Kern, Thomas and Reich, David R. and Haller, Patrick and J\"ager, Lena A.},
     title={{PoTeC}: A {German} Naturalistic Eye-tracking-while-reading Corpus},
-    year={2024},
-    note={under review}
+    year={2025},
+    note={In press},
+    journal={Behavior Research Methods}
 }
 ```
 

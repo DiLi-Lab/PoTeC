@@ -1,4 +1,4 @@
-aoi_type	aoi	start_x	start_y	end_x	end_y	character
+aoi_type	aoi	start_x	start_y	end_x	end_y	word
 0 RECTANGLE	1.0	82.0	21.0	115.0	99.0	In
 0 RECTANGLE	2.0	115.0	21.0	170.0	99.0	der
 0 RECTANGLE	3.0	170.0	21.0	311.0	99.0	homologen

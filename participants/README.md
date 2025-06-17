@@ -38,3 +38,20 @@ made available in the `participant_data.tsv` file. Please see the `CODEBOOK.md` 
 | **gender** | reader's gender     | categorical     |male,female,nan     |
 | **gender_numeric** | numerical value of reader's gender   | int     | male==0 female==1     |
 
+
+## Validation of comprehension questions
+In order to test the usefulness of the comprehension questions, we conducted some additional experiments. In an online survey, participants were presented 
+with the text questions **without** having access to the text. They were asked to answer the questions to the best of their knowledge.
+Please find more details in the paper.
+
+## Files
+| file name                                 | description                                                                                                                                                                                                           |
+|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| **`participants_data.tsv`**               | Contains demographic data of the participants of the eye-tracking experiment.                                                                                                                                         |
+| **`participant_response_accuracy.tsv`**   | Contains the accuracy of the participants' answers to the comprehension and background questions during the eye-tracking experiment.                                                                                  |
+| **`answer_coding_online_survey.csv`**     | Contains all answer options for all questions of the online survey including attention checks as well as whether the answer option is the correct answer                                                              |
+| **`response_data_online_survey.csv`**     | Contains the raw data of answers as well as demographic information of the participants of the online survey. Note that the file `answer_coding_online_survey.csv` is needed to understand the contents of this file. |
+| **`response_accuracy_online_survey.csv`** | Contains the accuracy and the explicit demographic information of the participants of the online survey.                                                                                                              |
+| **`ParticipantBriefing.pdf`**             | Contains the information that was provided to the participants before the eye-tracking experiment.                                                                                                                    |
+
+
