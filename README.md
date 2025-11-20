@@ -33,6 +33,18 @@ More information is found in the following README'S:
 **For a detailed description of the data types, format and content, please refer to the 
 [CODEBOOK](./CODEBOOK.md).**
 
+## Contents of this Readme
+* [Download the data](#download-the-data)
+* [Pymovements integration](#pymovements-integration)
+* [Important notes on the data files](#important-notes-on-the-data-files)
+* [Data overview](#data-overview)
+* [Technical set-up](#technical-set-up)
+* [Stimuli](#stimuli)
+* [Stimuli annotation](#stimuli-annotation)
+* [Citation](#citation)
+* [Repository structure](#repository-structure)
+
+
 ## Download the data
 The data files are stored in an [OSF repository](https://osf.io/dn5hp/?view_only=). If this GitHub repository has been cloned, 
 they can be downloaded and extracted automatically using the following script:
@@ -60,7 +72,14 @@ dataset = pm.Dataset('PoTeC', path='data/PoTeC')
 dataset.download()
 ```
 
-## Note on reading the data files using `pandas`
+## Important notes on the data files
+
+### Missing data
+Participant number 9 only completed 5 trials. The data collection has been interrupted after those 5 trials due to extremly poor calibration. The data is available as raw data and uncorrected fixations, however, not for the other data formats. The raw data and uncorrected fixations contain therefore 905 trials, while the other data formats only contain 900 trials (75 participants * 12 trials).
+
+For some participants the comprehension questions were not recorded correctly by the device and could not be recovered. Those are marked as NaN in the data files. Please see the [Codebook](CODEBOOK.md) for more information on missing values.
+
+### Note on reading the data files using `pandas`
 The German text p3 includes the word "null". If e.g. the word features are read using pandas, the word "null" is 
 interpreted as a NA value. In order to avoid this behavior the command can be used with the following arguments:
 
