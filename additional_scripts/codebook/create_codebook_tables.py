@@ -269,8 +269,12 @@ def create_codebook_tables(root_path, description_path, text_path, tables_folder
                            '- [Reading measures](#reading-measures)\n'
                            '- [Reading measures merged](#merged-fixations-participant-info-reading-measures-and-word-features)\n'
                            '- [Scanpaths merged](#merged-scanpaths-participant-info-reading-measures-and-word-features)\n'
-                           '- [Roi to word mapping](#roi-to-word-mapping)\n'
-                           '- [Participants](#participants)\n\n\n'
+                           '- [AOI to word mapping](#aoi-to-word-mapping)\n'
+                           '- [Participants](#participants)\n'
+                           '- [Participant\'s response accuracy](#participants-response-accuracy)\n'
+                           '- [Coding online survey](#coding-of-the-answers-of-the-online-survey)\n'
+                           '- [Participant\'s response accuracy online survey](#response-accuracy-online-survey)\n'
+                           '- [Response data online survey](#response-data-online-survey)\n\n'
                            )
 
         md_tables.write(codebook_header)

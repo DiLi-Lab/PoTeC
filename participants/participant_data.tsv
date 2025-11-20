@@ -1,0 +1,76 @@
+reader_id	reader_discipline	reader_discipline_numeric	level_of_studies	level_of_studies_numeric	discipline_level_of_studies	discipline_level_of_studies_numeric	glasses	age	handedness	hours_sleep	alcohol	gender	gender_numeric	semester	bilingual	state	grade	subject_detailed
+0	physics	1	graduate	1	physics-graduate	3	yes	26.0	right	8.0	no	female	1.0	9. FA Master Klimaphysik	n	Brandenburg	1,9	Physik
+1	physics	1	graduate	1	physics-graduate	3	yes		right	6.5	no	male	0.0	5. FA Master	n	Brandenburg		Physik
+2	physics	1	graduate	1	physics-graduate	3	yes	26.0	right	7.5	no	female	1.0	Doktorandin	n	Brandenburg	1,4	Physik
+3	physics	1	graduate	1	physics-graduate	3	yes	26.0	right	6.5	no	male	0.0	Doktorand	n	Brandenburg	1	Physik
+4	physics	1	graduate	1	physics-graduate	3	no	25.0	right	7.0	no	male	0.0	5. FS Master	n	Brandenburg	2,2	Physik
+5	physics	1	graduate	1	physics-graduate	3	no	22.0	right	7.5	no	female	1.0	10. Semester Bachelor	n	Niedersachsen	2,7	Physik/Mathe LA
+6	physics	1	graduate	1	physics-graduate	3	no	27.0	right	7.0	no	male	0.0	1. FS Master	n	Brandenburg	2,3	Physik/Englisch  LA
+7	physics	1	graduate	1	physics-graduate	3	no	23.0	right	8.0	no	male	0.0	7 Sem Bachelor	n	Berlin	3,3	LA Physik, Chemie
+8	physics	1	graduate	1	physics-graduate	3	no	30.0	right	6.0	no	male	0.0	Lehrer Gymnasium	n	Brandenburg	2	Physik/Politik LA
+10	physics	1	graduate	1	physics-graduate	3	no	34.0	right	5.5	no	female	1.0	24. Semester Diplom	n	Brandenburg	2	Physik
+12	physics	1	graduate	1	physics-graduate	3	no	26.0	right	7.0	no	female	1.0	Doktorandin	n	Thüringen	1,3	LA Physik/ Mathe
+13	physics	1	graduate	1	physics-graduate	3	no	26.0	right	7.0	no	female	1.0	8. Semester Bachelor	n	Brandenburg	2,7	Physik
+14	physics	1	graduate	1	physics-graduate	3	no	22.0	right	7.0	yes	male	0.0	9. Semester	n	Brandenburg	1,9	Physik/Mathe LA 
+15	physics	1	graduate	1	physics-graduate	3	no	25.0	right	7.0	no	female	1.0	5. Fachsemester Master	n	Berlin	2,7	Physik LA
+16	physics	1	graduate	1	physics-graduate	3	no	24.0	right	7.0	no	female	1.0	2. Fachsemester Master	n	Bayern	1,7	Physik
+17	physics	1	graduate	1	physics-graduate	3	no	25.0	right	11.0	no	female	1.0	3. FS Master	n	Brandenburg	2,3	MA LA Physik
+18	physics	1	graduate	1	physics-graduate	3	no	23.0	right	8.5	no	male	0.0	9. Semester	n	Baden-Würtemberg	1,1	Physik
+19	physics	1	graduate	1	physics-graduate	3	no	25.0	right	7.5	no	male	0.0	1. FS Master	n	Brandenburg	2,5	Physik
+20	physics	1	graduate	1	physics-graduate	3	yes	28.0	right	7.5	no	male	0.0	1. FS Master	n	Brandenburg	2	Physik LA
+22	physics	1	undergraduate	0	physics-undergraduate	2	no	20.0	right	7.0	no	male	0.0	3. Semester	n	Sachsen-Anhalt	1	Physik/Geografie LA
+23	physics	1	graduate	1	physics-graduate	3	no	26.0	left	9.0	no	female	1.0	10. Semester	n	Brandenburg	1,5	Physik/ Mathe LA
+30	physics	1	undergraduate	0	physics-undergraduate	2	no	30.0	right	7.0	no	male	0.0	3.Sem Bachelor	n	Berlin	2	Physik
+31	physics	1	undergraduate	0	physics-undergraduate	2	yes	19.0	right	5.5	no	female	1.0	1. Sem Bachelor	n	Sachsen-Anhalt	1	Physik
+32	physics	1	undergraduate	0	physics-undergraduate	2	no	20.0	right	6.0	no	female	1.0	1.Sem Bachelor	n	Schleswig-Holstein	1	Physik
+34	physics	1	undergraduate	0	physics-undergraduate	2	yes	18.0	right	8.0	no	male	0.0	1. Semester	n	Brandenburg	1	Physik
+35	physics	1	undergraduate	0	physics-undergraduate	2	no	20.0	right	7.0	no	male	0.0	1. Sem Bachelor	n	Mecklenburg-Vorpommern	3	Physik
+36	physics	1	undergraduate	0	physics-undergraduate	2	yes	24.0	right	8.0	no	male	0.0	1 Sem Bachelor	n	Sachsen	2,8	Physik
+37	physics	1	undergraduate	0	physics-undergraduate	2	no	19.0	right	7.0	no	male	0.0	1 Sem Bachelor	n	Brandenburg	1	Physik
+38	physics	1	undergraduate	0	physics-undergraduate	2	no	19.0	right	8.0	no	female	1.0	1 Sem Bachelor	n	Mecklenburg-Vorpommern	1	Physik
+39	physics	1	undergraduate	0	physics-undergraduate	2	no	19.0	right	0.0	no	male	0.0	1. Semester	n	Nordrhein-Westfalen	1,2	Informatik/ Computational Science
+40	physics	1	undergraduate	0	physics-undergraduate	2	yes	19.0	right	9.0	yes	male	0.0	1. Semester	n	Mecklenburg-Vorpommern	3	Physik
+41	physics	1	undergraduate	0	physics-undergraduate	2	no	19.0	right	7.0	no	male	0.0	1. Semester	n	Brandenburg	1,8	Lehramt Physik/ WAT
+60	biology	0	graduate	1	biology-graduate	1	yes	27.0	left	6.5	no	male	0.0	5. FA Master	n	Berlin	2,3	Biowiss.
+61	biology	0	graduate	1	biology-graduate	1	no	22.0	right	8.0	no	female	1.0	7. Sem Bachelor	n	Nordrhein-Westfalen	2	Biowiss.
+62	biology	0	graduate	1	biology-graduate	1	no	21.0	right	7.0	no	female	1.0	7. Sem Bachelor	n	Brandenburg	2,3	Biowiss.
+63	biology	0	graduate	1	biology-graduate	1	yes	25.0	right	7.0	no	female	1.0	5. FA Master Ökologie	n	Brandenburg	2,4	Biowiss.
+64	biology	0	graduate	1	biology-graduate	1	yes	25.0	right	7.5	no	male	0.0	7. Sem Bachelor	n	Berlin	2,8	Biowiss.
+65	biology	0	graduate	1	biology-graduate	1	yes	27.0	left	7.5	no	male	0.0	5. FA Master Ökologie	j	Berlin	2,4	Biowiss.
+66	biology	0	graduate	1	biology-graduate	1	no	25.0	right	6.0	no	female	1.0	5 FA Master Ökologie, Ev., Naturschutz	n	Brandenburg	2,1	Biologie
+67	biology	0	graduate	1	biology-graduate	1	yes	41.0	left	6.5	no	male	0.0	Biochemie Bachelor 9.	n	Berlin	3	Biowiss.
+68	biology	0	graduate	1	biology-graduate	1	no	22.0	right	6.0	no	female	1.0	7 Sem Bachelor	n	Brandenburg	3	Biologie
+69	biology	0	graduate	1	biology-graduate	1	no	26.0	right	10.0	no	female	1.0	5. FA Master	n	Brandenburg	1,3	Bio/Englisch LA
+70	biology	0	graduate	1	biology-graduate	1	no	25.0	right	8.0	no	female	1.0	4 FS Master Ökologie	n	Mecklenburg-Vorpommern	2	Biowiss
+71	biology	0	graduate	1	biology-graduate	1	no	23.0	right	7.0	no	male	0.0	6. Semester Bachelor	n	Rheinland-Pfalz	2	Biologie
+72	biology	0	graduate	1	biology-graduate	1	no	32.0	right	8.0	no	female	1.0	Diplom	n	Nordrhein-Westfalen	1,3	Biologie
+73	biology	0	graduate	1	biology-graduate	1	no	22.0	right	7.0	no	female	1.0	6. Semester Bachelor	n	Brandenburg	2,7	Biologie
+74	biology	0	graduate	1	biology-graduate	1	no	30.0	right	8.0	no	female	1.0	6. Semester Bachelor	n	Sachsen	2,7	Biologie/Chemie LA
+75	biology	0	graduate	1	biology-graduate	1	yes	32.0	right	8.0	no	female	1.0	Diplom	n	Berlin	1,8	Biochemie
+76	biology	0	graduate	1	biology-graduate	1	no	24.0	right	7.0	no	female	1.0	6.Sem Bachelor	n	Berlin		Biowissenschaften
+77	biology	0	graduate	1	biology-graduate	1	no	28.0	right	6.0	no	female	1.0	Master fertig	n	Berlin	1,7	Biowissenschaften
+78	biology	0	graduate	1	biology-graduate	1	yes	27.0	right	8.0	yes	male	0.0	Doktorand	n	Berlin	1,3	Biochemie
+79	biology	0	graduate	1	biology-graduate	1	no	23.0	right	7.0	no	male	0.0	9. Semester	n	Berlin	2,5	Biowiss. Bis 5 Sem/ LA Bio
+80	biology	0	graduate	1	biology-graduate	1	yes	22.0	right	6.0	no	female	1.0	7. Semester	n	Berlin	2,5	Biowissenschaften
+81	biology	0	graduate	1	biology-graduate	1	no	27.0	right	8.0	no	male	0.0	7. FS Mster	n	Baden-Würtemberg	2,5	Ökologie, Naturschutz
+82	biology	0	graduate	1	biology-graduate	1	no	25.0	right	7.0	no	female	1.0	13. Fachsemester	n	Sachsen	1,3	LA Biologie/ LER
+83	biology	0	graduate	1	biology-graduate	1	yes	26.0	left	7.5	no	female	1.0	12. Fachsemester	n	Berlin	1,8	Biowissenschaften
+84	biology	0	graduate	1	biology-graduate	1	no	25.0	right	8.0	no	male	0.0	7. Faschsemester	n	Sachsen	3,2	Lehramt Bio/ Geschichte
+85	biology	0	graduate	1	biology-graduate	1	yes	29.0	right	5.0	no	male	0.0	5. FS studiert, jetzt seit 1 Jahr Biologin	n	Brandenburg	1,8	Biowissenschaften, Molekularbiologie
+87	biology	0	graduate	1	biology-graduate	1	no	25.0	right	8.5	no	female	1.0	7. Fachsemester	n	Berlin	3	Lehramt Biologie/ Sport
+90	biology	0	undergraduate	0	biology-undergraduate	0	no	26.0	right	5.5	no	male	0.0	1. Sem Bachelor	n	Sachsen-Anhalt	1,2	LA Bio/ Chemie
+91	biology	0	undergraduate	0	biology-undergraduate	0	no	18.0	left	6.5	no	male	0.0	1 Sem Bachelor	n	Berlin	1	Biowiss.
+92	biology	0	undergraduate	0	biology-undergraduate	0	no	20.0	right	6.0	no	female	1.0	1. Semester	n	Rheinland-Pfalz	1	Biowiss
+93	biology	0	undergraduate	0	biology-undergraduate	0	no	18.0	right	8.0	no	female	1.0	1 Sem Bachelor	n	Brandenburg	1,2	Biowiss
+94	biology	0	undergraduate	0	biology-undergraduate	0	no	18.0	right	7.5	no	female	1.0	1 Sem Bachelor	n	Mecklenburg-Vorpommern		Biowiss
+95	biology	0	undergraduate	0	biology-undergraduate	0	no	22.0	right	7.0	no	female	1.0	2. Sem. Bachelor	n	Niedersachsen	2	Biowissenschaften
+96	biology	0	undergraduate	0	biology-undergraduate	0	no	24.0	right	8.0	no	female	1.0	2. Sem Bachelor	n	Berlin	1,7	Biowissenschaften
+97	biology	0	undergraduate	0	biology-undergraduate	0	no	25.0	right	8.0	no	female	1.0	3. Semester	n	Berlin	2	Biologie LA
+98	biology	0	undergraduate	0	biology-undergraduate	0	no	19.0	right	7.0	no	male	0.0	2 Semester	n	Brandenburg	1,8	Biowissenschaften
+99	biology	0	undergraduate	0	biology-undergraduate	0	no	27.0	right	9.0	no	female	1.0	2 Semester	n	Berlin	1,8	Biowissenschaften
+100	biology	0	undergraduate	0	biology-undergraduate	0	no	20.0	right	7.5	no	female	1.0	1. Semester	n	Brandenburg	1,1	Bio Lehramt
+101	biology	0	undergraduate	0	biology-undergraduate	0	no	26.0	right	8.0	no	male	0.0	1.Semester	n	Brandenburg		Biowissenschaften
+102	biology	0	undergraduate	0	biology-undergraduate	0	no	21.0	right	7.5	no	male	0.0	3.Semester	n	Thüringen	2	Bio LA
+103	biology	0	undergraduate	0	biology-undergraduate	0	no	20.0	right	7.0	no	male	0.0	3. Semester Bachelor	n	Nordrhein-Westfalen	1,3	Biologie
+104	biology	0	undergraduate	0	biology-undergraduate	0											1,8
+105	biology	0	undergraduate	0	biology-undergraduate	0	yes	19.0	right	7.5	no	female	1.0	3. Semester	n	Mecklenburg-Vorpommern	1,8	Biowissenschaften
