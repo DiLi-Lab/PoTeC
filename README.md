@@ -1,4 +1,5 @@
 # PoTeC - Potsdam Textbook Corpus
+[![paper](https://img.shields.io/static/v1?label=paper&message=Behavior%20Research%20Methods%20link&color=brightgreen)](https://link.springer.com/article/10.3758/s13428-024-02536-8)
 
 > :star2: :star2: If you'd like to ask a question, notice a mistake or want to say anything regarding the data please use the Discussions tab on GitHub. We're happy to hear your ideas and feeback!
 
