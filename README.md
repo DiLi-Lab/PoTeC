@@ -148,13 +148,17 @@ in a separate file: [ANNOTATION](stimuli/ANNOTATION.md).
 
 ## Citation
 ```
-@article{potec,
-    url={\url{https://github.com/DiLi-Lab/PoTeC}},
-    author={Jakobi, Deborah N. and Kern, Thomas and Reich, David R. and Haller, Patrick and J\"ager, Lena A.},
-    title={{PoTeC}: A {German} Naturalistic Eye-tracking-while-reading Corpus},
-    year={2025},
-    note={In press},
-    journal={Behavior Research Methods}
+@article{jakobi2025PoTeC,
+  title = {{{PoTeC}}: {{A German}} naturalistic eye-tracking-while-reading corpus},
+  shorttitle = {{{PoTeC}}},
+  author = {Jakobi, Deborah N. and Kern, Thomas and Reich, David R. and Haller, Patrick and J{\"a}ger, Lena A.},
+  year = 2025,
+  journal = {Behavior Research Methods},
+  volume = {57},
+  number = {8},
+  pages = {211},
+  issn = {1554-3528},
+  doi = {10.3758/s13428-024-02536-8}
 }
 ```
 
