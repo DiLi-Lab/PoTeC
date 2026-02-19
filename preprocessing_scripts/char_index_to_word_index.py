@@ -35,6 +35,7 @@ def char_index_to_word_index(limits_file: Path, output_file: Path) -> None:
     item_ids = []
     word_indices = []
     aois = []
+    char_indices_in_words = []
 
     for text_id in texts:
         text_limits = limits[text_id]
@@ -42,18 +43,26 @@ def char_index_to_word_index(limits_file: Path, output_file: Path) -> None:
         iter_aois = range(1, max_aoi + 1)  # all aois
 
         # iterate over all aois (i.e. all char ids) in one text
+        char_index_in_word = 0
+        prv_word = 0
         for aoi in iter_aois:
             # word index in text
             word_index = aoi2word(aoi, text_limits)
+            if word_index > prv_word:
+                char_index_in_word = 0
 
             word_indices.append(word_index)
             item_ids.append(text_id)
             aois.append(aoi)
+            char_indices_in_words.append(char_index_in_word)
+            char_index_in_word += 1
+            prv_word = word_index
 
     data_dict = {
         'text_id': item_ids,
         'word_index_in_text': word_indices,
-        'char_index_in_text': aois
+        'char_index_in_text': aois,
+        'char_index_in_word': char_indices_in_words,
     }
 
     data_df = pd.DataFrame(data_dict)
