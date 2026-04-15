@@ -3,6 +3,8 @@
 
 > :star2: :star2: If you'd like to ask a question, notice a mistake or want to say anything regarding the data please use the Discussions tab on GitHub. We're happy to hear your ideas and feeback!
 
+> :exclamation: :bell: There has been a bug discovered in the surprisal estimation. If you intend to use the surprisal values, please contact the authors. Contact details can be found here: [Link to paper](https://link.springer.com/article/10.3758/s13428-024-02536-8)
+
 This repository contains the Potsdam Textbook Corpus (PoTeC) which is a natural reading eye-tracking corpus.
 Four groups of participants (expert/beginner level students of physics and biology) read 12 short 
 texts taken from textbooks of physics and biology while their eye movements were monitored. 
