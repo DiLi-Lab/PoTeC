@@ -9,6 +9,12 @@ This directory contains all the necessary scripts that have been used to further
 
 The script is made to compute a number of commonly used reading measures for eye-tracking research.
 
+`mean_acc_tq` averages the three text questions; `mean_acc_bq` averages the three
+background questions. Earlier reading-measure exports reversed these averages
+and included a dummy zero row that reduced all accuracy values. Recompute the
+reading measures and merged outputs from the fixation files to correct both.
+The participant accuracy and online-survey tables already use the correct labels.
+
 **How to run:**
  ```bash
  # python or python3

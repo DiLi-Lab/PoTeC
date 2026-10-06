@@ -72,7 +72,7 @@ contains_symbol	Whether or not the word contains a symbol. E.g.: β-D-Glucose	Ma
 tq_1	Text question 1.	Manually created
 level_of_studies	Reader's level of studies. Readers are considered experts if they are either MSc or PhD students. 1st semester BSc students are considered beginners.	demographic questionnaire
 bq_2_option4	Option 4 for background question 2.	Manually created
-mean_acc_tq	The mean accuracy of all background questions for one text read by one reader.
+mean_acc_tq	The mean accuracy of all text questions for one text read by one reader.
 avg_cond_prob_in_bigrams	The conditional probability of the bigram, given the occurrence of its first component. In other words, how likely it is for the second component to follow directly after the first. Here, this measure is computed on the basis of the annotated type information.	dlexDB
 familiarity_normalized		dlexDB
 gender_numeric	Numerical value of gender; 0=male, 1=female.
@@ -102,7 +102,7 @@ cumulative_character_trigram_lexicon_frequency_normalized		dlexDB
 order_bq_2_ans	See description of order_bq_1_ans
 correct_ans_bq_1	"The index of the correct answer for background question 1. Specified as option number of the questions in that file. For example: 2 means that the answer that is specified in the column ""tq_3_option2"" is the correct answer to this question."
 cumulative_character_bigram_corpus_frequency_normalized		dlexDB
-mean_acc_bq	The mean accuracy of all text questions for one text read by one reader.
+mean_acc_bq	The mean accuracy of all background questions for one text read by one reader.
 lemma		dlexDB
 avg_cond_prob_in_trigrams	The conditional probability of the trigram, given the occurrence of its initial bigram. In other words, how likely it is for the third component to follow directly after the initial pair. Here, this measure is computed on the basis of the annotated type information.	dlexDB
 correct_ans_bq_3	"The index of the correct answer for background question 3. Specified as option number of the questions in that file. For example: 2 means that the answer that is specified in the column ""tq_3_option2"" is the correct answer to this question."
