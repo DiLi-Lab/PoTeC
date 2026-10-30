@@ -7,6 +7,7 @@ Call: python3 compute_reading_measures.py
 import json
 import os
 import statistics
+from itertools import chain
 from pathlib import Path
 
 import pandas as pd
@@ -90,15 +91,6 @@ def compute_reading_measures(
         # make sure fixations are sorted by their index
         fixation_file_sorted = fixation_file.sort_values(by=[FIX_INDEX_COL_NAME])
 
-        # append one extra dummy fixation to have a next fixation for the actual last fixation
-        fixation_file_sorted = pd.concat(
-            [fixation_file_sorted,
-             pd.DataFrame(
-                 [[0 for _ in range(len(fixation_file_sorted.columns))]], columns=fixation_file_sorted.columns
-             )],
-            ignore_index=True,
-        )
-
         # iterate over words in that text
         word_dict = {}
         num_words_in_text = len(word_limits_text[0])
@@ -116,20 +108,24 @@ def compute_reading_measures(
 
         right_most_word = cur_fix_word_idx = next_fix_word_idx = next_fix_dur = 0
 
-        for index, fixation in fixation_file_sorted.iterrows():
+        # Flush the final fixation.
+        for _, fixation in chain(fixation_file_sorted.iterrows(), [(None, None)]):
+            end_of_stream = fixation is None
+            if end_of_stream:
+                word_idx = next_fix_word_idx
+            else:
+                aoi = fixation[AOI_COL_NAME]
 
-            aoi = fixation[AOI_COL_NAME]
+                # Skip missing AOIs.
+                try:
+                    int(aoi)
+                except ValueError:
+                    continue
 
-            # If aoi is not a number (i.e., coded as missing value using any string), continue
-            try:
-                int(aoi)
-            except ValueError:
-                continue
-
-            # if fixation is not on a word, continue
-            word_idx = aoi2word(aoi, word_limits_text)
-            if word_idx < 0:
-                continue
+                # Skip off-word fixations.
+                word_idx = aoi2word(aoi, word_limits_text)
+                if word_idx < 0:
+                    continue
 
             last_fix_word_idx = cur_fix_word_idx
 
@@ -137,13 +133,9 @@ def compute_reading_measures(
             cur_fix_dur = next_fix_dur
 
             next_fix_word_idx = word_idx
-            next_fix_dur = fixation[FIX_DUR_COL_NAME]
+            next_fix_dur = 0 if end_of_stream else fixation[FIX_DUR_COL_NAME]
 
-            if next_fix_dur == "0":
-                # we set the idx to the idx of the actual last fixation s.t. there is no error later in the script
-                next_fix_word_idx = cur_fix_word_idx
-
-            if word_dict[next_fix_word_idx]['LP'] == 0:
+            if not end_of_stream and word_dict[next_fix_word_idx]['LP'] == 0:
                 word_dict[next_fix_word_idx]['LP'] = int(aoi) - word_limits_text[0][next_fix_word_idx - 1] + 1
             if right_most_word < cur_fix_word_idx:
                 right_most_word = cur_fix_word_idx
@@ -174,7 +166,7 @@ def compute_reading_measures(
             if cur_fix_word_idx == right_most_word:
                 word_dict[cur_fix_word_idx]['RBRT'] += int(cur_fix_dur)
             if word_dict[cur_fix_word_idx]['FRT'] == 0 and (
-                    not next_fix_word_idx == cur_fix_word_idx or next_fix_dur == "0"):
+                    not next_fix_word_idx == cur_fix_word_idx or end_of_stream):
                 word_dict[cur_fix_word_idx]['FRT'] = word_dict[cur_fix_word_idx]['TFT']
             if word_dict[cur_fix_word_idx]['SL_in'] == 0:
                 word_dict[cur_fix_word_idx]['SL_in'] = cur_fix_word_idx - last_fix_word_idx
@@ -185,25 +177,25 @@ def compute_reading_measures(
             acc_tq1, acc_tq2, acc_tq3 = fixation_file_sorted[['acc_tq_1', 'acc_tq_2', 'acc_tq_3']].mean()
             acc_bq1, acc_bq2, acc_bq3 = fixation_file_sorted[['acc_bq_1', 'acc_bq_2', 'acc_bq_3']].mean()
 
-            mean_acc_tq = statistics.mean([acc_bq1, acc_bq2, acc_bq3])
-            mean_acc_bq = statistics.mean([acc_tq1, acc_tq2, acc_tq3])
+            mean_acc_tq = statistics.mean([acc_tq1, acc_tq2, acc_tq3])
+            mean_acc_bq = statistics.mean([acc_bq1, acc_bq2, acc_bq3])
 
         except (ValueError, TypeError):
             # if no accuracy information is available, code with -1
             acc_tq1 = acc_tq2 = acc_tq3 = acc_bq1 = acc_bq2 = acc_bq3 = mean_acc_tq = mean_acc_bq = pd.NA
 
         # Coding of topic: biology=0, phy=1
-        if (fixation_file_sorted.loc[1, 'text_domain'] == 'bio' or
-                fixation_file_sorted.loc[1, 'text_domain'] == 'biology'):
+        if (fixation_file_sorted.iloc[0]['text_domain'] == 'bio' or
+                fixation_file_sorted.iloc[0]['text_domain'] == 'biology'):
             text_domain_numeric = 0
-        elif fixation_file_sorted.loc[1, 'text_domain'] == 'physics':
+        elif fixation_file_sorted.iloc[0]['text_domain'] == 'physics':
             text_domain_numeric = 1
         else:
-            raise ValueError(f"Unknown text domain: {fixation_file_sorted.loc[1, 'text_domain']}")
+            raise ValueError(f"Unknown text domain: {fixation_file_sorted.iloc[0]['text_domain']}")
 
         # get some more information on text and reader
-        trial = fixation_file_sorted.loc[1, 'trial']
-        text_id = fixation_file_sorted.loc[1, 'text_id']
+        trial = fixation_file_sorted.iloc[0]['trial']
+        text_id = fixation_file_sorted.iloc[0]['text_id']
 
         # if the text has been read by a domain expert, the label is 1=expert_reading, else 0=non-expert_reading
         expert_reading_label_numeric = 1 if level_of_studies_numeric == 1 and text_domain_numeric == reader_discipline_numeric \
